@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Angular.js // Blog do Cezar</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Hello Angular.js" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://cezarcruz.com.br/hello-angular-js/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="http://cezarcruz.com.br/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://cezarcruz.com.br/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://cezarcruz.com.br/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    
+    <meta name="generator" content="Hugo 0.21" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://cezarcruz.com.br/">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Hello Angular.js</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/hello-angular-js/" class="article-date">
+                <time datetime='2014-12-19T00:04:33.000&#43;00:00' itemprop="datePublished">2014-12-19</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://cezarcruz.com.br//categories/outros">Outros</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>Olá, hoje vou escrever um post bem básico de como utilizar <strong>Angular.JS</strong> no seu próximo projeto.</p>
+
+<p></p>
+
+<p>Pra quem não sabe, o Angular.JS é um framework javascript MV*&copy;, feito pelo google para basicamente &#8220;deixar seu <strong>html</strong> dinâmico&#8221;, ou seja, com algumas tags no seu <strong>HTML</strong> será possível fazer atualização de dados, por exemplo.</p>
+
+<p>Chega de papo, para mais informações nerds, acesse o <a href="https://angularjs.org/" title="https://angularjs.org/">site do agunlar.</a></p>
+
+<p>Bom, o primeiro passo é adicionar o <strong>javascript</strong> na nossa página HTML:</p>
+
+<pre class="lang:js decode:true ">&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular.js"&gt;&lt;/script&gt;</pre>
+
+<blockquote>
+<p> Vamos usar o CDN deles, fica a seu critério usar remoto ou local.</p>
+</blockquote>
+
+<p>Depois de adicionarmos isso no header do nosso <strong>HTML</strong>, o próximo passo é adicionar a tag ng-app no elemento body, ele ficara assim:</p>
+
+<pre class="lang:default decode:true ">&lt;html lang="pt-BR" ng-app&gt;</pre>
+
+<p>Feito isso, seu <strong>HTML</strong> deverá estar assim:</p>
+
+<pre class="lang:default decode:true">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR" ng-app&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+    &lt;title&gt;Titulo&lt;/title&gt;
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    1 + 1 = {{ 1 + 1 }}
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<blockquote>
+<p> Adicionei o código 1 + 1 = {{ 1 + 1 }} apenas pra verificar se está ok, caso esteja ok, a saida do seu <strong>HTML</strong> deverá ser 1 + 1 = 2. Simples assim.</p>
+</blockquote>
+
+<p>Assim, concluímos que tudo que tiver dentro de {{ }} será processado pelo <strong>Angular</strong>. Agora vamos a um exemplo mais legal.</p>
+
+<p>Troque o conteúdo do seu body pelo código abaixo:</p>
+
+<pre class="lang:default decode:true">&lt;input type="text" ng-model="valor"/&gt;
+&lt;p&gt;{{valor}}&lt;/p&gt;</pre>
+
+<p>Nele temos o conteúdo do <p> sendo atualizado conforme é digitado o no input. O grande segredo está no ng-model e no <a class="ng-binding" tabindex="2" href="https://docs.angularjs.org/tutorial/step_04">Two-way Data Binding</a> do Angular.</p>
+
+<p>Por ultimo um exemplo que mostra uma pontinha do potencial do <strong>Angular.JS</strong>, veja só:</p>
+
+<pre class="lang:default decode:true ">&lt;html lang="pt-BR" ng-app="meuApp"&gt;
+
+&lt;script&gt;
+        var meuApp = angular.module('meuApp',[]);
+        meuApp.controller('HomeCtrl', ['$scope', function($scope) {
+              $scope.valor = 'Oi Blog!';
+        }]);
+&lt;/script&gt;
+
+&lt;div ng-controller="HomeCtrl"&gt;
+        &lt;input type="text" ng-model="valor"/&gt;
+        &lt;p&gt;{{valor}}&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+<p>Podemos ver as seguintes alterações:</p>
+
+<ul>
+<li>Alteramos o ng-app no elemento HTML para o valor meuApp;</li>
+<li>Alteramos o JavaScript, nele criamos o &#8220;meuApp&#8221;, que eh um module do Angular;</li>
+<li>Em seguida, criamos o controller &#8220;HomeCtrl&#8221; e setamos o valor da variável &#8220;Valor&#8221;;</li>
+<li>Criamos uma nova div com o valor de ng-controller setado para &#8220;HomeCtrl&#8221;, isso significa que tudo que está dentro da div, refere apenas ao que está na criação do controller no javascript.</li>
+</ul>
+
+<blockquote>
+<p>Atenção ao $scope, ele é o cara que devemos setar o valor do ng-model.</p>
+</blockquote>
+
+<p>Nesse ultimo exemplo quero apenas mostrar que o Angular permite alterar o valor de um span, por exemplo, de dentro do javascript, e como essa alteração ocorre em tempo real, você pode utilizar, por exemplo, um webservice REST para buscar os dados e atribuir os valores tudo em tempo real e sem complicações.</p>
+
+<p>Bom, acho que é isso, esse será o primeiro post de <strong>Angular</strong>, logo virá mais alguns. Obrigado e bons estudos!!</p>
+
+<p>PS: Feliz Natal e um 2015 com muito amor!!</p>
+        </div>
+
+        
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/criando-um-controller-com-angular-js-utilizando-padroes/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Criando um controller com Angular.JS utilizando padrões
+        </div>
+    </a>
+    
+    
+    <a href="/como-navegar-por-um-field-manytomany-em-um-template-django/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Como navegar por um field manytomany em um template Django&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Blog do Cezar&nbsp;
+            
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-37762884-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>

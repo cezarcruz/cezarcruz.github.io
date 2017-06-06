@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Como criar um repositório SVN no Dropbox [deprecated] // Blog do Cezar</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Como criar um repositório SVN no Dropbox [deprecated]" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://cezarcruz.com.br/como-criar-um-repositorio-svn-no-dropbox/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="http://cezarcruz.com.br/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://cezarcruz.com.br/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://cezarcruz.com.br/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    
+    <meta name="generator" content="Hugo 0.21" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://cezarcruz.com.br/">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Como criar um repositório SVN no Dropbox [deprecated]</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/como-criar-um-repositorio-svn-no-dropbox/" class="article-date">
+                <time datetime='2013-07-23T14:59:18.000&#43;00:00' itemprop="datePublished">2013-07-23</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://cezarcruz.com.br//categories/outros">Outros</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>Um requisito básico para programar, talvez até antes de uma IDE, é uma forma de armazenar os códigos com segurança e se for com controle de versão, melhor ainda.</p>
+
+<p></p>
+
+<p>Iremos precisar de uma conta ativa no Dropbox junto com o software de sincronia, que deve ser adquirido aqui: <a href="https://www.dropbox.com/downloading?os=win" target="_blank"><a href="https://www.dropbox.com/downloading?os=win">https://www.dropbox.com/downloading?os=win</a></a></p>
+
+<p>Iremos precisar to Tortoise SVN, esse é ferramenta muito útil no dia a dia, é com ela que iremos criar nosso repositório e faremos updates e commits, ela deve ser obtida aqui: <a href="http://tortoisesvn.net/downloads.html" target="_blank"><a href="http://tortoisesvn.net/downloads.html">http://tortoisesvn.net/downloads.html</a></a></p>
+
+<p>A instalação de ambos é bem simples, então iremos direto pra parte de criar o repositório:</p>
+
+<blockquote>
+<p>Não esqueça de reiniciar o PC após a instalação do Tortoise SVN</p>
+</blockquote>
+
+<p>No Windows 7 e Windows 8 o software do Dropbox cria uma pasta no diretório do usuário, por exemplo:</p>
+
+<p>C:UsersusuárioDropbox</p>
+
+<p>Nesse diretório que iremos criar nosso, repositório:</p>
+
+<p>Primeiro crie uma pasta com um nome qualquer, por exemplo &#8220;Repositório&#8221;, sem aspas 😉</p>
+
+<p>Dentro dela, clique com o botão direito do mouse, escolha a opção <em>TortoiseSVN</em> e em seguida <em>Create respository here</em></p>
+
+<p style="text-align: center;">
+  <a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457592/criando_rep_svn_yctbqr.png"><img class="size-medium wp-image-104 aligncenter" alt="criando_rep_svn" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_171,w_300/v1454457592/criando_rep_svn_yctbqr.png" width="300" height="171" /></a>
+</p>
+
+<p>O TortoiseSVN irá criar a estrutura de diretórios abaixo</p>
+
+<p style="text-align: center;">
+  <a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457591/resultado_ou0gwv.png"><img class="size-medium wp-image-105 aligncenter" alt="resultado" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_193,w_300/v1454457591/resultado_ou0gwv.png" width="300" height="192" /></a>
+</p>
+
+<p>Clique na opção Create folder structure, para criar as pastas trunk, tags, branch&#8230;</p>
+
+<p>Repare que na figura temos um caminho selecionado, começando com file:///C:&#8230;. e é nesse endereço que está o pulo do gato, quando for abrir o repo browser ou for fazer um chekout/commit, basta acrescentar o caminho dessa forma</p>
+
+<p style="text-align: center;">
+  <a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457589/abrindo_repo_br_pu6exf.png"><img class="size-medium wp-image-108 aligncenter" alt="abrindo_repo_br" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_103,w_300/v1454457589/abrindo_repo_br_pu6exf.png" width="300" height="103" /></a>
+</p>
+
+<p>Assim, teremos, de uma forma gratuita, um repositório SVN que pode ser acessado de qualquer lugar, lembrando sempre de sincronizar a pasta com o repositório.</p>
+        </div>
+
+        
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/dica-rapida-foundation-4-uma-alternativa-ao-bootsrap/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Dica rapida: Foundation 4 uma alternativa ao Bootsrap
+        </div>
+    </a>
+    
+    
+    <a href="/como-instalar-apache-php-mysql-no-ubuntu/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Como instalar Apache &#43; PHP &#43; MySQL no Ubuntu&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Blog do Cezar&nbsp;
+            
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-37762884-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>

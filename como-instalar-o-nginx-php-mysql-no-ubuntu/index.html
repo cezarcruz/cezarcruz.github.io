@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Como instalar o Nginx &#43; PHP &#43; MySql no Ubuntu // Blog do Cezar</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Como instalar o Nginx &#43; PHP &#43; MySql no Ubuntu" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://cezarcruz.com.br/como-instalar-o-nginx-php-mysql-no-ubuntu/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="http://cezarcruz.com.br/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://cezarcruz.com.br/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://cezarcruz.com.br/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    
+    <meta name="generator" content="Hugo 0.21" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://cezarcruz.com.br/">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Como instalar o Nginx &#43; PHP &#43; MySql no Ubuntu</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/como-instalar-o-nginx-php-mysql-no-ubuntu/" class="article-date">
+                <time datetime='2013-10-22T12:48:50.000&#43;00:00' itemprop="datePublished">2013-10-22</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://cezarcruz.com.br//categories/outros">Outros</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="hoje-uma-dica-bem-simples-como-instalar-o-nginx-servidor-web-php-e-mysql-no-ubuntu">Hoje uma dica bem simples: como instalar o Nginx (Servidor WEB) + PHP e MySql no Ubuntu.</h2>
+
+<p>O <strong>Nginx</strong> (Pronuncia Engine-x) é um concorrente do Apache para servir páginas web. Para servir páginas estáticas, sem dúvidas é muito melhor que o Apache e tem um ganho com páginas dinâmicas também (<a href="http://systemsarchitect.net/apache2-vs-nginx-for-php-application/">Apache vs Nginx</a>). O que pude comprovar é o uso de memória, por exemplo, o <strong>Nginx</strong> usa bem menos e o tempo de reposta é bem menor quando comparado ao Apache. Vamos lá.</p>
+
+<p></p>
+
+<p>O primeiro passo é Instalar o <strong>Nginx</strong>:</p>
+
+<pre class="lang:sh decode:true">sudo apt-get install nginx</pre>
+
+<blockquote>
+<p>A versão no repositório oficial do Ubuntu é um pouco desatualizada, mas irá funcionar muito bem pra esse tutorial</p>
+</blockquote>
+
+<p>Depois de instalado, basta iniciar o serviço:</p>
+
+<pre class="lang:sh decode:true">/etc/init.d/nginx start</pre>
+
+<p>A página de boas vindas é a seguinte:<figure id="attachment_231" style="width: 300px" class="wp-caption aligncenter"></p>
+
+<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457576/nginx-imagen-inicial_krlgoc.png"><img class="size-medium wp-image-231 " title="Welcome to nginx" alt="nginx-imagen-inicial" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_169,w_300/v1454457576/nginx-imagen-inicial_krlgoc.png" width="300" height="169" /></a><figcaption class="wp-caption-text">Welcome to nginx</figcaption></figure></p>
+
+<p style="text-align: left;">
+  Pra instalar o PHP é tão simples quanto o <strong>Nginx</strong>:
+</p>
+
+<pre class="lang:sh decode:true">apt-get install php5-fpm</pre>
+
+<blockquote>
+<p>O Php FPM é o interpretador utilizado para os códigos PHP. <a href="http://php-fpm.org/about/">Mais sobre PHP FPM</a></p>
+</blockquote>
+
+<p>Pra integrar o <strong>Nginx</strong> com o PHP temos que por a mão na massa, é necessário alterar um arquivo de configuração:</p>
+
+<pre class="lang:sh decode:true">/etc/nginx/sites-available/default</pre>
+
+<p>Pra configuração básica, é preciso fazer duas pequenas alterações:</p>
+
+<p>No começo do arquivo, precisamos adicionar <strong>index.php</strong> entre <strong>index</strong> e <strong>index.html</strong>, ficando assim:</p>
+
+<pre class="lang:sh decode:true">index index.php index.html index.htm</pre>
+
+<p>e mais abaixo, basta &#8220;descomentar&#8221; algumas linhas, onde começa o <strong>location  ~* .php</strong></p>
+
+<p>, ficando assim:</p>
+
+<pre class="lang:sh decode:true">location ~* .php$ {
+                fastcgi_split_path_info ^(.+.php)(/.+)$;
+                # NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
+
+                # With php5-cgi alone:
+        #       fastcgi_pass 127.0.0.1:9000;
+                # With php5-fpm:
+                fastcgi_pass unix:/var/run/php5-fpm.sock;
+                fastcgi_index index.php;
+                include fastcgi_params;
+        }</pre>
+
+<p>Agora que está tudo configurado, é preciso reiniciar o <strong>Nginx</strong>:</p>
+
+<pre class="lang:sh decode:true">/etc/init.d/nginx restart</pre>
+
+<p>Pra verificarmos se está tudo funcionando, criamos um arquivo na pasta publica do Nginx (/usr/share/nginx/html) chamado info.php, com o conteúdo abaixo:</p>
+
+<pre class="lang:php decode:true">&lt;?php
+        phpinfo();
+?&gt;</pre>
+
+<p>Acessar por <strong><a href="http://localhost/info.php">http://localhost/info.php</a></strong> E o resultado, claro:<figure id="attachment_232" style="width: 300px" class="wp-caption aligncenter"></p>
+
+<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457574/phpinfo-nginx_lk5sxg.png"><img class="size-medium wp-image-232 " title="PHP info no Nginx" alt="phpinfo-nginx" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_169,w_300/v1454457574/phpinfo-nginx_lk5sxg.png" width="300" height="168" /></a><figcaption class="wp-caption-text">PHP info no Nginx</figcaption></figure></p>
+
+<p style="text-align: left;">
+  Tudo funcionando, agora é hora de instalar o MySQL, mesmo comando simples de sempre:
+</p>
+
+<pre class="lang:sh decode:true">apt-get install mysql-server mysql-client php5-mysql</pre>
+
+<p>Para verificar se o MySql está corretamente instalado basta acessar novamente <strong><a href="http://localhost/info.php ">http://localhost/info.php </a></strong>e procurar por MySql, o resultado deve ser igual o abaixo:<figure id="attachment_234" style="width: 300px" class="wp-caption aligncenter"></p>
+
+<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457573/phpinfor-mysql-nginx_m0w6xb.png"><img class="size-medium wp-image-234 " title="PHP info Nginx" alt="phpinfor-mysql-nginx" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_169,w_300/v1454457573/phpinfor-mysql-nginx_m0w6xb.png" width="300" height="168" /></a><figcaption class="wp-caption-text">PHP info Nginx</figcaption></figure></p>
+
+<p style="text-align: left;">
+  Agora é só se divertir, até mais!!
+</p>
+
+<h1 style="text-align: left;">
+  Bonus
+</h1>
+
+<p><a href="http://www.infowester.com/aptget1.php">Como usar o apt-get</a></p>
+
+<p><a href="http://wiki.nginx.org/Main">Sobre o Nginx</a></p>
+
+<p><a href="http://wiki.nginx.org/Codeigniter">CodeIgniter no Nginx</a></p>
+        </div>
+
+        
+        
+        <div class="article-toc" style="display:none;">
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#hoje-uma-dica-bem-simples-como-instalar-o-nginx-servidor-web-php-e-mysql-no-ubuntu">Hoje uma dica bem simples: como instalar o Nginx (Servidor WEB) + PHP e MySql no Ubuntu.</a></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/fazendo-o-cakephp-funcionar-milagrosamente-em-subdiretorio-do-nginx/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Fazendo o CakePHP funcionar milagrosamente em um subdiretório do NGINX
+        </div>
+    </a>
+    
+    
+    <a href="/utilizando-multi-idiomas-no-php-codeigniter/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Utilizando multi idiomas no php CodeIgniter&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Blog do Cezar&nbsp;
+            
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-37762884-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>

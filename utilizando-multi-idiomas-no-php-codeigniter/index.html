@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Utilizando multi idiomas no php CodeIgniter // Blog do Cezar</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Utilizando multi idiomas no php CodeIgniter" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://cezarcruz.com.br/utilizando-multi-idiomas-no-php-codeigniter/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="http://cezarcruz.com.br/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://cezarcruz.com.br/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://cezarcruz.com.br/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    
+    <meta name="generator" content="Hugo 0.21" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://cezarcruz.com.br/">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Utilizando multi idiomas no php CodeIgniter</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/utilizando-multi-idiomas-no-php-codeigniter/" class="article-date">
+                <time datetime='2013-10-01T18:23:53.000&#43;00:00' itemprop="datePublished">2013-10-01</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://cezarcruz.com.br//categories/outros">Outros</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="esse-é-o-primeiro-post-falando-de-codeiginiter">Esse é o primeiro post falando de <strong>CodeIginiter</strong>.</h2>
+
+<p>Vamos lá, nesse tutorial vamos tentar aprender como utilizar o multi idioma em uma aplicação utilizando <strong>CodeIginiter</strong>, daqui pra frente, apenas CI.</p>
+
+<p>O primeiro passo é configurar:</p>
+
+<p></p>
+
+<p>Criamos uma pasta dentro de application/language chamada <strong>portuguese</strong> nessa pasta que iremos colocar nossas strings traduzidas.</p>
+
+<p>Após criarmos a pasta, devemos alterar o arquivo application/config/config.php, na seguinte linha:</p>
+
+<pre class="lang:php decode:true">$config['language'] = 'english';</pre>
+
+<p>para:</p>
+
+<pre class="lang:php decode:true">$config['language'] = 'portuguese';</pre>
+
+<p>Essa configuração quer dizer que o idioma padrão vai ser o que tiver dentro da pasta portuguese.</p>
+
+<blockquote>
+<p>Repare que temos duas pastas language, uma dentro de application e outra dentro de system, quando o CI procura pelas strings traduzidas, o primeiro local que ele procurar é em application/language e em seguida system/language, então, o mais sensato é colocarmos nossas strings dentro de application/language.</p>
+</blockquote>
+
+<p>A nomenclatura padrão dos arquivos de idiomas é <strong>nome_lang.php,</strong> para o nosso exemplo, vamos criar um arquivo chamada app_lang.php dentro da pasta portuguese. O conteúdo do arquivo deverá ficar da seguinte forma:</p>
+
+<pre class="lang:php decode:true">&lt;?php
+        $lang['title'] = "Titulo";
+    $lang['first_name'] = "Primeiro nome";
+    $lang['last_name'] = "Ultimo nome";
+    $lang['date'] = "data";
+
+?&gt;</pre>
+
+<p>Agora, para utilizarmos ele é tão simples quanto a sua criação, basta carregar ele com essa &#8220;enorme&#8221; linha de código:</p>
+
+<pre class="lang:php decode:true">$this-&gt;lang-&gt;load("app","portuguese");</pre>
+
+<p>Da forma acima, devemos colocar a chamada em todo lugar que for ter strings traduzidas, então, pra facilitar, vamos usar ele no método construtor do nosso Controller:</p>
+
+<pre class="lang:php decode:true">public function __construct() {
+        parent::__construct();      
+        $this-&gt;lang-&gt;load("app","portuguese");
+   }</pre>
+
+<blockquote>
+<p> Repare que utilizamos apenas o nome do arquivo, &#8220;app&#8221;, o resto o CI que preenche.</p>
+</blockquote>
+
+<p>Agora que carregamos ele no nosso Controller, vamos utilizar ele:</p>
+
+<pre class="lang:php decode:true">$data['title'] = $this -&gt; lang -&gt; line('title');</pre>
+
+<p>A linha acima assume que o valor de $title será Titulo. É tão simples que parece mentira, mas é isso mesmo, agora só passar o valor pra view e exibir, lindo e traduzido.</p>
+
+<p>E claro, como a intenção de utilizar o multi idioma é o de que nossa aplicação seja visível em outra língua, pra isso, basta criar uma nova pasta em application/language com o idioma que preferir, criar os mesmos arquivos que estão na pasta portuguese e mandar ver na tradução.</p>
+
+<p>Só não esqueça de alterar o lang-&gt;load para que ele carregue o novo idioma corretamente:</p>
+
+<pre class="lang:php decode:true">$this-&gt;lang-&gt;load("app","idioma");</pre>
+
+<p><a href="https://github.com/EllisLab/CodeIgniter/">Obtenha o CI aqui</a> e o <a href="http://ellislab.com/codeigniter/user-guide/">pratico manual aqui</a>.</p>
+
+<p>É isso ai, espero que seja útil.</p>
+
+<p>Até mais, abraços.</p>
+        </div>
+
+        
+        
+        <div class="article-toc" style="display:none;">
+            <h3>Contents</h3>
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#esse-é-o-primeiro-post-falando-de-codeiginiter">Esse é o primeiro post falando de <strong>CodeIginiter</strong>.</a></li>
+</ul></li>
+</ul>
+</nav>
+        </div>
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/como-instalar-o-nginx-php-mysql-no-ubuntu/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Como instalar o Nginx &#43; PHP &#43; MySql no Ubuntu
+        </div>
+    </a>
+    
+    
+    <a href="/como-utilizar-_layout-cshtml-no-asp-net-mvc-4/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Como utilizar _Layout.cshtml no ASP.NET MVC 4&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Blog do Cezar&nbsp;
+            
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-37762884-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>

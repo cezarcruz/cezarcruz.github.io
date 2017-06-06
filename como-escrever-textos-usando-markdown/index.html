@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Como escrever textos usando Markdown // Blog do Cezar</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Como escrever textos usando Markdown" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://cezarcruz.com.br/como-escrever-textos-usando-markdown/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="http://cezarcruz.com.br/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://cezarcruz.com.br/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://cezarcruz.com.br/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    
+    <meta name="generator" content="Hugo 0.21" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://cezarcruz.com.br/">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Como escrever textos usando Markdown</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/como-escrever-textos-usando-markdown/" class="article-date">
+                <time datetime='2014-01-17T14:36:48.000&#43;00:00' itemprop="datePublished">2014-01-17</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://cezarcruz.com.br//categories/outros">Outros</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>Olás, nesse tutorial, vou mostrar como utilizarmos o <strong>Markdown</strong> para escrevermos textos formatados em Html. Esse tutorial será, basicamente, um spin-off da saga Jekyll.</p>
+
+<p><strong>Markdown</strong> é uma ferramenta de conversão texto pra HTML para escrever textos para web. <strong>Markdown</strong> permite escrever usando um texto fácil de ler e escrever e depois converte em uma estrutura valida de XHTML (ou HTML). Pra uma definição melhor, veja o <a href="http://daringfireball.net/projects/markdown/">site do projeto</a>.</p>
+
+<p></p>
+
+<p>Um local onde o <strong>Markdown</strong> é bastante utilizado é nos arquivos .md utilizado no <a href="https://github.com/">Git Hub</a>.</p>
+
+<p>Mas vamos lá, pra escrevermos texto começamos sempre com o titulo, hehehe. Pra gerarmos  um titulo em <strong>Markdown</strong> é tranquilo, veja:</p>
+
+<pre class="lang:yaml decode:true">007 - Um novo dia pra morrer
+============================</pre>
+
+<p>Colocamos a partir de três símbolos de <strong>= </strong>(igual)  abaixo do texto, e o HTML gerado é:</p>
+
+<pre class="lang:xhtml decode:true">&lt;h1&gt;007 - Um novo dia pra morrer&lt;/h1&gt;</pre>
+
+<p>Bem sussa, pra gerar um subtítulo, é tão simples quanto:</p>
+
+<pre class="lang:yaml decode:true">O Daniel Craig é o James Bond mais zica
+---------------------------------------</pre>
+
+<p>Colocamos a partir de três traços abaixo do texto, e o HTML gerado é:</p>
+
+<pre class="lang:xhtml decode:true">&lt;h2&gt;O Daniel Craig é o James Bond mais zica&lt;/h2&gt;</pre>
+
+<p>Pra escrever títulos, podemos utilizar outras formas também:</p>
+
+<pre class="lang:default decode:true">#Titulo 1
+##Subtítulo
+###SubSubtítulo
+.....</pre>
+
+<p>E o resultado é:</p>
+
+<pre class="lang:xhtml decode:true">&lt;h1&gt;Titulo 1&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;SubSubtítulo&lt;/h3&gt;</pre>
+
+<p>Para escrevermos um texto, também é bem simples, o que devemos atentar é que pra começarmos um novo paragrafo, devemos deixar uma linha em branco no texto <strong>Markdown</strong>:</p>
+
+<pre class="lang:default decode:true">Curabitur consequat commodo magna. Nulla vel eros nec dui malesuada gravida. Donec pellentesque, quam et varius consectetur, risus orci dapibus ante, quis euismod diam metus sed erat. 
+
+Mauris aliquet pretium ante, a rutrum libero facilisis a. Nulla facilisi. Praesent semper ornare felis, non pharetra elit vestibulum pulvinar. 
+
+Phasellus quis lacus ultrices, posuere urna eu, pellentesque metus. Donec vulputate velit sit amet augue mattis rutrum. Phasellus ultrices tempor elit vitae vulputate. Praesent quis ullamcorper justo. Cras euismod nisl nibh, eu pulvinar lectus condimentum ut.</pre>
+
+<p>O HTML gerado segue abaixo:</p>
+
+<pre class="lang:xhtml decode:true">&lt;p&gt;Curabitur consequat commodo magna. Nulla vel eros nec dui malesuada gravida. Donec pellentesque, quam et varius consectetur, risus orci dapibus ante, quis euismod diam metus sed erat. &lt;/p&gt;
+
+&lt;p&gt;Mauris aliquet pretium ante, a rutrum libero facilisis a. Nulla facilisi. Praesent semper ornare felis, non pharetra elit vestibulum pulvinar. &lt;/p&gt;
+
+&lt;p&gt;Phasellus quis lacus ultrices, posuere urna eu, pellentesque metus. Donec vulputate velit sit amet augue mattis rutrum. Phasellus ultrices tempor elit vitae vulputate. Praesent quis ullamcorper justo. Cras euismod nisl nibh, eu pulvinar lectus condimentum ut.&lt;/p&gt;</pre>
+
+<p>No meio do texto, podemos colocar palavras em itálico ou negrito, por exemplo:</p>
+
+<pre class="lang:default decode:true">_consequat_
+**consequat**</pre>
+
+<p>Resultado:</p>
+
+<pre class="lang:default decode:true">&lt;em&gt;consequat&lt;/em&gt;
+&lt;strong&gt;consequat&lt;/strong&gt;</pre>
+
+<p>Pra adicionarmos uma citação:</p>
+
+<pre class="lang:default decode:true">&gt; Ser ou não ser, eis a questão.</pre>
+
+<p>O HTML gerado é:</p>
+
+<pre class="lang:default decode:true">&lt;blockquote&gt;
+&lt;p&gt;Ser ou não ser, eis a questão&lt;/p&gt;
+&lt;/blockquote&gt;</pre>
+
+<p>Em <strong>Markdown</strong>, sempre que vc começar a linha com &gt; (maior) ele será uma citação e se você continuar em varias linhas seguidas, será apenas uma única citação com e um paragrafo, mas caso você coloque um linha em branco com sinal de &gt; (maior) entre duas linhas com sinal de &gt; (maior)  mas que tenha algum conteúdo, você irá criar um novo paragrafo, porem, está dentro de uma única citação.</p>
+
+<p>Pra criarmos uma lista não ordenada, temos um segredinho também, temos que pular uma linha depois do ultimo paragrafo, veja:</p>
+
+<pre class="lang:default decode:true">Lista de compras
+
+* alface
+* tomate
+* cebola
+* couve</pre>
+
+<p>O resultado:</p>
+
+<pre class="lang:default decode:true">&lt;p&gt;Lista de compras&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;alface&lt;/li&gt;
+&lt;li&gt;tomate&lt;/li&gt;
+&lt;li&gt;cebola&lt;/li&gt;
+&lt;li&gt;couve&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+<p>Além do * (asterisco), podemos utilizar o sinal de + (soma) ou &#8211; (subtração) pra formarmos uma lista.</p>
+
+<p>Pra termos uma lista ordenada, segue a mesma ideia da lista não ordenada:</p>
+
+<pre class="lang:default decode:true">Lista de compras
+
+1. alface
+2. tomate
+3. cebola
+4. couve</pre>
+
+<p>E resultado:</p>
+
+<pre class="lang:default decode:true">&lt;p&gt;Lista de compras&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;alface&lt;/li&gt;
+&lt;li&gt;tomate&lt;/li&gt;
+&lt;li&gt;cebola&lt;/li&gt;
+&lt;li&gt;couve&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+<p>Pra criamos uma lista aninhada, basta uma colocarmos o subitem com um espaço na frente:</p>
+
+<pre class="lang:default decode:true">Lista de compras
+
+* alface
+ * tomate
+* cebola
+ * couve</pre>
+
+<p>O resultado:</p>
+
+<pre class="lang:default decode:true">&lt;p&gt;Lista de compras&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;alface
+        &lt;ul&gt;
+            &lt;li&gt;tomate&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;cebola
+        &lt;ul&gt;
+            &lt;li&gt;couve&lt;/li&gt;
+            &lt;li&gt;espinafre&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+<p>A ideia é a mesma para a lista ordenada.</p>
+
+<p>Pra criamos um link com uma página da web:</p>
+
+<pre><code>Esse o [link para o meu blog](https://cezarcruz.com.br/blog/ &quot;Meu blog&quot;)
+</code></pre>
+
+<p>O resultado vem logo abaixo:</p>
+
+<pre class="lang:default decode:true">&lt;p&gt;Esse o &lt;a href="https://cezarcruz.com.br/blog/" title="Meu blog"&gt;link para o meu blog&lt;/a&gt;&lt;/p&gt;</pre>
+
+<p>Repare que o que está dentro do colchetes é o que irá virar um link, o endereço vem dentro de parênteses e utilizar o title dentro do parênteses é opcional, caso não queira, basta deixar somente o endereço.</p>
+
+<p>Ainda com links, podemos usar ele de uma forma um pouco mais organizada, utilizando referencias:</p>
+
+<pre class="lang:default decode:true">O site do [G1][1] é igual ao do [R7][2]
+
+
+[2]: http://r7.com "Site do R7"</pre>
+
+<p>O Resultado segue como de costume:</p>
+
+<pre class="lang:default decode:true">&lt;p&gt;O site do &lt;a href="g1.com" title="Site do G1"&gt;G1&lt;/a&gt; é igual ao do &lt;a href="r7.com" title="Site do R7"&gt;R7&lt;/a&gt;&lt;/p&gt;</pre>
+
+<p>Pra utilizarmos referencias em links, temos que atentar aos fatos:</p>
+
+<ul>
+<li>O que estiver entre os primeiros colchetes é o que irá se tornar &#8220;clicável&#8221;;</li>
+<li>O segundo colchetes é a referencia, nela, podemos utilizar uma letra ou palavra e elas não são <em>case sensitive</em>;</li>
+<li>No local onde deixamos organizada as referencias, temos de colocar : (dois pontos) depois dos colchetes pra que funcione corretamente;</li>
+<li>Não esquecer de por <strong>http://</strong>;</li>
+</ul>
+
+<p>Pra utilizarmos imagens, o código é semelhante ao de links:</p>
+
+<pre class="lang:default decode:true">![O alt](https://www.google.com.br/images/srpr/logo11w.png "Logo do google")</pre>
+
+<p>E o lindo resultado:</p>
+
+<pre class="lang:default decode:true">&lt;p&gt;Olha essa imagem: &lt;img src="https://www.google.com.br/images/srpr/logo11w.png" alt="O alt" title="Logo do google"&gt;&lt;/p&gt;</pre>
+
+<p>A diferença básica entre links e imagens é a ! (exclamação) antes do código.</p>
+
+<p>Bom por enquanto é isso ai, são bem básicas, mas é o suficiente pra nos prepararmos pros próximos tutoriais de Jekyll.</p>
+
+<p>Abraços.</p>
+
+<p>Links úteis</p>
+
+<ul>
+<li><a href="http://markable.in/editor/">Markdown editor online</a></li>
+<li><a href="http://daringfireball.net/">Site oficial do Markdown</a></li>
+<li><a href="https://cezarcruz.com.br/blog/2014/01/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/" title="Como utilizar o Jekyll pra criar um blog com páginas estáticas. Jekyll parte 1">Jekyll beeeeem básico</a></li>
+</ul>
+        </div>
+
+        
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/dica-gitignore-nao-esta-funcionando/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Dica git: .gitignore não está funcionando corretamente
+        </div>
+    </a>
+    
+    
+    <a href="/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Como utilizar o Jekyll pra criar um blog com páginas estáticas. Jekyll parte 1&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Blog do Cezar&nbsp;
+            
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-37762884-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>

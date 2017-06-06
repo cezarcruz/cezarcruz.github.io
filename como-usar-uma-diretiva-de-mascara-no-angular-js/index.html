@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Como usar uma diretiva de máscara no angular js // Blog do Cezar</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Como usar uma diretiva de máscara no angular js" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://cezarcruz.com.br/como-usar-uma-diretiva-de-mascara-no-angular-js/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="http://cezarcruz.com.br/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://cezarcruz.com.br/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://cezarcruz.com.br/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    
+    <meta name="generator" content="Hugo 0.21" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://cezarcruz.com.br/">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Como usar uma diretiva de máscara no angular js</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/como-usar-uma-diretiva-de-mascara-no-angular-js/" class="article-date">
+                <time datetime='2015-09-13T20:24:18.000&#43;00:00' itemprop="datePublished">2015-09-13</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://cezarcruz.com.br//categories/outros">Outros</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>Olás, no tutorial de hoje, vou mostrar como criar um diretiva bem simples utilizando Angular JS para colocar uma máscara de telefone celular com o nono digito em um campo input text.</p>
+
+<p></p>
+
+<p>Pré requisito:</p>
+
+<ul>
+<li>Angular JS;</li>
+<li>JQuery;</li>
+<li>JQuery Mask (<a href="http://igorescobar.github.io/jQuery-Mask-Plugin/">http://igorescobar.github.io/jQuery-Mask-Plugin/</a>);</li>
+<li>Tutorial <a href="https://cezarcruz.com.br/2014/12/hello-angular-js/">Hello Angular JS</a>;</li>
+</ul>
+
+<p>Para criar uma diretiva, devemos definir ela no módulo usando &#8220;directive&#8221; e passando uma function, que será a diretiva de fato:</p>
+
+<pre class="lang:js decode:true">angular.module("app").directive("phoneDir", PhoneDir);
+
+
+function PhoneDir() {
+  return {
+    link : function(scope, element, attrs) {
+        var options = {
+            onKeyPress: function(val, e, field, options) {
+                putMask();
+            }
+        }
+
+        $(element).mask('(00) 00000-0000', options);
+
+        function putMask() {
+            var mask;
+            var cleanVal = element[0].value.replace(/\D/g, '');//pega o valor sem mascara
+            if(cleanVal.length &gt; 10) {//verifica a quantidade de digitos.
+                mask = "(00) 00000-0000";
+            } else {
+                mask = "(00) 0000-00009";
+            }
+            $(element).mask(mask, options);//aplica a mascara novamente
+        }
+    }
+  }
+}</pre>
+
+<ul>
+<li>Na primeira linha definimos a diretiva dando o nome de &#8220;phoneDir&#8221;, lembrando que o nome deve ser camel case;</li>
+<li>Na function é onde definimos a diretiva;</li>
+<li>Começamos sempre com um return;</li>
+<li>A chave link deve ser utilizada para diretivas que alteram o DOM;</li>
+<li>O &#8220;options&#8221; é um objeto utilizado para o JQuery, no caso, estamos definindo que quando temos um evento &#8220;onKeyPress&#8221; (quando teclamos algo), será executado a function putMask;</li>
+<li>Na primeira vez que a diretiva é executada já definimos uma valor inicial para a máscara e adicionamos o objeto &#8220;options&#8221; ao elemento para começarmos a termos uma ação sempre que é digitado algo no campo;</li>
+<li>Por fim a function que define qual mascara devemos utilizar: a simples de 8 dígitos ou a de 9 dígitos;</li>
+<li>Observação: a máscara é atualizada sempre que é digitado uma nova tecla;</li>
+</ul>
+
+<p>Com a diretiva pronta, é hora de utilizarmos ela em um campo de texto, o que é muito simples:</p>
+
+<pre class="lang:default decode:true ">&lt;input type="text" ng-model="phone" phone-dir/&gt;</pre>
+
+<p>No elemento eu coloco a diretiva utilizando o seguinte padrão:</p>
+
+<ul>
+<li>Sempre letras minusculas;</li>
+<li>Quando a diretiva tiver um nome composto (phoneDir), no elemento html devemos colocar ela em minúsculo e onde tiver um letra maiúscula colocamos um hífen (-) (phone-dir);</li>
+</ul>
+
+<p>Pronto, uma forma simples de criar uma diretiva AngularJS.</p>
+
+<p>Até a próxima.</p>
+
+<p>&nbsp;</p>
+        </div>
+
+        
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/how-to-create-a-sails-js-start-app/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            How to create a Sails.JS start app
+        </div>
+    </a>
+    
+    
+    <a href="/como-utilizar-o-http-interceptor-do-angular-js/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Como utilizar o $http interceptor do Angular.JS&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Blog do Cezar&nbsp;
+            
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-37762884-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Como utilizar o Jekyll pra criar um blog com páginas estáticas. Jekyll parte 1 // Blog do Cezar</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Como utilizar o Jekyll pra criar um blog com páginas estáticas. Jekyll parte 1" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://cezarcruz.com.br/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="http://cezarcruz.com.br/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://cezarcruz.com.br/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://cezarcruz.com.br/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    
+    <meta name="generator" content="Hugo 0.21" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://cezarcruz.com.br/">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Como utilizar o Jekyll pra criar um blog com páginas estáticas. Jekyll parte 1</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/" class="article-date">
+                <time datetime='2014-01-16T00:40:15.000&#43;00:00' itemprop="datePublished">2014-01-16</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://cezarcruz.com.br//categories/outros">Outros</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p><strong>Jekyll</strong>, um software para gerar páginas estáticas usado principalmente pra blogs. Esse tutorial é a primeira parte. O <strong>Jekyll</strong> é um software gerador de páginas estáticas. Usando arquivos de texto com <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>, ele cria um site completo, estático, pronto pra ser publicado. A vantagem de gerar um blog, ou um site em html estático, é que não precisamos nos preocupar com muitas camadas de segurança, considerando que eliminamos o interpretador PHP, no caso do WordPress, eliminamos o próprio WordPress, que apesar de ser uma ótima plataforma de blog, pode conter bugs, eliminamos também a necessidade de um servidor de banco de dados (falow MySql 😉 ), e claro,  o desempenho, como só é exibido páginas estáticas, são menos requisições e nada pra processar e pra hospedar apenas páginas estáticas é muito mais barato e até &#8220;di grátis&#8221; hehehehe.</p>
+
+<p></p>
+
+<blockquote>
+<p>Esse tutorial é baseado no Ubuntu, o Windows não foi muito amigável pra instalar o Jekyll. =/ Deixando bem claro que o WordPress é uma ótima plataforma, supre qualquer necessidades para um blog e até algo mais avançado. O <strong>Jekyll</strong> não é muito simples de se trabalhar, por isso deve ser utilizado, principalmente por desenvolvedores, e nesse caso, é uma ótima oportunidade de aprender novas tecnologias e ir afiando os conhecimentos em otimização não somente de conteúdo como também dos códigos do site.</p>
+</blockquote>
+
+<p>Vamos começar. O primeiro passo é instalar o Ruby na maquina, no Ubuntu é muuuuuuuuuito simples:</p>
+
+<pre class="lang:sh decode:true">sudo apt-get install ruby1.9.1 ruby1.9.1-dev</pre>
+
+<blockquote>
+<p>No comando eu utilizei a versão 1.9.1, apesar de já existir a versão 2.1 do Ruby, quando fiz os primeiros testes, as coisas não foram lisas, como usando a 1.9.1 vai atender pro que precisamos, então é ela que iremos utilizar aqui. =D</p>
+</blockquote>
+
+<p>Isso já é o suficiente pra instalar o Ruby no ubuntu. Pra verificar se instalou certo, mais por desencargo mesmo, basta digitar o comando abaixo:</p>
+
+<pre class="lang:sh decode:true">ruby --version</pre>
+
+<p>E o resultado é a versão do Ruby instalado&#8230; 😉 Agora que temos o Ruby funcionando, vamos instalar o <strong>Jekyll</strong>, o comando, claro, é bem simples:</p>
+
+<pre class="lang:ruby decode:true">gem install jekyll</pre>
+
+<blockquote>
+<p> O gem é o comando do Ruby similar ao comando apt-get do Linux, ele serve pra instalar pacotes.</p>
+</blockquote>
+
+<p>Agora já estamos quase prontos pra começar a  criar páginas estáticas. O comando que devemos utilizar agora é:</p>
+
+<pre class="lang:sh decode:true">jekyll new blog</pre>
+
+<p>Ele irá criar a estrutura padrão de diretórios do <strong>Jekyll</strong>, ela deve ficar assim:</p>
+
+<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457572/arvore_de_diretorio_jekyll_kqae0n.png"><img class="size-medium wp-image-264 aligncenter" alt="arvore_de_diretorio_jekyll" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_193,w_300/v1454457572/arvore_de_diretorio_jekyll_kqae0n.png" width="300" height="192" /></a></p>
+
+<p>&nbsp;</p>
+
+<ul>
+<li>Os arquivos <strong>_config.yml</strong> é onde ficam as configurações do blog, como o nome do blog, por exemplo;</li>
+<li>A pasta <strong>css</strong> é onde fica os arquivos de estilo;</li>
+<li>A pasta <strong>_layouts</strong> é onde fica o layout padrão de cada página, mais pra frente, veremos como ele é utilizado;</li>
+<li>A pasta <strong>_posts</strong> é onde fica os posts do nosso blog;</li>
+</ul>
+
+<p>Por enquanto esses são os diretórios essenciais para começarmos a conhecer melhor nosso blog. Pra rodarmos ele localmente e ver como ficou, devemos, de dentro da pasta blog, rodar o comando abaixo:</p>
+
+<pre class="lang:default decode:true">jekyll serve</pre>
+
+<p>Ele irá disponibilizar um modo &#8220;preview&#8221; do blog no endereço <a href="http://localhost:4000">http://localhost:4000</a>, assim podemos ver como irá ficar nosso blog com o layout padrão do <strong>jekyll</strong>. Além disso, é claro, ele irá gerar uma build, as páginas html, dentro da pasta _site. O resultado final é a página abaixo: <a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457571/pagina_inicial_utilizando_o_layout_padrao_do_jekyll_kqxcae.png"><img class="size-medium wp-image-265 aligncenter" alt="pagina_inicial_utilizando_o_layout_padrao_do_jekyll" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_179,w_300/v1454457571/pagina_inicial_utilizando_o_layout_padrao_do_jekyll_kqxcae.png" width="300" height="178" /></a> Nos próximos tutorias irei explicar como criar um post, personalizar o blog, otimizar o SEO e o que for surgindo. Links úteis:</p>
+
+<ul>
+<li><a href="http://jekyllrb.com/">Site oficial do Jekyll</a> (A documentação é bem completa);</li>
+<li><a href="https://www.ruby-lang.org/pt/">Site oficila do Ruby</a>;</li>
+</ul>
+        </div>
+
+        
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/como-escrever-textos-usando-markdown/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Como escrever textos usando Markdown
+        </div>
+    </a>
+    
+    
+    <a href="/fazendo-o-cakephp-funcionar-milagrosamente-em-subdiretorio-do-nginx/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Fazendo o CakePHP funcionar milagrosamente em um subdiretório do NGINX&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Blog do Cezar&nbsp;
+            
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-37762884-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>

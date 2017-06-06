@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criando o primeiro projeto ASPNET MVC com CSharp // Blog do Cezar</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Criando o primeiro projeto ASPNET MVC com CSharp" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://cezarcruz.com.br/criando-o-primeiro-projeto-aspnet-mvc-com-csharp/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="http://cezarcruz.com.br/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://cezarcruz.com.br/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://cezarcruz.com.br/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    
+    <meta name="generator" content="Hugo 0.21" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://cezarcruz.com.br/">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Criando o primeiro projeto ASPNET MVC com CSharp</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/criando-o-primeiro-projeto-aspnet-mvc-com-csharp/" class="article-date">
+                <time datetime='2013-09-02T12:31:21.000&#43;00:00' itemprop="datePublished">2013-09-02</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://cezarcruz.com.br//categories/outros">Outros</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>Fala pessoal,</p>
+
+<p>nesse post vou mostrar como criar a nossa primeira página ASP.NET MVC.</p>
+
+<p>Não vou entrar em detalhes da tecnologia, mas pelo pouco que estou aprendendo, acredito ser uma boa área de estudo, quem vem do Web Forms vai sentir um pouco de dificuldade, mas rapidinho pega o jeito, vamos lá:</p>
+
+<p></p>
+
+<p><strong>Requisitos</strong></p>
+
+<p>Nesse tutorial vamos utilizar o <a href="http://www.microsoft.com/visualstudio/ptb/products/visual-studio-express-for-web">Visual Studio 2012 Express for Web</a></p>
+
+<p><strong>Mão na massa</strong></p>
+
+<p>Nosso primeiro passo é criar um novo projeto no VS(Visual Studio), clique em File -&gt; New Project</p>
+
+<p style="text-align: center;">
+  <a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457585/tela_new_project_vs2012_MVC_nikiyo.png"><img class=" wp-image-172   aligncenter" alt="tela_new_project_vs2012_MVC" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457585/tela_new_project_vs2012_MVC_nikiyo.png" /></a>
+</p>
+
+<p>Na tela New Project iremos escolher a linguagem (Csharp ou VB.NET) qual é o tipo de projeto, a localização e o nome dele:</p>
+
+<p>Pra esse tutorial iremos utilizar a linguagem CSharp, o tipo de projeto é ASP.NET MVC 4 Web Aplication, o nome, iremos colocar <strong>SiteMVC</strong>, clicamos em OK.</p>
+
+<p style="text-align: center;">
+  <a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457584/tela_new_aspnet_mvc_project_euqv1f.png"><img class=" wp-image-173  aligncenter" alt="Tela new MVC project" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457584/tela_new_aspnet_mvc_project_euqv1f.png" /></a>
+</p>
+
+<p>Nessa tela iremos escolher os tipos de projetos, no nosso caso iremos utilizar o template <strong><em>Empty</em></strong> (Os outros templates já vem com algumas funcionalidades, recomendo dar uma olhada, pra entender um pouco mais como funciona a estrutura do ASP.NET MVC), o View engine podemos deixar Razor mesmo (<a href="http://msdn.microsoft.com/pt-br/library/gg675215.aspx">mais informações sobre o Razor aqui</a> <em>****</em>). Após as escolhas, clicar em OK.</p>
+
+<p>Após nosso projeto ser criado, teremos a seguinte estrutura:</p>
+
+<p style="text-align: center;">
+  <a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457582/projeto_site_mvc_vs2012_qwbyct.png"><img class=" wp-image-174  aligncenter" alt="Estrutura projeto MVC" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457582/projeto_site_mvc_vs2012_qwbyct.png" /></a>
+</p>
+
+<p>Pra esse tutorial devemos destacar os seguintes diretórios</p>
+
+<ul>
+<li><strong>App_Start</strong>: Nesse diretório devemos ficar atento com o arquivo RouteConfig.cs, que iremos utilizar em seguida;</li>
+<li><strong>Controllers:</strong> Onde fica os controles da nossa aplicação (MVC básico aqui =D);</li>
+<li><strong>Model</strong>: Onde fica os modelos/dados da aplicação (MVC básico aqui também);</li>
+<li><strong>Views</strong>: Onde fica os cshtml, arquivos que serão a &#8220;cara&#8221; da nossa aplicação;</li>
+<li><strong>Web.config</strong>: Onde normalmente fica as configurações de uma aplicação .NET;</li>
+</ul>
+
+<p>Com a estrutura criada, vamos escrever códigos. Primeiro, vamos criar um Controller chamado site, isso é bem simples, clicar com o botão direito do mouse na pasta Controllers e em seguida Add -&gt; Controller. Por padrão devemos criar um controle assim:</p>
+
+<p><strong>[NomeDoController]Controler</strong></p>
+
+<p>No nosso exemplo ficará SiteController, na tela AddController coloque o Controller name SiteController e no Scaffolding options selecione Empty MVC controller, clique em add:<figure id="attachment_175" style="width: 300px" class="wp-caption aligncenter"></p>
+
+<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457581/tela_add_controller_mrsuxs.png"><img class="size-medium wp-image-175  " alt="tela_add_controller" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_195,w_300/v1454457581/tela_add_controller_mrsuxs.png" width="300" height="195" /></a><figcaption class="wp-caption-text">Tela Add Controller</figcaption></figure></p>
+
+<p>Nossa classe SiteController irá estar assim:</p>
+
+<pre class="lang:c# decode:true">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace SiteMVC.Controllers
+{
+    public class SiteController : Controller
+    {
+        //
+        // GET: /Site/
+
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+    }
+}</pre>
+
+<p>Note que nossa classe herda da classe Controller (OO aqui =P), e que já é criado automaticamente um método ActionResult chamdo Index que retorna uma View(). Essa classe quer dizer que, quando for feita a requisição <a href="http://endereco/Site/">http://endereco/Site/</a> irá retornar a View /Site/Index.</p>
+
+<p>Agora vamos criar a view /Site/Index, pra fazermos isso, devemos criar uma pasta chamada Site(com S maiúsculo) dentro da pasta Views. Depois de criado a pasta Site vamos criar a View Index, botão direito do mouse em cima da pasta Site, Add -&gt; View. Na tela Add View, colocamos o View name de Index, View engine deixamos Razor mesmo, de resto deixamos como está, clicar em Add.<figure id="attachment_176" style="width: 300px" class="wp-caption aligncenter"></p>
+
+<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457580/tela_add_view_gusagk.png"><img class="size-medium wp-image-176 " alt="Tela Add view" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_295,w_300/v1454457580/tela_add_view_gusagk.png" width="300" height="295" /></a><figcaption class="wp-caption-text">Tela Add view</figcaption></figure></p>
+
+<p>Agora foi criado a view Index.cshtml dentro da pasta Site, que ficou assim:</p>
+
+<pre class="lang:c# decode:true">@{
+    ViewBag.Title = "Index";
+}
+
+&lt;h2&gt;Index&lt;/h2&gt;</pre>
+
+<blockquote>
+<p> Nota: Sempre que criarmos um ActionResult no controller, devemos criar um arquivo cshtml com o mesmo nome para que possa ser chamado quando for feito a requisição via http.</p>
+</blockquote>
+
+<p>O arquivos Index.cshtml é um arquivo html (podemos colocar marcação html neles):</p>
+
+<pre class="lang:c# decode:true">@{
+    ViewBag.Title = "Index";
+}
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Home&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Home&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>Pra executarmos nosso projeto, precisamos fazer um pequeno ajuste no arquivo <em>RouteConfig.cs:</em></p>
+
+<pre class="lang:c# decode:true">public static void RegisterRoutes(RouteCollection routes)
+        {
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Site", action = "Index", id = UrlParameter.Optional }
+            );
+        }</pre>
+
+<p>Essa classe define as rotas do MVC, e o parâmetro defaults é o controller que deve ser chamado quando não é passado nenhum link na url. No nosso caso, usaremos o controller Site, e o action Index, para que a primeira pagina a ser processada será o Index.cshmtl, o resultado está a baixo:<figure id="attachment_179" style="width: 300px" class="wp-caption aligncenter"></p>
+
+<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457578/index_cshtml_t8wqep.png"><img class="size-medium wp-image-179 " alt="Página index.cshtml" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_196,w_300/v1454457578/index_cshtml_t8wqep.png" width="300" height="196" /></a><figcaption class="wp-caption-text">Página index.cshtml</figcaption></figure></p>
+
+<p>O código html gerado fica assim:</p>
+
+<pre class="lang:php decode:true">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Home&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Home&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>Repare que o código gerado fica limpo e nada gerado escondido, que é comum quando se trata de webforms.</p>
+
+<p>Pra finalizar, vamos passar dados do controller para a View, pra isso, abrimos o SiteController.cs e editamos o ActionResult Index, inserindo a seguinte linha:</p>
+
+<pre class="lang:c# decode:true">ViewBag.Mensagem = "Olá MVC";</pre>
+
+<p>Estamos definindo que a variável Titulo receberá a string Olá MVC. Obs: ela deve ser colocada antes do return View().</p>
+
+<p>Depois de definido o valor da variável, devemos colocar ela no arquivo Index.cshtml:</p>
+
+<pre class="lang:default decode:true">@{
+    ViewBag.Title = "Index";
+}
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Home&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;@ViewBag.Mensagem&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<blockquote>
+<p> Pra utilizarmos Csharp no arquivo Index.cshtml devemos sempre começar o código com @ (arroba).</p>
+
+<p>Sempre que fizer atualização no Controller o no Model é preciso recompilar o projeto, mas quando é feito atualização somente na View, não precisa compilar o projeto novamente.</p>
+</blockquote>
+
+<p>Executamos novamente o nosso projeto, e teremos o resultado abaixo:<figure id="attachment_181" style="width: 300px" class="wp-caption aligncenter"></p>
+
+<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457577/index_cshtml_final1_xgty2c.png"><img class="size-medium wp-image-181 " alt="Index.cshtml com ViewBag" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_196,w_300/v1454457577/index_cshtml_final1_xgty2c.png" width="300" height="196" /></a><figcaption class="wp-caption-text">Index.cshtml com ViewBag</figcaption></figure></p>
+
+<p>E o código gerado:</p>
+
+<p>&nbsp;</p>
+
+<pre class="lang:php decode:true">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Home&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Ol&#225; MVC&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</pre>
+
+<p>É isso ai, até mais!</p>
+        </div>
+
+        
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/pegando-valores-via-url-get-usando-csharp-ou-vb-net/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Pegando valores via Url (GET) usando CSharp ou VB.NET
+        </div>
+    </a>
+    
+    
+    <a href="/uikit-uma-outra-alternativa-ao-bootstrap/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">UIkit: uma outra alternativa ao Bootstrap&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Blog do Cezar&nbsp;
+            
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-37762884-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>

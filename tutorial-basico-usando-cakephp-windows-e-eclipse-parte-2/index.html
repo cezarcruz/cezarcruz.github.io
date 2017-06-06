@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutorial básico usando CakePHP, Windows e Eclipse – Parte 2 // Blog do Cezar</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+        <meta property="og:title" content="Tutorial básico usando CakePHP, Windows e Eclipse – Parte 2" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <link href="http://cezarcruz.com.br/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+    <link href="http://cezarcruz.com.br/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="http://cezarcruz.com.br/css/style.css">
+
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    
+    <meta name="generator" content="Hugo 0.21" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+            <a id="logo" class="logo-text" href="http://cezarcruz.com.br/">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Tutorial básico usando CakePHP, Windows e Eclipse – Parte 2</h1>
+        </header>
+        
+        <div class="article-meta">
+            <a href="/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/" class="article-date">
+                <time datetime='2013-06-20T13:11:04.000&#43;00:00' itemprop="datePublished">2013-06-20</time>
+            </a>
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="http://cezarcruz.com.br//categories/outros">Outros</a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>Continuando com a segunda parte do tutorial básico usando CakePHP, Windows e Eclipse.</p>
+
+<p>A primeira parte você encontra <a href="https://cezarcruz.com.br/2013/06/tutorial-basico-usando-cakephp-windows-eclipse-parte1/">aqui</a>, paramos na tela em que é exibido uma mensagem de erro de conexão com o bando de dados no CakePHP, vamos lá.</p>
+
+<p>Primeiro, precisamos criar uma base de dados, como estamos utilizando o Wamp, é só utilizar o phpMyAdmin, para o tutorial, vamos criar um base de dados chamada <strong>cake.</strong></p>
+
+<p>Depois de criado o banco de dados, vamos configurar ele no projeto:</p>
+
+<p>Abra a pasta app-&gt;Config, nessa pasta, encontramos os arquivos relacionados ao configuração do CakePHP, o arquivo que conecta com a base de dados é o database.php.default, o primeiro passo é renomear ele para database.php:</p>
+
+<blockquote>
+<p>No Eclipse, o botão F2, é um atalho para renomear arquivos e pastas.</p>
+</blockquote>
+
+<p>Após renomear o arquivo, vamos configurar a conexão com a base de dados, procure no arquivos por class DATABASE_CONFIG, ela deve esar assim:</p>
+
+<pre class="lang:php decode:true">class DATABASE_CONFIG {
+
+    public $default = array(
+        'datasource' =&gt; 'Database/Mysql',
+        'persistent' =&gt; false,
+        'host' =&gt; 'localhost',
+        'login' =&gt; 'user',
+        'password' =&gt; 'password',
+        'database' =&gt; 'database_name',
+        'prefix' =&gt; '',
+        //'encoding' =&gt; 'utf8',
+    );
+
+    public $test = array(
+        'datasource' =&gt; 'Database/Mysql',
+        'persistent' =&gt; false,
+        'host' =&gt; 'localhost',
+        'login' =&gt; 'user',
+        'password' =&gt; 'password',
+        'database' =&gt; 'test_database_name',
+        'prefix' =&gt; '',
+        //'encoding' =&gt; 'utf8',
+    );
+}</pre>
+
+<p></p>
+
+<p>Devemos alterar apenas o login, password e o database:</p>
+
+<p>&#8216;login&#8217; =&gt; &#8216;root&#8217;, &#8216;password&#8217; =&gt; &#8221;,</p>
+
+<p>&#8216;database&#8217; =&gt; &#8216;cake&#8217;</p>
+
+<p>&nbsp;</p>
+
+<blockquote>
+<p>Lembrando que os dados de conexão pode variar de instalação para instalação, porém, o padrão do Wamp é o que está acima</p>
+</blockquote>
+
+<p>Por fim, seu código deve ficar assim:</p>
+
+<pre class="lang:php decode:true">class DATABASE_CONFIG {
+
+    public $default = array(
+        'datasource' =&gt; 'Database/Mysql',
+        'persistent' =&gt; false,
+        'host' =&gt; 'localhost',
+        'login' =&gt; 'root',
+        'password' =&gt; '',
+        'database' =&gt; 'cake',
+        'prefix' =&gt; '',
+        //'encoding' =&gt; 'utf8',
+    );
+
+    public $test = array(
+        'datasource' =&gt; 'Database/Mysql',
+        'persistent' =&gt; false,
+        'host' =&gt; 'localhost',
+        'login' =&gt; 'user',
+        'password' =&gt; 'password',
+        'database' =&gt; 'test_database_name',
+        'prefix' =&gt; '',
+        //'encoding' =&gt; 'utf8',
+    );
+}</pre>
+
+<p>E ao acessar a pagina via navegador, deveremos ter o seguinte resultado:</p>
+
+<p style="text-align: center;">
+  <a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457599/cake_php_home_final_sem_erros_vnpu2o.png"><img class="size-medium wp-image-60 aligncenter" alt="cake_php_home_final_sem_erros" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_281,w_300/v1454457599/cake_php_home_final_sem_erros_vnpu2o.png" width="300" height="281" /></a>
+</p>
+
+<p>O Ultimo Warning restante é sugerindo a instalação do DebugKit, no momento não teremos utilidade para ele no nosso tutorial, então fica pra próxima 😉</p>
+
+<p>Agora, vamos a parte teórica:</p>
+
+<p style="text-align: center;">
+  <a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457598/estrutura_de_diretorios_cake_hvocmx.png"><img class="size-medium wp-image-61 aligncenter" alt="estrutura_de_diretorios_cake" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_300,w_210/v1454457598/estrutura_de_diretorios_cake_hvocmx.png" width="210" height="300" /></a>
+</p>
+
+<p>Pra esse tutorial a parte mais importante do CakePHP é a que está dentro da pasta app, então não vou entrar em detalhe sobre as outras.</p>
+
+<p>As pastas que utilizamos com mais frequência são Controller, View e Model (M V C):</p>
+
+<p>A pasta Controller é onde colocamos nossos controladores, ou seja, onde trataremos as entradas e saídas da Aplicação.</p>
+
+<p>A pasta Model é onde colocamos a parte que traz dados, não só de uma base de dados.</p>
+
+<p>A pasta View é onde colocamos os arquivos relacionados a layouts (CSS, HTML) e exibição de conteúdo no navegador.</p>
+
+<p>Resumindo:</p>
+
+<p>Quando um usuário requisita uma página, ex: lista de livros, o controller recebe essa requisição, faz uma chamada no model para carregar os livros e envia para a view, que exibe para usuário.</p>
+
+<p>Vamos criar nossa primeira página, mãos a obra.</p>
+
+<p>Como quem recebe as requisições é o controller, então, vamos começar pelo controller:</p>
+
+<p>Na pasta controller, criaremos o arquivo HomeController.php.</p>
+
+<blockquote>
+<p>Por convenção, o controller seguido da palavra Controller iniciada com letra maiúscula. ex: TimesController.php</p>
+
+<p>Quando criamos um controller HomeController.php, queremos dizer ao CakePHP que envie as solicitações <a href="http://localhost/cake/home">http://localhost/cake/home</a> para ele</p>
+</blockquote>
+
+<p>Após criarmos o controller vamos editalo da seguinte forma:</p>
+
+<p>&nbsp;</p>
+
+<pre class="lang:php decode:true">&lt;?php
+class HomeController extends AppController{
+    public function index(){
+
+    } 
+}
+?&gt;</pre>
+
+<p>Aqui uma menção a programação orientada a objetos. =D</p>
+
+<p>Sempre devemos começar nosso controller, declarando class seguido do nome do controller extends AppController</p>
+
+<blockquote>
+<p>Repare que na pasta Controller temos o arquivo AppController.php, devemos (mas não somos obrigados) estender nossa classe dela pois podemos usar ela para carregar algo padrão para todos os outros controllers, um plugin por exemplo, ou desabilitar o uso da base de dados.</p>
+</blockquote>
+
+<p>Na linha seguinte, colocamos public function index() que seria o mesmo que colocar a página index.php, essa será a função a ser executada caso não tenha nenhum parâmetro com a url home.</p>
+
+<p>Sempre que criamos uma function no controller, devemos criar um arquivo .ctp (Cake Template) para que ela seja carregada automaticamente.</p>
+
+<p>Como criamos a <strong>function index</strong> dentro do <strong>controller Home</strong>, devemos criar, dentro da pasta View, uma pasta chamada <strong>Home</strong> e um arquivo chamado <strong>index.ctp</strong></p>
+
+<blockquote>
+<p>Se dentro do controller Home criarmos uma function cadastrar, devemos, dentro de View/Home, criar um arquivos cadastrar.ctp, ele será exibido quando a url for <a href="http://localhost/cake/home/cadastrar">http://localhost/cake/home/cadastrar</a>.</p>
+</blockquote>
+
+<p>Esses arquivos de template é que irá ser exibido no navegador, os arquivos .ctp serão tratados como arquivos php, ou seja, você pode colocar HTML, Css, JS ou Php nele.</p>
+
+<p>Para finalizarmos essa parte do tutorial, faremos o seguinte, coloque o código abaixo no no arquivo index.ctp</p>
+
+<p>&nbsp;</p>
+
+<pre class="lang:php decode:true">&lt;?php echo "HelloCake" ?&gt;</pre>
+
+<p>Feito isso acesse o link <a href="http://localhost/cake/home">http://localhost/cake/home</a>, o resultado será o seguinte:</p>
+
+<p style="text-align: center;">
+  <a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457597/hello_cake_tw5o6d.png"><img class="size-medium wp-image-63 aligncenter" alt="hello_cake" src="http://res.cloudinary.com/cezarcruz-com-br/image/upload/h_163,w_300/v1454457597/hello_cake_tw5o6d.png" width="300" height="162" /></a>
+</p>
+
+<p>Está ai nossa primeira página utilizando o CakePHP, repare que ela já está estilizada, isso acontece porque não definimos nenhum layout, então ele carrega o layout padrão definido pelo CakePHP, em outro tutorial veremos com isso funciona.</p>
+
+<p>Até a próxima.</p>
+        </div>
+
+        
+        
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+        <script>
+            (function() {
+                var $toc = $('#TableOfContents');
+                if ($toc.length > 0) {
+                    var $window = $(window);
+
+                    function onScroll(){
+                        var currentScroll = $window.scrollTop();
+                        var h = $('.article-entry h1, .article-entry h2, .article-entry h3, .article-entry h4, .article-entry h5, .article-entry h6');
+                        var id = "";
+                        h.each(function (i, e) {
+                            e = $(e);
+                            if (e.offset().top - 10 <= currentScroll) {
+                                id = e.attr('id');
+                            }
+                        });
+                        var active = $toc.find('a.active');
+                        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+                        active.each(function (i, e) {
+                            $(e).removeClass('active').siblings('ul').hide();
+                        });
+                        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+                            $(e).children('a').addClass('active').siblings('ul').show();
+                        });
+                    }
+
+                    $window.on('scroll', onScroll);
+                    $(document).ready(function() {
+                        $toc.find('a').parent('li').find('ul').hide();
+                        onScroll();
+                        document.getElementsByClassName('article-toc')[0].style.display = '';
+                    });
+                }
+            })();
+        </script>
+        
+
+
+        
+    </div>
+    <nav id="article-nav">
+    
+    <a href="/como-parar-um-servico-windows-utilizando-csharp/" id="article-nav-newer" class="article-nav-link-wrap">
+        <div class="article-nav-title"><span>&lt;</span>&nbsp;
+            Como parar um serviço Windows utilizando CSharp
+        </div>
+    </a>
+    
+    
+    <a href="/tutorial-basico-usando-cakephp-windows-eclipse-parte1/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Tutorial básico usando CakePHP, Windows e Eclipse – Parte 1&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 Blog do Cezar&nbsp;
+            
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-37762884-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>
