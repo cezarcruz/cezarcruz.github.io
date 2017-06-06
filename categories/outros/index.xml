@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Outros on Blog do Cezar</title>
-    <link>http://cezarcruz.com.br/categories/outros/</link>
+    <link>https://cezarcruz.com.br/categories/outros/</link>
     <description>Recent content in Outros on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
     <lastBuildDate>Wed, 19 Apr 2017 00:47:44 +0000</lastBuildDate>
     
-	<atom:link href="http://cezarcruz.com.br/categories/outros/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://cezarcruz.com.br/categories/outros/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>“Open in Terminal” – Nautilus do fedora</title>
-      <link>http://cezarcruz.com.br/open-in-terminal-nautilus-do-fedora/</link>
+      <link>https://cezarcruz.com.br/open-in-terminal-nautilus-do-fedora/</link>
       <pubDate>Wed, 19 Apr 2017 00:47:44 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/open-in-terminal-nautilus-do-fedora/</guid>
+      <guid>https://cezarcruz.com.br/open-in-terminal-nautilus-do-fedora/</guid>
       <description>Olas,
 Para habilitar esta funcionalidade no nautilus do Fedora eh muito simples, basta rodar os comandos abaixo:
 sudo dnf install nautilus-open-terminal
@@ -27,10 +27,10 @@ Prontinho! =)</description>
     
     <item>
       <title>Resolvendo problema de certificado ao instalar gems do ruby</title>
-      <link>http://cezarcruz.com.br/resolvendo-problema-de-certificado-ao-instalar-gems-do-ruby/</link>
+      <link>https://cezarcruz.com.br/resolvendo-problema-de-certificado-ao-instalar-gems-do-ruby/</link>
       <pubDate>Wed, 21 Dec 2016 11:14:46 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/resolvendo-problema-de-certificado-ao-instalar-gems-do-ruby/</guid>
+      <guid>https://cezarcruz.com.br/resolvendo-problema-de-certificado-ao-instalar-gems-do-ruby/</guid>
       <description>Depois de instalar o Ruby (RubyInstaller) no Windows e tentar utilizar o comando:
 gem install bundler
 O seguinte erro acontecia:
@@ -42,10 +42,10 @@ gem install rubygems-update --source &amp;quot;http://rubygems.org&amp;quot; upd
     
     <item>
       <title>Como instalar drivers nvidia no Elementary OS Loki</title>
-      <link>http://cezarcruz.com.br/como-instalar-drivers-nvidia-no-elementary-os-loki/</link>
+      <link>https://cezarcruz.com.br/como-instalar-drivers-nvidia-no-elementary-os-loki/</link>
       <pubDate>Mon, 12 Sep 2016 14:01:11 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-instalar-drivers-nvidia-no-elementary-os-loki/</guid>
+      <guid>https://cezarcruz.com.br/como-instalar-drivers-nvidia-no-elementary-os-loki/</guid>
       <description>Olás,
 recentemente foi lançado a nova versão do Elementary OS, uma distribuição que tem como meta ser &amp;#8220;Uma alternativa rápida e código aberto ao Windows e macOS&amp;#8221;, após a instalação, como sempre, é necessário instalar os drivers da placa de vídeo, uma forma bem simples é executar esse comando:
 sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples, após a conclusão da instalação, basta reiniciar a maquina e desfrutar. =)</description>
@@ -53,10 +53,10 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
     
     <item>
       <title>Utilizando component no Angular 1.5</title>
-      <link>http://cezarcruz.com.br/usando-component-no-angular-1-5/</link>
+      <link>https://cezarcruz.com.br/usando-component-no-angular-1-5/</link>
       <pubDate>Wed, 22 Jun 2016 01:55:53 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/usando-component-no-angular-1-5/</guid>
+      <guid>https://cezarcruz.com.br/usando-component-no-angular-1-5/</guid>
       <description>&lt;p&gt;Olá,&lt;/p&gt;
 
 &lt;p&gt;Hoje vamos ver uma forma de usar uma nova funcionalidade do Angular 1, o component.&lt;/p&gt;
@@ -68,10 +68,10 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
     
     <item>
       <title>How to create a Sails.JS start app</title>
-      <link>http://cezarcruz.com.br/how-to-create-a-sails-js-start-app/</link>
+      <link>https://cezarcruz.com.br/how-to-create-a-sails-js-start-app/</link>
       <pubDate>Mon, 16 May 2016 15:39:06 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/how-to-create-a-sails-js-start-app/</guid>
+      <guid>https://cezarcruz.com.br/how-to-create-a-sails-js-start-app/</guid>
       <description>&lt;p&gt;Hello folks.&lt;/p&gt;
 
 &lt;p&gt;For this post i think doing something different. I will try to write this post in English. Any question, please, chat me. Thanks.&lt;/p&gt;
@@ -81,10 +81,10 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
     
     <item>
       <title>Como usar uma diretiva de máscara no angular js</title>
-      <link>http://cezarcruz.com.br/como-usar-uma-diretiva-de-mascara-no-angular-js/</link>
+      <link>https://cezarcruz.com.br/como-usar-uma-diretiva-de-mascara-no-angular-js/</link>
       <pubDate>Sun, 13 Sep 2015 20:24:18 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-usar-uma-diretiva-de-mascara-no-angular-js/</guid>
+      <guid>https://cezarcruz.com.br/como-usar-uma-diretiva-de-mascara-no-angular-js/</guid>
       <description>&lt;p&gt;Olás, no tutorial de hoje, vou mostrar como criar um diretiva bem simples utilizando Angular JS para colocar uma máscara de telefone celular com o nono digito em um campo input text.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -92,10 +92,10 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
     
     <item>
       <title>Como utilizar o $http interceptor do Angular.JS</title>
-      <link>http://cezarcruz.com.br/como-utilizar-o-http-interceptor-do-angular-js/</link>
+      <link>https://cezarcruz.com.br/como-utilizar-o-http-interceptor-do-angular-js/</link>
       <pubDate>Fri, 10 Jul 2015 14:12:35 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-utilizar-o-http-interceptor-do-angular-js/</guid>
+      <guid>https://cezarcruz.com.br/como-utilizar-o-http-interceptor-do-angular-js/</guid>
       <description>&lt;p&gt;Olás, hoje uma dica para como utilizar um $http interceptor do Angular.JS.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -103,10 +103,10 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
     
     <item>
       <title>Criando um controller com Angular.JS utilizando padrões</title>
-      <link>http://cezarcruz.com.br/criando-um-controller-com-angular-js-utilizando-padroes/</link>
+      <link>https://cezarcruz.com.br/criando-um-controller-com-angular-js-utilizando-padroes/</link>
       <pubDate>Tue, 28 Apr 2015 02:55:37 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/criando-um-controller-com-angular-js-utilizando-padroes/</guid>
+      <guid>https://cezarcruz.com.br/criando-um-controller-com-angular-js-utilizando-padroes/</guid>
       <description>&lt;p&gt;Ol&lt;span class=&#34;st&#34;&gt;ás&lt;/span&gt;, hoje vamos ver como criar um Controller no Angular.JS utilizando &lt;a href=&#34;https://github.com/johnpapa/angular-styleguide&#34;&gt;styleguide&lt;/a&gt; criado pelo John Papa.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -114,10 +114,10 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
     
     <item>
       <title>Hello Angular.js</title>
-      <link>http://cezarcruz.com.br/hello-angular-js/</link>
+      <link>https://cezarcruz.com.br/hello-angular-js/</link>
       <pubDate>Fri, 19 Dec 2014 00:04:33 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/hello-angular-js/</guid>
+      <guid>https://cezarcruz.com.br/hello-angular-js/</guid>
       <description>&lt;p&gt;Olá, hoje vou escrever um post bem básico de como utilizar &lt;strong&gt;Angular.JS&lt;/strong&gt; no seu próximo projeto.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -125,10 +125,10 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
     
     <item>
       <title>Como navegar por um field manytomany em um template Django</title>
-      <link>http://cezarcruz.com.br/como-navegar-por-um-field-manytomany-em-um-template-django/</link>
+      <link>https://cezarcruz.com.br/como-navegar-por-um-field-manytomany-em-um-template-django/</link>
       <pubDate>Tue, 11 Nov 2014 13:58:36 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-navegar-por-um-field-manytomany-em-um-template-django/</guid>
+      <guid>https://cezarcruz.com.br/como-navegar-por-um-field-manytomany-em-um-template-django/</guid>
       <description>&lt;p&gt;Olás,  hoje mais uma dica curtinha: como navegar por um campo &lt;strong&gt;manytomany&lt;/strong&gt; em um template &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -136,10 +136,10 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
     
     <item>
       <title>Curtinhas: Como exibir o nome do usuário logado em um template django</title>
-      <link>http://cezarcruz.com.br/curtinhas-como-exibir-o-nome-do-usuario-logado-em-um-template-django/</link>
+      <link>https://cezarcruz.com.br/curtinhas-como-exibir-o-nome-do-usuario-logado-em-um-template-django/</link>
       <pubDate>Mon, 10 Nov 2014 11:42:29 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/curtinhas-como-exibir-o-nome-do-usuario-logado-em-um-template-django/</guid>
+      <guid>https://cezarcruz.com.br/curtinhas-como-exibir-o-nome-do-usuario-logado-em-um-template-django/</guid>
       <description>&lt;p&gt;Olá, uma dica curtinha hoje:&lt;/p&gt;
 
 &lt;p&gt;Como exibir o nome do usuário logado em um sistema/site utilizando Django 1.7+.&lt;/p&gt;
@@ -149,10 +149,10 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
     
     <item>
       <title>Como salvar autenticação no repositório local usando GIT</title>
-      <link>http://cezarcruz.com.br/como-salvar-autenticacao-no-repositorio-local-usando-git/</link>
+      <link>https://cezarcruz.com.br/como-salvar-autenticacao-no-repositorio-local-usando-git/</link>
       <pubDate>Thu, 06 Nov 2014 23:49:38 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-salvar-autenticacao-no-repositorio-local-usando-git/</guid>
+      <guid>https://cezarcruz.com.br/como-salvar-autenticacao-no-repositorio-local-usando-git/</guid>
       <description>Uma dica bem curtinha, porém útil:
 Como configurar o git para não pedir senha ao baixar ou subir dados no repositório remoto, para isto, basta entrar no seu repositório local e digitar o comando abaixo:
 git config credential.helper cache Pra salvar apenas por um tempo determinado, utilizar:
@@ -161,10 +161,10 @@ git config credential.helper &#39;cache --timeout=60000&#39; =D</description>
     
     <item>
       <title>Java – Como navegar por ENUMs</title>
-      <link>http://cezarcruz.com.br/java-como-navegar-por-enums/</link>
+      <link>https://cezarcruz.com.br/java-como-navegar-por-enums/</link>
       <pubDate>Thu, 11 Sep 2014 18:37:27 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/java-como-navegar-por-enums/</guid>
+      <guid>https://cezarcruz.com.br/java-como-navegar-por-enums/</guid>
       <description>Olás,
 hoje uma dica rápida pra navegarmos por uma classe java que contenha enums:
 Considerando nosso enum:
@@ -175,10 +175,10 @@ Abraços!</description>
     
     <item>
       <title>Criando um projeto Maven web com o Eclipse JEE</title>
-      <link>http://cezarcruz.com.br/criando-um-projeto-maven-web-com-o-eclipse-jee/</link>
+      <link>https://cezarcruz.com.br/criando-um-projeto-maven-web-com-o-eclipse-jee/</link>
       <pubDate>Sun, 31 Aug 2014 16:11:10 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/criando-um-projeto-maven-web-com-o-eclipse-jee/</guid>
+      <guid>https://cezarcruz.com.br/criando-um-projeto-maven-web-com-o-eclipse-jee/</guid>
       <description>&lt;p&gt;Olás, hoje vamos ver como criar um projeto java web utilizando &lt;a href=&#34;https://cezarcruz.com.br/2014/07/como-instalar-o-maven-windows/&#34; title=&#34;Como instalar o Maven no Windows&#34;&gt;Olás, hoje vamos ver como criar um projeto java web utilizando&lt;/a&gt; e Eclipse JEE/Tomcat.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -186,10 +186,10 @@ Abraços!</description>
     
     <item>
       <title>Como usar Case em select no Oracle</title>
-      <link>http://cezarcruz.com.br/como-usar-case-em-select-no-oracle/</link>
+      <link>https://cezarcruz.com.br/como-usar-case-em-select-no-oracle/</link>
       <pubDate>Wed, 30 Jul 2014 19:51:56 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-usar-case-em-select-no-oracle/</guid>
+      <guid>https://cezarcruz.com.br/como-usar-case-em-select-no-oracle/</guid>
       <description>&lt;p&gt;Olás,&lt;/p&gt;
 
 &lt;p&gt;Hoje uma dica rápida sobre oracle: Como utilizar o &lt;strong&gt;Case&lt;/strong&gt; em um select no Oracle.&lt;/p&gt;
@@ -199,10 +199,10 @@ Abraços!</description>
     
     <item>
       <title>Como instalar o Maven no Windows</title>
-      <link>http://cezarcruz.com.br/como-instalar-o-maven-windows/</link>
+      <link>https://cezarcruz.com.br/como-instalar-o-maven-windows/</link>
       <pubDate>Tue, 08 Jul 2014 14:38:57 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-instalar-o-maven-windows/</guid>
+      <guid>https://cezarcruz.com.br/como-instalar-o-maven-windows/</guid>
       <description>Olás, depois de um tempo parado, voltamos com um post ensinando como instalar o Maven.
 Pra quem não sabe, o Maven é basicamente um repositório de libs/jars, que armazena tudo em um único servidor remoto, com isso, teremos sempre certeza de que todos os ambientes (desenvolvimento e build), estarão com as mesmas versões de dependências, entre outras coisas, pelo Maven é possível realizar testes unitários automatizados.
 Vamos lá, o primeiro passo é ter instalado o JVM no seu sistema, feito isso, não se esqueça de adicionar o JAVA_HOME no path, o próximo passo é baixar o Maven no site:</description>
@@ -210,10 +210,10 @@ Vamos lá, o primeiro passo é ter instalado o JVM no seu sistema, feito isso, n
     
     <item>
       <title>Utilizando timer com JavaScript e AJAX JQuery</title>
-      <link>http://cezarcruz.com.br/utilizando-timer-com-javascript-e-ajax-jquery/</link>
+      <link>https://cezarcruz.com.br/utilizando-timer-com-javascript-e-ajax-jquery/</link>
       <pubDate>Fri, 09 May 2014 12:17:40 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/utilizando-timer-com-javascript-e-ajax-jquery/</guid>
+      <guid>https://cezarcruz.com.br/utilizando-timer-com-javascript-e-ajax-jquery/</guid>
       <description>Olás,
 Hoje uma pequena dica de JavaScript / JQuery: Como fazer um &amp;#8220;Ajax get&amp;#8221; com timer.
 Vamos lá, depois de colocarmos as referencias necessárias para o JQuery, devemos utilizar o seguinte código:
@@ -225,10 +225,10 @@ Na função getData colocamos a chamada ajax:</description>
     
     <item>
       <title>Como adicionar o Lightbox em um site utilizando CakePHP</title>
-      <link>http://cezarcruz.com.br/como-adicionar-o-lightbox-em-um-site-utilizando-cakephp/</link>
+      <link>https://cezarcruz.com.br/como-adicionar-o-lightbox-em-um-site-utilizando-cakephp/</link>
       <pubDate>Sat, 19 Apr 2014 14:50:41 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-adicionar-o-lightbox-em-um-site-utilizando-cakephp/</guid>
+      <guid>https://cezarcruz.com.br/como-adicionar-o-lightbox-em-um-site-utilizando-cakephp/</guid>
       <description>Olás,
 Hoje vamos com uma dica simples e usual: Como utilizar o Lightbox, aquele plugin JQuery para imagens/galeria, com o CakePHP.
 Vamos lá, depois de instalado o CakePHP, podemos utilizar esse tutorial (Como usar javascript e css no CakePHP), pra colocarmos os arquivos do Lightbox no local correto, e fazermos a chamada no nosso arquivo de layout.
@@ -238,10 +238,10 @@ A chamada para os arquivos de CSS e Javascript devem ficar assim:
     
     <item>
       <title>CSS: como personalizar inputs sem utilizar classe</title>
-      <link>http://cezarcruz.com.br/css-como-personalizar-inputs-sem-utilizar-classe/</link>
+      <link>https://cezarcruz.com.br/css-como-personalizar-inputs-sem-utilizar-classe/</link>
       <pubDate>Fri, 28 Mar 2014 19:23:34 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/css-como-personalizar-inputs-sem-utilizar-classe/</guid>
+      <guid>https://cezarcruz.com.br/css-como-personalizar-inputs-sem-utilizar-classe/</guid>
       <description>Olás, vindo aqui hoje só pra manter o blog &amp;#8220;ativo&amp;#8221; heheh, hoje, uma dica bem simples de css pra personalizar textbox (mania de .net) inputs.
 O código é o seguinte:
 input[type=text] { /* regras de estilo aqui. */ } Com o código css acima, não será mais preciso declarar uma classe no e colocar em cada elemento input, lembrando que pode ser utilizado em outros elementos, exemplo:
@@ -250,10 +250,10 @@ input[type=checkbox] { /* estilo aqui */ } Parece bobo e preguiçoso, mas se lev
     
     <item>
       <title>Dica git: .gitignore não está funcionando corretamente</title>
-      <link>http://cezarcruz.com.br/dica-gitignore-nao-esta-funcionando/</link>
+      <link>https://cezarcruz.com.br/dica-gitignore-nao-esta-funcionando/</link>
       <pubDate>Wed, 05 Feb 2014 15:36:20 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/dica-gitignore-nao-esta-funcionando/</guid>
+      <guid>https://cezarcruz.com.br/dica-gitignore-nao-esta-funcionando/</guid>
       <description>Olás, aqui vai um dica rapidinha, pra quem usa Git. Quando atualizamos o .gitignore (arquivo utilizado pra descrever pastas ou arquivos que não devem ser versionados), pode ser que os arquivos que colocamos neles continuem sendo versionados, pra que ele funcione corretamente, devemos limpar o cache local:
 git rm -r --cached .  Rode o comando acima no root do diretório.
 Depois, procedimento padrão:
@@ -262,10 +262,10 @@ git add . git commit -m &amp;quot;.</description>
     
     <item>
       <title>Como escrever textos usando Markdown</title>
-      <link>http://cezarcruz.com.br/como-escrever-textos-usando-markdown/</link>
+      <link>https://cezarcruz.com.br/como-escrever-textos-usando-markdown/</link>
       <pubDate>Fri, 17 Jan 2014 14:36:48 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-escrever-textos-usando-markdown/</guid>
+      <guid>https://cezarcruz.com.br/como-escrever-textos-usando-markdown/</guid>
       <description>&lt;p&gt;Olás, nesse tutorial, vou mostrar como utilizarmos o &lt;strong&gt;Markdown&lt;/strong&gt; para escrevermos textos formatados em Html. Esse tutorial será, basicamente, um spin-off da saga Jekyll.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; é uma ferramenta de conversão texto pra HTML para escrever textos para web. &lt;strong&gt;Markdown&lt;/strong&gt; permite escrever usando um texto fácil de ler e escrever e depois converte em uma estrutura valida de XHTML (ou HTML). Pra uma definição melhor, veja o &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;site do projeto&lt;/a&gt;.&lt;/p&gt;
@@ -275,10 +275,10 @@ git add . git commit -m &amp;quot;.</description>
     
     <item>
       <title>Como utilizar o Jekyll pra criar um blog com páginas estáticas. Jekyll parte 1</title>
-      <link>http://cezarcruz.com.br/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/</link>
+      <link>https://cezarcruz.com.br/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/</link>
       <pubDate>Thu, 16 Jan 2014 00:40:15 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/</guid>
+      <guid>https://cezarcruz.com.br/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;, um software para gerar páginas estáticas usado principalmente pra blogs. Esse tutorial é a primeira parte. O &lt;strong&gt;Jekyll&lt;/strong&gt; é um software gerador de páginas estáticas. Usando arquivos de texto com &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax&#34;&gt;Markdown&lt;/a&gt;, ele cria um site completo, estático, pronto pra ser publicado. A vantagem de gerar um blog, ou um site em html estático, é que não precisamos nos preocupar com muitas camadas de segurança, considerando que eliminamos o interpretador PHP, no caso do WordPress, eliminamos o próprio WordPress, que apesar de ser uma ótima plataforma de blog, pode conter bugs, eliminamos também a necessidade de um servidor de banco de dados (falow MySql 😉 ), e claro,  o desempenho, como só é exibido páginas estáticas, são menos requisições e nada pra processar e pra hospedar apenas páginas estáticas é muito mais barato e até &amp;#8220;di grátis&amp;#8221; hehehehe.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -286,10 +286,10 @@ git add . git commit -m &amp;quot;.</description>
     
     <item>
       <title>Fazendo o CakePHP funcionar milagrosamente em um subdiretório do NGINX</title>
-      <link>http://cezarcruz.com.br/fazendo-o-cakephp-funcionar-milagrosamente-em-subdiretorio-do-nginx/</link>
+      <link>https://cezarcruz.com.br/fazendo-o-cakephp-funcionar-milagrosamente-em-subdiretorio-do-nginx/</link>
       <pubDate>Fri, 01 Nov 2013 13:11:15 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/fazendo-o-cakephp-funcionar-milagrosamente-em-subdiretorio-do-nginx/</guid>
+      <guid>https://cezarcruz.com.br/fazendo-o-cakephp-funcionar-milagrosamente-em-subdiretorio-do-nginx/</guid>
       <description>Olás, uma dica rápida pra fazer o CakePHP rodar satisfatoriamente no NGINX.
 Caso queira saber como instalar o cake, é soh clicar aqui. 😉
 Sem mais delongas, basta abrir o arquivo de configuração do NGINX e adicionar as seguintes linhas, depois das configurações padrões para funcionamento com o PHP:
@@ -298,10 +298,10 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
     
     <item>
       <title>Como instalar o Nginx &#43; PHP &#43; MySql no Ubuntu</title>
-      <link>http://cezarcruz.com.br/como-instalar-o-nginx-php-mysql-no-ubuntu/</link>
+      <link>https://cezarcruz.com.br/como-instalar-o-nginx-php-mysql-no-ubuntu/</link>
       <pubDate>Tue, 22 Oct 2013 12:48:50 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-instalar-o-nginx-php-mysql-no-ubuntu/</guid>
+      <guid>https://cezarcruz.com.br/como-instalar-o-nginx-php-mysql-no-ubuntu/</guid>
       <description>&lt;h2 id=&#34;hoje-uma-dica-bem-simples-como-instalar-o-nginx-servidor-web-php-e-mysql-no-ubuntu&#34;&gt;Hoje uma dica bem simples: como instalar o Nginx (Servidor WEB) + PHP e MySql no Ubuntu.&lt;/h2&gt;
 
 &lt;p&gt;O &lt;strong&gt;Nginx&lt;/strong&gt; (Pronuncia Engine-x) é um concorrente do Apache para servir páginas web. Para servir páginas estáticas, sem dúvidas é muito melhor que o Apache e tem um ganho com páginas dinâmicas também (&lt;a href=&#34;http://systemsarchitect.net/apache2-vs-nginx-for-php-application/&#34;&gt;Apache vs Nginx&lt;/a&gt;). O que pude comprovar é o uso de memória, por exemplo, o &lt;strong&gt;Nginx&lt;/strong&gt; usa bem menos e o tempo de reposta é bem menor quando comparado ao Apache. Vamos lá.&lt;/p&gt;
@@ -311,10 +311,10 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
     
     <item>
       <title>Utilizando multi idiomas no php CodeIgniter</title>
-      <link>http://cezarcruz.com.br/utilizando-multi-idiomas-no-php-codeigniter/</link>
+      <link>https://cezarcruz.com.br/utilizando-multi-idiomas-no-php-codeigniter/</link>
       <pubDate>Tue, 01 Oct 2013 18:23:53 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/utilizando-multi-idiomas-no-php-codeigniter/</guid>
+      <guid>https://cezarcruz.com.br/utilizando-multi-idiomas-no-php-codeigniter/</guid>
       <description>&lt;h2 id=&#34;esse-é-o-primeiro-post-falando-de-codeiginiter&#34;&gt;Esse é o primeiro post falando de &lt;strong&gt;CodeIginiter&lt;/strong&gt;.&lt;/h2&gt;
 
 &lt;p&gt;Vamos lá, nesse tutorial vamos tentar aprender como utilizar o multi idioma em uma aplicação utilizando &lt;strong&gt;CodeIginiter&lt;/strong&gt;, daqui pra frente, apenas CI.&lt;/p&gt;
@@ -326,10 +326,10 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
     
     <item>
       <title>Como utilizar _Layout.cshtml no ASP.NET MVC 4</title>
-      <link>http://cezarcruz.com.br/como-utilizar-_layout-cshtml-no-asp-net-mvc-4/</link>
+      <link>https://cezarcruz.com.br/como-utilizar-_layout-cshtml-no-asp-net-mvc-4/</link>
       <pubDate>Fri, 13 Sep 2013 12:37:24 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-utilizar-_layout-cshtml-no-asp-net-mvc-4/</guid>
+      <guid>https://cezarcruz.com.br/como-utilizar-_layout-cshtml-no-asp-net-mvc-4/</guid>
       <description>&lt;p&gt;Nesse tutorial vamos aprender como utilizar o arquivo de _Layout.cshtml no nosso &lt;a href=&#34;https://cezarcruz.com.br/blog/2013/09/criando-o-primeiro-projeto-aspnet-mvc-com-csharp/&#34; target=&#34;_blank&#34;&gt;primeiro projeto MVC 4&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Assim como no Web Forms com seu Master Page, o MVC tem o seu arquivo master também, porém ele é chamado de _Layout.cshtml, nele colocamos nosso layout padrão de páginas.&lt;/p&gt;
@@ -339,10 +339,10 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
     
     <item>
       <title>Pegando valores via Url (GET) usando CSharp ou VB.NET</title>
-      <link>http://cezarcruz.com.br/pegando-valores-via-url-get-usando-csharp-ou-vb-net/</link>
+      <link>https://cezarcruz.com.br/pegando-valores-via-url-get-usando-csharp-ou-vb-net/</link>
       <pubDate>Mon, 09 Sep 2013 18:26:46 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/pegando-valores-via-url-get-usando-csharp-ou-vb-net/</guid>
+      <guid>https://cezarcruz.com.br/pegando-valores-via-url-get-usando-csharp-ou-vb-net/</guid>
       <description>Dica rápida pra pegar valores (GET) em urls em ASP .NET:
 Temos o seguinte link:
 http://exemplo.com/pag.aspx?rel=valor&amp;amp;lang=br
@@ -355,10 +355,10 @@ For Each param As String In Request.QueryString() Response.Write(Request.QuerySt
     
     <item>
       <title>Criando o primeiro projeto ASPNET MVC com CSharp</title>
-      <link>http://cezarcruz.com.br/criando-o-primeiro-projeto-aspnet-mvc-com-csharp/</link>
+      <link>https://cezarcruz.com.br/criando-o-primeiro-projeto-aspnet-mvc-com-csharp/</link>
       <pubDate>Mon, 02 Sep 2013 12:31:21 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/criando-o-primeiro-projeto-aspnet-mvc-com-csharp/</guid>
+      <guid>https://cezarcruz.com.br/criando-o-primeiro-projeto-aspnet-mvc-com-csharp/</guid>
       <description>&lt;p&gt;Fala pessoal,&lt;/p&gt;
 
 &lt;p&gt;nesse post vou mostrar como criar a nossa primeira página ASP.NET MVC.&lt;/p&gt;
@@ -370,20 +370,20 @@ For Each param As String In Request.QueryString() Response.Write(Request.QuerySt
     
     <item>
       <title>UIkit: uma outra alternativa ao Bootstrap</title>
-      <link>http://cezarcruz.com.br/uikit-uma-outra-alternativa-ao-bootstrap/</link>
+      <link>https://cezarcruz.com.br/uikit-uma-outra-alternativa-ao-bootstrap/</link>
       <pubDate>Wed, 14 Aug 2013 14:03:58 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/uikit-uma-outra-alternativa-ao-bootstrap/</guid>
+      <guid>https://cezarcruz.com.br/uikit-uma-outra-alternativa-ao-bootstrap/</guid>
       <description>Como mostrei nesse post uma alternativa ao bootsrap , nesse post vou &amp;#8220;mostrar&amp;#8221; (entenda como colocar o link para o site) um outro framework que é uma ótima alternativa ao velho bootsrap.
 Como falei no outro post, o Bootstrap não é ruim, mas se dermos uma olhada em alguns sites por ai, será muito fácil nos depararmos com o bootstrap, então, para que nosso site ou sistema não seja mais um igual ao boostrap, o UIkit é uma alternativa a se considerar.</description>
     </item>
     
     <item>
       <title>Dica: CMS para blog utilizando ASP.NET / CSharp</title>
-      <link>http://cezarcruz.com.br/dica-cms-para-blog-utilizando-aspnet-csharp/</link>
+      <link>https://cezarcruz.com.br/dica-cms-para-blog-utilizando-aspnet-csharp/</link>
       <pubDate>Mon, 05 Aug 2013 18:53:22 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/dica-cms-para-blog-utilizando-aspnet-csharp/</guid>
+      <guid>https://cezarcruz.com.br/dica-cms-para-blog-utilizando-aspnet-csharp/</guid>
       <description>O CMS que irei mostrar aqui é o BlogEngine, feito em CSharp e roda no IIS, uma boa alternativa ao WordPress para que usar servidor Windows.
 O BlogEngine é uma ferramenta grátis para criação de blogs, que utiliza ASP.NET/CSharp no seu código fonte e para o armazenamento de dados utiliza como padrão arquivos XML.
 É muito útil pra quem quer ter um blog e não quer usar o WordPress ou mesmo não sabia que existe esse tipo de ferramentas em .</description>
@@ -391,20 +391,20 @@ O BlogEngine é uma ferramenta grátis para criação de blogs, que utiliza ASP.
     
     <item>
       <title>Programando PHP do jeito certo</title>
-      <link>http://cezarcruz.com.br/programando-php-do-jeito-certo/</link>
+      <link>https://cezarcruz.com.br/programando-php-do-jeito-certo/</link>
       <pubDate>Mon, 05 Aug 2013 14:09:13 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/programando-php-do-jeito-certo/</guid>
+      <guid>https://cezarcruz.com.br/programando-php-do-jeito-certo/</guid>
       <description>Um grande problema pra quem está aprendendo uma linguagem de programação nova é como fazer as coisas da maneira certa, navegando pelo Facebook, encontrei uma dica muito bacana de como programar PHP do jeito certo, tudo que você precisa está nesse site: http://br.phptherightway.com/
  É importante entender que não existe uma maneira canônica de usar PHP. Essa é a graça. Este site introduz novos desenvolvedores PHP às melhores práticas, opções disponíveis e boas informações.</description>
     </item>
     
     <item>
       <title>Como usar Javascript e CSS no CakePHP</title>
-      <link>http://cezarcruz.com.br/como-usar-javascript-e-css-no-cakephp/</link>
+      <link>https://cezarcruz.com.br/como-usar-javascript-e-css-no-cakephp/</link>
       <pubDate>Fri, 26 Jul 2013 13:27:09 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-usar-javascript-e-css-no-cakephp/</guid>
+      <guid>https://cezarcruz.com.br/como-usar-javascript-e-css-no-cakephp/</guid>
       <description>&lt;p&gt;Olá, hoje mais uma dica sobre CakePHP, vou ensinar como colocar CSS e Javascript corretamente no seu projeto CakePHP.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -412,10 +412,10 @@ O BlogEngine é uma ferramenta grátis para criação de blogs, que utiliza ASP.
     
     <item>
       <title>Dica rapida: Foundation 4 uma alternativa ao Bootsrap</title>
-      <link>http://cezarcruz.com.br/dica-rapida-foundation-4-uma-alternativa-ao-bootsrap/</link>
+      <link>https://cezarcruz.com.br/dica-rapida-foundation-4-uma-alternativa-ao-bootsrap/</link>
       <pubDate>Tue, 23 Jul 2013 17:07:31 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/dica-rapida-foundation-4-uma-alternativa-ao-bootsrap/</guid>
+      <guid>https://cezarcruz.com.br/dica-rapida-foundation-4-uma-alternativa-ao-bootsrap/</guid>
       <description>Pra quem está cansado de usar o Twitter Bootstrap, não que ele seja ruim, muito pelo contrario, sugiro a utilização do Foundation 4.
 O Foundation 4 é uma biblioteca muito útil para padronizar a visualização de um site, ele é uma biblioteca bem completa, conheci a pouco tempo e comecei os estudos.
 Pra baixar a versão mais recente, basta entrar no site do projeto: http://foundation.zurb.com
@@ -424,10 +424,10 @@ Logo mais, postarei como começar a tirar proveito dele e fujir um pouco do boot
     
     <item>
       <title>Como criar um repositório SVN no Dropbox [deprecated]</title>
-      <link>http://cezarcruz.com.br/como-criar-um-repositorio-svn-no-dropbox/</link>
+      <link>https://cezarcruz.com.br/como-criar-um-repositorio-svn-no-dropbox/</link>
       <pubDate>Tue, 23 Jul 2013 14:59:18 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-criar-um-repositorio-svn-no-dropbox/</guid>
+      <guid>https://cezarcruz.com.br/como-criar-um-repositorio-svn-no-dropbox/</guid>
       <description>&lt;p&gt;Um requisito básico para programar, talvez até antes de uma IDE, é uma forma de armazenar os códigos com segurança e se for com controle de versão, melhor ainda.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -435,10 +435,10 @@ Logo mais, postarei como começar a tirar proveito dele e fujir um pouco do boot
     
     <item>
       <title>Como instalar Apache &#43; PHP &#43; MySQL no Ubuntu</title>
-      <link>http://cezarcruz.com.br/como-instalar-apache-php-mysql-no-ubuntu/</link>
+      <link>https://cezarcruz.com.br/como-instalar-apache-php-mysql-no-ubuntu/</link>
       <pubDate>Tue, 02 Jul 2013 15:54:23 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-instalar-apache-php-mysql-no-ubuntu/</guid>
+      <guid>https://cezarcruz.com.br/como-instalar-apache-php-mysql-no-ubuntu/</guid>
       <description>&lt;p&gt;Olás, nesse tutorial veremos como instalar e configurar o Ubuntu para rodar nossos sites em PHP.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -446,10 +446,10 @@ Logo mais, postarei como começar a tirar proveito dele e fujir um pouco do boot
     
     <item>
       <title>Como parar um serviço Windows utilizando CSharp</title>
-      <link>http://cezarcruz.com.br/como-parar-um-servico-windows-utilizando-csharp/</link>
+      <link>https://cezarcruz.com.br/como-parar-um-servico-windows-utilizando-csharp/</link>
       <pubDate>Fri, 21 Jun 2013 12:22:39 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-parar-um-servico-windows-utilizando-csharp/</guid>
+      <guid>https://cezarcruz.com.br/como-parar-um-servico-windows-utilizando-csharp/</guid>
       <description>Saindo um pouco do PHP, vamos para a plataforma .NET, nesse tutorial (guia rápido hehhehe), vou ensinar como parar e subir um serviço Windows utilizando CSharp, vamos lá.
 Primeiro, vamos intanciar o ServiceController passando como o parâmetro o nome do serviço que iremos gerenciar
 using System.ServiceProcess; ServiceController service = new ServiceController(&#34;xxxservico&#34;); Aqui como paramos o serviço
@@ -458,10 +458,10 @@ if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();   P
     
     <item>
       <title>Tutorial básico usando CakePHP, Windows e Eclipse – Parte 2</title>
-      <link>http://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/</link>
+      <link>https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/</link>
       <pubDate>Thu, 20 Jun 2013 13:11:04 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/</guid>
+      <guid>https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/</guid>
       <description>&lt;p&gt;Continuando com a segunda parte do tutorial básico usando CakePHP, Windows e Eclipse.&lt;/p&gt;
 
 &lt;p&gt;A primeira parte você encontra &lt;a href=&#34;https://cezarcruz.com.br/2013/06/tutorial-basico-usando-cakephp-windows-eclipse-parte1/&#34;&gt;aqui&lt;/a&gt;, paramos na tela em que é exibido uma mensagem de erro de conexão com o bando de dados no CakePHP, vamos lá.&lt;/p&gt;
@@ -508,10 +508,10 @@ if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();   P
     
     <item>
       <title>Tutorial básico usando CakePHP, Windows e Eclipse – Parte 1</title>
-      <link>http://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-eclipse-parte1/</link>
+      <link>https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-eclipse-parte1/</link>
       <pubDate>Tue, 18 Jun 2013 12:33:16 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-eclipse-parte1/</guid>
+      <guid>https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-eclipse-parte1/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457626/cake-logo_ns8tdv.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-42&#34; src=&#34;http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457626/cake-logo_ns8tdv.png&#34; alt=&#34;cake-logo&#34; width=&#34;180&#34; height=&#34;180&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Olá, nesse tutorial gostaria de ensinar de uma forma bem básica, como rodar o Framework CakePHP no Windows e escrever algum código usando o Eclipse.&lt;/p&gt;
@@ -525,10 +525,10 @@ if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();   P
     
     <item>
       <title>Saber qual é o navegador usando PHP</title>
-      <link>http://cezarcruz.com.br/saber-qual-e-o-navegador-usando-php/</link>
+      <link>https://cezarcruz.com.br/saber-qual-e-o-navegador-usando-php/</link>
       <pubDate>Thu, 13 Jun 2013 15:29:38 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/saber-qual-e-o-navegador-usando-php/</guid>
+      <guid>https://cezarcruz.com.br/saber-qual-e-o-navegador-usando-php/</guid>
       <description>Dica rápida para descobrir qual navegador está acessando sua aplicação php:
 &amp;lt;?php
 $navegador = $_SERVER[&amp;#8216;HTTP_USER_AGENT&amp;#8217;];
@@ -543,10 +543,10 @@ Internet Explorer: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Tri
     
     <item>
       <title>Como deixar uma div transparente (CSS)</title>
-      <link>http://cezarcruz.com.br/como-deixar-uma-div-transparente-css/</link>
+      <link>https://cezarcruz.com.br/como-deixar-uma-div-transparente-css/</link>
       <pubDate>Thu, 13 Jun 2013 03:20:05 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/como-deixar-uma-div-transparente-css/</guid>
+      <guid>https://cezarcruz.com.br/como-deixar-uma-div-transparente-css/</guid>
       <description>Olás,
 aqui não é bem um tutorial, está mais para uma dica:
 Se você quer deixar sua div transparente, você pode utilizar isso, por exemplo, pra deixar a imagem de background visível, deve ser inserido no seu css a seguinte regra:
@@ -555,10 +555,10 @@ Se você quer deixar sua div transparente, você pode utilizar isso, por exemplo
     
     <item>
       <title>Hostinger Brasil, hospedagem gratuita</title>
-      <link>http://cezarcruz.com.br/hostinger-brasil-hospedagem-gratuita/</link>
+      <link>https://cezarcruz.com.br/hostinger-brasil-hospedagem-gratuita/</link>
       <pubDate>Thu, 13 Jun 2013 03:19:23 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/hostinger-brasil-hospedagem-gratuita/</guid>
+      <guid>https://cezarcruz.com.br/hostinger-brasil-hospedagem-gratuita/</guid>
       <description>Olá, nesse post vou falar um pouco da Hostinger Brasil, um serviço de hospedagem PHP e MySQL que é gratuito e oferece bons recurso.
 Conheci a Hostinger Brasil por acaso, queria hospedar um site em PHP, mais pra conhecer melhor a linguagem, e me deparei com a Hostinger Brasil.
 A Hostinger Brasil oferece 3 tipos de planos de hospedagem: Gratuito, Premium e Busines.
@@ -567,10 +567,10 @@ O plano gratuito já resolve muitos problemas de quem está iniciando ou querend
     
     <item>
       <title>Por que criar um blog?</title>
-      <link>http://cezarcruz.com.br/porque/</link>
+      <link>https://cezarcruz.com.br/porque/</link>
       <pubDate>Thu, 13 Jun 2013 03:18:29 +0000</pubDate>
       
-      <guid>http://cezarcruz.com.br/porque/</guid>
+      <guid>https://cezarcruz.com.br/porque/</guid>
       <description>Na verdade gostaria de fazer desse blog uma base de conhecimento, tanto pra mim como pra quem precisar de uma ajudinha, e um local onde eu possa compartilhar meus estudos.</description>
     </item>
     
