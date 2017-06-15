@@ -218,6 +218,11 @@
   </url>
   
   <url>
+    <loc>https://cezarcruz.com.br/author/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cezarcruz.com.br/</loc>
     <lastmod>2017-04-19T00:47:44+00:00</lastmod>
     <priority>0</priority>
@@ -225,6 +230,12 @@
   
   <url>
     <loc>https://cezarcruz.com.br/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/author/cezar-cruz/</loc>
+    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
     <priority>0</priority>
   </url>
   
