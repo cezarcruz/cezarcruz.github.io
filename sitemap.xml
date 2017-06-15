@@ -218,6 +218,12 @@
   </url>
   
   <url>
+    <loc>https://cezarcruz.com.br/tags/angularjs/</loc>
+    <lastmod>2015-09-13T20:24:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cezarcruz.com.br/author/</loc>
     <priority>0</priority>
   </url>
@@ -240,6 +246,30 @@
   </url>
   
   <url>
+    <loc>https://cezarcruz.com.br/tags/eclipse/</loc>
+    <lastmod>2014-08-31T16:11:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/tags/java/</loc>
+    <lastmod>2014-08-31T16:11:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/tags/javascript/</loc>
+    <lastmod>2015-09-13T20:24:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/tags/maven/</loc>
+    <lastmod>2014-08-31T16:11:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cezarcruz.com.br/categories/outros/</loc>
     <lastmod>2017-04-19T00:47:44+00:00</lastmod>
     <priority>0</priority>
@@ -253,6 +283,7 @@
   
   <url>
     <loc>https://cezarcruz.com.br/tags/</loc>
+    <lastmod>2015-09-13T20:24:18+00:00</lastmod>
     <priority>0</priority>
   </url>
   

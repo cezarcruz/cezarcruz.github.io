@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angularjs on Blog do Cezar</title>
+    <link>https://cezarcruz.com.br/tags/angularjs/</link>
+    <description>Recent content in Angularjs on Blog do Cezar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Sun, 13 Sep 2015 20:24:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://cezarcruz.com.br/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como usar uma diretiva de máscara no angular js</title>
+      <link>https://cezarcruz.com.br/como-usar-uma-diretiva-de-mascara-no-angular-js/</link>
+      <pubDate>Sun, 13 Sep 2015 20:24:18 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/como-usar-uma-diretiva-de-mascara-no-angular-js/</guid>
+      <description>&lt;p&gt;Olás, no tutorial de hoje, vou mostrar como criar um diretiva bem simples utilizando Angular JS para colocar uma máscara de telefone celular com o nono digito em um campo input text.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
