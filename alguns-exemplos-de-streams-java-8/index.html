@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Blog do Cezar - Alguns exemplos de streams java 8</title>
+
+        <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="Veja algumas formas básicas de utilizar a api de Stream do Java 8">
+    <meta name="keywords" content="">
+    <meta name="author" content="Cezar Cruz">
+    <link rel="canonical" href="https://cezarcruz.com.br/alguns-exemplos-de-streams-java-8/">
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cezarcruz.com.br/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cezarcruz.com.br/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cezarcruz.com.br/favicon-16x16.png">
+    <link rel="manifest" href="https://cezarcruz.com.br/manifest.json">
+    <link rel="mask-icon" href="https://cezarcruz.com.br/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cezarcruz.com.br/css/style.css">
+    
+    <meta name="generator" content="Hugo 0.22" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="" href="javascript:;">
+                <div class="main-nav-toggle"></div>
+                <div class="main-nav-toggle"></div>
+                <div class="main-nav-toggle"></div>
+            </a>
+            <a id="logo" class="logo-text" href="https://cezarcruz.com.br">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+                <a class="main-nav-link" href="https://cezarcruz.com.br/sobre/">Sobre</a>
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                    <form method="get" id="search" action="https://duckduckgo.com/">
+                        <input type="hidden" name="sites" value="https://cezarcruz.com.br"/>
+                        <input type="hidden" name="k8" value="#444444"/>
+                        <input type="hidden" name="k9" value="#D51920"/>
+                        <input type="hidden" name="kt" value="h"/>
+                        <input type="submit" value="" style="visibility: hidden;" />
+                        <input type="text" name="q" maxlength="255" placeholder="Faça sua busca&hellip;"/>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Alguns exemplos de streams java 8</h1>
+        </header>
+        
+        <div class="article-meta">
+            
+                <time class="article-date" datetime='2017-06-15T09:59:51.000-03:00' itemprop="datePublished">15/06/2017</time>
+            
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="https://cezarcruz.com.br/categories/java">Java</a>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="article-comment-link-wrap">
+                <a href="https://cezarcruz.com.br/alguns-exemplos-de-streams-java-8/#disqus_thread" class="article-comment-link">Comments</a>
+            </div>
+            
+            
+                <div class="article-comment-link-wrap">                            
+                        <span class="tb-author">por <a href="https://cezarcruz.com.br/author/cezar-cruz">Cezar Cruz</a></span>
+                </div>
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>Olas, hoje iremos ver algumas formas básicas de utilizar a api de Stream do Java 8.</p>
+
+<p></p>
+
+<p>A ideia é ser bem pratico, então, vamos ao exemplo:</p>
+
+<p>O primeiro passo é criar uma lista, no nosso caso, uma lista de Strings:</p>
+
+<pre><code>    final List&lt;String&gt; stringList = new ArrayList&lt;&gt;();
+
+    stringList.add(&quot;Brasil&quot;);
+    stringList.add(&quot;Argentina&quot;);
+    stringList.add(&quot;Chile&quot;);
+    stringList.add(&quot;Equador&quot;);
+    stringList.add(&quot;Brasil&quot;);
+</code></pre>
+
+<p>O ação obvia é iterar esta lista e imprimir seus itens, nada mais útil que nosso System.out:</p>
+
+<pre><code>    stringList.forEach(s -&gt; {
+        System.out.println(s);
+    });
+</code></pre>
+
+<p>No exemplo acima, podemos ler da seguinte forma:
+<strong>para cada item s da lista stringList passamos um método que faz algo com s</strong></p>
+
+<p>Repare que estamos utilizando &ldquo;thin arrow&rdquo; -&gt; e passamos entre chaves {} a ação.</p>
+
+<p>Em casos onde a ação é realizada com apenas 1 linha, podemos simplificar para:</p>
+
+<pre><code>stringList.forEach(s -&gt; System.out.println(s));
+</code></pre>
+
+<p>Ou ainda:</p>
+
+<pre><code>stringList.forEach(System.out::println);
+</code></pre>
+
+<p>Lembre sempre da tipagem da lista e do seu método.</p>
+
+<p>Outra acao que pode ser feita utilizando a api de Streams e&rsquo; filtrar uma lista utilizando o método <em>filter</em>, veja o exemplo abaixo:</p>
+
+<pre><code>stringList.stream().filter((s -&gt; s.equals(&quot;Brasil&quot;))).forEach(System.out::println);
+</code></pre>
+
+<p>O input do método <em>filter</em> e&rsquo; o mesmo do <em>forEach</em>: 1 item por vez da lista. No entanto, o método que ele recebe deve retornar um boolean. Basicamente ele itera a lista item por item e executa o método em cada um, sempre que o resultado for true, ele guarda em uma lista temporária, ao final da iteração ele retorna esses itens em uma nova lista (no nosso exemplo, sera impresso todos os itens que forem igual &lsquo;Brasil&rsquo;).
+Repare que o retorno do filter e&rsquo; uma Stream de itens, então, é possível iterar essa lista com um <em>forEach</em>, igual ao primeiro exemplo.</p>
+
+<p>Também e&rsquo; possível guardar o itens de um filter em um List, basta usar o código abaixo:</p>
+
+<pre><code>List&lt;String&gt; brasilList = stringList.stream().filter((s -&gt; s.equals(&quot;Brasil&quot;))).collect(Collectors.toList());
+</code></pre>
+
+<p>Como o método <em>filter</em> retornar um &ldquo;Stream&rdquo; é necessário transformar em um &ldquo;List&rdquo;, para isso utilizamos o método <em>collect(Collectors.toList())</em></p>
+
+<p>Podemo utilizar a Api de Streams para remover os itens duplicados de uma lista, simplesmente utilizando o método <em>distinct</em>:</p>
+
+<pre><code>stringList.stream().distinct().forEach(System.out::println);
+</code></pre>
+
+<p>O código acima ira remover todos os itens duplicados da lista e ira imprimir na tela o resultado.</p>
+
+<p>Outra funcionalidade muito útil é transformar uma lista de um tipo para outro, para isso utilizamos o método <em>map</em>. No exemplo abaixo iremos transformar a nossa lista de string em uma lista de números:</p>
+
+<pre><code>stringList.stream().map((String::length)).forEach(System.out::println);
+</code></pre>
+
+<p>E para guardar os itens retornados do map, simples:</p>
+
+<pre><code>List&lt;Integer&gt; integerStream = stringList.stream().map(String::length).collect(Collectors.toList());
+</code></pre>
+
+<p>Por fim, nunca devemos esquecer que podemos chamar vários métodos da api de streams em sequencia:</p>
+
+<pre><code>stringList.stream().distinct().sorted().forEach(System.out::println);
+</code></pre>
+
+<p>O código acima faz a seguinte ação: <strong>dado uma lista de strings ele remove todo os itens duplicados utilizando <em>distinct</em> depois ordena com o método <em>sorted</em> e por fim imprime o resultado na tela.</strong></p>
+
+<p>Bom e&rsquo; isso pessoal, essa foi uma passada bem básica na api de streams do Java 8, para saber mais, visite o link abaixo:</p>
+
+<p><a href="http://www.oracle.com/technetwork/pt/articles/java/streams-api-java-8-3410098-ptb.html">http://www.oracle.com/technetwork/pt/articles/java/streams-api-java-8-3410098-ptb.html</a></p>
+
+<p>Abraços.</p>
+        </div>
+        
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://cezarcruz.com.br/tags/java">Java
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    
+    <a href="https://cezarcruz.com.br/open-in-terminal-nautilus-do-fedora/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">“Open in Terminal” – Nautilus do fedora&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+                    
+            <div id="disqus_thread"></div>
+            <script>
+
+            
+
+            
+
+            (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://cezarcruz.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Blog do Cezar @ 2017
+            
+        </div>
+    </div>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-37762884-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>

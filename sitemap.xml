@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cezarcruz.com.br/alguns-exemplos-de-streams-java-8/</loc>
+    <lastmod>2017-06-15T09:59:51-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cezarcruz.com.br/open-in-terminal-nautilus-do-fedora/</loc>
     <lastmod>2017-04-19T00:47:44+00:00</lastmod>
   </url>
@@ -230,7 +235,7 @@
   
   <url>
     <loc>https://cezarcruz.com.br/</loc>
-    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
+    <lastmod>2017-06-15T09:59:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -241,7 +246,7 @@
   
   <url>
     <loc>https://cezarcruz.com.br/author/cezar-cruz/</loc>
-    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
+    <lastmod>2017-06-15T09:59:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -252,8 +257,14 @@
   </url>
   
   <url>
+    <loc>https://cezarcruz.com.br/categories/java/</loc>
+    <lastmod>2017-06-15T09:59:51-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cezarcruz.com.br/tags/java/</loc>
-    <lastmod>2014-08-31T16:11:10+00:00</lastmod>
+    <lastmod>2017-06-15T09:59:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -277,7 +288,7 @@
   
   <url>
     <loc>https://cezarcruz.com.br/post/</loc>
-    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
+    <lastmod>2017-06-15T09:59:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
