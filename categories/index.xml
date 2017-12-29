@@ -6,9 +6,46 @@
     <description>Recent content in Categories on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
+    <lastBuildDate>Tue, 28 Apr 2015 02:55:37 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angularjs</title>
+      <link>https://cezarcruz.com.br/categories/angularjs/</link>
+      <pubDate>Tue, 28 Apr 2015 02:55:37 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/angularjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Css</title>
+      <link>https://cezarcruz.com.br/categories/css/</link>
+      <pubDate>Thu, 13 Jun 2013 03:20:05 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eclipse</title>
+      <link>https://cezarcruz.com.br/categories/eclipse/</link>
+      <pubDate>Sun, 31 Aug 2014 16:11:10 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/eclipse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://cezarcruz.com.br/categories/git/</link>
+      <pubDate>Thu, 06 Nov 2014 23:49:38 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/git/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Java</title>
@@ -16,6 +53,33 @@
       <pubDate>Thu, 15 Jun 2017 09:59:51 -0300</pubDate>
       
       <guid>https://cezarcruz.com.br/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://cezarcruz.com.br/categories/javascript/</link>
+      <pubDate>Tue, 28 Apr 2015 02:55:37 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://cezarcruz.com.br/categories/linux/</link>
+      <pubDate>Mon, 12 Sep 2016 14:01:11 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>https://cezarcruz.com.br/categories/maven/</link>
+      <pubDate>Sun, 31 Aug 2014 16:11:10 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/maven/</guid>
       <description></description>
     </item>
     

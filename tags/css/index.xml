@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css on Blog do Cezar</title>
+    <link>https://cezarcruz.com.br/tags/css/</link>
+    <description>Recent content in Css on Blog do Cezar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Thu, 13 Jun 2013 03:20:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://cezarcruz.com.br/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como deixar uma div transparente (CSS)</title>
+      <link>https://cezarcruz.com.br/como-deixar-uma-div-transparente-css/</link>
+      <pubDate>Thu, 13 Jun 2013 03:20:05 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/como-deixar-uma-div-transparente-css/</guid>
+      <description>Olás,
+aqui não é bem um tutorial, está mais para uma dica:
+Se você quer deixar sua div transparente, você pode utilizar isso, por exemplo, pra deixar a imagem de background visível, deve ser inserido no seu css a seguinte regra:
+.transparente{ background: rgb(0, 0, 0) transparent; background: rgba(0, 0, 0, 0.7); /* Para navegadores IE 5.5 - 7 */ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#000000, endColorstr=#000000); /* Para navegadores IE 8 */ -ms-filter: &#34;progid:DXImageTransform.Microsoft.gradient(startColorstr=#000000, endColorstr=#000000)&#34;</description>
+    </item>
+    
+  </channel>
+</rss>
