@@ -21,7 +21,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cezarcruz.com.br/css/style.css">
     
-    <meta name="generator" content="Hugo 0.31.1" />
+    <meta name="generator" content="Hugo 0.32.1" />
 </head>
 
 <body>
@@ -56,6 +56,63 @@
     </div>
 </header>
     <section id="main" class="outer">
+        
+        <article class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-inner">
+                
+                
+                <header class="article-header">
+                    <h1 itemprop="name"><a class="article-title" href="https://cezarcruz.com.br/saber-qual-e-o-navegador-usando-php/">Saber qual é o navegador usando PHP</a></h1>
+                </header>
+                
+                <div class="article-meta">
+                    
+                        <time class="article-date" datetime='2013-06-13T15:29:38.000&#43;00:00' itemprop="datePublished">13/06/2013</time>
+                    
+                    
+                    
+                    <div class="post-categories">
+                        <div class="article-category">
+                            
+                            
+                            <a class="article-category-link" href="https://cezarcruz.com.br/categories/outros">Outros</a>
+                            
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="article-comment-link-wrap">
+                        <a href="https://cezarcruz.com.br/saber-qual-e-o-navegador-usando-php/#disqus_thread" class="article-comment-link">Comentários</a>
+                    </div>
+                    
+                    
+                        <div class="article-comment-link-wrap">                            
+                             <span class="tb-author">por <a href="https://cezarcruz.com.br/author/cezar-cruz">Cezar Cruz</a></span>
+                        </div>
+                    
+                </div>
+                <div class="article-entry" itemprop="articleBody">
+                    <p>
+                        
+                    Dica rápida para descobrir qual navegador está acessando sua aplicação php:
+&lt;?php
+$navegador = $_SERVER[&#8216;HTTP_USER_AGENT&#8217;];
+echo $navegado;
+?&gt;
+A variável $navegador guarda a informação de $_SERVER[&#8216;HTTP_USER_AGENT&#8217;], que é ecoada na linha abaixo.
+O array $_SERVER[] contem algumas informações uteis, todas descritas aqui: http://php.net/manual/pt_BR/reserved.variables.server.php
+As saídas padrão são:
+Firefox: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0
+Internet Explorer: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.
+                    </p>
+                    <p class="article-more-link">
+                        <a href="https://cezarcruz.com.br/saber-qual-e-o-navegador-usando-php/">Leia mais</a>
+                    </p>
+                </div>
+
+                
+            </div>
+        </article>
         
         <article class="article article-type-post" itemscope itemprop="blogPost">
             <div class="article-inner">
@@ -299,7 +356,7 @@ O plano gratuito já resolve muitos problemas de quem está iniciando ou querend
     <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            Blog do Cezar @ 2017
+            Blog do Cezar @ 2018
             
         </div>
     </div>
