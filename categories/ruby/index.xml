@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on Blog do Cezar</title>
+    <link>https://cezarcruz.com.br/categories/ruby/</link>
+    <description>Recent content in Ruby on Blog do Cezar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Wed, 21 Dec 2016 11:14:46 +0000</lastBuildDate>
+    
+	<atom:link href="https://cezarcruz.com.br/categories/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Resolvendo problema de certificado ao instalar gems do ruby</title>
+      <link>https://cezarcruz.com.br/resolvendo-problema-de-certificado-ao-instalar-gems-do-ruby/</link>
+      <pubDate>Wed, 21 Dec 2016 11:14:46 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/resolvendo-problema-de-certificado-ao-instalar-gems-do-ruby/</guid>
+      <description>Depois de instalar o Ruby (RubyInstaller) no Windows e tentar utilizar o comando:
+gem install bundler
+O seguinte erro acontecia:
+SSLv3 read server certificate B: certificate verify failed
+Para corrigir, basta digitar o comando abaixo:
+gem install rubygems-update --source &amp;quot;http://rubygems.org&amp;quot; update_rubygems
+=)</description>
+    </item>
+    
+  </channel>
+</rss>

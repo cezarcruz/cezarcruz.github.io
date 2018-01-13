@@ -6,10 +6,47 @@
     <description>Recent content in Angularjs on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Tue, 28 Apr 2015 02:55:37 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jun 2016 01:55:53 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/angularjs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Utilizando component no Angular 1.5</title>
+      <link>https://cezarcruz.com.br/usando-component-no-angular-1-5/</link>
+      <pubDate>Wed, 22 Jun 2016 01:55:53 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/usando-component-no-angular-1-5/</guid>
+      <description>&lt;p&gt;Olá,&lt;/p&gt;
+
+&lt;p&gt;Hoje vamos ver uma forma de usar uma nova funcionalidade do Angular 1, o component.&lt;/p&gt;
+
+&lt;p&gt;O component é um tipo especial de diretiva, que permite criar, de uma forma simplificada, web components e pavimentar o caminho para uma futura migração para o Angular 2. Para mim a principal vantagem é poder criar peças de códigos reaproveitáveis de uma maneira bem mais simples que criar uma diretiva e suas configurações complexas (manipulação de DOM ainda deve ser feito por diretivas).&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Como usar uma diretiva de máscara no angular js</title>
+      <link>https://cezarcruz.com.br/como-usar-uma-diretiva-de-mascara-no-angular-js/</link>
+      <pubDate>Sun, 13 Sep 2015 20:24:18 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/como-usar-uma-diretiva-de-mascara-no-angular-js/</guid>
+      <description>&lt;p&gt;Olás, no tutorial de hoje, vou mostrar como criar um diretiva bem simples utilizando Angular JS para colocar uma máscara de telefone celular com o nono digito em um campo input text.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Como utilizar o $http interceptor do Angular.JS</title>
+      <link>https://cezarcruz.com.br/como-utilizar-o-http-interceptor-do-angular-js/</link>
+      <pubDate>Fri, 10 Jul 2015 14:12:35 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/como-utilizar-o-http-interceptor-do-angular-js/</guid>
+      <description>&lt;p&gt;Olás, hoje uma dica para como utilizar um $http interceptor do Angular.JS.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Criando um controller com Angular.JS utilizando padrões</title>

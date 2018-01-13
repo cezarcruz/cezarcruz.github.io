@@ -229,13 +229,13 @@
   
   <url>
     <loc>https://cezarcruz.com.br/tags/angularjs/</loc>
-    <lastmod>2015-09-13T20:24:18+00:00</lastmod>
+    <lastmod>2016-06-22T01:55:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cezarcruz.com.br/categories/angularjs/</loc>
-    <lastmod>2015-04-28T02:55:37+00:00</lastmod>
+    <lastmod>2016-06-22T01:55:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -252,7 +252,7 @@
   
   <url>
     <loc>https://cezarcruz.com.br/categories/</loc>
-    <lastmod>2015-04-28T02:55:37+00:00</lastmod>
+    <lastmod>2016-06-22T01:55:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -283,6 +283,18 @@
   <url>
     <loc>https://cezarcruz.com.br/categories/eclipse/</loc>
     <lastmod>2014-08-31T16:11:10+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/tags/fedora/</loc>
+    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/categories/fedora/</loc>
+    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -318,19 +330,25 @@
   
   <url>
     <loc>https://cezarcruz.com.br/tags/javascript/</loc>
-    <lastmod>2015-09-13T20:24:18+00:00</lastmod>
+    <lastmod>2016-06-22T01:55:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cezarcruz.com.br/categories/javascript/</loc>
-    <lastmod>2015-04-28T02:55:37+00:00</lastmod>
+    <lastmod>2016-06-22T01:55:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/tags/linux/</loc>
+    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cezarcruz.com.br/categories/linux/</loc>
-    <lastmod>2016-09-12T14:01:11+00:00</lastmod>
+    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -347,8 +365,20 @@
   </url>
   
   <url>
+    <loc>https://cezarcruz.com.br/tags/nodejs/</loc>
+    <lastmod>2016-05-16T15:39:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/categories/nodejs/</loc>
+    <lastmod>2016-05-16T15:39:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cezarcruz.com.br/categories/outros/</loc>
-    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
+    <lastmod>2014-11-11T13:58:36+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -359,8 +389,32 @@
   </url>
   
   <url>
+    <loc>https://cezarcruz.com.br/tags/ruby/</loc>
+    <lastmod>2016-12-21T11:14:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/categories/ruby/</loc>
+    <lastmod>2016-12-21T11:14:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/tags/sailsjs/</loc>
+    <lastmod>2016-05-16T15:39:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/categories/sailsjs/</loc>
+    <lastmod>2016-05-16T15:39:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://cezarcruz.com.br/tags/</loc>
-    <lastmod>2015-09-13T20:24:18+00:00</lastmod>
+    <lastmod>2016-06-22T01:55:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   

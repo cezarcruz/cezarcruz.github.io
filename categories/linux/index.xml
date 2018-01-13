@@ -6,10 +6,24 @@
     <description>Recent content in Linux on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Mon, 12 Sep 2016 14:01:11 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Apr 2017 00:47:44 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>“Open in Terminal” – Nautilus do fedora</title>
+      <link>https://cezarcruz.com.br/open-in-terminal-nautilus-do-fedora/</link>
+      <pubDate>Wed, 19 Apr 2017 00:47:44 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/open-in-terminal-nautilus-do-fedora/</guid>
+      <description>Olas,
+Para habilitar esta funcionalidade no nautilus do Fedora eh muito simples, basta rodar os comandos abaixo:
+sudo dnf install nautilus-open-terminal
+Apos isto, basta reiniciar o nautilius, e quando clicar com o botão direito do mouse, a opção &amp;#8220;Open in terminal&amp;#8221; estará disponível:
+killall nautilus
+Prontinho! =)</description>
+    </item>
     
     <item>
       <title>Como instalar drivers nvidia no Elementary OS Loki</title>
