@@ -59,5 +59,44 @@
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Hello Angular.js</title>
+      <link>https://cezarcruz.com.br/hello-angular-js/</link>
+      <pubDate>Fri, 19 Dec 2014 00:04:33 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/hello-angular-js/</guid>
+      <description>&lt;p&gt;Olá, hoje vou escrever um post bem básico de como utilizar &lt;strong&gt;Angular.JS&lt;/strong&gt; no seu próximo projeto.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Utilizando timer com JavaScript e AJAX JQuery</title>
+      <link>https://cezarcruz.com.br/utilizando-timer-com-javascript-e-ajax-jquery/</link>
+      <pubDate>Fri, 09 May 2014 12:17:40 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/utilizando-timer-com-javascript-e-ajax-jquery/</guid>
+      <description>Olás,
+Hoje uma pequena dica de JavaScript / JQuery: Como fazer um &amp;#8220;Ajax get&amp;#8221; com timer.
+Vamos lá, depois de colocarmos as referencias necessárias para o JQuery, devemos utilizar o seguinte código:
+&amp;nbsp;
+&amp;lt;script&amp;gt; $(document).ready(function() { function getData() { $.ajax({ url: &#34;http://localhost/dados.php&#34;, beforeSend: function() {$(&#34;#conteudo&#34;).empty();$(&#34;#conteudo&#34;).append(&#34;Carregando&#34;);} }).done(function(data) { $(&#34;#conteudo&#34;).empty(); $(&#34;#conteudo&#34;).append(data); }); } getData(); setInterval(getData, 50000); }); &amp;lt;/script&amp;gt; Explicando:
+Dentro do $(document).ready(function() colocamos os scripts que irão fazer a mágica.
+Na função getData colocamos a chamada ajax:</description>
+    </item>
+    
+    <item>
+      <title>Como adicionar o Lightbox em um site utilizando CakePHP</title>
+      <link>https://cezarcruz.com.br/como-adicionar-o-lightbox-em-um-site-utilizando-cakephp/</link>
+      <pubDate>Sat, 19 Apr 2014 14:50:41 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/como-adicionar-o-lightbox-em-um-site-utilizando-cakephp/</guid>
+      <description>Olás,
+Hoje vamos com uma dica simples e usual: Como utilizar o Lightbox, aquele plugin JQuery para imagens/galeria, com o CakePHP.
+Vamos lá, depois de instalado o CakePHP, podemos utilizar esse tutorial (Como usar javascript e css no CakePHP), pra colocarmos os arquivos do Lightbox no local correto, e fazermos a chamada no nosso arquivo de layout.
+A chamada para os arquivos de CSS e Javascript devem ficar assim:
+&amp;lt;?php echo $this-&amp;gt;Html-&amp;gt;css(&#39;lightbox&#39;); ?</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Svn on Blog do Cezar</title>
+    <link>https://cezarcruz.com.br/categories/svn/</link>
+    <description>Recent content in Svn on Blog do Cezar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Tue, 23 Jul 2013 14:59:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://cezarcruz.com.br/categories/svn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Como criar um repositório SVN no Dropbox [deprecated]</title>
+      <link>https://cezarcruz.com.br/como-criar-um-repositorio-svn-no-dropbox/</link>
+      <pubDate>Tue, 23 Jul 2013 14:59:18 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/como-criar-um-repositorio-svn-no-dropbox/</guid>
+      <description>&lt;p&gt;Um requisito básico para programar, talvez até antes de uma IDE, é uma forma de armazenar os códigos com segurança e se for com controle de versão, melhor ainda.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

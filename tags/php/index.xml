@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php on Blog do Cezar</title>
+    <link>https://cezarcruz.com.br/tags/php/</link>
+    <description>Recent content in Php on Blog do Cezar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Fri, 01 Nov 2013 13:11:15 +0000</lastBuildDate>
+    
+	<atom:link href="https://cezarcruz.com.br/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fazendo o CakePHP funcionar milagrosamente em um subdiretório do NGINX</title>
+      <link>https://cezarcruz.com.br/fazendo-o-cakephp-funcionar-milagrosamente-em-subdiretorio-do-nginx/</link>
+      <pubDate>Fri, 01 Nov 2013 13:11:15 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/fazendo-o-cakephp-funcionar-milagrosamente-em-subdiretorio-do-nginx/</guid>
+      <description>Olás, uma dica rápida pra fazer o CakePHP rodar satisfatoriamente no NGINX.
+Caso queira saber como instalar o cake, é soh clicar aqui. 😉
+Sem mais delongas, basta abrir o arquivo de configuração do NGINX e adicionar as seguintes linhas, depois das configurações padrões para funcionamento com o PHP:
+location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 break; root /usr/share/nginx/html/cake/app/webroot; try_files $uri /$uri/ @cakephp; } location @cakephp { set $q $request_uri; if ($request_uri ~ &#34;</description>
+    </item>
+    
+    <item>
+      <title>Utilizando multi idiomas no php CodeIgniter</title>
+      <link>https://cezarcruz.com.br/utilizando-multi-idiomas-no-php-codeigniter/</link>
+      <pubDate>Tue, 01 Oct 2013 18:23:53 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/utilizando-multi-idiomas-no-php-codeigniter/</guid>
+      <description>&lt;h2 id=&#34;esse-é-o-primeiro-post-falando-de-codeiginiter&#34;&gt;Esse é o primeiro post falando de &lt;strong&gt;CodeIginiter&lt;/strong&gt;.&lt;/h2&gt;
+
+&lt;p&gt;Vamos lá, nesse tutorial vamos tentar aprender como utilizar o multi idioma em uma aplicação utilizando &lt;strong&gt;CodeIginiter&lt;/strong&gt;, daqui pra frente, apenas CI.&lt;/p&gt;
+
+&lt;p&gt;O primeiro passo é configurar:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Programando PHP do jeito certo</title>
+      <link>https://cezarcruz.com.br/programando-php-do-jeito-certo/</link>
+      <pubDate>Mon, 05 Aug 2013 14:09:13 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/programando-php-do-jeito-certo/</guid>
+      <description>Um grande problema pra quem está aprendendo uma linguagem de programação nova é como fazer as coisas da maneira certa, navegando pelo Facebook, encontrei uma dica muito bacana de como programar PHP do jeito certo, tudo que você precisa está nesse site: http://br.phptherightway.com/
+ É importante entender que não existe uma maneira canônica de usar PHP. Essa é a graça. Este site introduz novos desenvolvedores PHP às melhores práticas, opções disponíveis e boas informações.</description>
+    </item>
+    
+    <item>
+      <title>Como usar Javascript e CSS no CakePHP</title>
+      <link>https://cezarcruz.com.br/como-usar-javascript-e-css-no-cakephp/</link>
+      <pubDate>Fri, 26 Jul 2013 13:27:09 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/como-usar-javascript-e-css-no-cakephp/</guid>
+      <description>&lt;p&gt;Olá, hoje mais uma dica sobre CakePHP, vou ensinar como colocar CSS e Javascript corretamente no seu projeto CakePHP.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tutorial básico usando CakePHP, Windows e Eclipse – Parte 2</title>
+      <link>https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/</link>
+      <pubDate>Thu, 20 Jun 2013 13:11:04 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/</guid>
+      <description>&lt;p&gt;Continuando com a segunda parte do tutorial básico usando CakePHP, Windows e Eclipse.&lt;/p&gt;
+
+&lt;p&gt;A primeira parte você encontra &lt;a href=&#34;https://cezarcruz.com.br/2013/06/tutorial-basico-usando-cakephp-windows-eclipse-parte1/&#34;&gt;aqui&lt;/a&gt;, paramos na tela em que é exibido uma mensagem de erro de conexão com o bando de dados no CakePHP, vamos lá.&lt;/p&gt;
+
+&lt;p&gt;Primeiro, precisamos criar uma base de dados, como estamos utilizando o Wamp, é só utilizar o phpMyAdmin, para o tutorial, vamos criar um base de dados chamada &lt;strong&gt;cake.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Depois de criado o banco de dados, vamos configurar ele no projeto:&lt;/p&gt;
+
+&lt;p&gt;Abra a pasta app-&amp;gt;Config, nessa pasta, encontramos os arquivos relacionados ao configuração do CakePHP, o arquivo que conecta com a base de dados é o database.php.default, o primeiro passo é renomear ele para database.php:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;No Eclipse, o botão F2, é um atalho para renomear arquivos e pastas.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Após renomear o arquivo, vamos configurar a conexão com a base de dados, procure no arquivos por class DATABASE_CONFIG, ela deve esar assim:&lt;/p&gt;
+
+&lt;pre class=&#34;lang:php decode:true&#34;&gt;class DATABASE_CONFIG {
+
+    public $default = array(
+        &#39;datasource&#39; =&amp;gt; &#39;Database/Mysql&#39;,
+        &#39;persistent&#39; =&amp;gt; false,
+        &#39;host&#39; =&amp;gt; &#39;localhost&#39;,
+        &#39;login&#39; =&amp;gt; &#39;user&#39;,
+        &#39;password&#39; =&amp;gt; &#39;password&#39;,
+        &#39;database&#39; =&amp;gt; &#39;database_name&#39;,
+        &#39;prefix&#39; =&amp;gt; &#39;&#39;,
+        //&#39;encoding&#39; =&amp;gt; &#39;utf8&#39;,
+    );
+
+    public $test = array(
+        &#39;datasource&#39; =&amp;gt; &#39;Database/Mysql&#39;,
+        &#39;persistent&#39; =&amp;gt; false,
+        &#39;host&#39; =&amp;gt; &#39;localhost&#39;,
+        &#39;login&#39; =&amp;gt; &#39;user&#39;,
+        &#39;password&#39; =&amp;gt; &#39;password&#39;,
+        &#39;database&#39; =&amp;gt; &#39;test_database_name&#39;,
+        &#39;prefix&#39; =&amp;gt; &#39;&#39;,
+        //&#39;encoding&#39; =&amp;gt; &#39;utf8&#39;,
+    );
+}&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Saber qual é o navegador usando PHP</title>
+      <link>https://cezarcruz.com.br/saber-qual-e-o-navegador-usando-php/</link>
+      <pubDate>Thu, 13 Jun 2013 15:29:38 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/saber-qual-e-o-navegador-usando-php/</guid>
+      <description>Dica rápida para descobrir qual navegador está acessando sua aplicação php:
+&amp;lt;?php
+$navegador = $_SERVER[&amp;#8216;HTTP_USER_AGENT&amp;#8217;];
+echo $navegado;
+?&amp;gt;
+A variável $navegador guarda a informação de $_SERVER[&amp;#8216;HTTP_USER_AGENT&amp;#8217;], que é ecoada na linha abaixo.
+O array $_SERVER[] contem algumas informações uteis, todas descritas aqui: http://php.net/manual/pt_BR/reserved.variables.server.php
+As saídas padrão são:
+Firefox: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0
+Internet Explorer: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,44 @@
     <description>Recent content in Css on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Thu, 13 Jun 2013 03:20:05 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 28 Mar 2014 19:23:34 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS: como personalizar inputs sem utilizar classe</title>
+      <link>https://cezarcruz.com.br/css-como-personalizar-inputs-sem-utilizar-classe/</link>
+      <pubDate>Fri, 28 Mar 2014 19:23:34 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/css-como-personalizar-inputs-sem-utilizar-classe/</guid>
+      <description>Olás, vindo aqui hoje só pra manter o blog &amp;#8220;ativo&amp;#8221; heheh, hoje, uma dica bem simples de css pra personalizar textbox (mania de .net) inputs.
+O código é o seguinte:
+input[type=text] { /* regras de estilo aqui. */ } Com o código css acima, não será mais preciso declarar uma classe no e colocar em cada elemento input, lembrando que pode ser utilizado em outros elementos, exemplo:
+input[type=checkbox] { /* estilo aqui */ } Parece bobo e preguiçoso, mas se levarmos em conta o quanto da pra economizar de Ctrl + C e Ctrl + V.</description>
+    </item>
+    
+    <item>
+      <title>UIkit: uma outra alternativa ao Bootstrap</title>
+      <link>https://cezarcruz.com.br/uikit-uma-outra-alternativa-ao-bootstrap/</link>
+      <pubDate>Wed, 14 Aug 2013 14:03:58 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/uikit-uma-outra-alternativa-ao-bootstrap/</guid>
+      <description>Como mostrei nesse post uma alternativa ao bootsrap , nesse post vou &amp;#8220;mostrar&amp;#8221; (entenda como colocar o link para o site) um outro framework que é uma ótima alternativa ao velho bootsrap.
+Como falei no outro post, o Bootstrap não é ruim, mas se dermos uma olhada em alguns sites por ai, será muito fácil nos depararmos com o bootstrap, então, para que nosso site ou sistema não seja mais um igual ao boostrap, o UIkit é uma alternativa a se considerar.</description>
+    </item>
+    
+    <item>
+      <title>Dica rapida: Foundation 4 uma alternativa ao Bootsrap</title>
+      <link>https://cezarcruz.com.br/dica-rapida-foundation-4-uma-alternativa-ao-bootsrap/</link>
+      <pubDate>Tue, 23 Jul 2013 17:07:31 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/dica-rapida-foundation-4-uma-alternativa-ao-bootsrap/</guid>
+      <description>Pra quem está cansado de usar o Twitter Bootstrap, não que ele seja ruim, muito pelo contrario, sugiro a utilização do Foundation 4.
+O Foundation 4 é uma biblioteca muito útil para padronizar a visualização de um site, ele é uma biblioteca bem completa, conheci a pouco tempo e comecei os estudos.
+Pra baixar a versão mais recente, basta entrar no site do projeto: http://foundation.zurb.com
+Logo mais, postarei como começar a tirar proveito dele e fujir um pouco do bootstrap, que anda dominando a Interwebs por ai.</description>
+    </item>
     
     <item>
       <title>Como deixar uma div transparente (CSS)</title>

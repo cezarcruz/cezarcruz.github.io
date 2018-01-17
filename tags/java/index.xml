@@ -32,6 +32,20 @@
     </item>
     
     <item>
+      <title>Java – Como navegar por ENUMs</title>
+      <link>https://cezarcruz.com.br/java-como-navegar-por-enums/</link>
+      <pubDate>Thu, 11 Sep 2014 18:37:27 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/java-como-navegar-por-enums/</guid>
+      <description>Olás,
+hoje uma dica rápida pra navegarmos por uma classe java que contenha enums:
+Considerando nosso enum:
+public enum Cidades { CAMPINAS, HORTOLANDIA, SUMARE, VALINHOS } Pra navegamos por ele basta fazer o seguinte:
+for (Cidades c : Cidages.values()) { System.out.println(c.toString()); } Utilizando o método values, obtemos um list do tipo do nosso enum com todos os enum, daí pra frente é só diversão.
+Abraços!</description>
+    </item>
+    
+    <item>
       <title>Criando um projeto Maven web com o Eclipse JEE</title>
       <link>https://cezarcruz.com.br/criando-um-projeto-maven-web-com-o-eclipse-jee/</link>
       <pubDate>Sun, 31 Aug 2014 16:11:10 +0000</pubDate>

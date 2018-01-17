@@ -22,5 +22,16 @@
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Como instalar o Maven no Windows</title>
+      <link>https://cezarcruz.com.br/como-instalar-o-maven-windows/</link>
+      <pubDate>Tue, 08 Jul 2014 14:38:57 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/como-instalar-o-maven-windows/</guid>
+      <description>Olás, depois de um tempo parado, voltamos com um post ensinando como instalar o Maven.
+Pra quem não sabe, o Maven é basicamente um repositório de libs/jars, que armazena tudo em um único servidor remoto, com isso, teremos sempre certeza de que todos os ambientes (desenvolvimento e build), estarão com as mesmas versões de dependências, entre outras coisas, pelo Maven é possível realizar testes unitários automatizados.
+Vamos lá, o primeiro passo é ter instalado o JVM no seu sistema, feito isso, não se esqueça de adicionar o JAVA_HOME no path, o próximo passo é baixar o Maven no site:</description>
+    </item>
+    
   </channel>
 </rss>
