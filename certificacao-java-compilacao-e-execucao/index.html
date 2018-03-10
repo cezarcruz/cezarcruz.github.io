@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title> Blog do Cezar - Certificação JAVA (1Z0-808) - Compilação e execução</title>
+
+        <meta http-equiv="content-type" content="text/html;">
+    <meta name="viewport">
+    <meta name="description" content="Certificação JAVA (1Z0-808) - Compilação e execução">
+    <meta name="keywords" content="">
+    <meta name="author" content="Cezar Cruz">
+    <link rel="canonical" href="https://cezarcruz.com.br/certificacao-java-compilacao-e-execucao/">
+    <meta name="google-site-verification" content="P6NeAS00fSfvFWx5QxNI1G16fR9eWzp1HCKOtbJuB98" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cezarcruz.com.br/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cezarcruz.com.br/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cezarcruz.com.br/favicon-16x16.png">
+    <link rel="manifest" href="https://cezarcruz.com.br/manifest.json">
+    <link rel="mask-icon" href="https://cezarcruz.com.br/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cezarcruz.com.br/css/style.css">
+    <meta name="generator" content="Hugo 0.37.1" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="" href="javascript:;">
+                <div class="main-nav-toggle"></div>
+                <div class="main-nav-toggle"></div>
+                <div class="main-nav-toggle"></div>
+            </a>
+            <a id="logo" class="logo-text" href="https://cezarcruz.com.br">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+                <a class="main-nav-link" href="https://cezarcruz.com.br/sobre/">Sobre</a>
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                    <form method="get" id="search" action="https://duckduckgo.com/">
+                        <input type="hidden" name="sites" value="https://cezarcruz.com.br"/>
+                        <input type="hidden" name="k8" value="#444444"/>
+                        <input type="hidden" name="k9" value="#D51920"/>
+                        <input type="hidden" name="kt" value="h"/>
+                        <input type="submit" value="" style="visibility: hidden;" />
+                        <input type="text" name="q" maxlength="255" placeholder="Faça sua busca&hellip;"/>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost" role="main">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Certificação JAVA (1Z0-808) - Compilação e execução</h1>
+        </header>
+        
+        <div class="article-meta">
+            
+                <time class="article-date" datetime='2018-03-10T10:05:51.000-03:00' itemprop="datePublished">10/03/2018</time>
+            
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="https://cezarcruz.com.br/categories/java">Java</a>
+                    
+                    
+                    <span>&gt;</span>
+                    
+                    <a class="article-category-link" href="https://cezarcruz.com.br/categories/1z0-808">1Z0-808</a>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="article-comment-link-wrap">
+                <a href="https://cezarcruz.com.br/certificacao-java-compilacao-e-execucao/#disqus_thread" class="article-comment-link">Comments</a>
+            </div>
+            
+            
+                <div class="article-comment-link-wrap">                            
+                        <span class="tb-author">por <a href="https://cezarcruz.com.br/author/cezar-cruz">Cezar Cruz</a></span>
+                </div>
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>Olá,
+neste primeiro post iremos ver como escrever o nosso primeiro programa Java, como executar e como passar “parametros” para ele.</p>
+
+<p>Com o JDK é necessário usar um console, um prompt de comandos, para efetuar a compilação ou execução de programas Java, além de compilar e executar, são disponibilizadas outras ferramentas no JDK. Nosso foco será apenas nos comando <em>javac</em> e <em>java</em>.</p>
+
+<p>Para criarmos nosso primeiro programa, será necessário criar um arquivo texto com o nome <em>HelloWorld.java</em>, seu conteúdo deve ser conforme o texto abaixo.</p>
+
+<pre><code>public class HelloWorld {
+    public static void main(String args[]) {
+        System.out.println(&quot;Oi Mundo&quot;);
+    }
+}
+</code></pre>
+
+<p>Para compilar um arquivo Java</p>
+
+<pre><code>javac HelloWorld.java
+</code></pre>
+
+<p>O nome do arquivo-fonte a ser compilado deve ser fornecido obrigatoriamente com sua extensão .java. Quando a compilação transcorre corretamente, nenhuma mensagem é exibida, produzindo o arquivo HelloWorld.class. Caso sejam exibidas mensagens de erros, as linhas em que esses erros ocorrem também serão exibidas.</p>
+
+<p>Para executar o programa <em>HelloWorld</em> é preciso acionar a JVM com o comando</p>
+
+<pre><code>java HelloWorld
+</code></pre>
+
+<p>A extensão <em>.class</em> nao deve ser fornecida quando se executa um programa Java com a JVM.</p>
+
+<p>Também é possível passar argumentos para um programa Java.</p>
+
+<pre><code>public class Echo {
+    public static void main(String args[]) {
+        for (String s: args) {
+            System.out.pritln(s);
+        }
+    }
+}
+</code></pre>
+
+<p>Compilação</p>
+
+<pre><code>javac Echo.java
+</code></pre>
+
+<p>Execução</p>
+
+<pre><code>java Echo a b c
+</code></pre>
+
+<p>Esse post cobre o básico, veremos mais detalhes sobre um programa Java nos posts futuros.</p>
+
+<p>Até.</p>
+
+        </div>
+        
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://cezarcruz.com.br/tags/java">Java
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://cezarcruz.com.br/tags/1z0-808">1Z0-808
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    
+    <a href="https://cezarcruz.com.br/guia-de-estudos-para-certificacao-java-1z0-808/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Guia de estudos para certificação JAVA (1Z0-808)&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+                    
+            <div id="disqus_thread"></div>
+            <script>
+
+            
+
+            
+
+            (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://cezarcruz.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Blog do Cezar @ 2018
+            
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>

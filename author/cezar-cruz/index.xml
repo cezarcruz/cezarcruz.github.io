@@ -6,10 +6,33 @@
     <description>Recent content in Cezar Cruz on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-BR</language>
-    <lastBuildDate>Sun, 07 Jan 2018 09:59:51 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 10 Mar 2018 10:05:51 -0300</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/author/cezar-cruz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Certificação JAVA (1Z0-808) - Compilação e execução</title>
+      <link>https://cezarcruz.com.br/certificacao-java-compilacao-e-execucao/</link>
+      <pubDate>Sat, 10 Mar 2018 10:05:51 -0300</pubDate>
+      
+      <guid>https://cezarcruz.com.br/certificacao-java-compilacao-e-execucao/</guid>
+      <description>Olá, neste primeiro post iremos ver como escrever o nosso primeiro programa Java, como executar e como passar “parametros” para ele.
+Com o JDK é necessário usar um console, um prompt de comandos, para efetuar a compilação ou execução de programas Java, além de compilar e executar, são disponibilizadas outras ferramentas no JDK. Nosso foco será apenas nos comando javac e java.
+Para criarmos nosso primeiro programa, será necessário criar um arquivo texto com o nome HelloWorld.</description>
+    </item>
+    
+    <item>
+      <title>Guia de estudos para certificação JAVA (1Z0-808)</title>
+      <link>https://cezarcruz.com.br/guia-de-estudos-para-certificacao-java-1z0-808/</link>
+      <pubDate>Sat, 10 Mar 2018 09:59:51 -0300</pubDate>
+      
+      <guid>https://cezarcruz.com.br/guia-de-estudos-para-certificacao-java-1z0-808/</guid>
+      <description>&lt;p&gt;Olá,
+irei começar uma série de posts relacionados a Java. A ideia é escrever sobre os principais pontos que podem cair na prova de certificação (Java SE 8 Programmer I (1Z0-808)).&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Como exportar um arquivo .jar utilizando intellij</title>
