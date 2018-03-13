@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title> Blog do Cezar - Certificação JAVA (1Z0-808) - Variáveis</title>
+
+        <meta http-equiv="content-type" content="text/html;">
+    <meta name="viewport">
+    <meta name="description" content="Certificação JAVA (1Z0-808) - Variáveis">
+    <meta name="keywords" content="">
+    <meta name="author" content="Cezar Cruz">
+    <link rel="canonical" href="https://cezarcruz.com.br/certificacao-java-variaveis/">
+    <meta name="google-site-verification" content="P6NeAS00fSfvFWx5QxNI1G16fR9eWzp1HCKOtbJuB98" />
+    
+
+    <link href="" rel="alternate" type="application/rss+xml" title="Blog do Cezar" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cezarcruz.com.br/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cezarcruz.com.br/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cezarcruz.com.br/favicon-16x16.png">
+    <link rel="manifest" href="https://cezarcruz.com.br/manifest.json">
+    <link rel="mask-icon" href="https://cezarcruz.com.br/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cezarcruz.com.br/css/style.css">
+    <meta name="generator" content="Hugo 0.37.1" />
+</head>
+
+
+<body>
+<div id="container">
+    <header id="header">
+    <div id="header-outer" class="outer">
+        <div id="header-inner" class="inner">
+            <a id="main-nav-toggle" class="" href="javascript:;">
+                <div class="main-nav-toggle"></div>
+                <div class="main-nav-toggle"></div>
+                <div class="main-nav-toggle"></div>
+            </a>
+            <a id="logo" class="logo-text" href="https://cezarcruz.com.br">Blog do Cezar</a>
+            <nav id="main-nav">
+                
+                <a class="main-nav-link" href="https://cezarcruz.com.br/sobre/">Sobre</a>
+                
+            </nav>
+            <nav id="sub-nav">
+                <div id="search-form-wrap">
+                    <form method="get" id="search" action="https://duckduckgo.com/">
+                        <input type="hidden" name="sites" value="https://cezarcruz.com.br"/>
+                        <input type="hidden" name="k8" value="#444444"/>
+                        <input type="hidden" name="k9" value="#D51920"/>
+                        <input type="hidden" name="kt" value="h"/>
+                        <input type="submit" value="" style="visibility: hidden;" />
+                        <input type="text" name="q" maxlength="255" placeholder="Faça sua busca&hellip;"/>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section id="main" class="outer">
+        <article class="article article-type-post" itemscope itemprop="blogPost" role="main">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Certificação JAVA (1Z0-808) - Variáveis</h1>
+        </header>
+        
+        <div class="article-meta">
+            
+                <time class="article-date" datetime='2018-03-12T10:05:51.000-03:00' itemprop="datePublished">12/03/2018</time>
+            
+            
+            
+            <div class="post-categories">
+                <div class="article-category">
+                    
+                    
+                    <a class="article-category-link" href="https://cezarcruz.com.br/categories/java">Java</a>
+                    
+                    
+                    <span>&gt;</span>
+                    
+                    <a class="article-category-link" href="https://cezarcruz.com.br/categories/1z0-808">1Z0-808</a>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="article-comment-link-wrap">
+                <a href="https://cezarcruz.com.br/certificacao-java-variaveis/#disqus_thread" class="article-comment-link">Comments</a>
+            </div>
+            
+            
+                <div class="article-comment-link-wrap">                            
+                        <span class="tb-author">por <a href="https://cezarcruz.com.br/author/cezar-cruz">Cezar Cruz</a></span>
+                </div>
+            
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <p>Neste post veremos como são criadas e utilizadas as variáveis em uma aplicação Java.</p>
+
+<p></p>
+
+<p>Uma variável é um nome definido pelo programador ao qual se associa um valor pertencente a um certo tipo de dados e armazenado em um conjunto de posições da memória do computador. Basicamente, toda variável sempre possui um nome, um tipo e um conteúdo.</p>
+
+<p>O nome de uma variável, em Java, pode ser formado por uma letra, pelos caracteres _ (<em>underscore</em>), ou $ (cifrão). Nomes não podem conter outros símbolos gráficos, operadores ou espaços em branco, podendo ser longos, embora apenas os primeiros 32 caracteres sejam usados para distinguir. Lembrando que Java é <em>Case Sensitive</em>, letras minusculas e maiusculas são consideradas diferentes. Exemplos válidos:</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>a</td>
+<td>outro</td>
+<td>x</td>
+<td>_valor</td>
+<td>$top</td>
+<td>VALOR</td>
+</tr>
+</tbody>
+</table>
+
+<p>Exemplos inválidos:</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1x</td>
+<td>outro</td>
+<td>novo valor</td>
+<td>sem-valor</td>
+<td>void</td>
+<td>super</td>
+</tr>
+</tbody>
+</table>
+
+<p>O Java possui um conjunto de palavras que indicam os nomes dos tipos primitivos, as diretivas da linguagem, os especificadores e modificadores e outros elementos pertencentes a sintaxe dessa linguagem. Essas palavras são reservadas e não podem ser utilizadas com outro finalidade:</p>
+
+<p><em>abstract</em>, <em>assert</em>, <em>boolean</em>, <em>break</em>, <em>byte</em>, <em>case</em>, <em>catch</em>, <em>class</em>, <em>continue</em>, <em>default</em>, <em>do</em>, <em>double</em>, <em>else</em>, <em>enum</em>, <em>extends</em>, <em>false</em>, <em>final</em>, <em>finally</em>, <em>float</em>, <em>for</em>, <em>if</em>, <em>implements</em>, <em>import</em>, <em>instanceof</em>, <em>int</em>, <em>interface</em>, <em>long</em>, <em>native</em>, <em>new</em>, <em>null</em>, <em>package</em>, <em>private</em>, <em>protected</em>, <em>public</em>, <em>return</em>, <em>short</em>, <em>static</em>, <em>strictfp</em>, <em>super</em>, <em>switch</em>, <em>synchronized</em>, <em>this</em>, <em>throw</em>, <em>throws</em>, <em>transient</em>, <em>true</em>, <em>try</em>, <em>void</em>, <em>volatile</em>, <em>while</em></p>
+
+<p>false e true não são palavras reservadas, mas valores literais do tipo boolean. Do mesmo modo, null é o literal nulo. Além dos citados, existem outras duas que, embora sejam reservadas, nao sao utilizadas pela linguagem: const e goto.</p>
+
+<p>Declarar uma variável é associar um tipo, um nome e um valor. Para isso deve ser observada a sintaxe:</p>
+
+<pre><code>&lt;Tipo&gt; &lt;nome1&gt; [, nome2 [, nome3 [..., nomeN]]];
+</code></pre>
+
+<p>A especificação de um Tipo e ao menos um nome sao obrigatorios. Pode seguir opcionalmente uma lista de nomes, todos separados por vírgulas. A declaração é terminado por ; (ponto e vírgula). O Tipo pode ser um tipo primitivo, uma classe da API Java ou outra definida pelo programador. Exemplos:</p>
+
+<pre><code>int i;
+float total, preco;
+byte mascara;
+double valorMedio;
+</code></pre>
+
+<p>Variáveis de um mesmo tipo podem ser declaradas separadas ou em conjunto:</p>
+
+<pre><code>char op1;
+char op2;
+
+char op3, op4;
+</code></pre>
+
+<p>Também é possível definir um valor inicial para uma variável, o que é chamado de inicialização:</p>
+
+<pre><code>int i, quantidade = 0;
+float angulo = 1.57f, temp;
+double valor = 13.323;
+boolean ok = false;
+char letra = ‘c’;
+</code></pre>
+
+<p>Variáveis podem ser declaradas em qualquer ponto de um programa Java, sendo válidas em todo o escopo em que foram declaradas e nos escopos internos a esses.</p>
+
+<p>O conjunto dos locais no qual uma declaração tem validade é denominado escopo. Um bloco de comandos é um conjunto de comandos da linguagem delimitados por uma chave  inicial { e outra chave final }. A partir do ponto em que ocorreu a declaração de uma variável, é dito que a variável está em seu escopo, limitado ao bloco de comandos onde ocorreu essa declaração, mas incluindo escopos mais internos. Observe os vários escopos existentes abaixo:</p>
+
+<pre><code>public class Escopo { // inicio do bloco0
+    public static void main(String args[]) { //inicio do bloco 1
+        int i = 5; // variavel do bloco 1
+        { // inicio do bloco 2
+            int j = 0; // variavel do bloco 2
+            System.out.println(i); // uso de i dentro do seu escopo
+            j = 4 * i; // uso de i dentro do seu escopo
+            System.out.println(j);
+            { // inicio do bloco 3
+                System.out.println(i); // uso de i dentro do seu escopo
+                System.out.println(j); // uso de j dentro do seu escopo
+            }
+        }
+
+        System.out.println(i); // uso de i dentro do seu escopo
+        System.out.println(j); // ERRO. Uso de j FORA do seu escopo
+    }
+}
+</code></pre>
+
+<p>A variável i foi declarada no bloco de escopo 1 e pode ser usada nesse escopo e também nos blocos 2 e 3, que são escopos internos em relação ao bloco 1. A variável j, declarada no bloco 2, também pode ser usada no próprio bloco de escopo e em escopos mais internos. No código acima, existe um erro, que pode ser visualizado usando o compilador do java:</p>
+
+<pre><code>javac Escopo.java
+Escopo.java:16: error: cannot find symbol
+        System.out.println(j);
+                           ^
+  symbol:   variable j
+  location: class Escopo
+1 error
+</code></pre>
+
+<p>A mensagem indica que na linha 16 do arquivo Escopo.java foi detectado um simbolo desconhecido (variavel j), pois, de fato, naquele escopo, (bloco 1 ou mais externos) não existe essa variável. Para corrigir o erro, a declaração da variável j deve ser movida para o início do bloco onde ocorreu o erro:</p>
+
+<pre><code>public class Escopo { // inicio do bloco0
+    public static void main(String args[]) { //inicio do bloco 1
+        int i = 5; // variavel do bloco 1
+        int j = 0; // variavel do bloco 1
+        { // inicio do bloco 2
+            
+            System.out.println(i); // uso de i dentro do seu escopo
+            j = 4 * i; // uso de i dentro do seu escopo
+            System.out.println(j);
+            { // inicio do bloco 3
+                System.out.println(i); // uso de i dentro do seu escopo
+                System.out.println(j); // uso de j dentro do seu escopo
+            }
+        }
+
+        System.out.println(i); // uso de i dentro do seu escopo
+        System.out.println(j); // Sucesso
+    }
+}
+</code></pre>
+
+<p>O uso de variáveis ou objetos fora de seu escopo constitui um erro de programação detectado pelo compilador e que deve ser obrigatoriamente corrigido.</p>
+
+<p>Uma variável declarada dentro de métodos é denominada variável (de escopo) local e sua validade segue as regras apresentadas. Contudo, se a variável for declarada dentro do corpo da classe, será tratada como campo (field) da classe e será então escopo de classe, será válida em qualquer ponto da classe.</p>
+
+<p>Hoje abordamos as criações de variáveis, futuramente iremos ver sobre os modificadores de acesso, enquanto isso, leia sobre convenções de código java aqui:</p>
+
+<p><a href="https://www.devmedia.com.br/convencoes-de-codigo-java/23871">https://www.devmedia.com.br/convencoes-de-codigo-java/23871</a></p>
+
+<p>Até!</p>
+        </div>
+        
+        
+        <footer class="article-footer">
+            <ul class="article-tag-list">
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://cezarcruz.com.br/tags/java">Java
+                    </a>
+                </li>
+                
+                <li class="article-tag-list-item">
+                    <a class="article-tag-list-link" href="https://cezarcruz.com.br/tags/1z0-808">1Z0-808
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </div>
+    <nav id="article-nav">
+    
+    
+    <a href="https://cezarcruz.com.br/certificacao-java-compilacao-e-execucao/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Certificação JAVA (1Z0-808) - Compilação e execução&nbsp;<span>&gt;</span></div>
+    </a>
+    
+</nav>
+</article>
+
+                    
+            <div id="disqus_thread"></div>
+            <script>
+
+            
+
+            
+
+            (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://cezarcruz.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+    </section>
+    <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Blog do Cezar @ 2018
+            
+        </div>
+    </div>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37762884-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-37762884-1');
+    </script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/tomorrow-night.min.css" integrity="sha256-2wL88NKUqvJi/ExflDzkzUumjUM73mcK2gBvBBeLvTk=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js" integrity="sha256-KbfTjB0WZ8vvXngdpJGY3Yp3xKk+tttbqClO11anCIU=" crossorigin="anonymous"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    <script>
+        document.getElementById('main-nav-toggle').addEventListener('click', function () {
+            var header = document.getElementById('header');
+            if (header.classList.contains('mobile-on')) {
+                header.classList.remove('mobile-on');
+            } else {
+                header.classList.add('mobile-on');
+            }
+        });
+    </script>
+</footer>
+</div>
+</body>
+</html>
