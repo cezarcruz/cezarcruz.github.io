@@ -6,10 +6,21 @@
     <description>Recent content in Cezar Cruz on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Mon, 12 Mar 2018 10:05:51 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 19 Sep 2018 09:59:51 -0300</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/author/cezar-cruz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Configurando ambiente de desenvolvimento Java rapidamente no Linux</title>
+      <link>https://cezarcruz.com.br/configurando-ambiente-java-simples-rapido-no-linux/</link>
+      <pubDate>Wed, 19 Sep 2018 09:59:51 -0300</pubDate>
+      
+      <guid>https://cezarcruz.com.br/configurando-ambiente-java-simples-rapido-no-linux/</guid>
+      <description>&lt;p&gt;Todo mundo já teve que configurar um ambiente de desenvolvimento Java e sofreu, hoje vou mostrar uma forma simples de pratica.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Certificação JAVA (1Z0-808) - Variáveis</title>

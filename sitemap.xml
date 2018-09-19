@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://cezarcruz.com.br/configurando-ambiente-java-simples-rapido-no-linux/</loc>
+    <lastmod>2018-09-19T09:59:51-03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cezarcruz.com.br/certificacao-java-variaveis/</loc>
     <lastmod>2018-03-12T10:05:51-03:00</lastmod>
   </url>
@@ -243,25 +248,25 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/1z0-808/</loc>
-    <lastmod>2018-03-12T10:05:51-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cezarcruz.com.br/tags/1z0-808/</loc>
     <lastmod>2018-03-12T10:05:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/angularjs/</loc>
-    <lastmod>2016-06-22T01:55:53+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/1z0-808/</loc>
+    <lastmod>2018-03-12T10:05:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cezarcruz.com.br/tags/angularjs/</loc>
+    <lastmod>2016-06-22T01:55:53+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/categories/angularjs/</loc>
     <lastmod>2016-06-22T01:55:53+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -273,18 +278,18 @@
   
   <url>
     <loc>https://cezarcruz.com.br/</loc>
-    <lastmod>2018-03-12T10:05:51-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cezarcruz.com.br/categories/cakephp/</loc>
-    <lastmod>2013-11-01T13:11:15+00:00</lastmod>
+    <lastmod>2018-09-19T09:59:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cezarcruz.com.br/tags/cakephp/</loc>
+    <lastmod>2013-11-01T13:11:15+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/categories/cakephp/</loc>
     <lastmod>2013-11-01T13:11:15+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -297,13 +302,7 @@
   
   <url>
     <loc>https://cezarcruz.com.br/author/cezar-cruz/</loc>
-    <lastmod>2018-03-12T10:05:51-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://cezarcruz.com.br/categories/csharp/</loc>
-    <lastmod>2013-09-02T12:31:21+00:00</lastmod>
+    <lastmod>2018-09-19T09:59:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -314,8 +313,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/css/</loc>
-    <lastmod>2014-03-28T19:23:34+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/csharp/</loc>
+    <lastmod>2013-09-02T12:31:21+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -326,8 +325,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/django/</loc>
-    <lastmod>2014-11-11T13:58:36+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/css/</loc>
+    <lastmod>2014-03-28T19:23:34+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -338,8 +337,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/eclipse/</loc>
-    <lastmod>2014-08-31T16:11:10+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/django/</loc>
+    <lastmod>2014-11-11T13:58:36+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -350,8 +349,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/fedora/</loc>
-    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/eclipse/</loc>
+    <lastmod>2014-08-31T16:11:10+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -362,8 +361,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/git/</loc>
-    <lastmod>2014-11-06T23:49:38+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/fedora/</loc>
+    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -374,8 +373,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/hospedagem/</loc>
-    <lastmod>2013-06-13T03:19:23+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/git/</loc>
+    <lastmod>2014-11-06T23:49:38+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -386,8 +385,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/intellij/</loc>
-    <lastmod>2018-01-07T09:59:51-03:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/hospedagem/</loc>
+    <lastmod>2013-06-13T03:19:23+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -398,20 +397,20 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/java/</loc>
-    <lastmod>2018-03-12T10:05:51-03:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/intellij/</loc>
+    <lastmod>2018-01-07T09:59:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cezarcruz.com.br/tags/java/</loc>
-    <lastmod>2018-03-12T10:05:51-03:00</lastmod>
+    <lastmod>2018-09-19T09:59:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/javascript/</loc>
-    <lastmod>2016-06-22T01:55:53+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/java/</loc>
+    <lastmod>2018-09-19T09:59:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -422,8 +421,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/jekyll/</loc>
-    <lastmod>2014-01-16T00:40:15+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/javascript/</loc>
+    <lastmod>2016-06-22T01:55:53+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -434,8 +433,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/lamp/</loc>
-    <lastmod>2013-07-02T15:54:23+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/jekyll/</loc>
+    <lastmod>2014-01-16T00:40:15+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -446,8 +445,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/lemp/</loc>
-    <lastmod>2013-10-22T12:48:50+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/lamp/</loc>
+    <lastmod>2013-07-02T15:54:23+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -458,8 +457,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/linux/</loc>
-    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/lemp/</loc>
+    <lastmod>2013-10-22T12:48:50+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -470,8 +469,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/markdown/</loc>
-    <lastmod>2014-01-17T14:36:48+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/linux/</loc>
+    <lastmod>2017-04-19T00:47:44+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -482,8 +481,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/maven/</loc>
-    <lastmod>2014-08-31T16:11:10+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/markdown/</loc>
+    <lastmod>2014-01-17T14:36:48+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -494,8 +493,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/net/</loc>
-    <lastmod>2013-09-13T12:37:24+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/maven/</loc>
+    <lastmod>2014-08-31T16:11:10+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -506,8 +505,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/nodejs/</loc>
-    <lastmod>2016-05-16T15:39:06+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/net/</loc>
+    <lastmod>2013-09-13T12:37:24+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -518,13 +517,19 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/oracle/</loc>
-    <lastmod>2014-07-30T19:51:56+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/nodejs/</loc>
+    <lastmod>2016-05-16T15:39:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cezarcruz.com.br/tags/oracle/</loc>
+    <lastmod>2014-07-30T19:51:56+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/categories/oracle/</loc>
     <lastmod>2014-07-30T19:51:56+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -542,26 +547,20 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/php/</loc>
-    <lastmod>2013-11-01T13:11:15+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://cezarcruz.com.br/tags/php/</loc>
     <lastmod>2013-11-01T13:11:15+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/post/</loc>
-    <lastmod>2018-03-12T10:05:51-03:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/php/</loc>
+    <lastmod>2013-11-01T13:11:15+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/ruby/</loc>
-    <lastmod>2016-12-21T11:14:46+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/post/</loc>
+    <lastmod>2018-09-19T09:59:51-03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -572,8 +571,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/sailsjs/</loc>
-    <lastmod>2016-05-16T15:39:06+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/ruby/</loc>
+    <lastmod>2016-12-21T11:14:46+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -584,8 +583,8 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/sql/</loc>
-    <lastmod>2014-07-30T19:51:56+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/sailsjs/</loc>
+    <lastmod>2016-05-16T15:39:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -596,13 +595,19 @@
   </url>
   
   <url>
-    <loc>https://cezarcruz.com.br/categories/svn/</loc>
-    <lastmod>2013-07-23T14:59:18+00:00</lastmod>
+    <loc>https://cezarcruz.com.br/categories/sql/</loc>
+    <lastmod>2014-07-30T19:51:56+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://cezarcruz.com.br/tags/svn/</loc>
+    <lastmod>2013-07-23T14:59:18+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://cezarcruz.com.br/categories/svn/</loc>
     <lastmod>2013-07-23T14:59:18+00:00</lastmod>
     <priority>0</priority>
   </url>
