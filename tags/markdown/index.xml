@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/tags/markdown/</link>
     <description>Recent content in Markdown on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Fri, 17 Jan 2014 14:36:48 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
@@ -19,9 +19,7 @@
       <guid>https://cezarcruz.com.br/como-escrever-textos-usando-markdown/</guid>
       <description>&lt;p&gt;Olás, nesse tutorial, vou mostrar como utilizarmos o &lt;strong&gt;Markdown&lt;/strong&gt; para escrevermos textos formatados em Html. Esse tutorial será, basicamente, um spin-off da saga Jekyll.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; é uma ferramenta de conversão texto pra HTML para escrever textos para web. &lt;strong&gt;Markdown&lt;/strong&gt; permite escrever usando um texto fácil de ler e escrever e depois converte em uma estrutura valida de XHTML (ou HTML). Pra uma definição melhor, veja o &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;site do projeto&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; é uma ferramenta de conversão texto pra HTML para escrever textos para web. &lt;strong&gt;Markdown&lt;/strong&gt; permite escrever usando um texto fácil de ler e escrever e depois converte em uma estrutura valida de XHTML (ou HTML). Pra uma definição melhor, veja o &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;site do projeto&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

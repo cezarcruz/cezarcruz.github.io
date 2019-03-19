@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/tags/php/</link>
     <description>Recent content in Php on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Fri, 01 Nov 2013 13:11:15 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/tags/php/index.xml" rel="self" type="application/rss+xml" />
@@ -33,9 +33,7 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
 
 &lt;p&gt;Vamos lá, nesse tutorial vamos tentar aprender como utilizar o multi idioma em uma aplicação utilizando &lt;strong&gt;CodeIginiter&lt;/strong&gt;, daqui pra frente, apenas CI.&lt;/p&gt;
 
-&lt;p&gt;O primeiro passo é configurar:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;O primeiro passo é configurar:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -54,9 +52,7 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
       <pubDate>Fri, 26 Jul 2013 13:27:09 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-usar-javascript-e-css-no-cakephp/</guid>
-      <description>&lt;p&gt;Olá, hoje mais uma dica sobre CakePHP, vou ensinar como colocar CSS e Javascript corretamente no seu projeto CakePHP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olá, hoje mais uma dica sobre CakePHP, vou ensinar como colocar CSS e Javascript corretamente no seu projeto CakePHP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -104,9 +100,7 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
         &#39;prefix&#39; =&amp;gt; &#39;&#39;,
         //&#39;encoding&#39; =&amp;gt; &#39;utf8&#39;,
     );
-}&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+}&lt;/pre&gt;</description>
     </item>
     
     <item>

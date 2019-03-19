@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/categories/eclipse/</link>
     <description>Recent content in Eclipse on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Sun, 31 Aug 2014 16:11:10 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/eclipse/index.xml" rel="self" type="application/rss+xml" />
@@ -17,9 +17,7 @@
       <pubDate>Sun, 31 Aug 2014 16:11:10 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/criando-um-projeto-maven-web-com-o-eclipse-jee/</guid>
-      <description>&lt;p&gt;Olás, hoje vamos ver como criar um projeto java web utilizando &lt;a href=&#34;https://cezarcruz.com.br/2014/07/como-instalar-o-maven-windows/&#34; title=&#34;Como instalar o Maven no Windows&#34;&gt;Olás, hoje vamos ver como criar um projeto java web utilizando&lt;/a&gt; e Eclipse JEE/Tomcat.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olás, hoje vamos ver como criar um projeto java web utilizando &lt;a href=&#34;https://cezarcruz.com.br/2014/07/como-instalar-o-maven-windows/&#34; title=&#34;Como instalar o Maven no Windows&#34;&gt;Olás, hoje vamos ver como criar um projeto java web utilizando&lt;/a&gt; e Eclipse JEE/Tomcat.&lt;/p&gt;</description>
     </item>
     
   </channel>

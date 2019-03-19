@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/tags/lamp/</link>
     <description>Recent content in Lamp on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Tue, 02 Jul 2013 15:54:23 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/tags/lamp/index.xml" rel="self" type="application/rss+xml" />
@@ -17,9 +17,7 @@
       <pubDate>Tue, 02 Jul 2013 15:54:23 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-instalar-apache-php-mysql-no-ubuntu/</guid>
-      <description>&lt;p&gt;Olás, nesse tutorial veremos como instalar e configurar o Ubuntu para rodar nossos sites em PHP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olás, nesse tutorial veremos como instalar e configurar o Ubuntu para rodar nossos sites em PHP.&lt;/p&gt;</description>
     </item>
     
   </channel>

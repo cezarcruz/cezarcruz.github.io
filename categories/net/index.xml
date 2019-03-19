@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/categories/net/</link>
     <description>Recent content in Net on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Fri, 13 Sep 2013 12:37:24 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/net/index.xml" rel="self" type="application/rss+xml" />
@@ -19,9 +19,7 @@
       <guid>https://cezarcruz.com.br/como-utilizar-_layout-cshtml-no-asp-net-mvc-4/</guid>
       <description>&lt;p&gt;Nesse tutorial vamos aprender como utilizar o arquivo de _Layout.cshtml no nosso &lt;a href=&#34;https://cezarcruz.com.br/blog/2013/09/criando-o-primeiro-projeto-aspnet-mvc-com-csharp/&#34; target=&#34;_blank&#34;&gt;primeiro projeto MVC 4&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Assim como no Web Forms com seu Master Page, o MVC tem o seu arquivo master também, porém ele é chamado de _Layout.cshtml, nele colocamos nosso layout padrão de páginas.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Assim como no Web Forms com seu Master Page, o MVC tem o seu arquivo master também, porém ele é chamado de _Layout.cshtml, nele colocamos nosso layout padrão de páginas.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -50,9 +48,7 @@ For Each param As String In Request.QueryString() Response.Write(Request.QuerySt
 
 &lt;p&gt;nesse post vou mostrar como criar a nossa primeira página ASP.NET MVC.&lt;/p&gt;
 
-&lt;p&gt;Não vou entrar em detalhes da tecnologia, mas pelo pouco que estou aprendendo, acredito ser uma boa área de estudo, quem vem do Web Forms vai sentir um pouco de dificuldade, mas rapidinho pega o jeito, vamos lá:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Não vou entrar em detalhes da tecnologia, mas pelo pouco que estou aprendendo, acredito ser uma boa área de estudo, quem vem do Web Forms vai sentir um pouco de dificuldade, mas rapidinho pega o jeito, vamos lá:&lt;/p&gt;</description>
     </item>
     
     <item>

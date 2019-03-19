@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/tags/svn/</link>
     <description>Recent content in Svn on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Tue, 23 Jul 2013 14:59:18 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/tags/svn/index.xml" rel="self" type="application/rss+xml" />
@@ -17,9 +17,7 @@
       <pubDate>Tue, 23 Jul 2013 14:59:18 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-criar-um-repositorio-svn-no-dropbox/</guid>
-      <description>&lt;p&gt;Um requisito básico para programar, talvez até antes de uma IDE, é uma forma de armazenar os códigos com segurança e se for com controle de versão, melhor ainda.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Um requisito básico para programar, talvez até antes de uma IDE, é uma forma de armazenar os códigos com segurança e se for com controle de versão, melhor ainda.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/categories/sailsjs/</link>
     <description>Recent content in Sailsjs on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Mon, 16 May 2016 15:39:06 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/sailsjs/index.xml" rel="self" type="application/rss+xml" />
@@ -19,9 +19,7 @@
       <guid>https://cezarcruz.com.br/how-to-create-a-sails-js-start-app/</guid>
       <description>&lt;p&gt;Hello folks.&lt;/p&gt;
 
-&lt;p&gt;For this post i think doing something different. I will try to write this post in English. Any question, please, chat me. Thanks.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;For this post i think doing something different. I will try to write this post in English. Any question, please, chat me. Thanks.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/tags/cakephp/</link>
     <description>Recent content in Cakephp on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Fri, 01 Nov 2013 13:11:15 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/tags/cakephp/index.xml" rel="self" type="application/rss+xml" />
@@ -29,9 +29,7 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
       <pubDate>Fri, 26 Jul 2013 13:27:09 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-usar-javascript-e-css-no-cakephp/</guid>
-      <description>&lt;p&gt;Olá, hoje mais uma dica sobre CakePHP, vou ensinar como colocar CSS e Javascript corretamente no seu projeto CakePHP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olá, hoje mais uma dica sobre CakePHP, vou ensinar como colocar CSS e Javascript corretamente no seu projeto CakePHP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -79,9 +77,7 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
         &#39;prefix&#39; =&amp;gt; &#39;&#39;,
         //&#39;encoding&#39; =&amp;gt; &#39;utf8&#39;,
     );
-}&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+}&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -96,9 +92,7 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
 
 &lt;p&gt;Bora lá:&lt;/p&gt;
 
-&lt;p&gt;O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos beneficios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada &lt;a href=&#34;http://blog.glaucocustodio.com/2012/07/31/porque-usar-um-framework/&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt; e &lt;a href=&#34;http://pt.wikipedia.org/wiki/MVC&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos beneficios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada &lt;a href=&#34;http://blog.glaucocustodio.com/2012/07/31/porque-usar-um-framework/&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt; e &lt;a href=&#34;http://pt.wikipedia.org/wiki/MVC&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

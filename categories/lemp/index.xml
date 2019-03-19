@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/categories/lemp/</link>
     <description>Recent content in Lemp on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Tue, 22 Oct 2013 12:48:50 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/lemp/index.xml" rel="self" type="application/rss+xml" />
@@ -19,9 +19,7 @@
       <guid>https://cezarcruz.com.br/como-instalar-o-nginx-php-mysql-no-ubuntu/</guid>
       <description>&lt;h2 id=&#34;hoje-uma-dica-bem-simples-como-instalar-o-nginx-servidor-web-php-e-mysql-no-ubuntu&#34;&gt;Hoje uma dica bem simples: como instalar o Nginx (Servidor WEB) + PHP e MySql no Ubuntu.&lt;/h2&gt;
 
-&lt;p&gt;O &lt;strong&gt;Nginx&lt;/strong&gt; (Pronuncia Engine-x) é um concorrente do Apache para servir páginas web. Para servir páginas estáticas, sem dúvidas é muito melhor que o Apache e tem um ganho com páginas dinâmicas também (&lt;a href=&#34;http://systemsarchitect.net/apache2-vs-nginx-for-php-application/&#34;&gt;Apache vs Nginx&lt;/a&gt;). O que pude comprovar é o uso de memória, por exemplo, o &lt;strong&gt;Nginx&lt;/strong&gt; usa bem menos e o tempo de reposta é bem menor quando comparado ao Apache. Vamos lá.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;O &lt;strong&gt;Nginx&lt;/strong&gt; (Pronuncia Engine-x) é um concorrente do Apache para servir páginas web. Para servir páginas estáticas, sem dúvidas é muito melhor que o Apache e tem um ganho com páginas dinâmicas também (&lt;a href=&#34;http://systemsarchitect.net/apache2-vs-nginx-for-php-application/&#34;&gt;Apache vs Nginx&lt;/a&gt;). O que pude comprovar é o uso de memória, por exemplo, o &lt;strong&gt;Nginx&lt;/strong&gt; usa bem menos e o tempo de reposta é bem menor quando comparado ao Apache. Vamos lá.&lt;/p&gt;</description>
     </item>
     
   </channel>

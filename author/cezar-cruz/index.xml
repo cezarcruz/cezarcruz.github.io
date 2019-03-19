@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/author/cezar-cruz/</link>
     <description>Recent content in Cezar Cruz on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Wed, 19 Sep 2018 09:59:51 -0300</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/author/cezar-cruz/index.xml" rel="self" type="application/rss+xml" />
@@ -17,9 +17,7 @@
       <pubDate>Wed, 19 Sep 2018 09:59:51 -0300</pubDate>
       
       <guid>https://cezarcruz.com.br/configurando-ambiente-java-simples-rapido-no-linux/</guid>
-      <description>&lt;p&gt;Todo mundo já teve que configurar um ambiente de desenvolvimento Java e sofreu, hoje vou mostrar uma forma simples de pratica.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Todo mundo já teve que configurar um ambiente de desenvolvimento Java e sofreu, hoje vou mostrar uma forma simples de pratica.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,9 +26,7 @@
       <pubDate>Mon, 12 Mar 2018 10:05:51 -0300</pubDate>
       
       <guid>https://cezarcruz.com.br/certificacao-java-variaveis/</guid>
-      <description>&lt;p&gt;Neste post veremos como são criadas e utilizadas as variáveis em uma aplicação Java.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Neste post veremos como são criadas e utilizadas as variáveis em uma aplicação Java.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -51,9 +47,7 @@ Para criarmos nosso primeiro programa, será necessário criar um arquivo texto 
       
       <guid>https://cezarcruz.com.br/guia-de-estudos-para-certificacao-java-1z0-808/</guid>
       <description>&lt;p&gt;Olá,
-irei começar uma série de posts relacionados a Java. A ideia é escrever sobre os principais pontos que podem cair na prova de certificação (Java SE 8 Programmer I (1Z0-808)).&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+irei começar uma série de posts relacionados a Java. A ideia é escrever sobre os principais pontos que podem cair na prova de certificação (Java SE 8 Programmer I (1Z0-808)).&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -71,9 +65,7 @@ irei começar uma série de posts relacionados a Java. A ideia é escrever sobre
       <pubDate>Thu, 15 Jun 2017 09:59:51 -0300</pubDate>
       
       <guid>https://cezarcruz.com.br/alguns-exemplos-de-streams-java-8/</guid>
-      <description>&lt;p&gt;Olas, hoje iremos ver algumas formas básicas de utilizar a api de Stream do Java 8.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olas, hoje iremos ver algumas formas básicas de utilizar a api de Stream do Java 8.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -126,9 +118,7 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
 
 &lt;p&gt;Hoje vamos ver uma forma de usar uma nova funcionalidade do Angular 1, o component.&lt;/p&gt;
 
-&lt;p&gt;O component é um tipo especial de diretiva, que permite criar, de uma forma simplificada, web components e pavimentar o caminho para uma futura migração para o Angular 2. Para mim a principal vantagem é poder criar peças de códigos reaproveitáveis de uma maneira bem mais simples que criar uma diretiva e suas configurações complexas (manipulação de DOM ainda deve ser feito por diretivas).&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;O component é um tipo especial de diretiva, que permite criar, de uma forma simplificada, web components e pavimentar o caminho para uma futura migração para o Angular 2. Para mim a principal vantagem é poder criar peças de códigos reaproveitáveis de uma maneira bem mais simples que criar uma diretiva e suas configurações complexas (manipulação de DOM ainda deve ser feito por diretivas).&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -139,9 +129,7 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
       <guid>https://cezarcruz.com.br/how-to-create-a-sails-js-start-app/</guid>
       <description>&lt;p&gt;Hello folks.&lt;/p&gt;
 
-&lt;p&gt;For this post i think doing something different. I will try to write this post in English. Any question, please, chat me. Thanks.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;For this post i think doing something different. I will try to write this post in English. Any question, please, chat me. Thanks.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -150,9 +138,7 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
       <pubDate>Sun, 13 Sep 2015 20:24:18 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-usar-uma-diretiva-de-mascara-no-angular-js/</guid>
-      <description>&lt;p&gt;Olás, no tutorial de hoje, vou mostrar como criar um diretiva bem simples utilizando Angular JS para colocar uma máscara de telefone celular com o nono digito em um campo input text.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olás, no tutorial de hoje, vou mostrar como criar um diretiva bem simples utilizando Angular JS para colocar uma máscara de telefone celular com o nono digito em um campo input text.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -161,9 +147,7 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
       <pubDate>Fri, 10 Jul 2015 14:12:35 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-utilizar-o-http-interceptor-do-angular-js/</guid>
-      <description>&lt;p&gt;Olás, hoje uma dica para como utilizar um $http interceptor do Angular.JS.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olás, hoje uma dica para como utilizar um $http interceptor do Angular.JS.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -172,9 +156,7 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
       <pubDate>Tue, 28 Apr 2015 02:55:37 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/criando-um-controller-com-angular-js-utilizando-padroes/</guid>
-      <description>&lt;p&gt;Ol&lt;span class=&#34;st&#34;&gt;ás&lt;/span&gt;, hoje vamos ver como criar um Controller no Angular.JS utilizando &lt;a href=&#34;https://github.com/johnpapa/angular-styleguide&#34;&gt;styleguide&lt;/a&gt; criado pelo John Papa.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ol&lt;span class=&#34;st&#34;&gt;ás&lt;/span&gt;, hoje vamos ver como criar um Controller no Angular.JS utilizando &lt;a href=&#34;https://github.com/johnpapa/angular-styleguide&#34;&gt;styleguide&lt;/a&gt; criado pelo John Papa.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -183,9 +165,7 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
       <pubDate>Fri, 19 Dec 2014 00:04:33 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/hello-angular-js/</guid>
-      <description>&lt;p&gt;Olá, hoje vou escrever um post bem básico de como utilizar &lt;strong&gt;Angular.JS&lt;/strong&gt; no seu próximo projeto.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olá, hoje vou escrever um post bem básico de como utilizar &lt;strong&gt;Angular.JS&lt;/strong&gt; no seu próximo projeto.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -194,9 +174,7 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
       <pubDate>Tue, 11 Nov 2014 13:58:36 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-navegar-por-um-field-manytomany-em-um-template-django/</guid>
-      <description>&lt;p&gt;Olás,  hoje mais uma dica curtinha: como navegar por um campo &lt;strong&gt;manytomany&lt;/strong&gt; em um template &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olás,  hoje mais uma dica curtinha: como navegar por um campo &lt;strong&gt;manytomany&lt;/strong&gt; em um template &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -207,9 +185,7 @@ sudo ubuntu-drivers debug &amp;&amp; sudo ubuntu-drivers autoinstall bem simples
       <guid>https://cezarcruz.com.br/curtinhas-como-exibir-o-nome-do-usuario-logado-em-um-template-django/</guid>
       <description>&lt;p&gt;Olá, uma dica curtinha hoje:&lt;/p&gt;
 
-&lt;p&gt;Como exibir o nome do usuário logado em um sistema/site utilizando Django 1.7+.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Como exibir o nome do usuário logado em um sistema/site utilizando Django 1.7+.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -244,9 +220,7 @@ Abraços!</description>
       <pubDate>Sun, 31 Aug 2014 16:11:10 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/criando-um-projeto-maven-web-com-o-eclipse-jee/</guid>
-      <description>&lt;p&gt;Olás, hoje vamos ver como criar um projeto java web utilizando &lt;a href=&#34;https://cezarcruz.com.br/2014/07/como-instalar-o-maven-windows/&#34; title=&#34;Como instalar o Maven no Windows&#34;&gt;Olás, hoje vamos ver como criar um projeto java web utilizando&lt;/a&gt; e Eclipse JEE/Tomcat.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olás, hoje vamos ver como criar um projeto java web utilizando &lt;a href=&#34;https://cezarcruz.com.br/2014/07/como-instalar-o-maven-windows/&#34; title=&#34;Como instalar o Maven no Windows&#34;&gt;Olás, hoje vamos ver como criar um projeto java web utilizando&lt;/a&gt; e Eclipse JEE/Tomcat.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -257,9 +231,7 @@ Abraços!</description>
       <guid>https://cezarcruz.com.br/como-usar-case-em-select-no-oracle/</guid>
       <description>&lt;p&gt;Olás,&lt;/p&gt;
 
-&lt;p&gt;Hoje uma dica rápida sobre oracle: Como utilizar o &lt;strong&gt;Case&lt;/strong&gt; em um select no Oracle.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Hoje uma dica rápida sobre oracle: Como utilizar o &lt;strong&gt;Case&lt;/strong&gt; em um select no Oracle.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -333,9 +305,7 @@ git add . git commit -m &amp;quot;.</description>
       <guid>https://cezarcruz.com.br/como-escrever-textos-usando-markdown/</guid>
       <description>&lt;p&gt;Olás, nesse tutorial, vou mostrar como utilizarmos o &lt;strong&gt;Markdown&lt;/strong&gt; para escrevermos textos formatados em Html. Esse tutorial será, basicamente, um spin-off da saga Jekyll.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; é uma ferramenta de conversão texto pra HTML para escrever textos para web. &lt;strong&gt;Markdown&lt;/strong&gt; permite escrever usando um texto fácil de ler e escrever e depois converte em uma estrutura valida de XHTML (ou HTML). Pra uma definição melhor, veja o &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;site do projeto&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; é uma ferramenta de conversão texto pra HTML para escrever textos para web. &lt;strong&gt;Markdown&lt;/strong&gt; permite escrever usando um texto fácil de ler e escrever e depois converte em uma estrutura valida de XHTML (ou HTML). Pra uma definição melhor, veja o &lt;a href=&#34;http://daringfireball.net/projects/markdown/&#34;&gt;site do projeto&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -344,9 +314,7 @@ git add . git commit -m &amp;quot;.</description>
       <pubDate>Thu, 16 Jan 2014 00:40:15 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;, um software para gerar páginas estáticas usado principalmente pra blogs. Esse tutorial é a primeira parte. O &lt;strong&gt;Jekyll&lt;/strong&gt; é um software gerador de páginas estáticas. Usando arquivos de texto com &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax&#34;&gt;Markdown&lt;/a&gt;, ele cria um site completo, estático, pronto pra ser publicado. A vantagem de gerar um blog, ou um site em html estático, é que não precisamos nos preocupar com muitas camadas de segurança, considerando que eliminamos o interpretador PHP, no caso do WordPress, eliminamos o próprio WordPress, que apesar de ser uma ótima plataforma de blog, pode conter bugs, eliminamos também a necessidade de um servidor de banco de dados (falow MySql 😉 ), e claro,  o desempenho, como só é exibido páginas estáticas, são menos requisições e nada pra processar e pra hospedar apenas páginas estáticas é muito mais barato e até &amp;#8220;di grátis&amp;#8221; hehehehe.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;, um software para gerar páginas estáticas usado principalmente pra blogs. Esse tutorial é a primeira parte. O &lt;strong&gt;Jekyll&lt;/strong&gt; é um software gerador de páginas estáticas. Usando arquivos de texto com &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax&#34;&gt;Markdown&lt;/a&gt;, ele cria um site completo, estático, pronto pra ser publicado. A vantagem de gerar um blog, ou um site em html estático, é que não precisamos nos preocupar com muitas camadas de segurança, considerando que eliminamos o interpretador PHP, no caso do WordPress, eliminamos o próprio WordPress, que apesar de ser uma ótima plataforma de blog, pode conter bugs, eliminamos também a necessidade de um servidor de banco de dados (falow MySql 😉 ), e claro,  o desempenho, como só é exibido páginas estáticas, são menos requisições e nada pra processar e pra hospedar apenas páginas estáticas é muito mais barato e até &amp;#8220;di grátis&amp;#8221; hehehehe.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -369,9 +337,7 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
       <guid>https://cezarcruz.com.br/como-instalar-o-nginx-php-mysql-no-ubuntu/</guid>
       <description>&lt;h2 id=&#34;hoje-uma-dica-bem-simples-como-instalar-o-nginx-servidor-web-php-e-mysql-no-ubuntu&#34;&gt;Hoje uma dica bem simples: como instalar o Nginx (Servidor WEB) + PHP e MySql no Ubuntu.&lt;/h2&gt;
 
-&lt;p&gt;O &lt;strong&gt;Nginx&lt;/strong&gt; (Pronuncia Engine-x) é um concorrente do Apache para servir páginas web. Para servir páginas estáticas, sem dúvidas é muito melhor que o Apache e tem um ganho com páginas dinâmicas também (&lt;a href=&#34;http://systemsarchitect.net/apache2-vs-nginx-for-php-application/&#34;&gt;Apache vs Nginx&lt;/a&gt;). O que pude comprovar é o uso de memória, por exemplo, o &lt;strong&gt;Nginx&lt;/strong&gt; usa bem menos e o tempo de reposta é bem menor quando comparado ao Apache. Vamos lá.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;O &lt;strong&gt;Nginx&lt;/strong&gt; (Pronuncia Engine-x) é um concorrente do Apache para servir páginas web. Para servir páginas estáticas, sem dúvidas é muito melhor que o Apache e tem um ganho com páginas dinâmicas também (&lt;a href=&#34;http://systemsarchitect.net/apache2-vs-nginx-for-php-application/&#34;&gt;Apache vs Nginx&lt;/a&gt;). O que pude comprovar é o uso de memória, por exemplo, o &lt;strong&gt;Nginx&lt;/strong&gt; usa bem menos e o tempo de reposta é bem menor quando comparado ao Apache. Vamos lá.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -384,9 +350,7 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
 
 &lt;p&gt;Vamos lá, nesse tutorial vamos tentar aprender como utilizar o multi idioma em uma aplicação utilizando &lt;strong&gt;CodeIginiter&lt;/strong&gt;, daqui pra frente, apenas CI.&lt;/p&gt;
 
-&lt;p&gt;O primeiro passo é configurar:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;O primeiro passo é configurar:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -397,9 +361,7 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
       <guid>https://cezarcruz.com.br/como-utilizar-_layout-cshtml-no-asp-net-mvc-4/</guid>
       <description>&lt;p&gt;Nesse tutorial vamos aprender como utilizar o arquivo de _Layout.cshtml no nosso &lt;a href=&#34;https://cezarcruz.com.br/blog/2013/09/criando-o-primeiro-projeto-aspnet-mvc-com-csharp/&#34; target=&#34;_blank&#34;&gt;primeiro projeto MVC 4&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Assim como no Web Forms com seu Master Page, o MVC tem o seu arquivo master também, porém ele é chamado de _Layout.cshtml, nele colocamos nosso layout padrão de páginas.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Assim como no Web Forms com seu Master Page, o MVC tem o seu arquivo master também, porém ele é chamado de _Layout.cshtml, nele colocamos nosso layout padrão de páginas.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -428,9 +390,7 @@ For Each param As String In Request.QueryString() Response.Write(Request.QuerySt
 
 &lt;p&gt;nesse post vou mostrar como criar a nossa primeira página ASP.NET MVC.&lt;/p&gt;
 
-&lt;p&gt;Não vou entrar em detalhes da tecnologia, mas pelo pouco que estou aprendendo, acredito ser uma boa área de estudo, quem vem do Web Forms vai sentir um pouco de dificuldade, mas rapidinho pega o jeito, vamos lá:&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Não vou entrar em detalhes da tecnologia, mas pelo pouco que estou aprendendo, acredito ser uma boa área de estudo, quem vem do Web Forms vai sentir um pouco de dificuldade, mas rapidinho pega o jeito, vamos lá:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -470,9 +430,7 @@ O BlogEngine é uma ferramenta grátis para criação de blogs, que utiliza ASP.
       <pubDate>Fri, 26 Jul 2013 13:27:09 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-usar-javascript-e-css-no-cakephp/</guid>
-      <description>&lt;p&gt;Olá, hoje mais uma dica sobre CakePHP, vou ensinar como colocar CSS e Javascript corretamente no seu projeto CakePHP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olá, hoje mais uma dica sobre CakePHP, vou ensinar como colocar CSS e Javascript corretamente no seu projeto CakePHP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -493,9 +451,7 @@ Logo mais, postarei como começar a tirar proveito dele e fujir um pouco do boot
       <pubDate>Tue, 23 Jul 2013 14:59:18 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-criar-um-repositorio-svn-no-dropbox/</guid>
-      <description>&lt;p&gt;Um requisito básico para programar, talvez até antes de uma IDE, é uma forma de armazenar os códigos com segurança e se for com controle de versão, melhor ainda.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Um requisito básico para programar, talvez até antes de uma IDE, é uma forma de armazenar os códigos com segurança e se for com controle de versão, melhor ainda.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -504,9 +460,7 @@ Logo mais, postarei como começar a tirar proveito dele e fujir um pouco do boot
       <pubDate>Tue, 02 Jul 2013 15:54:23 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-instalar-apache-php-mysql-no-ubuntu/</guid>
-      <description>&lt;p&gt;Olás, nesse tutorial veremos como instalar e configurar o Ubuntu para rodar nossos sites em PHP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olás, nesse tutorial veremos como instalar e configurar o Ubuntu para rodar nossos sites em PHP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -566,9 +520,7 @@ if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();   P
         &#39;prefix&#39; =&amp;gt; &#39;&#39;,
         //&#39;encoding&#39; =&amp;gt; &#39;utf8&#39;,
     );
-}&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+}&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -583,9 +535,7 @@ if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();   P
 
 &lt;p&gt;Bora lá:&lt;/p&gt;
 
-&lt;p&gt;O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos beneficios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada &lt;a href=&#34;http://blog.glaucocustodio.com/2012/07/31/porque-usar-um-framework/&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt; e &lt;a href=&#34;http://pt.wikipedia.org/wiki/MVC&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos beneficios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada &lt;a href=&#34;http://blog.glaucocustodio.com/2012/07/31/porque-usar-um-framework/&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt; e &lt;a href=&#34;http://pt.wikipedia.org/wiki/MVC&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>

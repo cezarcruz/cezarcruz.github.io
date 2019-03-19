@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/tags/django/</link>
     <description>Recent content in Django on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Tue, 11 Nov 2014 13:58:36 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/tags/django/index.xml" rel="self" type="application/rss+xml" />
@@ -17,9 +17,7 @@
       <pubDate>Tue, 11 Nov 2014 13:58:36 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-navegar-por-um-field-manytomany-em-um-template-django/</guid>
-      <description>&lt;p&gt;Olás,  hoje mais uma dica curtinha: como navegar por um campo &lt;strong&gt;manytomany&lt;/strong&gt; em um template &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olás,  hoje mais uma dica curtinha: como navegar por um campo &lt;strong&gt;manytomany&lt;/strong&gt; em um template &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -30,9 +28,7 @@
       <guid>https://cezarcruz.com.br/curtinhas-como-exibir-o-nome-do-usuario-logado-em-um-template-django/</guid>
       <description>&lt;p&gt;Olá, uma dica curtinha hoje:&lt;/p&gt;
 
-&lt;p&gt;Como exibir o nome do usuário logado em um sistema/site utilizando Django 1.7+.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Como exibir o nome do usuário logado em um sistema/site utilizando Django 1.7+.&lt;/p&gt;</description>
     </item>
     
   </channel>

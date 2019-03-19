@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Como utilizar _Layout.cshtml no ASP.NET MVC 4</title>
+	<title>Como utilizar _Layout.cshtml no ASP.NET MVC 4 - Blog do Cezar</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta name="generator" content="Hugo 0.47.1" />
+	<meta name="generator" content="Hugo 0.54.0" />
 	
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="https://cezarcruz.com.br/css/style.css">
-	<script type="text/javascript" src="https://cezarcruz.com.br/js/scripts.js"></script>
+	
 	<link rel="shortcut icon" href="https://cezarcruz.com.br/favicon.ico">
 		
 <script type="application/javascript">
@@ -27,52 +28,53 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({
-		google_ad_client: "ca-pub-1691224447355253",
-		enable_page_level_ads: true
-	});
-	</script>
 </head>
 <body class="body">
-	<div class="container container-outer">
+	<div class="container container--outer">
 		<header class="header">
-	<div class="container container-inner">
-		<div class="logo" role="banner">
+	<div class="container">
+		<div class="logo">
 			<a class="logo__link" href="https://cezarcruz.com.br/" title="Blog do Cezar" rel="home">
 				<div class="logo__title">Blog do Cezar</div>
-				
+				<div class="logo__tagline">um blog sobre programação e outras coisas mais</div>
 			</a>
 		</div>
-	</div>
-	
+		
 <nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
 	<ul class="menu__list">
-		<li class="menu__item"><a class="menu__link" href="https://cezarcruz.com.br/sobre/">SOBRE</a></li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://cezarcruz.com.br/sobre/">Sobre</a>
+		</li>
 	</ul>
 </nav>
 
+	</div>
 </header>
-
 		<div class="wrapper flex">
+			<div class="primary">
 			
-<main class="main content">
+<main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Como utilizar _Layout.cshtml no ASP.NET MVC 4</h1><div class="post__meta meta">
-<svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2013-09-13T12:37:24">September 13, 2013</time>
-<span class="post__meta-categories meta-categories">
-	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta-categories__list"><a class="meta-categories__link" href="https://cezarcruz.com.br/categories/net" rel="category">NET</a></span>
-</span></div>
-		</header><div class="post__content clearfix">
+			<h1 class="post__title">Como utilizar _Layout.cshtml no ASP.NET MVC 4</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2013-09-13T12:37:24">13 Sep 2013</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="https://cezarcruz.com.br/categories/net" rel="category">NET</a></span>
+</div>
+</div>
+		</header><div class="content post__content clearfix">
 			<p>Nesse tutorial vamos aprender como utilizar o arquivo de _Layout.cshtml no nosso <a href="https://cezarcruz.com.br/blog/2013/09/criando-o-primeiro-projeto-aspnet-mvc-com-csharp/" target="_blank">primeiro projeto MVC 4</a>.</p>
 
 <p>Assim como no Web Forms com seu Master Page, o MVC tem o seu arquivo master também, porém ele é chamado de _Layout.cshtml, nele colocamos nosso layout padrão de páginas.</p>
-
-<p></p>
 
 <blockquote>
 <p>Quando uma View começa com _ (underline) significa que ela não estará navegável, ou seja, não será possível acessar seu conteúdo através de requisições do browser.</p>
@@ -208,14 +210,15 @@ if (!doNotTrack) {
 		</div>
 		
 <div class="post__tags tags clearfix">
-	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373 0-.74-.24-1-.5L1 8a2.853 2.853 0 0 1-.7-1C.113 6.55 0 5.973 0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034 0 1.4 0h4.2c.373 0 .95.113 1.4.3.45.187.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item"><a class="tags__link btn" href="https://cezarcruz.com.br/tags/net/" rel="tag">NET</a></li>
 	</ul>
 </div>
 	</article>
-	
-	
+</main>
+
+
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
 		<a class="post-nav__link" href="https://cezarcruz.com.br/pegando-valores-via-url-get-usando-csharp-ou-vb-net/" rel="prev"><span class="post-nav__caption">«&thinsp;Anterior</span><p class="post-nav__post-title">Pegando valores via Url (GET) usando CSharp ou VB.NET</p></a>
@@ -224,7 +227,7 @@ if (!doNotTrack) {
 		<a class="post-nav__link" href="https://cezarcruz.com.br/utilizando-multi-idiomas-no-php-codeigniter/" rel="next"><span class="post-nav__caption">Próximo&thinsp;»</span><p class="post-nav__post-title">Utilizando multi idiomas no php CodeIgniter</p></a>
 	</div>
 </nav>
-	
+
 <section class="comments">
 	<div id="disqus_thread"></div>
 <script type="application/javascript">
@@ -248,8 +251,8 @@ if (!doNotTrack) {
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </section>
 
-</main>
 
+			</div>
 			<aside class="sidebar"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
@@ -258,8 +261,9 @@ if (!doNotTrack) {
 		<input class="widget-search__submit" type="submit" value="Search">
 		<input type="hidden" name="sitesearch" value="https://cezarcruz.com.br" />
 	</form>
-</div><div class="widget-recent widget">
-	<h4 class="widget__title">Posts Recentes</h4>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/configurando-ambiente-java-simples-rapido-no-linux/">Configurando ambiente de desenvolvimento Java rapidamente no Linux</a></li>
@@ -341,16 +345,14 @@ if (!doNotTrack) {
 </aside>
 		</div>
 		<footer class="footer">
-	<div class="container container-inner">
-		<div class="footer__copyright">&copy; 2018 Blog do Cezar. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 Blog do Cezar.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
 	</div>
 </footer>
-
 	</div>
-<script>
-	var navigation = responsiveNav(".menu", {
-		navClass: "menu--collapse",
-		label: "Menu",
-	});
-</script></body>
+<script async defer src="https://cezarcruz.com.br/js/menu.js"></script></body>
 </html>

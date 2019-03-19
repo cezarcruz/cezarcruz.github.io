@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/categories/1z0-808/</link>
     <description>Recent content in 1z0 808 on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Mon, 12 Mar 2018 10:05:51 -0300</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/1z0-808/index.xml" rel="self" type="application/rss+xml" />
@@ -17,9 +17,7 @@
       <pubDate>Mon, 12 Mar 2018 10:05:51 -0300</pubDate>
       
       <guid>https://cezarcruz.com.br/certificacao-java-variaveis/</guid>
-      <description>&lt;p&gt;Neste post veremos como são criadas e utilizadas as variáveis em uma aplicação Java.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Neste post veremos como são criadas e utilizadas as variáveis em uma aplicação Java.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,9 +38,7 @@ Para criarmos nosso primeiro programa, será necessário criar um arquivo texto 
       
       <guid>https://cezarcruz.com.br/guia-de-estudos-para-certificacao-java-1z0-808/</guid>
       <description>&lt;p&gt;Olá,
-irei começar uma série de posts relacionados a Java. A ideia é escrever sobre os principais pontos que podem cair na prova de certificação (Java SE 8 Programmer I (1Z0-808)).&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+irei começar uma série de posts relacionados a Java. A ideia é escrever sobre os principais pontos que podem cair na prova de certificação (Java SE 8 Programmer I (1Z0-808)).&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/tags/javascript/</link>
     <description>Recent content in Javascript on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Wed, 22 Jun 2016 01:55:53 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
@@ -21,9 +21,7 @@
 
 &lt;p&gt;Hoje vamos ver uma forma de usar uma nova funcionalidade do Angular 1, o component.&lt;/p&gt;
 
-&lt;p&gt;O component é um tipo especial de diretiva, que permite criar, de uma forma simplificada, web components e pavimentar o caminho para uma futura migração para o Angular 2. Para mim a principal vantagem é poder criar peças de códigos reaproveitáveis de uma maneira bem mais simples que criar uma diretiva e suas configurações complexas (manipulação de DOM ainda deve ser feito por diretivas).&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;O component é um tipo especial de diretiva, que permite criar, de uma forma simplificada, web components e pavimentar o caminho para uma futura migração para o Angular 2. Para mim a principal vantagem é poder criar peças de códigos reaproveitáveis de uma maneira bem mais simples que criar uma diretiva e suas configurações complexas (manipulação de DOM ainda deve ser feito por diretivas).&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,9 +30,7 @@
       <pubDate>Sun, 13 Sep 2015 20:24:18 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-usar-uma-diretiva-de-mascara-no-angular-js/</guid>
-      <description>&lt;p&gt;Olás, no tutorial de hoje, vou mostrar como criar um diretiva bem simples utilizando Angular JS para colocar uma máscara de telefone celular com o nono digito em um campo input text.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olás, no tutorial de hoje, vou mostrar como criar um diretiva bem simples utilizando Angular JS para colocar uma máscara de telefone celular com o nono digito em um campo input text.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -43,9 +39,7 @@
       <pubDate>Fri, 10 Jul 2015 14:12:35 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-utilizar-o-http-interceptor-do-angular-js/</guid>
-      <description>&lt;p&gt;Olás, hoje uma dica para como utilizar um $http interceptor do Angular.JS.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olás, hoje uma dica para como utilizar um $http interceptor do Angular.JS.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -54,9 +48,7 @@
       <pubDate>Tue, 28 Apr 2015 02:55:37 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/criando-um-controller-com-angular-js-utilizando-padroes/</guid>
-      <description>&lt;p&gt;Ol&lt;span class=&#34;st&#34;&gt;ás&lt;/span&gt;, hoje vamos ver como criar um Controller no Angular.JS utilizando &lt;a href=&#34;https://github.com/johnpapa/angular-styleguide&#34;&gt;styleguide&lt;/a&gt; criado pelo John Papa.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ol&lt;span class=&#34;st&#34;&gt;ás&lt;/span&gt;, hoje vamos ver como criar um Controller no Angular.JS utilizando &lt;a href=&#34;https://github.com/johnpapa/angular-styleguide&#34;&gt;styleguide&lt;/a&gt; criado pelo John Papa.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -65,9 +57,7 @@
       <pubDate>Fri, 19 Dec 2014 00:04:33 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/hello-angular-js/</guid>
-      <description>&lt;p&gt;Olá, hoje vou escrever um post bem básico de como utilizar &lt;strong&gt;Angular.JS&lt;/strong&gt; no seu próximo projeto.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Olá, hoje vou escrever um post bem básico de como utilizar &lt;strong&gt;Angular.JS&lt;/strong&gt; no seu próximo projeto.&lt;/p&gt;</description>
     </item>
     
     <item>

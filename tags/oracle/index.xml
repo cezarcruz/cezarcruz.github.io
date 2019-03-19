@@ -5,7 +5,7 @@
     <link>https://cezarcruz.com.br/tags/oracle/</link>
     <description>Recent content in Oracle on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en</language>
     <lastBuildDate>Wed, 30 Jul 2014 19:51:56 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
@@ -19,9 +19,7 @@
       <guid>https://cezarcruz.com.br/como-usar-case-em-select-no-oracle/</guid>
       <description>&lt;p&gt;Olás,&lt;/p&gt;
 
-&lt;p&gt;Hoje uma dica rápida sobre oracle: Como utilizar o &lt;strong&gt;Case&lt;/strong&gt; em um select no Oracle.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Hoje uma dica rápida sobre oracle: Como utilizar o &lt;strong&gt;Case&lt;/strong&gt; em um select no Oracle.&lt;/p&gt;</description>
     </item>
     
   </channel>
