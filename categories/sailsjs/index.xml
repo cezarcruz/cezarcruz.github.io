@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sailsjs on Blog do Cezar</title>
+    <title>SailsJS on Blog do Cezar</title>
     <link>https://cezarcruz.com.br/categories/sailsjs/</link>
-    <description>Recent content in Sailsjs on Blog do Cezar</description>
+    <description>Recent content in SailsJS on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 16 May 2016 15:39:06 +0000</lastBuildDate>
