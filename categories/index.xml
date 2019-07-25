@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Sep 2018 09:59:51 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jul 2019 11:20:28 -0300</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Java</title>
       <link>https://cezarcruz.com.br/categories/java/</link>
-      <pubDate>Wed, 19 Sep 2018 09:59:51 -0300</pubDate>
+      <pubDate>Thu, 25 Jul 2019 11:20:28 -0300</pubDate>
       
       <guid>https://cezarcruz.com.br/categories/java/</guid>
       <description></description>
@@ -75,7 +75,7 @@
     </item>
     
     <item>
-      <title>Javascript</title>
+      <title>JavaScript</title>
       <link>https://cezarcruz.com.br/categories/javascript/</link>
       <pubDate>Wed, 22 Jun 2016 01:55:53 +0000</pubDate>
       

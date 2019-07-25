@@ -6,10 +6,21 @@
     <description>Recent content in Cezar Cruz on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Sep 2018 09:59:51 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jul 2019 11:20:28 -0300</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/author/cezar-cruz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Incluindo Lombok em sua aplicaçao Java</title>
+      <link>https://cezarcruz.com.br/post/incluindo-lombok-na-sua-aplicacao-java/</link>
+      <pubDate>Thu, 25 Jul 2019 11:20:28 -0300</pubDate>
+      
+      <guid>https://cezarcruz.com.br/post/incluindo-lombok-na-sua-aplicacao-java/</guid>
+      <description>&lt;p&gt;Olá,&lt;/p&gt;
+
+&lt;p&gt;no post de hoje, vamos ver como incluir o lombok na nossa aplicação Java.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Configurando ambiente de desenvolvimento Java rapidamente no Linux</title>
