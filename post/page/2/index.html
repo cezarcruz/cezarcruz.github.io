@@ -7,7 +7,7 @@
 	<title>Posts - Blog do Cezar</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta name="generator" content="Hugo 0.55.6" />
+	<meta name="generator" content="Hugo 0.54.0" />
 	
 		
 	<link rel="alternate" type="application/rss+xml" href="https://cezarcruz.com.br/post/index.xml" title="Blog do Cezar">
@@ -65,6 +65,33 @@ if (!doNotTrack) {
 	<header class="main__header">
 		<h1 class="main__title">Posts</h1>
 	</header><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="https://cezarcruz.com.br/como-instalar-drivers-nvidia-no-elementary-os-loki/" rel="bookmark">
+			Como instalar drivers nvidia no Elementary OS Loki
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-09-12T14:01:11">12 Sep 2016</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="https://cezarcruz.com.br/categories/linux" rel="category">Linux</a></span>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Olás,
+recentemente foi lançado a nova versão do Elementary OS, uma distribuição que tem como meta ser &#8220;Uma alternativa rápida e código aberto ao Windows e macOS&#8221;, após a instalação, como sempre, é necessário instalar os drivers da placa de vídeo, uma forma bem simples é executar esse comando:
+sudo ubuntu-drivers debug && sudo ubuntu-drivers autoinstall bem simples, após a conclusão da instalação, basta reiniciar a maquina e desfrutar. =)
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/como-instalar-drivers-nvidia-no-elementary-os-loki/">Continue lendo…</a>
+	</div>
+</article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
 			<a href="https://cezarcruz.com.br/usando-component-no-angular-1-5/" rel="bookmark">
@@ -297,33 +324,6 @@ Como configurar o git para não pedir senha ao baixar ou subir dados no reposit�
 git config credential.helper cache Pra salvar apenas por um tempo determinado, utilizar:
 git config credential.helper 'cache --timeout=60000' =D
 	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="https://cezarcruz.com.br/java-como-navegar-por-enums/" rel="bookmark">
-			Java – Como navegar por ENUMs
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2014-09-11T18:37:27">11 Sep 2014</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="https://cezarcruz.com.br/categories/java" rel="category">Java</a></span>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Olás,
-hoje uma dica rápida pra navegarmos por uma classe java que contenha enums:
-Considerando nosso enum:
-public enum Cidades { CAMPINAS, HORTOLANDIA, SUMARE, VALINHOS } Pra navegamos por ele basta fazer o seguinte:
-for (Cidades c : Cidages.values()) { System.out.println(c.toString()); } Utilizando o método values, obtemos um list do tipo do nosso enum com todos os enum, daí pra frente é só diversão.
-Abraços!
-	</div>
 </article>
 </main>
 
@@ -349,11 +349,11 @@ Abraços!
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/post/incluindo-lombok-na-sua-aplicacao-java/">Incluindo Lombok em sua aplicaçao Java</a></li>
+			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/post/incluindo-map-struct-em-sua-aplicacao-java/">Incluindo MapStruct em sua aplicação Java</a></li>
+			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/post/incluindo-lombok-na-sua-aplicacao-java/">Incluindo Lombok em sua aplicação Java</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/configurando-ambiente-java-simples-rapido-no-linux/">Configurando ambiente de desenvolvimento Java rapidamente no Linux</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/certificacao-java-variaveis/">Certificação JAVA (1Z0-808) - Variáveis</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/certificacao-java-compilacao-e-execucao/">Certificação JAVA (1Z0-808) - Compilação e execução</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/guia-de-estudos-para-certificacao-java-1z0-808/">Guia de estudos para certificação JAVA (1Z0-808)</a></li>
 		</ul>
 	</div>
 </div>
@@ -431,7 +431,7 @@ Abraços!
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2019 Blog do Cezar.
+			&copy; 2020 Blog do Cezar.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

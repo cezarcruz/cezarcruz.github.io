@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CSharp on Blog do Cezar</title>
+    <title>Csharp on Blog do Cezar</title>
     <link>https://cezarcruz.com.br/tags/csharp/</link>
-    <description>Recent content in CSharp on Blog do Cezar</description>
+    <description>Recent content in Csharp on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 02 Sep 2013 12:31:21 +0000</lastBuildDate>

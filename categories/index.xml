@@ -6,22 +6,13 @@
     <description>Recent content in Categories on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Jul 2019 11:20:28 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 12 Mar 2018 10:05:51 -0300</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Java</title>
-      <link>https://cezarcruz.com.br/categories/java/</link>
-      <pubDate>Thu, 25 Jul 2019 11:20:28 -0300</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>1Z0-808</title>
+      <title>1z0 808</title>
       <link>https://cezarcruz.com.br/categories/1z0-808/</link>
       <pubDate>Mon, 12 Mar 2018 10:05:51 -0300</pubDate>
       
@@ -30,43 +21,7 @@
     </item>
     
     <item>
-      <title>Intellij</title>
-      <link>https://cezarcruz.com.br/categories/intellij/</link>
-      <pubDate>Sun, 07 Jan 2018 09:59:51 -0300</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/intellij/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fedora</title>
-      <link>https://cezarcruz.com.br/categories/fedora/</link>
-      <pubDate>Wed, 19 Apr 2017 00:47:44 +0000</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/fedora/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://cezarcruz.com.br/categories/linux/</link>
-      <pubDate>Wed, 19 Apr 2017 00:47:44 +0000</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ruby</title>
-      <link>https://cezarcruz.com.br/categories/ruby/</link>
-      <pubDate>Wed, 21 Dec 2016 11:14:46 +0000</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/ruby/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AngularJS</title>
+      <title>Angularjs</title>
       <link>https://cezarcruz.com.br/categories/angularjs/</link>
       <pubDate>Wed, 22 Jun 2016 01:55:53 +0000</pubDate>
       
@@ -75,29 +30,29 @@
     </item>
     
     <item>
-      <title>JavaScript</title>
-      <link>https://cezarcruz.com.br/categories/javascript/</link>
-      <pubDate>Wed, 22 Jun 2016 01:55:53 +0000</pubDate>
+      <title>Cakephp</title>
+      <link>https://cezarcruz.com.br/categories/cakephp/</link>
+      <pubDate>Fri, 01 Nov 2013 13:11:15 +0000</pubDate>
       
-      <guid>https://cezarcruz.com.br/categories/javascript/</guid>
+      <guid>https://cezarcruz.com.br/categories/cakephp/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>NodeJS</title>
-      <link>https://cezarcruz.com.br/categories/nodejs/</link>
-      <pubDate>Mon, 16 May 2016 15:39:06 +0000</pubDate>
+      <title>Csharp</title>
+      <link>https://cezarcruz.com.br/categories/csharp/</link>
+      <pubDate>Mon, 02 Sep 2013 12:31:21 +0000</pubDate>
       
-      <guid>https://cezarcruz.com.br/categories/nodejs/</guid>
+      <guid>https://cezarcruz.com.br/categories/csharp/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>SailsJS</title>
-      <link>https://cezarcruz.com.br/categories/sailsjs/</link>
-      <pubDate>Mon, 16 May 2016 15:39:06 +0000</pubDate>
+      <title>Css</title>
+      <link>https://cezarcruz.com.br/categories/css/</link>
+      <pubDate>Fri, 28 Mar 2014 19:23:34 +0000</pubDate>
       
-      <guid>https://cezarcruz.com.br/categories/sailsjs/</guid>
+      <guid>https://cezarcruz.com.br/categories/css/</guid>
       <description></description>
     </item>
     
@@ -111,15 +66,6 @@
     </item>
     
     <item>
-      <title>Git</title>
-      <link>https://cezarcruz.com.br/categories/git/</link>
-      <pubDate>Thu, 06 Nov 2014 23:49:38 +0000</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Eclipse</title>
       <link>https://cezarcruz.com.br/categories/eclipse/</link>
       <pubDate>Sun, 31 Aug 2014 16:11:10 +0000</pubDate>
@@ -129,56 +75,56 @@
     </item>
     
     <item>
-      <title>Maven</title>
-      <link>https://cezarcruz.com.br/categories/maven/</link>
-      <pubDate>Sun, 31 Aug 2014 16:11:10 +0000</pubDate>
+      <title>Fedora</title>
+      <link>https://cezarcruz.com.br/categories/fedora/</link>
+      <pubDate>Wed, 19 Apr 2017 00:47:44 +0000</pubDate>
       
-      <guid>https://cezarcruz.com.br/categories/maven/</guid>
+      <guid>https://cezarcruz.com.br/categories/fedora/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Oracle</title>
-      <link>https://cezarcruz.com.br/categories/oracle/</link>
-      <pubDate>Wed, 30 Jul 2014 19:51:56 +0000</pubDate>
+      <title>Git</title>
+      <link>https://cezarcruz.com.br/categories/git/</link>
+      <pubDate>Thu, 06 Nov 2014 23:49:38 +0000</pubDate>
       
-      <guid>https://cezarcruz.com.br/categories/oracle/</guid>
+      <guid>https://cezarcruz.com.br/categories/git/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>SQL</title>
-      <link>https://cezarcruz.com.br/categories/sql/</link>
-      <pubDate>Wed, 30 Jul 2014 19:51:56 +0000</pubDate>
+      <title>Hospedagem</title>
+      <link>https://cezarcruz.com.br/categories/hospedagem/</link>
+      <pubDate>Thu, 13 Jun 2013 03:19:23 +0000</pubDate>
       
-      <guid>https://cezarcruz.com.br/categories/sql/</guid>
+      <guid>https://cezarcruz.com.br/categories/hospedagem/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>CSS</title>
-      <link>https://cezarcruz.com.br/categories/css/</link>
-      <pubDate>Fri, 28 Mar 2014 19:23:34 +0000</pubDate>
+      <title>Intellij</title>
+      <link>https://cezarcruz.com.br/categories/intellij/</link>
+      <pubDate>Sun, 07 Jan 2018 09:59:51 -0300</pubDate>
       
-      <guid>https://cezarcruz.com.br/categories/css/</guid>
+      <guid>https://cezarcruz.com.br/categories/intellij/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Outros</title>
-      <link>https://cezarcruz.com.br/categories/outros/</link>
-      <pubDate>Wed, 05 Feb 2014 15:36:20 +0000</pubDate>
+      <title>Java</title>
+      <link>https://cezarcruz.com.br/categories/java/</link>
+      <pubDate>Sun, 11 Aug 2019 15:50:36 -0300</pubDate>
       
-      <guid>https://cezarcruz.com.br/categories/outros/</guid>
+      <guid>https://cezarcruz.com.br/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Markdown</title>
-      <link>https://cezarcruz.com.br/categories/markdown/</link>
-      <pubDate>Fri, 17 Jan 2014 14:36:48 +0000</pubDate>
+      <title>Javascript</title>
+      <link>https://cezarcruz.com.br/categories/javascript/</link>
+      <pubDate>Wed, 22 Jun 2016 01:55:53 +0000</pubDate>
       
-      <guid>https://cezarcruz.com.br/categories/markdown/</guid>
+      <guid>https://cezarcruz.com.br/categories/javascript/</guid>
       <description></description>
     </item>
     
@@ -192,61 +138,7 @@
     </item>
     
     <item>
-      <title>CakePHP</title>
-      <link>https://cezarcruz.com.br/categories/cakephp/</link>
-      <pubDate>Fri, 01 Nov 2013 13:11:15 +0000</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/cakephp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PHP</title>
-      <link>https://cezarcruz.com.br/categories/php/</link>
-      <pubDate>Fri, 01 Nov 2013 13:11:15 +0000</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>LEMP</title>
-      <link>https://cezarcruz.com.br/categories/lemp/</link>
-      <pubDate>Tue, 22 Oct 2013 12:48:50 +0000</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/lemp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>NET</title>
-      <link>https://cezarcruz.com.br/categories/net/</link>
-      <pubDate>Fri, 13 Sep 2013 12:37:24 +0000</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/net/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CSharp</title>
-      <link>https://cezarcruz.com.br/categories/csharp/</link>
-      <pubDate>Mon, 02 Sep 2013 12:31:21 +0000</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/csharp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SVN</title>
-      <link>https://cezarcruz.com.br/categories/svn/</link>
-      <pubDate>Tue, 23 Jul 2013 14:59:18 +0000</pubDate>
-      
-      <guid>https://cezarcruz.com.br/categories/svn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>LAMP</title>
+      <title>Lamp</title>
       <link>https://cezarcruz.com.br/categories/lamp/</link>
       <pubDate>Tue, 02 Jul 2013 15:54:23 +0000</pubDate>
       
@@ -255,11 +147,119 @@
     </item>
     
     <item>
-      <title>Hospedagem</title>
-      <link>https://cezarcruz.com.br/categories/hospedagem/</link>
-      <pubDate>Thu, 13 Jun 2013 03:19:23 +0000</pubDate>
+      <title>Lemp</title>
+      <link>https://cezarcruz.com.br/categories/lemp/</link>
+      <pubDate>Tue, 22 Oct 2013 12:48:50 +0000</pubDate>
       
-      <guid>https://cezarcruz.com.br/categories/hospedagem/</guid>
+      <guid>https://cezarcruz.com.br/categories/lemp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://cezarcruz.com.br/categories/linux/</link>
+      <pubDate>Wed, 19 Apr 2017 00:47:44 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://cezarcruz.com.br/categories/markdown/</link>
+      <pubDate>Fri, 17 Jan 2014 14:36:48 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maven</title>
+      <link>https://cezarcruz.com.br/categories/maven/</link>
+      <pubDate>Sun, 31 Aug 2014 16:11:10 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/maven/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Net</title>
+      <link>https://cezarcruz.com.br/categories/net/</link>
+      <pubDate>Fri, 13 Sep 2013 12:37:24 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nodejs</title>
+      <link>https://cezarcruz.com.br/categories/nodejs/</link>
+      <pubDate>Mon, 16 May 2016 15:39:06 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Oracle</title>
+      <link>https://cezarcruz.com.br/categories/oracle/</link>
+      <pubDate>Wed, 30 Jul 2014 19:51:56 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/oracle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Outros</title>
+      <link>https://cezarcruz.com.br/categories/outros/</link>
+      <pubDate>Wed, 05 Feb 2014 15:36:20 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/outros/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Php</title>
+      <link>https://cezarcruz.com.br/categories/php/</link>
+      <pubDate>Fri, 01 Nov 2013 13:11:15 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>https://cezarcruz.com.br/categories/ruby/</link>
+      <pubDate>Wed, 21 Dec 2016 11:14:46 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sailsjs</title>
+      <link>https://cezarcruz.com.br/categories/sailsjs/</link>
+      <pubDate>Mon, 16 May 2016 15:39:06 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/sailsjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sql</title>
+      <link>https://cezarcruz.com.br/categories/sql/</link>
+      <pubDate>Wed, 30 Jul 2014 19:51:56 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Svn</title>
+      <link>https://cezarcruz.com.br/categories/svn/</link>
+      <pubDate>Tue, 23 Jul 2013 14:59:18 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/svn/</guid>
       <description></description>
     </item>
     

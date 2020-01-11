@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CakePHP on Blog do Cezar</title>
+    <title>Cakephp on Blog do Cezar</title>
     <link>https://cezarcruz.com.br/categories/cakephp/</link>
-    <description>Recent content in CakePHP on Blog do Cezar</description>
+    <description>Recent content in Cakephp on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 01 Nov 2013 13:11:15 +0000</lastBuildDate>

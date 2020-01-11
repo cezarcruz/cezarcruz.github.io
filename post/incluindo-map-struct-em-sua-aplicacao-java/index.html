@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Por que criar um blog? - Blog do Cezar</title>
+	<title>Incluindo MapStruct em sua aplicação Java - Blog do Cezar</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<meta name="generator" content="Hugo 0.54.0" />
@@ -63,21 +63,298 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Por que criar um blog?</h1>
+			<h1 class="post__title">Incluindo MapStruct em sua aplicação Java</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2013-06-13T03:18:29">13 Jun 2013</time>
+	<time class="meta__text" datetime="2019-08-11T15:50:36">11 Aug 2019</time>
 </div>
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="https://cezarcruz.com.br/categories/outros" rel="category">Outros</a></span>
+	<span class="meta__text"><a class="meta__link" href="https://cezarcruz.com.br/categories/java" rel="category">Java</a></span>
 </div>
 </div>
 		</header><div class="content post__content clearfix">
-			<p>Na verdade gostaria de fazer desse blog uma base de conhecimento, tanto pra mim como pra quem precisar de uma ajudinha, e um local onde eu possa compartilhar meus estudos.</p>
+			<p>Olá, neste post veremos como incluindo o MapStruct em uma aplicação Java.</p>
 
+<p>Qual é o problema?</p>
+
+<p>Nas aplicações atuais estamos acostumados a criar &ldquo;camadas&rdquo;: controllers, services, repositories, DAO, etc. Normalmente, separamos nossa request de dados do que é salvo no banco, com isso temos o famoso DTO e nossas Entidades (JPA). O DTO fica no controller e as entidades são gerenciadas pelo repositório ou DAO, para que isso funcione, temos que converter o DTO antes de salvar no nosso banco de dados, para isso existem algumas formas de fazer, mas todas são massantes.</p>
+
+<p>O que é o MapStruct e como ele pode resolver este problema?</p>
+
+<p>O MapStruct, é suas palavras, é um gerador de código que converte &ldquo;Java Beans&rdquo; baseado em convenção sob configuração.</p>
+
+<p><a href="https://mapstruct.org/">https://mapstruct.org/</a></p>
+
+<p>Dito isso, podemos utilizar o MapStruct para fazer conversões entre um DTO e uma entidade e vice versa, vamos aos passos:</p>
+
+<h2 id="incluir-no-projeto-maven">Incluir no projeto maven</h2>
+
+<p>Deve ser incluído as seguintes linhas no pom.xml</p>
+
+<pre><code>   &lt;dependency&gt;
+       &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
+       &lt;artifactId&gt;mapstruct&lt;/artifactId&gt;
+       &lt;version&gt;1.3.1.Final&lt;/version&gt;
+   &lt;/dependency&gt;
+ 
+   &lt;build&gt;
+       &lt;plugins&gt;
+           &lt;plugin&gt;
+               &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+               &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+               &lt;version&gt;3.5.1&lt;/version&gt; &lt;!-- or newer version --&gt;
+               &lt;configuration&gt;
+                   &lt;source&gt;1.8&lt;/source&gt; &lt;!-- depending on your project --&gt;
+                   &lt;target&gt;1.8&lt;/target&gt; &lt;!-- depending on your project --&gt;
+                   &lt;annotationProcessorPaths&gt;
+                       &lt;path&gt;
+                           &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
+                           &lt;artifactId&gt;mapstruct-processor&lt;/artifactId&gt;
+                           &lt;version&gt;${org.mapstruct.version}&lt;/version&gt;
+                       &lt;/path&gt;
+                       &lt;!-- other annotation processors --&gt;
+                   &lt;/annotationProcessorPaths&gt;
+               &lt;/configuration&gt;
+           &lt;/plugin&gt;
+       &lt;/plugins&gt;
+   &lt;/build&gt;
+</code></pre>
+
+<p>Após esta configuração é possível utilizar normalmente.</p>
+
+<blockquote>
+<p>O MapStruct gera código através de processamento de anotações, por isso, sempre que houver uma alteração em classes que envolvam o MapStruct (mappers, dto, entidade, etc), deve ser executado um comando de build do maven</p>
+</blockquote>
+
+<h2 id="criando-dtos">Criando DTOs</h2>
+
+<p>Para simplificar o nosso código, não irei exibir os getters e setters.
+Nossa aplicação será composta de 4 POJOs, onde será feita a conversão de um para o outro, veja:</p>
+
+<p>PessoaRequest.java</p>
+
+<pre><code>private String nome;
+private Integer idade;
+private List&lt;EnderecoRequest&gt; enderecos;
+</code></pre>
+
+<p>EnderecoRequest.java</p>
+
+<pre><code>private String rua;
+private Integer numero;
+private String cidade;
+</code></pre>
+
+<p>PessoaResponse.class</p>
+
+<pre><code>private String nome;
+private Integer idade;
+private List&lt;EnderecoResponse&gt; enderecos
+</code></pre>
+
+<p>EnderecoResponse.class</p>
+
+<pre><code>private String logradouro;
+private String numero;
+private String cidade;
+</code></pre>
+
+<p>Repare que as classes de endereço tem propriedades com nomes e tipos diferentes propositalmente.</p>
+
+<h2 id="implementar-os-mappers">Implementar os mappers</h2>
+
+<p>Agora que temos nossa aplicação configurada e nossos POJOs, podemos iniciar a implementação.
+Ela pode ser feita de duas formas: Implementando em uma Interface ou uma classe Abstrata.</p>
+
+<blockquote>
+<p>Normalmente devemos utilizar Interfaces e, caso precise de algum método extra, criamos um método &ldquo;default&rdquo;, em casos mais especifitos (injetar um bean do Spring, por exemplo), podemos utilizar classes abstratas.</p>
+</blockquote>
+
+<p>Iremos começar pela classe Endereço:</p>
+
+<p>EnderecoMapper.java</p>
+
+<pre><code>@Mapper(componentModel = &quot;spring&quot;)
+public interface EnderecoMapper {
+ 
+ @Mapping(target = &quot;logradouro&quot;, source = &quot;rua&quot;)
+ EnderecoResponse de(final EnderecoRequest enderecoRequest);
+ 
+ @InheritInverseConfiguration
+ EnderecoRequest de(final EnderecoResponse enderecoResponse);
+ 
+ List&lt;EnderecoResponse&gt; deRequest(final List&lt;EnderecoRequest&gt; enderecoRequests);
+  List&lt;EnderecoRequest&gt; deResponse(final List&lt;EnderecoResponse&gt; enderecoResponses);
+}
+ 
+</code></pre>
+
+<p>@Mapper é utilizado para dizermos que esta interface é um mapper, a opção &ldquo;componentModel&rdquo; foi utilizada para dizer ao MapStruct que deve ser criar um &ldquo;Bean&rdquo; do spring para que possamos utilizar a Injeção de Dependencia do Spring. A configuração &ldquo;componentModel&rdquo; é opcional</p>
+
+<p>@Mapping é utilizado para deixar explícito a conversão. Quando o nome das propriedades estão iguais o próprio MapStruct infere, mas quando está diferente, precisa ser especificado a origem e o destino, existem outra possibilidades, mas vamos explorar apenas o básico. Repare que o campo número são de tipos diferentes, o proprio MapStruct consegue fazer as conversões, é bem útil e ainda é possível especificar a conversão manualmente.</p>
+
+<p>@InheritInverseConfiguration faz a configuração inversa da conversão, deve ser utilizado quando existe um mapper com algum tipo de configuração específica.</p>
+
+<p>Os métodos de list sabem utilizar a configuração criada nos métodos anteriores não sendo necessário nenhuma configuração extra.</p>
+
+<p>Veja como fica a classe gerada a partir desta configuração:</p>
+
+<pre><code>package br.com.cezarcruz.mapstruct.controllers.mappers;
+ 
+import br.com.cezarcruz.mapstruct.controllers.request.EnderecoRequest;
+import br.com.cezarcruz.mapstruct.controllers.response.EnderecoResponse;
+import java.util.ArrayList;
+import java.util.List;
+import javax.annotation.Generated;
+import org.springframework.stereotype.Component;
+ 
+@Generated(
+   value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+   date = &quot;2020-01-11T12:49:13-0200&quot;,
+   comments = &quot;version: 1.3.1.Final, compiler: javac, environment: Java 11.0.4 (AdoptOpenJDK)&quot;
+)
+@Component
+public class EnderecoMapperImpl implements EnderecoMapper {
+ 
+   @Override
+   public EnderecoResponse de(EnderecoRequest enderecoRequest) {
+       if ( enderecoRequest == null ) {
+           return null;
+       }
+ 
+       EnderecoResponse enderecoResponse = new EnderecoResponse();
+ 
+       enderecoResponse.setLogradouro( enderecoRequest.getRua() );
+       if ( enderecoRequest.getNumero() != null ) {
+           enderecoResponse.setNumero( String.valueOf( enderecoRequest.getNumero() ) );
+       }
+       enderecoResponse.setCidade( enderecoRequest.getCidade() );
+ 
+       return enderecoResponse;
+   }
+ 
+   @Override
+   public EnderecoRequest de(EnderecoResponse enderecoResponse) {
+       if ( enderecoResponse == null ) {
+           return null;
+       }
+ 
+       EnderecoRequest enderecoRequest = new EnderecoRequest();
+ 
+       enderecoRequest.setRua( enderecoResponse.getLogradouro() );
+       if ( enderecoResponse.getNumero() != null ) {
+           enderecoRequest.setNumero( Integer.parseInt( enderecoResponse.getNumero() ) );
+       }
+       enderecoRequest.setCidade( enderecoResponse.getCidade() );
+ 
+       return enderecoRequest;
+   }
+ 
+   @Override
+   public List&lt;EnderecoResponse&gt; deRequest(List&lt;EnderecoRequest&gt; enderecoRequests) {
+       if ( enderecoRequests == null ) {
+           return null;
+       }
+ 
+       List&lt;EnderecoResponse&gt; list = new ArrayList&lt;EnderecoResponse&gt;( enderecoRequests.size() );
+       for ( EnderecoRequest enderecoRequest : enderecoRequests ) {
+           list.add( de( enderecoRequest ) );
+       }
+ 
+       return list;
+   }
+ 
+   @Override
+   public List&lt;EnderecoRequest&gt; deResponse(List&lt;EnderecoResponse&gt; enderecoResponses) {
+       if ( enderecoResponses == null ) {
+           return null;
+       }
+ 
+       List&lt;EnderecoRequest&gt; list = new ArrayList&lt;EnderecoRequest&gt;( enderecoResponses.size() );
+       for ( EnderecoResponse enderecoResponse : enderecoResponses ) {
+           list.add( de( enderecoResponse ) );
+       }
+ 
+       return list;
+   }
+}
+ 
+</code></pre>
+
+<blockquote>
+<p>Observe que ele sabe lidar com valores nulos e incluiu anotações do  Spring</p>
+</blockquote>
+
+<p>Veja como fica o mapper da classe Pessoa</p>
+
+<pre><code>@Mapper(componentModel = &quot;spring&quot;, uses = {
+   EnderecoMapper.class
+})
+public interface PessoaMapper {
+ PessoaResponse de(final PessoaRequest pessoaRequest);
+}
+</code></pre>
+
+<p>@Mapper nessa classe ele foi implementado com um detalhe, o &ldquo;uses&rdquo;, com isso dizemos ao MapStruct que não deve ser implementado um novo conversor para endereço mas utilizar o que mapper pronto.</p>
+
+<p>Veja como ficou a classe gerada:</p>
+
+<pre><code>@Generated(
+   value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
+   date = &quot;2020-01-11T12:49:13-0200&quot;,
+   comments = &quot;version: 1.3.1.Final, compiler: javac, environment: Java 11.0.4 (AdoptOpenJDK)&quot;
+)
+@Component
+public class PessoaMapperImpl implements PessoaMapper {
+ 
+   @Autowired
+   private EnderecoMapper enderecoMapper;
+ 
+   @Override
+   public PessoaResponse de(PessoaRequest pessoaRequest) {
+       if ( pessoaRequest == null ) {
+           return null;
+       }
+ 
+       PessoaResponse pessoaResponse = new PessoaResponse();
+ 
+       pessoaResponse.setNome( pessoaRequest.getNome() );
+       pessoaResponse.setIdade( pessoaRequest.getIdade() );
+       pessoaResponse.setEnderecos( enderecoMapper.deRequest( pessoaRequest.getEnderecos() ) );
+ 
+       return pessoaResponse;
+   }
+}
+ 
+</code></pre>
+
+<p>E com nossa conversão pronta basta utilizarmos:</p>
+
+<pre><code>@Service
+public class ConversorService {
+ 
+ @Autowired
+ private PessoaMapper pessoaMapper;
+ 
+ public PessoaResponse converte(final PessoaRequest pessoaRequest) {
+   return pessoaMapper.de(pessoaRequest);
+ }
+}
+</code></pre>
+
+<p>Pronto.</p>
+
+<p>É possível incluir mais configurações ou fazer alguma implementação para executar antes ou depois de uma conversão, vemos isso em outros posts.</p>
+
+<p>Enquanto isso veja a documentação:
+<a href="https://mapstruct.org/documentation/stable/reference/html/">https://mapstruct.org/documentation/stable/reference/html/</a></p>
+
+<p>Qualquer duvida, comente o post.</p>
+
+<p>Até.</p>
 		</div>
 		
 	</article>
@@ -85,8 +362,8 @@ if (!doNotTrack) {
 
 
 <nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="https://cezarcruz.com.br/hostinger-brasil-hospedagem-gratuita/" rel="next"><span class="post-nav__caption">Próximo&thinsp;»</span><p class="post-nav__post-title">Hostinger Brasil, hospedagem gratuita</p></a>
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="https://cezarcruz.com.br/post/incluindo-lombok-na-sua-aplicacao-java/" rel="prev"><span class="post-nav__caption">«&thinsp;Anterior</span><p class="post-nav__post-title">Incluindo Lombok em sua aplicação Java</p></a>
 	</div>
 </nav>
 
