@@ -75,91 +75,64 @@ if (!doNotTrack) {
 			<p>Neste post veremos como são criadas e utilizadas as variáveis em uma aplicação Java.</p>
 <p>Uma variável é um nome definido pelo programador ao qual se associa um valor pertencente a um certo tipo de dados e armazenado em um conjunto de posições da memória do computador. Basicamente, toda variável sempre possui um nome, um tipo e um conteúdo.</p>
 <p>O nome de uma variável, em Java, pode ser formado por uma letra, pelos caracteres _ (<em>underscore</em>), ou $ (cifrão). Nomes não podem conter outros símbolos gráficos, operadores ou espaços em branco, podendo ser longos, embora apenas os primeiros 32 caracteres sejam usados para distinguir. Lembrando que Java é <em>Case Sensitive</em>, letras minusculas e maiusculas são consideradas diferentes. Exemplos válidos:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a</td>
-<td>outro</td>
-<td>x</td>
-<td>_valor</td>
-<td>$top</td>
-<td>VALOR</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>a</li>
+<li>outro</li>
+<li>x</li>
+<li>_valor</li>
+<li>$top</li>
+<li>VALOR</li>
+</ul>
 <p>Exemplos inválidos:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1x</td>
-<td>novo valor</td>
-<td>sem-valor</td>
-<td>void</td>
-<td>super</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>1x</li>
+<li>novo valor</li>
+<li>sem-valor</li>
+<li>void</li>
+<li>super</li>
+</ul>
 <p>O Java possui um conjunto de palavras que indicam os nomes dos tipos primitivos, as diretivas da linguagem, os especificadores e modificadores e outros elementos pertencentes a sintaxe dessa linguagem. Essas palavras são reservadas e não podem ser utilizadas com outra finalidade:</p>
 <p><em>abstract</em>, <em>assert</em>, <em>boolean</em>, <em>break</em>, <em>byte</em>, <em>case</em>, <em>catch</em>, <em>class</em>, <em>continue</em>, <em>default</em>, <em>do</em>, <em>double</em>, <em>else</em>, <em>enum</em>, <em>extends</em>, <em>false</em>, <em>final</em>, <em>finally</em>, <em>float</em>, <em>for</em>, <em>if</em>, <em>implements</em>, <em>import</em>, <em>instanceof</em>, <em>int</em>, <em>interface</em>, <em>long</em>, <em>native</em>, <em>new</em>, <em>null</em>, <em>package</em>, <em>private</em>, <em>protected</em>, <em>public</em>, <em>return</em>, <em>short</em>, <em>static</em>, <em>strictfp</em>, <em>super</em>, <em>switch</em>, <em>synchronized</em>, <em>this</em>, <em>throw</em>, <em>throws</em>, <em>transient</em>, <em>true</em>, <em>try</em>, <em>void</em>, <em>volatile</em>, <em>while</em></p>
 <p>false e true não são palavras reservadas, mas valores literais do tipo boolean. Do mesmo modo, null é o literal nulo. Além dos citados, existem outras duas que, embora sejam reservadas, nao sao utilizadas pela linguagem: <em>const</em> e <em>goto</em>.</p>
 <p>Declarar uma variável é associar um tipo, um nome e um valor. Para isso deve ser observada a sintaxe:</p>
 <pre><code>&lt;Tipo&gt; &lt;nome1&gt; [, nome2 [, nome3 [..., nomeN]]];
 </code></pre><p>A especificação de um Tipo e ao menos um nome sao obrigatorios. Pode seguir opcionalmente uma lista de nomes, todos separados por vírgulas. A declaração é terminado por ; (ponto e vírgula). O Tipo pode ser um tipo primitivo, uma classe da API Java ou outra definida pelo programador. Exemplos:</p>
-<pre><code>int i;
-float total, preco;
-byte mascara;
-double valorMedio;
-</code></pre><p>Variáveis de um mesmo tipo podem ser declaradas separadas ou em conjunto:</p>
-<pre><code>char op1;
-char op2;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> i<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> total<span style="color:#f92672">,</span> preco<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">byte</span> mascara<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">double</span> valorMedio<span style="color:#f92672">;</span>
+</code></pre></div><p>Variáveis de um mesmo tipo podem ser declaradas separadas ou em conjunto:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">char</span> op1<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">char</span> op2<span style="color:#f92672">;</span>
 
-char op3, op4;
-</code></pre><p>Também é possível definir um valor inicial para uma variável, o que é chamado de inicialização:</p>
-<pre><code>int i, quantidade = 0;
-float angulo = 1.57f, temp;
-double valor = 13.323;
-boolean ok = false;
-char letra = ‘c’;
-</code></pre><p>Variáveis podem ser declaradas em qualquer ponto de um programa Java, sendo válidas em todo o escopo em que foram declaradas e nos escopos internos a esses.</p>
+<span style="color:#66d9ef">char</span> op3<span style="color:#f92672">,</span> op4<span style="color:#f92672">;</span>
+</code></pre></div><p>Também é possível definir um valor inicial para uma variável, o que é chamado de inicialização:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> i<span style="color:#f92672">,</span> quantidade <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">float</span> angulo <span style="color:#f92672">=</span> 1<span style="color:#f92672">.</span><span style="color:#a6e22e">57f</span><span style="color:#f92672">,</span> temp<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">double</span> valor <span style="color:#f92672">=</span> 13<span style="color:#f92672">.</span><span style="color:#a6e22e">323</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">boolean</span> ok <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">char</span> letra <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">‘</span>c<span style="color:#960050;background-color:#1e0010">’</span><span style="color:#f92672">;</span>
+</code></pre></div><p>Variáveis podem ser declaradas em qualquer ponto de um programa Java, sendo válidas em todo o escopo em que foram declaradas e nos escopos internos a esses.</p>
 <p>O conjunto dos locais no qual uma declaração tem validade é denominado escopo. Um bloco de comandos é um conjunto de comandos da linguagem delimitados por uma chave  inicial { e outra chave final }. A partir do ponto em que ocorreu a declaração de uma variável, é dito que a variável está em seu escopo, limitado ao bloco de comandos onde ocorreu essa declaração, mas incluindo escopos mais internos. Observe os vários escopos existentes abaixo:</p>
-<pre><code>public class Escopo { // inicio do bloco0
-    public static void main(String args[]) { //inicio do bloco 1
-        int i = 5; // variavel do bloco 1
-        { // inicio do bloco 2
-            int j = 0; // variavel do bloco 2
-            System.out.println(i); // uso de i dentro do seu escopo
-            j = 4 * i; // uso de i dentro do seu escopo
-            System.out.println(j);
-            { // inicio do bloco 3
-                System.out.println(i); // uso de i dentro do seu escopo
-                System.out.println(j); // uso de j dentro do seu escopo
-            }
-        }
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Escopo</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// inicio do bloco0
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[])</span> <span style="color:#f92672">{</span> <span style="color:#75715e">//inicio do bloco 1
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span> <span style="color:#75715e">// variavel do bloco 1
+</span><span style="color:#75715e"></span>        <span style="color:#f92672">{</span> <span style="color:#75715e">// inicio do bloco 2
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> <span style="color:#75715e">// variavel do bloco 2
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span> <span style="color:#75715e">// uso de i dentro do seu escopo
+</span><span style="color:#75715e"></span>            j <span style="color:#f92672">=</span> 4 <span style="color:#f92672">*</span> i<span style="color:#f92672">;</span> <span style="color:#75715e">// uso de i dentro do seu escopo
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span>
+            <span style="color:#f92672">{</span> <span style="color:#75715e">// inicio do bloco 3
+</span><span style="color:#75715e"></span>                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span> <span style="color:#75715e">// uso de i dentro do seu escopo
+</span><span style="color:#75715e"></span>                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span> <span style="color:#75715e">// uso de j dentro do seu escopo
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-        System.out.println(i); // uso de i dentro do seu escopo
-        System.out.println(j); // ERRO. Uso de j FORA do seu escopo
-    }
-}
-</code></pre><p>A variável i foi declarada no bloco de escopo 1 e pode ser usada nesse escopo e também nos blocos 2 e 3, que são escopos internos em relação ao bloco 1. A variável j, declarada no bloco 2, também pode ser usada no próprio bloco de escopo e em escopos mais internos. No código acima, existe um erro, que pode ser visualizado usando o compilador do java:</p>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span> <span style="color:#75715e">// uso de i dentro do seu escopo
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span> <span style="color:#75715e">// ERRO. Uso de j FORA do seu escopo
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>A variável i foi declarada no bloco de escopo 1 e pode ser usada nesse escopo e também nos blocos 2 e 3, que são escopos internos em relação ao bloco 1. A variável j, declarada no bloco 2, também pode ser usada no próprio bloco de escopo e em escopos mais internos. No código acima, existe um erro, que pode ser visualizado usando o compilador do java:</p>
 <pre><code>javac Escopo.java
 Escopo.java:16: error: cannot find symbol
         System.out.println(j);
@@ -168,26 +141,26 @@ Escopo.java:16: error: cannot find symbol
   location: class Escopo
 1 error
 </code></pre><p>A mensagem indica que na linha 16 do arquivo Escopo.java foi detectado um simbolo desconhecido (variavel j), pois, de fato, naquele escopo, (bloco 1 ou mais externos) não existe essa variável. Para corrigir o erro, a declaração da variável j deve ser movida para o início do bloco onde ocorreu o erro:</p>
-<pre><code>public class Escopo { // inicio do bloco0
-    public static void main(String args[]) { //inicio do bloco 1
-        int i = 5; // variavel do bloco 1
-        int j = 0; // variavel do bloco 1
-        { // inicio do bloco 2
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Escopo</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// inicio do bloco0
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[])</span> <span style="color:#f92672">{</span> <span style="color:#75715e">//inicio do bloco 1
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span> <span style="color:#75715e">// variavel do bloco 1
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> <span style="color:#75715e">// variavel do bloco 1
+</span><span style="color:#75715e"></span>        <span style="color:#f92672">{</span> <span style="color:#75715e">// inicio do bloco 2
+</span><span style="color:#75715e"></span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span> <span style="color:#75715e">// uso de i dentro do seu escopo
+</span><span style="color:#75715e"></span>            j <span style="color:#f92672">=</span> 4 <span style="color:#f92672">*</span> i<span style="color:#f92672">;</span> <span style="color:#75715e">// uso de i dentro do seu escopo
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span>
+            <span style="color:#f92672">{</span> <span style="color:#75715e">// inicio do bloco 3
+</span><span style="color:#75715e"></span>                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span> <span style="color:#75715e">// uso de i dentro do seu escopo
+</span><span style="color:#75715e"></span>                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span> <span style="color:#75715e">// uso de j dentro do seu escopo
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
 
-            System.out.println(i); // uso de i dentro do seu escopo
-            j = 4 * i; // uso de i dentro do seu escopo
-            System.out.println(j);
-            { // inicio do bloco 3
-                System.out.println(i); // uso de i dentro do seu escopo
-                System.out.println(j); // uso de j dentro do seu escopo
-            }
-        }
-
-        System.out.println(i); // uso de i dentro do seu escopo
-        System.out.println(j); // Sucesso
-    }
-}
-</code></pre><p>O uso de variáveis ou objetos fora de seu escopo constitui um erro de programação detectado pelo compilador e que deve ser obrigatoriamente corrigido.</p>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span> <span style="color:#75715e">// uso de i dentro do seu escopo
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>j<span style="color:#f92672">);</span> <span style="color:#75715e">// Sucesso
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>O uso de variáveis ou objetos fora de seu escopo constitui um erro de programação detectado pelo compilador e que deve ser obrigatoriamente corrigido.</p>
 <p>Uma variável declarada dentro de métodos é denominada variável (de escopo) local e sua validade segue as regras apresentadas. Contudo, se a variável for declarada dentro do corpo da classe, será tratada como campo (field) da classe e será então escopo de classe, será válida em qualquer ponto da classe.</p>
 <p>Hoje abordamos as criações de variáveis, futuramente iremos ver sobre os modificadores de acesso, enquanto isso, leia sobre convenções de código java aqui:</p>
 <p><a href="https://www.devmedia.com.br/convencoes-de-codigo-java/23871">https://www.devmedia.com.br/convencoes-de-codigo-java/23871</a></p>

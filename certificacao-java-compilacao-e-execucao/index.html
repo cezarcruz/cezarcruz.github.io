@@ -76,26 +76,26 @@ if (!doNotTrack) {
 neste primeiro post iremos ver como escrever o nosso primeiro programa Java, como executar e como passar “parametros” para ele.</p>
 <p>Com o JDK é necessário usar um console, um prompt de comandos, para efetuar a compilação ou execução de programas Java, além de compilar e executar, são disponibilizadas outras ferramentas no JDK. Nosso foco será apenas nos comando <em>javac</em> e <em>java</em>.</p>
 <p>Para criarmos nosso primeiro programa, será necessário criar um arquivo texto com o nome <em>HelloWorld.java</em>, seu conteúdo deve ser conforme o texto abaixo.</p>
-<pre><code>public class HelloWorld {
-    public static void main(String args[]) {
-        System.out.println(&quot;Oi Mundo&quot;);
-    }
-}
-</code></pre><p>Para compilar um arquivo Java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[])</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Oi Mundo&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Para compilar um arquivo Java</p>
 <pre><code>javac HelloWorld.java
 </code></pre><p>O nome do arquivo-fonte a ser compilado deve ser fornecido obrigatoriamente com sua extensão <em>.java</em>. Quando a compilação transcorre corretamente, nenhuma mensagem é exibida, produzindo o arquivo <em>HelloWorld.class</em>. Caso sejam exibidas mensagens de erros, as linhas em que esses erros ocorrem também serão exibidas.</p>
 <p>Para executar o programa <em>HelloWorld</em> é preciso acionar a JVM com o comando</p>
 <pre><code>java HelloWorld
 </code></pre><p>A extensão <em>.class</em> nao deve ser fornecida quando se executa um programa Java com a JVM.</p>
 <p>Também é possível passar argumentos para um programa Java.</p>
-<pre><code>public class Echo {
-    public static void main(String args[]) {
-        for (String s: args) {
-            System.out.pritln(s);
-        }
-    }
-}
-</code></pre><p>Compilação</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Echo</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[])</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String s<span style="color:#f92672">:</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">pritln</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Compilação</p>
 <pre><code>javac Echo.java
 </code></pre><p>Execução</p>
 <pre><code>java Echo a b c

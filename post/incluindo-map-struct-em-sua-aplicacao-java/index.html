@@ -153,9 +153,9 @@ Ela pode ser feita de duas formas: Implementando em uma Interface ou uma classe 
   List<span style="color:#f92672">&lt;</span>EnderecoRequest<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">deResponse</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> List<span style="color:#f92672">&lt;</span>EnderecoResponse<span style="color:#f92672">&gt;</span> enderecoResponses<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 
-</code></pre></div><p>@Mapper é utilizado para dizermos que esta interface é um mapper, a opção &ldquo;componentModel&rdquo; foi utilizada para dizer ao MapStruct que deve ser criar um &ldquo;Bean&rdquo; do spring para que possamos utilizar a Injeção de Dependencia do Spring. A configuração &ldquo;componentModel&rdquo; é opcional</p>
-<p>@Mapping é utilizado para deixar explícito a conversão. Quando o nome das propriedades estão iguais o próprio MapStruct infere, mas quando está diferente, precisa ser especificado a origem e o destino, existem outra possibilidades, mas vamos explorar apenas o básico. Repare que o campo número são de tipos diferentes, o proprio MapStruct consegue fazer as conversões, é bem útil e ainda é possível especificar a conversão manualmente.</p>
-<p>@InheritInverseConfiguration faz a configuração inversa da conversão, deve ser utilizado quando existe um mapper com algum tipo de configuração específica.</p>
+</code></pre></div><p><strong>@Mapper</strong> é utilizado para dizermos que esta interface é um mapper, a opção &ldquo;componentModel&rdquo; foi utilizada para dizer ao MapStruct que deve ser criar um &ldquo;Bean&rdquo; do spring para que possamos utilizar a Injeção de Dependencia do Spring. A configuração &ldquo;componentModel&rdquo; é opcional</p>
+<p><strong>@Mapping</strong> é utilizado para deixar explícito a conversão. Quando o nome das propriedades estão iguais o próprio MapStruct infere, mas quando está diferente, precisa ser especificado a origem e o destino, existem outra possibilidades, mas vamos explorar apenas o básico. Repare que o campo número são de tipos diferentes, o proprio MapStruct consegue fazer as conversões, é bem útil e ainda é possível especificar a conversão manualmente.</p>
+<p><strong>@InheritInverseConfiguration</strong> faz a configuração inversa da conversão, deve ser utilizado quando existe um mapper com algum tipo de configuração específica.</p>
 <p>Os métodos de list sabem utilizar a configuração criada nos métodos anteriores não sendo necessário nenhuma configuração extra.</p>
 <p>Veja como fica a classe gerada a partir desta configuração:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> br.com.cezarcruz.mapstruct.controllers.mappers<span style="color:#f92672">;</span>
@@ -248,7 +248,7 @@ Ela pode ser feita de duas formas: Implementando em uma Interface ou uma classe 
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">PessoaMapper</span> <span style="color:#f92672">{</span>
  PessoaResponse <span style="color:#a6e22e">de</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> PessoaRequest pessoaRequest<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>@Mapper nessa classe ele foi implementado com um detalhe, o &ldquo;uses&rdquo;, com isso dizemos ao MapStruct que não deve ser implementado um novo conversor para endereço mas utilizar o que mapper pronto.</p>
+</code></pre></div><p><strong>@Mapper</strong> nessa classe ele foi implementado com um detalhe, o &ldquo;uses&rdquo;, com isso dizemos ao MapStruct que não deve ser implementado um novo conversor para endereço mas utilizar o que mapper pronto.</p>
 <p>Veja como ficou a classe gerada:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Generated</span><span style="color:#f92672">(</span>
    value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;org.mapstruct.ap.MappingProcessor&#34;</span><span style="color:#f92672">,</span>

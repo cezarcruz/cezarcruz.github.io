@@ -76,24 +76,31 @@ if (!doNotTrack) {
 <p>Hoje vamos ver uma forma de usar uma nova funcionalidade do Angular 1, o component.</p>
 <p>O component é um tipo especial de diretiva, que permite criar, de uma forma simplificada, web components e pavimentar o caminho para uma futura migração para o Angular 2. Para mim a principal vantagem é poder criar peças de códigos reaproveitáveis de uma maneira bem mais simples que criar uma diretiva e suas configurações complexas (manipulação de DOM ainda deve ser feito por diretivas).</p>
 <p>Para esse tutorial, o primeiro passo é criar um controller:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Esse é um controller comum, que já estamos acostumados a criar no angular. O único ponto de atenção é quanto ao ‘this’, ao invés de utilizarmos ‘$scope’, podemos adicionar os valores direto no ‘this’, abaixo mostro como ele é carregado no template.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#66d9ef">function</span>() {
+  <span style="color:#a6e22e">angular</span>.<span style="color:#a6e22e">module</span>(<span style="color:#e6db74">&#39;home-module&#39;</span>).<span style="color:#a6e22e">controller</span>(<span style="color:#e6db74">&#39;HomeController&#39;</span>, <span style="color:#a6e22e">HomeController</span>);
+  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">HomeController</span>() {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">valor</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Blog do Cezar&#39;</span>;
+  }
+})();
+</code></pre></div><p>Esse é um controller comum, que já estamos acostumados a criar no angular. O único ponto de atenção é quanto ao ‘this’, ao invés de utilizarmos ‘$scope’, podemos adicionar os valores direto no ‘this’, abaixo mostro como ele é carregado no template.</p>
 <p>Agora que temos um controller, vamos criar um template para mostrar o nosso valor na tela:</p>
-<!-- raw HTML omitted -->
-<p>No nosso arquivo ‘home.html’, usamos a mesmas sintaxe que estamos acostumados, repare que usamos o ‘vm’ antes da variável que declaramos no controller, no código abaixo mostro o motivo ;).</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{{ <span style="color:#f92672">::</span><span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">valor</span> }}
+</code></pre></div><p>No nosso arquivo ‘home.html’, usamos a mesmas sintaxe que estamos acostumados, repare que usamos o ‘vm’ antes da variável que declaramos no controller, no código abaixo mostro o motivo ;).</p>
 <p>Depois de criarmos o controller e a view, vamos finalmente criar o nosso component, veja:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Para criarmos o component, basta colocar o ‘.component’ no modulo, como parâmetros, ele recebe o nome e um objeto com as configurações do componente. O nome do componente segue o mesmo padrão das diretivas:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">angular</span>.<span style="color:#a6e22e">module</span>(<span style="color:#e6db74">&#39;home-module&#39;</span>).<span style="color:#a6e22e">component</span>(<span style="color:#e6db74">&#39;homeModule&#39;</span>, {
+  <span style="color:#a6e22e">templateUrl</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;home.html&#39;</span>,
+  <span style="color:#a6e22e">controller</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;HomeController as vm&#39;</span>,
+});
+</code></pre></div><p>Para criarmos o component, basta colocar o ‘.component’ no modulo, como parâmetros, ele recebe o nome e um objeto com as configurações do componente. O nome do componente segue o mesmo padrão das diretivas:</p>
 <p>Nome: <strong>homeModule</strong></p>
 <p>Referencia em outras partes da aplicação: <strong>home-module</strong></p>
 <p>O parâmetro ‘templateUrl’ passamos o caminho da view que criamos anteriormente. Podemos também, substituir esse parâmetro por ‘templatle’ e colocar a view diretamente inline, para algo pequeno, me parece muito bom.</p>
 <p>Por fim, o parâmetro ‘controller’, que como o nome sugere, injetamos o controller no nosso component, repare que adicionamos os valores ‘as vm’ junto ao controller, é assim que definimos que o ‘this’, do controller, é referenciado na view como ‘vm’, se adicionarmos apenas o nome do controller, o Angular infere que você irá utilizar ‘$ctrl’ na view.</p>
 <p>E por fim, para adicionarmos nosso component na aplicação, podemos fazer igual faríamos normalmente com uma diretiva ‘<!-- raw HTML omitted --><!-- raw HTML omitted -->’ ou adicionar ele como uma uma rota, assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>E’ isso ai, simples e fácil.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">$routeProvider</span>.<span style="color:#a6e22e">when</span>(<span style="color:#e6db74">&#39;/home&#39;</span>, {
+  <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&amp;lt;home-module&amp;gt;&amp;lt;/home-module&amp;gt;&#39;</span>
+});
+</code></pre></div><p>E’ isso ai, simples e fácil.</p>
 <p>Espero que ajude, abraços!</p>
 <p><strong>Referencias</strong></p>
 <p><a href="https://toddmotto.com/exploring-the-angular-1-5-component-method/">https://toddmotto.com/exploring-the-angular-1-5-component-method/</a></p>

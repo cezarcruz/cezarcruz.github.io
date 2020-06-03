@@ -75,43 +75,43 @@ if (!doNotTrack) {
 			<p>Olas, hoje iremos ver algumas formas básicas de utilizar a api de Stream do Java 8.</p>
 <p>A ideia é ser bem pratico, então, vamos ao exemplo:</p>
 <p>O primeiro passo é criar uma lista, no nosso caso, uma lista de Strings:</p>
-<pre><code>    final List&lt;String&gt; stringList = new ArrayList&lt;&gt;();
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> stringList <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span>
 
-    stringList.add(&quot;Brasil&quot;);
-    stringList.add(&quot;Argentina&quot;);
-    stringList.add(&quot;Chile&quot;);
-    stringList.add(&quot;Equador&quot;);
-    stringList.add(&quot;Brasil&quot;);
-</code></pre><p>O ação obvia é iterar esta lista e imprimir seus itens, nada mais útil que nosso System.out:</p>
-<pre><code>    stringList.forEach(s -&gt; {
-        System.out.println(s);
-    });
-</code></pre><p>No exemplo acima, podemos ler da seguinte forma:
+stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Brasil&#34;</span><span style="color:#f92672">);</span>
+stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Argentina&#34;</span><span style="color:#f92672">);</span>
+stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Chile&#34;</span><span style="color:#f92672">);</span>
+stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Equador&#34;</span><span style="color:#f92672">);</span>
+stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Brasil&#34;</span><span style="color:#f92672">);</span>
+</code></pre></div><p>O ação obvia é iterar esta lista e imprimir seus itens, nada mais útil que nosso System.out:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>s <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s<span style="color:#f92672">);</span>
+<span style="color:#f92672">});</span>
+</code></pre></div><p>No exemplo acima, podemos ler da seguinte forma:
 <strong>para cada item s da lista stringList passamos um método que faz algo com s</strong></p>
 <p>Repare que estamos utilizando &ldquo;thin arrow&rdquo; -&gt; e passamos entre chaves {} a ação.</p>
 <p>Em casos onde a ação é realizada com apenas 1 linha, podemos simplificar para:</p>
-<pre><code>stringList.forEach(s -&gt; System.out.println(s));
-</code></pre><p>Ou ainda:</p>
-<pre><code>stringList.forEach(System.out::println);
-</code></pre><p>Lembre sempre da tipagem da lista e do seu método.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>s <span style="color:#f92672">-&gt;</span> System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>s<span style="color:#f92672">));</span>
+</code></pre></div><p>Ou ainda:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><p>Lembre sempre da tipagem da lista e do seu método.</p>
 <p>Outra acao que pode ser feita utilizando a api de Streams e&rsquo; filtrar uma lista utilizando o método <em>filter</em>, veja o exemplo abaixo:</p>
-<pre><code>stringList.stream().filter((s -&gt; s.equals(&quot;Brasil&quot;))).forEach(System.out::println);
-</code></pre><p>O input do método <em>filter</em> e&rsquo; o mesmo do <em>forEach</em>: 1 item por vez da lista. No entanto, o método que ele recebe deve retornar um boolean. Basicamente ele itera a lista item por item e executa o método em cada um, sempre que o resultado for true, ele guarda em uma lista temporária, ao final da iteração ele retorna esses itens em uma nova lista (no nosso exemplo, sera impresso todos os itens que forem igual &lsquo;Brasil&rsquo;).
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">((</span>s <span style="color:#f92672">-&gt;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Brasil&#34;</span><span style="color:#f92672">))).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><p>O input do método <em>filter</em> e&rsquo; o mesmo do <em>forEach</em>: 1 item por vez da lista. No entanto, o método que ele recebe deve retornar um boolean. Basicamente ele itera a lista item por item e executa o método em cada um, sempre que o resultado for true, ele guarda em uma lista temporária, ao final da iteração ele retorna esses itens em uma nova lista (no nosso exemplo, sera impresso todos os itens que forem igual &lsquo;Brasil&rsquo;).
 Repare que o retorno do filter e&rsquo; uma Stream de itens, então, é possível iterar essa lista com um <em>forEach</em>, igual ao primeiro exemplo.</p>
 <p>Também e&rsquo; possível guardar o itens de um filter em um List, basta usar o código abaixo:</p>
-<pre><code>List&lt;String&gt; brasilList = stringList.stream().filter((s -&gt; s.equals(&quot;Brasil&quot;))).collect(Collectors.toList());
-</code></pre><p>Como o método <em>filter</em> retornar um &ldquo;Stream&rdquo; é necessário transformar em um &ldquo;List&rdquo;, para isso utilizamos o método <em>collect(Collectors.toList())</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> brasilList <span style="color:#f92672">=</span> stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">((</span>s <span style="color:#f92672">-&gt;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Brasil&#34;</span><span style="color:#f92672">))).</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span>
+</code></pre></div><p>Como o método <em>filter</em> retornar um &ldquo;Stream&rdquo; é necessário transformar em um &ldquo;List&rdquo;, para isso utilizamos o método <em>collect(Collectors.toList())</em></p>
 <p>Podemo utilizar a Api de Streams para remover os itens duplicados de uma lista, simplesmente utilizando o método <em>distinct</em>:</p>
-<pre><code>stringList.stream().distinct().forEach(System.out::println);
-</code></pre><p>O código acima ira remover todos os itens duplicados da lista e ira imprimir na tela o resultado.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">distinct</span><span style="color:#f92672">().</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><p>O código acima ira remover todos os itens duplicados da lista e ira imprimir na tela o resultado.</p>
 <p>Outra funcionalidade muito útil é transformar uma lista de um tipo para outro, para isso utilizamos o método <em>map</em>. No exemplo abaixo iremos transformar a nossa lista de string em uma lista de números:</p>
-<pre><code>stringList.stream().map((String::length)).forEach(System.out::println);
-</code></pre><p>E para guardar os itens retornados do map, simples:</p>
-<pre><code>List&lt;Integer&gt; integerStream = stringList.stream().map(String::length).collect(Collectors.toList());
-</code></pre><p>Por fim, nunca devemos esquecer que podemos chamar vários métodos da api de streams em sequencia:</p>
-<pre><code>stringList.stream().distinct().sorted().forEach(System.out::println);
-</code></pre><p>O código acima faz a seguinte ação: <strong>dado uma lista de strings ele remove todo os itens duplicados utilizando <em>distinct</em> depois ordena com o método <em>sorted</em> e por fim imprime o resultado na tela.</strong></p>
-<p>Bom e&rsquo; isso pessoal, essa foi uma passada bem básica na api de streams do Java 8, para saber mais, visite o link abaixo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">((</span>String<span style="color:#f92672">::</span>length<span style="color:#f92672">)).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><p>E para guardar os itens retornados do map, simples:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>Integer<span style="color:#f92672">&gt;</span> integerStream <span style="color:#f92672">=</span> stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">map</span><span style="color:#f92672">(</span>String<span style="color:#f92672">::</span>length<span style="color:#f92672">).</span><span style="color:#a6e22e">collect</span><span style="color:#f92672">(</span>Collectors<span style="color:#f92672">.</span><span style="color:#a6e22e">toList</span><span style="color:#f92672">());</span>
+</code></pre></div><p>Por fim, nunca devemos esquecer que podemos chamar vários métodos da api de streams em sequencia:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">distinct</span><span style="color:#f92672">().</span><span style="color:#a6e22e">sorted</span><span style="color:#f92672">().</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
+</code></pre></div><p>O código acima faz a seguinte ação: <strong>dado uma lista de strings ele remove todo os itens duplicados utilizando <em>distinct</em> depois ordena com o método <em>sorted</em> e por fim imprime o resultado na tela.</strong></p>
+<p>Essa foi uma passada bem básica na api de streams do Java 8, para saber mais, visite o link abaixo:</p>
 <p><a href="http://www.oracle.com/technetwork/pt/articles/java/streams-api-java-8-3410098-ptb.html">http://www.oracle.com/technetwork/pt/articles/java/streams-api-java-8-3410098-ptb.html</a></p>
 <p>Abraços.</p>
 		</div>

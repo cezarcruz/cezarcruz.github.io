@@ -90,17 +90,39 @@ if (!doNotTrack) {
 </ul>
 <p>Para o nosso exemplo, vou utilizar apenas o request e o responseError, para inserir um header na requisição e tratar um erro de acesso negado, vamos lá:</p>
 <p>Primeiro vamos criar um factory:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Com o Interceptor criado, vamos adicionar as functions necessárias para interceptar as requisições:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>No request temos uma function que recebe um valor “config”, nele temos os dados da requisição, os headers, etc… No exemplo acima, adicionamos um header na requisição e damos um “return” com os dados alterados. Quando ele passa por esse interceptor, ele faz a alteração e o fluxo da requisição continua normalmente.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">(<span style="color:#66d9ef">function</span>(){
+	<span style="color:#a6e22e">angular</span>.<span style="color:#a6e22e">module</span>(<span style="color:#e6db74">&#39;app&#39;</span>, []).<span style="color:#a6e22e">factory</span>(<span style="color:#e6db74">&#39;Interceptor&#39;</span>, <span style="color:#a6e22e">Interceptor</span>);
+
+	<span style="color:#a6e22e">Interceptor</span>.<span style="color:#a6e22e">$inject</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;$q&#39;</span>];
+
+	<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Interceptor</span>(<span style="color:#a6e22e">$q</span>) {
+
+	}
+})();
+</code></pre></div><p>Com o Interceptor criado, vamos adicionar as functions necessárias para interceptar as requisições:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Interceptor</span>(<span style="color:#a6e22e">$q</span>) {
+	<span style="color:#66d9ef">return</span> {
+		<span style="color:#a6e22e">request</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">config</span>) {
+			<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">headers</span>[<span style="color:#e6db74">&#39;X-TOKEN&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;exemplo&#34;</span>;
+			<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">config</span>;
+		},
+		<span style="color:#a6e22e">responseError</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">error</span>) {
+			<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">401</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">403</span>) {
+				<span style="color:#75715e">//faz alguma coisa.
+</span><span style="color:#75715e"></span>			}
+			<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">$q</span>.<span style="color:#a6e22e">reject</span>(<span style="color:#a6e22e">error</span>);
+		}
+	};
+}
+</code></pre></div><p>No request temos uma function que recebe um valor “config”, nele temos os dados da requisição, os headers, etc… No exemplo acima, adicionamos um header na requisição e damos um “return” com os dados alterados. Quando ele passa por esse interceptor, ele faz a alteração e o fluxo da requisição continua normalmente.</p>
 <p>Já o responseError é executado quando obtemos uma resposta com o status 40x, que representa algum tipo de erro no lado do servidor, no nosso caso, quando temos um erro 401 ou 403, eu executo alguma ação e uso o $q.reject para que a requisição vá para o callback de error do $http do angular.</p>
 <p>Mas pra isso funcionar ainda falta um passo importante, registrar o interceptor no Angular:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Feito isso, todas as requisições $http irão passar pelo interceptor acima.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">angular</span>.<span style="color:#a6e22e">module</span>(<span style="color:#e6db74">&#39;app&#39;</span>).<span style="color:#a6e22e">config</span>([<span style="color:#e6db74">&#39;$httpProvider&#39;</span>, <span style="color:#a6e22e">Interceptor</span>]);
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Interceptor</span>(<span style="color:#a6e22e">$httpProvider</span>) {
+	<span style="color:#a6e22e">$httpProvider</span>.<span style="color:#a6e22e">interceptors</span>.<span style="color:#a6e22e">push</span>(<span style="color:#e6db74">&#39;Interceptor&#39;</span>);
+}
+</code></pre></div><p>Feito isso, todas as requisições $http irão passar pelo interceptor acima.</p>
 <p>É isso ai, até a próxima.</p>
 		</div>
 		<footer class="post__footer">
