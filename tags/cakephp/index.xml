@@ -39,7 +39,7 @@ Lembrando que essa configuração é pra quando estiver usando um subdiretório,
       
       <guid>https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/</guid>
       <description>&lt;p&gt;Continuando com a segunda parte do tutorial básico usando CakePHP, Windows e Eclipse.&lt;/p&gt;
-&lt;p&gt;A primeira parte você encontra &lt;a href=&#34;https://cezarcruz.com.br/2013/06/tutorial-basico-usando-cakephp-windows-eclipse-parte1/&#34;&gt;aqui&lt;/a&gt;, paramos na tela em que é exibido uma mensagem de erro de conexão com o bando de dados no CakePHP, vamos lá.&lt;/p&gt;
+&lt;p&gt;A primeira parte você encontra &lt;a href=&#34;https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-eclipse-parte1/&#34;&gt;aqui&lt;/a&gt;, paramos na tela em que é exibido uma mensagem de erro de conexão com o bando de dados no CakePHP, vamos lá.&lt;/p&gt;
 &lt;p&gt;Primeiro, precisamos criar uma base de dados, como estamos utilizando o Wamp, é só utilizar o phpMyAdmin, para o tutorial, vamos criar um base de dados chamada &lt;strong&gt;cake.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Depois de criado o banco de dados, vamos configurar ele no projeto:&lt;/p&gt;
 &lt;p&gt;Abra a pasta app-&amp;gt;Config, nessa pasta, encontramos os arquivos relacionados ao configuração do CakePHP, o arquivo que conecta com a base de dados é o database.php.default, o primeiro passo é renomear ele para database.php:&lt;/p&gt;
