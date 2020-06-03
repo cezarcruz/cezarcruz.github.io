@@ -6,7 +6,7 @@
     <description>Recent content in Cezar Cruz on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 11 Aug 2019 15:50:36 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 15:50:36 -0300</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/author/cezar-cruz/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Incluindo MapStruct em sua aplicação Java</title>
       <link>https://cezarcruz.com.br/post/incluindo-map-struct-em-sua-aplicacao-java/</link>
-      <pubDate>Sun, 11 Aug 2019 15:50:36 -0300</pubDate>
+      <pubDate>Sat, 11 Jan 2020 15:50:36 -0300</pubDate>
       
       <guid>https://cezarcruz.com.br/post/incluindo-map-struct-em-sua-aplicacao-java/</guid>
       <description>&lt;p&gt;Olá, neste post veremos como incluindo o MapStruct em uma aplicação Java.&lt;/p&gt;</description>
@@ -525,7 +525,9 @@ Internet Explorer: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Tri
       <pubDate>Thu, 13 Jun 2013 12:06:14 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/sobre/</guid>
-      <description>Olá, seja bem vindo ao meu Blog.</description>
+      <description>Olá, seja bem vindo ao meu Blog.
+Meu nome é Cezar e desenvolvo para Web utilizando Java e Javascript, criei esse blog para compartilhar algumas coisas que vou aprendendo.
+Então, seja bem vindo e aproveite a viagem.</description>
     </item>
     
     <item>

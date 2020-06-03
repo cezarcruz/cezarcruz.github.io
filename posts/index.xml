@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sun, 11 Aug 2019 15:50:36 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 15:50:36 -0300</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Incluindo MapStruct em sua aplicação Java</title>
       <link>https://cezarcruz.com.br/post/incluindo-map-struct-em-sua-aplicacao-java/</link>
-      <pubDate>Sun, 11 Aug 2019 15:50:36 -0300</pubDate>
+      <pubDate>Sat, 11 Jan 2020 15:50:36 -0300</pubDate>
       
       <guid>https://cezarcruz.com.br/post/incluindo-map-struct-em-sua-aplicacao-java/</guid>
       <description>&lt;p&gt;Olá, neste post veremos como incluindo o MapStruct em uma aplicação Java.&lt;/p&gt;</description>
