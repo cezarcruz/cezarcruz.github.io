@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eclipse on Blog do Cezar</title>
     <link>https://cezarcruz.com.br/tags/eclipse/</link>
     <description>Recent content in Eclipse on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>pt-br</language>
     <lastBuildDate>Sun, 31 Aug 2014 16:11:10 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/tags/eclipse/index.xml" rel="self" type="application/rss+xml" />

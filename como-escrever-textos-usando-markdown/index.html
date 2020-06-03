@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,9 +7,9 @@
 	<title>Como escrever textos usando Markdown - Blog do Cezar</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta name="generator" content="Hugo 0.54.0" />
-	
-		
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="https://cezarcruz.com.br/css/style.css">
 	
 	<link rel="shortcut icon" href="https://cezarcruz.com.br/favicon.ico">
@@ -25,24 +25,20 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-		(adsbygoogle = window.adsbygoogle || []).push({
-			google_ad_client: "ca-pub-1691224447355253",
-			enable_page_level_ads: true
-		});
-	</script>
 </head>
 <body class="body">
 	<div class="container container--outer">
 		<header class="header">
-	<div class="container">
-		<div class="logo">
-			<a class="logo__link" href="https://cezarcruz.com.br/" title="Blog do Cezar" rel="home">
-				<div class="logo__title">Blog do Cezar</div>
-				<div class="logo__tagline">um blog sobre programação e outras coisas mais</div>
-			</a>
-		</div>
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="https://cezarcruz.com.br/" title="Blog do Cezar" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Blog do Cezar</div>
+					<div class="logo__tagline">um blog sobre programação</div>
+				</div>
+		</a>
+	</div>
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -50,7 +46,11 @@ if (!doNotTrack) {
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="https://cezarcruz.com.br/sobre/">Sobre</a>
+			<a class="menu__link" href="https://cezarcruz.com.br/sobre/">
+				
+				<span class="menu__text">Sobre</span>
+				
+			</a>
 		</li>
 	</ul>
 </nav>
@@ -64,236 +64,119 @@ if (!doNotTrack) {
 	<article class="post">
 		<header class="post__header">
 			<h1 class="post__title">Como escrever textos usando Markdown</h1>
-			<div class="post__meta meta">
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Cezar Cruz</span>
+</div>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2014-01-17T14:36:48">17 Jan 2014</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="https://cezarcruz.com.br/categories/markdown" rel="category">Markdown</a></span>
-</div>
-</div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2014-01-17T14:36:48Z">17 Jan 2014</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://cezarcruz.com.br/categories/markdown/" rel="category">Markdown</a>
+	</span>
+</div></div>
 		</header><div class="content post__content clearfix">
 			<p>Olás, nesse tutorial, vou mostrar como utilizarmos o <strong>Markdown</strong> para escrevermos textos formatados em Html. Esse tutorial será, basicamente, um spin-off da saga Jekyll.</p>
-
 <p><strong>Markdown</strong> é uma ferramenta de conversão texto pra HTML para escrever textos para web. <strong>Markdown</strong> permite escrever usando um texto fácil de ler e escrever e depois converte em uma estrutura valida de XHTML (ou HTML). Pra uma definição melhor, veja o <a href="http://daringfireball.net/projects/markdown/">site do projeto</a>.</p>
-
 <p>Um local onde o <strong>Markdown</strong> é bastante utilizado é nos arquivos .md utilizado no <a href="https://github.com/">Git Hub</a>.</p>
-
 <p>Mas vamos lá, pra escrevermos texto começamos sempre com o titulo, hehehe. Pra gerarmos  um titulo em <strong>Markdown</strong> é tranquilo, veja:</p>
-
-<pre class="lang:yaml decode:true">007 - Um novo dia pra morrer
-============================</pre>
-
-<p>Colocamos a partir de três símbolos de <strong>= </strong>(igual)  abaixo do texto, e o HTML gerado é:</p>
-
-<pre class="lang:xhtml decode:true">&lt;h1&gt;007 - Um novo dia pra morrer&lt;/h1&gt;</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Colocamos a partir de três símbolos de **= **(igual)  abaixo do texto, e o HTML gerado é:</p>
+<!-- raw HTML omitted -->
 <p>Bem sussa, pra gerar um subtítulo, é tão simples quanto:</p>
-
-<pre class="lang:yaml decode:true">O Daniel Craig é o James Bond mais zica
----------------------------------------</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Colocamos a partir de três traços abaixo do texto, e o HTML gerado é:</p>
-
-<pre class="lang:xhtml decode:true">&lt;h2&gt;O Daniel Craig é o James Bond mais zica&lt;/h2&gt;</pre>
-
+<!-- raw HTML omitted -->
 <p>Pra escrever títulos, podemos utilizar outras formas também:</p>
-
-<pre class="lang:default decode:true">#Titulo 1
-##Subtítulo
-###SubSubtítulo
-.....</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>E o resultado é:</p>
-
-<pre class="lang:xhtml decode:true">&lt;h1&gt;Titulo 1&lt;/h1&gt;
-&lt;h2&gt;Subtítulo&lt;/h2&gt;
-&lt;h3&gt;SubSubtítulo&lt;/h3&gt;</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Para escrevermos um texto, também é bem simples, o que devemos atentar é que pra começarmos um novo paragrafo, devemos deixar uma linha em branco no texto <strong>Markdown</strong>:</p>
-
-<pre class="lang:default decode:true">Curabitur consequat commodo magna. Nulla vel eros nec dui malesuada gravida. Donec pellentesque, quam et varius consectetur, risus orci dapibus ante, quis euismod diam metus sed erat. 
-
-Mauris aliquet pretium ante, a rutrum libero facilisis a. Nulla facilisi. Praesent semper ornare felis, non pharetra elit vestibulum pulvinar. 
-
-Phasellus quis lacus ultrices, posuere urna eu, pellentesque metus. Donec vulputate velit sit amet augue mattis rutrum. Phasellus ultrices tempor elit vitae vulputate. Praesent quis ullamcorper justo. Cras euismod nisl nibh, eu pulvinar lectus condimentum ut.</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>O HTML gerado segue abaixo:</p>
-
-<pre class="lang:xhtml decode:true">&lt;p&gt;Curabitur consequat commodo magna. Nulla vel eros nec dui malesuada gravida. Donec pellentesque, quam et varius consectetur, risus orci dapibus ante, quis euismod diam metus sed erat. &lt;/p&gt;
-
-&lt;p&gt;Mauris aliquet pretium ante, a rutrum libero facilisis a. Nulla facilisi. Praesent semper ornare felis, non pharetra elit vestibulum pulvinar. &lt;/p&gt;
-
-&lt;p&gt;Phasellus quis lacus ultrices, posuere urna eu, pellentesque metus. Donec vulputate velit sit amet augue mattis rutrum. Phasellus ultrices tempor elit vitae vulputate. Praesent quis ullamcorper justo. Cras euismod nisl nibh, eu pulvinar lectus condimentum ut.&lt;/p&gt;</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>No meio do texto, podemos colocar palavras em itálico ou negrito, por exemplo:</p>
-
-<pre class="lang:default decode:true">_consequat_
-**consequat**</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Resultado:</p>
-
-<pre class="lang:default decode:true">&lt;em&gt;consequat&lt;/em&gt;
-&lt;strong&gt;consequat&lt;/strong&gt;</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Pra adicionarmos uma citação:</p>
-
-<pre class="lang:default decode:true">&gt; Ser ou não ser, eis a questão.</pre>
-
+<!-- raw HTML omitted -->
 <p>O HTML gerado é:</p>
-
-<pre class="lang:default decode:true">&lt;blockquote&gt;
-&lt;p&gt;Ser ou não ser, eis a questão&lt;/p&gt;
-&lt;/blockquote&gt;</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Em <strong>Markdown</strong>, sempre que vc começar a linha com &gt; (maior) ele será uma citação e se você continuar em varias linhas seguidas, será apenas uma única citação com e um paragrafo, mas caso você coloque um linha em branco com sinal de &gt; (maior) entre duas linhas com sinal de &gt; (maior)  mas que tenha algum conteúdo, você irá criar um novo paragrafo, porem, está dentro de uma única citação.</p>
-
 <p>Pra criarmos uma lista não ordenada, temos um segredinho também, temos que pular uma linha depois do ultimo paragrafo, veja:</p>
-
-<pre class="lang:default decode:true">Lista de compras
-
-* alface
-* tomate
-* cebola
-* couve</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>O resultado:</p>
-
-<pre class="lang:default decode:true">&lt;p&gt;Lista de compras&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;alface&lt;/li&gt;
-&lt;li&gt;tomate&lt;/li&gt;
-&lt;li&gt;cebola&lt;/li&gt;
-&lt;li&gt;couve&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<p>Além do * (asterisco), podemos utilizar o sinal de + (soma) ou &#8211; (subtração) pra formarmos uma lista.</p>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Além do * (asterisco), podemos utilizar o sinal de + (soma) ou – (subtração) pra formarmos uma lista.</p>
 <p>Pra termos uma lista ordenada, segue a mesma ideia da lista não ordenada:</p>
-
-<pre class="lang:default decode:true">Lista de compras
-
-1. alface
-2. tomate
-3. cebola
-4. couve</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>E resultado:</p>
-
-<pre class="lang:default decode:true">&lt;p&gt;Lista de compras&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;alface&lt;/li&gt;
-&lt;li&gt;tomate&lt;/li&gt;
-&lt;li&gt;cebola&lt;/li&gt;
-&lt;li&gt;couve&lt;/li&gt;
-&lt;/ol&gt;</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Pra criamos uma lista aninhada, basta uma colocarmos o subitem com um espaço na frente:</p>
-
-<pre class="lang:default decode:true">Lista de compras
-
-* alface
- * tomate
-* cebola
- * couve</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>O resultado:</p>
-
-<pre class="lang:default decode:true">&lt;p&gt;Lista de compras&lt;/p&gt;
-
-&lt;ul&gt;
-    &lt;li&gt;alface
-        &lt;ul&gt;
-            &lt;li&gt;tomate&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;cebola
-        &lt;ul&gt;
-            &lt;li&gt;couve&lt;/li&gt;
-            &lt;li&gt;espinafre&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>A ideia é a mesma para a lista ordenada.</p>
-
 <p>Pra criamos um link com uma página da web:</p>
-
 <pre><code>Esse o [link para o meu blog](https://cezarcruz.com.br/blog/ &quot;Meu blog&quot;)
 </code></pre>
-
 <p>O resultado vem logo abaixo:</p>
-
-<pre class="lang:default decode:true">&lt;p&gt;Esse o &lt;a href="https://cezarcruz.com.br/blog/" title="Meu blog"&gt;link para o meu blog&lt;/a&gt;&lt;/p&gt;</pre>
-
+<!-- raw HTML omitted -->
 <p>Repare que o que está dentro do colchetes é o que irá virar um link, o endereço vem dentro de parênteses e utilizar o title dentro do parênteses é opcional, caso não queira, basta deixar somente o endereço.</p>
-
 <p>Ainda com links, podemos usar ele de uma forma um pouco mais organizada, utilizando referencias:</p>
-
-<pre class="lang:default decode:true">O site do [G1][1] é igual ao do [R7][2]
-
-
-[2]: http://r7.com "Site do R7"</pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>O Resultado segue como de costume:</p>
-
-<pre class="lang:default decode:true">&lt;p&gt;O site do &lt;a href="g1.com" title="Site do G1"&gt;G1&lt;/a&gt; é igual ao do &lt;a href="r7.com" title="Site do R7"&gt;R7&lt;/a&gt;&lt;/p&gt;</pre>
-
+<!-- raw HTML omitted -->
 <p>Pra utilizarmos referencias em links, temos que atentar aos fatos:</p>
-
 <ul>
-<li>O que estiver entre os primeiros colchetes é o que irá se tornar &#8220;clicável&#8221;;</li>
+<li>O que estiver entre os primeiros colchetes é o que irá se tornar “clicável”;</li>
 <li>O segundo colchetes é a referencia, nela, podemos utilizar uma letra ou palavra e elas não são <em>case sensitive</em>;</li>
 <li>No local onde deixamos organizada as referencias, temos de colocar : (dois pontos) depois dos colchetes pra que funcione corretamente;</li>
 <li>Não esquecer de por <strong>http://</strong>;</li>
 </ul>
-
 <p>Pra utilizarmos imagens, o código é semelhante ao de links:</p>
-
-<pre class="lang:default decode:true">![O alt](https://www.google.com.br/images/srpr/logo11w.png "Logo do google")</pre>
-
+<!-- raw HTML omitted -->
 <p>E o lindo resultado:</p>
-
-<pre class="lang:default decode:true">&lt;p&gt;Olha essa imagem: &lt;img src="https://www.google.com.br/images/srpr/logo11w.png" alt="O alt" title="Logo do google"&gt;&lt;/p&gt;</pre>
-
+<!-- raw HTML omitted -->
 <p>A diferença básica entre links e imagens é a ! (exclamação) antes do código.</p>
-
 <p>Bom por enquanto é isso ai, são bem básicas, mas é o suficiente pra nos prepararmos pros próximos tutoriais de Jekyll.</p>
-
 <p>Abraços.</p>
-
 <p>Links úteis</p>
-
 <ul>
 <li><a href="http://markable.in/editor/">Markdown editor online</a></li>
 <li><a href="http://daringfireball.net/">Site oficial do Markdown</a></li>
 <li><a href="https://cezarcruz.com.br/blog/2014/01/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/" title="Como utilizar o Jekyll pra criar um blog com páginas estáticas. Jekyll parte 1">Jekyll beeeeem básico</a></li>
 </ul>
 		</div>
-		
+		<footer class="post__footer">
+			
 <div class="post__tags tags clearfix">
-	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="https://cezarcruz.com.br/tags/markdown/" rel="tag">Markdown</a></li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="https://cezarcruz.com.br/tags/markdown/" rel="tag">Markdown</a>
+		</li>
 	</ul>
 </div>
+		</footer>
 	</article>
 </main>
 
 
-<nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="https://cezarcruz.com.br/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/" rel="prev"><span class="post-nav__caption">«&thinsp;Anterior</span><p class="post-nav__post-title">Como utilizar o Jekyll pra criar um blog com páginas estáticas. Jekyll parte 1</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="https://cezarcruz.com.br/dica-gitignore-nao-esta-funcionando/" rel="next"><span class="post-nav__caption">Próximo&thinsp;»</span><p class="post-nav__post-title">Dica git: .gitignore não está funcionando corretamente</p></a>
-	</div>
-</nav>
+
 
 <section class="comments">
 	<div id="disqus_thread"></div>
@@ -326,15 +209,15 @@ Phasellus quis lacus ultrices, posuere urna eu, pellentesque metus. Donec vulput
 			<input class="widget-search__field" type="search" placeholder="BUSCAR..." value="" name="q" aria-label="BUSCAR...">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://cezarcruz.com.br" />
+		<input type="hidden" name="sitesearch" value="https://cezarcruz.com.br/" />
 	</form>
 </div>
 <div class="widget-recent widget">
-	<h4 class="widget__title">Recent Posts</h4>
+	<h4 class="widget__title">Postagens recentes</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/post/incluindo-map-struct-em-sua-aplicacao-java/">Incluindo MapStruct em sua aplicação Java</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/post/incluindo-lombok-na-sua-aplicacao-java/">Incluindo Lombok em sua aplicação Java</a></li>
+			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/posts/incluindo-map-struct-em-sua-aplicacao-java/">Incluindo MapStruct em sua aplicação Java</a></li>
+			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/posts/incluindo-lombok-na-sua-aplicacao-java/">Incluindo Lombok em sua aplicação Java</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/configurando-ambiente-java-simples-rapido-no-linux/">Configurando ambiente de desenvolvimento Java rapidamente no Linux</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/certificacao-java-variaveis/">Certificação JAVA (1Z0-808) - Variáveis</a></li>
 			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/certificacao-java-compilacao-e-execucao/">Certificação JAVA (1Z0-808) - Compilação e execução</a></li>
@@ -345,69 +228,127 @@ Phasellus quis lacus ultrices, posuere urna eu, pellentesque metus. Donec vulput
 	<h4 class="widget__title">Categorias</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/1z0-808">1z0 808</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/angularjs">Angularjs</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/cakephp">Cakephp</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/csharp">Csharp</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/css">Css</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/django">Django</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/eclipse">Eclipse</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/fedora">Fedora</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/git">Git</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem">Hospedagem</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/intellij">Intellij</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/java">Java</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/javascript">Javascript</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/jekyll">Jekyll</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/lamp">Lamp</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/lemp">Lemp</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/linux">Linux</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/mapstruct">Mapstruct</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/markdown">Markdown</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/maven">Maven</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/net">Net</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/nodejs">Nodejs</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/oracle">Oracle</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/outros">Outros</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/php">Php</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/ruby">Ruby</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/sailsjs">Sailsjs</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/sql">Sql</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/svn">Svn</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/1z0-808/">1Z0-808</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/angularjs/">AngularJS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/cakephp/">CakePHP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/csharp/">CSharp</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/css/">CSS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/django/">Django</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/eclipse/">Eclipse</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/fedora/">Fedora</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/java/">Java</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/javascript/">JavaScript</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/jekyll/">Jekyll</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/lamp/">LAMP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/lemp/">LEMP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/linux/">Linux</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/mapstruct/">MapStruct</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/markdown/">Markdown</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/maven/">Maven</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/net/">NET</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/nodejs/">NodeJS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/oracle/">Oracle</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/outros/">Outros</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/php/">PHP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/ruby/">Ruby</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/sailsjs/">SailsJS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/sql/">SQL</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/svn/">SVN</a>
+			</li>
 		</ul>
 	</div>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/1z0-808" title="1z0 808">1z0 808 (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/angularjs" title="Angularjs">Angularjs (5)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/cakephp" title="Cakephp">Cakephp (4)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/csharp" title="Csharp">Csharp (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/css" title="Css">Css (4)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/django" title="Django">Django (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse" title="Eclipse">Eclipse (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora" title="Fedora">Fedora (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem" title="Hospedagem">Hospedagem (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij" title="Intellij">Intellij (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java" title="Java">Java (8)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript" title="Javascript">Javascript (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll" title="Jekyll">Jekyll (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp" title="Lamp">Lamp (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lemp" title="Lemp">Lemp (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux" title="Linux">Linux (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/markdown" title="Markdown">Markdown (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/maven" title="Maven">Maven (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/net" title="Net">Net (5)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/nodejs" title="Nodejs">Nodejs (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/oracle" title="Oracle">Oracle (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/pgp" title="Pgp">Pgp (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/php" title="Php">Php (6)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/ruby" title="Ruby">Ruby (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/sailsjs" title="Sailsjs">Sailsjs (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/sql" title="Sql">Sql (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/svn" title="Svn">Svn (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/1z0-808/" title="1Z0-808">1Z0-808 (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/angularjs/" title="AngularJS">AngularJS (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/cakephp/" title="CakePHP">CakePHP (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/csharp/" title="CSharp">CSharp (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/css/" title="CSS">CSS (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/django/" title="Django">Django (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lemp/" title="LEMP">LEMP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/markdown/" title="Markdown">Markdown (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/maven/" title="Maven">Maven (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/net/" title="NET">NET (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/nodejs/" title="NodeJS">NodeJS (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/oracle/" title="Oracle">Oracle (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/pgp/" title="PGP">PGP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/php/" title="PHP">PHP (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/ruby/" title="Ruby">Ruby (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/sailsjs/" title="SailsJS">SailsJS (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/sql/" title="SQL">SQL (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/svn/" title="SVN">SVN (1)</a>
 	</div>
 </div>
 </aside>
@@ -417,10 +358,11 @@ Phasellus quis lacus ultrices, posuere urna eu, pellentesque metus. Donec vulput
 		
 		<div class="footer__copyright">
 			&copy; 2020 Blog do Cezar.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Gerado com <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> com o tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
 </footer>
 	</div>
-<script async defer src="https://cezarcruz.com.br/js/menu.js"></script></body>
+<script async defer src="https://cezarcruz.com.br/js/menu.js"></script>
+</body>
 </html>

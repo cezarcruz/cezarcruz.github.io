@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hospedagem on Blog do Cezar</title>
     <link>https://cezarcruz.com.br/categories/hospedagem/</link>
     <description>Recent content in Hospedagem on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>pt-br</language>
     <lastBuildDate>Thu, 13 Jun 2013 03:19:23 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/hospedagem/index.xml" rel="self" type="application/rss+xml" />
@@ -18,8 +18,7 @@
       
       <guid>https://cezarcruz.com.br/hostinger-brasil-hospedagem-gratuita/</guid>
       <description>Olá, nesse post vou falar um pouco da Hostinger Brasil, um serviço de hospedagem PHP e MySQL que é gratuito e oferece bons recurso.
-Conheci a Hostinger Brasil por acaso, queria hospedar um site em PHP, mais pra conhecer melhor a linguagem, e me deparei com a Hostinger Brasil.
-A Hostinger Brasil oferece 3 tipos de planos de hospedagem: Gratuito, Premium e Busines.
+Conheci a Hostinger Brasil por acaso, queria hospedar um site em PHP, mais pra conhecer melhor a linguagem, e me deparei com a Hostinger Brasil.A Hostinger Brasil oferece 3 tipos de planos de hospedagem: Gratuito, Premium e Busines.
 O plano gratuito já resolve muitos problemas de quem está iniciando ou querendo se familiarizar com hospedagem de sites.</description>
     </item>
     

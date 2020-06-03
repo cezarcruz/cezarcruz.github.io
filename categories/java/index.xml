@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Blog do Cezar</title>
     <link>https://cezarcruz.com.br/categories/java/</link>
     <description>Recent content in Java on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>pt-br</language>
     <lastBuildDate>Sun, 11 Aug 2019 15:50:36 -0300</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/java/index.xml" rel="self" type="application/rss+xml" />
@@ -13,19 +13,19 @@
     
     <item>
       <title>Incluindo MapStruct em sua aplicação Java</title>
-      <link>https://cezarcruz.com.br/post/incluindo-map-struct-em-sua-aplicacao-java/</link>
+      <link>https://cezarcruz.com.br/posts/incluindo-map-struct-em-sua-aplicacao-java/</link>
       <pubDate>Sun, 11 Aug 2019 15:50:36 -0300</pubDate>
       
-      <guid>https://cezarcruz.com.br/post/incluindo-map-struct-em-sua-aplicacao-java/</guid>
+      <guid>https://cezarcruz.com.br/posts/incluindo-map-struct-em-sua-aplicacao-java/</guid>
       <description>&lt;p&gt;Olá, neste post veremos como incluindo o MapStruct em uma aplicação Java.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Incluindo Lombok em sua aplicação Java</title>
-      <link>https://cezarcruz.com.br/post/incluindo-lombok-na-sua-aplicacao-java/</link>
+      <link>https://cezarcruz.com.br/posts/incluindo-lombok-na-sua-aplicacao-java/</link>
       <pubDate>Thu, 25 Jul 2019 11:20:28 -0300</pubDate>
       
-      <guid>https://cezarcruz.com.br/post/incluindo-lombok-na-sua-aplicacao-java/</guid>
+      <guid>https://cezarcruz.com.br/posts/incluindo-lombok-na-sua-aplicacao-java/</guid>
       <description>&lt;p&gt;Olá, no post de hoje, vamos ver como incluir o lombok na nossa aplicação Java.&lt;/p&gt;</description>
     </item>
     
@@ -95,8 +95,8 @@ irei começar uma série de posts relacionados a Java. A ideia é escrever sobre
       <description>Olás,
 hoje uma dica rápida pra navegarmos por uma classe java que contenha enums:
 Considerando nosso enum:
-public enum Cidades { CAMPINAS, HORTOLANDIA, SUMARE, VALINHOS } Pra navegamos por ele basta fazer o seguinte:
-for (Cidades c : Cidages.values()) { System.out.println(c.toString()); } Utilizando o método values, obtemos um list do tipo do nosso enum com todos os enum, daí pra frente é só diversão.
+Pra navegamos por ele basta fazer o seguinte:
+Utilizando o método values, obtemos um list do tipo do nosso enum com todos os enum, daí pra frente é só diversão.
 Abraços!</description>
     </item>
     

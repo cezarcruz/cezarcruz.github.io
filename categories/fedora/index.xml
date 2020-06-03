@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fedora on Blog do Cezar</title>
     <link>https://cezarcruz.com.br/categories/fedora/</link>
     <description>Recent content in Fedora on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>pt-br</language>
     <lastBuildDate>Wed, 19 Apr 2017 00:47:44 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/fedora/index.xml" rel="self" type="application/rss+xml" />
@@ -20,7 +20,7 @@
       <description>Olas,
 Para habilitar esta funcionalidade no nautilus do Fedora eh muito simples, basta rodar os comandos abaixo:
 sudo dnf install nautilus-open-terminal
-Apos isto, basta reiniciar o nautilius, e quando clicar com o botão direito do mouse, a opção &amp;#8220;Open in terminal&amp;#8221; estará disponível:
+Apos isto, basta reiniciar o nautilius, e quando clicar com o botão direito do mouse, a opção “Open in terminal” estará disponível:
 killall nautilus
 Prontinho! =)</description>
     </item>

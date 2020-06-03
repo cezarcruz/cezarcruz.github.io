@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nodejs on Blog do Cezar</title>
+    <title>NodeJS on Blog do Cezar</title>
     <link>https://cezarcruz.com.br/categories/nodejs/</link>
-    <description>Recent content in Nodejs on Blog do Cezar</description>
+    <description>Recent content in NodeJS on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>pt-br</language>
     <lastBuildDate>Mon, 16 May 2016 15:39:06 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/nodejs/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,6 @@
       
       <guid>https://cezarcruz.com.br/how-to-create-a-sails-js-start-app/</guid>
       <description>&lt;p&gt;Hello folks.&lt;/p&gt;
-
 &lt;p&gt;For this post i think doing something different. I will try to write this post in English. Any question, please, chat me. Thanks.&lt;/p&gt;</description>
     </item>
     

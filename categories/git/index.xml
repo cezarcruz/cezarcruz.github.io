@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Blog do Cezar</title>
     <link>https://cezarcruz.com.br/categories/git/</link>
     <description>Recent content in Git on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>pt-br</language>
     <lastBuildDate>Thu, 06 Nov 2014 23:49:38 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/git/index.xml" rel="self" type="application/rss+xml" />
@@ -19,8 +19,8 @@
       <guid>https://cezarcruz.com.br/como-salvar-autenticacao-no-repositorio-local-usando-git/</guid>
       <description>Uma dica bem curtinha, porém útil:
 Como configurar o git para não pedir senha ao baixar ou subir dados no repositório remoto, para isto, basta entrar no seu repositório local e digitar o comando abaixo:
-git config credential.helper cache Pra salvar apenas por um tempo determinado, utilizar:
-git config credential.helper &#39;cache --timeout=60000&#39; =D</description>
+Pra salvar apenas por um tempo determinado, utilizar:
+=D</description>
     </item>
     
   </channel>

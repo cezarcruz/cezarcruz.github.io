@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pgp on Blog do Cezar</title>
+    <title>PGP on Blog do Cezar</title>
     <link>https://cezarcruz.com.br/tags/pgp/</link>
-    <description>Recent content in Pgp on Blog do Cezar</description>
+    <description>Recent content in PGP on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>pt-br</language>
     <lastBuildDate>Tue, 18 Jun 2013 12:33:16 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/tags/pgp/index.xml" rel="self" type="application/rss+xml" />
@@ -17,13 +17,10 @@
       <pubDate>Tue, 18 Jun 2013 12:33:16 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-eclipse-parte1/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457626/cake-logo_ns8tdv.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-42&#34; src=&#34;http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457626/cake-logo_ns8tdv.png&#34; alt=&#34;cake-logo&#34; width=&#34;180&#34; height=&#34;180&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457626/cake-logo_ns8tdv.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Olá, nesse tutorial gostaria de ensinar de uma forma bem básica, como rodar o Framework CakePHP no Windows e escrever algum código usando o Eclipse.&lt;/p&gt;
-
 &lt;p&gt;Bora lá:&lt;/p&gt;
-
-&lt;p&gt;O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos beneficios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada &lt;a href=&#34;http://blog.glaucocustodio.com/2012/07/31/porque-usar-um-framework/&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt; e &lt;a href=&#34;http://pt.wikipedia.org/wiki/MVC&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos beneficios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada &lt;!-- raw HTML omitted --&gt;aqui&lt;!-- raw HTML omitted --&gt; e &lt;!-- raw HTML omitted --&gt;aqui&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Incluindo Lombok em sua aplicação Java - Blog do Cezar</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="https://cezarcruz.com.br/css/style.css">
+	
+	<link rel="shortcut icon" href="https://cezarcruz.com.br/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-37762884-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="https://cezarcruz.com.br/" title="Blog do Cezar" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Blog do Cezar</div>
+					<div class="logo__tagline">um blog sobre programação</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="https://cezarcruz.com.br/sobre/">
+				
+				<span class="menu__text">Sobre</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Incluindo Lombok em sua aplicação Java</h1>
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Cezar Cruz</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-07-25T11:20:28-03:00">25 Jul 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://cezarcruz.com.br/categories/java/" rel="category">Java</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<p>Olá, no post de hoje, vamos ver como incluir o lombok na nossa aplicação Java.</p>
+<p>Primeiro, o que é o Lombok?</p>
+<p>Site do projeto: <a href="https://projectlombok.org/">https://projectlombok.org/</a></p>
+<p>Basicamente o Lombok é um projeto que diminui a necessidade de ficar implementando um monte de código java que criamos em nossas classes. Ex: métodos get e set, builders, construtores, toString, hascode, etc. Com o lombok, basta anotarmos nossas classe com algumas anotações, que em tempo de compilação, o lombok gera todos esses métodos automaticamente, o que deixa nossa classe muito mais simples.</p>
+<p>Classe sem anotações lombok (e nem consideramos o builder):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Objects<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Pessoa</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#66d9ef">private</span> String nome<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> Integer idade<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Pessoa</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Pessoa</span><span style="color:#f92672">(</span>String nome<span style="color:#f92672">,</span> Integer idade<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">nome</span> <span style="color:#f92672">=</span> nome<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">idade</span> <span style="color:#f92672">=</span> idade<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getNome</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> nome<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setNome</span><span style="color:#f92672">(</span>String nome<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">nome</span> <span style="color:#f92672">=</span> nome<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getIdade</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> idade<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setIdade</span><span style="color:#f92672">(</span>Integer idade<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">idade</span> <span style="color:#f92672">=</span> idade<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>Object o<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span> <span style="color:#f92672">==</span> o<span style="color:#f92672">)</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>o <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> getClass<span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">())</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        Pessoa pessoa <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Pessoa<span style="color:#f92672">)</span> o<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>nome<span style="color:#f92672">,</span> pessoa<span style="color:#f92672">.</span><span style="color:#a6e22e">nome</span><span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span>
+                Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>idade<span style="color:#f92672">,</span> pessoa<span style="color:#f92672">.</span><span style="color:#a6e22e">idade</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">hashCode</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> Objects<span style="color:#f92672">.</span><span style="color:#a6e22e">hash</span><span style="color:#f92672">(</span>nome<span style="color:#f92672">,</span> idade<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Pessoa{&#34;</span> <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;nome=&#39;&#34;</span> <span style="color:#f92672">+</span> nome <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;, idade=&#34;</span> <span style="color:#f92672">+</span> idade <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Classe com anotações lombok:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> lombok.Value<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@Value</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PessoaLombok</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#66d9ef">private</span> String nome<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> Integer idade<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><p>A anotação <a href="https://projectlombok.org/features/Value">@Value</a> gera vários códigos:
+toString(), equal(), hashCode(), construtor com todos as propriedades, métodos getter. Obs: O @Value gera classes imutáveis, dessa forma não é possivel utilizar os famosos métodos Setters, para criar classes mutáveis, deve ser utilizada a anotação <a href="https://projectlombok.org/features/Data">@Data</a>.</p>
+<h2 id="incluindo-no-nosso-projeto">Incluindo no nosso projeto.</h2>
+<p>Como nem tudo são flores, o primeiro passo é incluir o plugin do lombok em nossa IDE, esse passo é importante, pois dessa forma a IDE consegue entender os métodos gerados:</p>
+<p><a href="https://projectlombok.org/setup/eclipse">Eclipse</a></p>
+<p><a href="https://projectlombok.org/setup/intellij">Intellij</a></p>
+<p>O proxímo passo é incluir a dependência no nosso pom.xml:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependencies&gt;</span>
+	<span style="color:#f92672">&lt;dependency&gt;</span>
+		<span style="color:#f92672">&lt;groupId&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
+		<span style="color:#f92672">&lt;artifactId&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
+		<span style="color:#f92672">&lt;version&gt;</span>1.18.8<span style="color:#f92672">&lt;/version&gt;</span>
+		<span style="color:#f92672">&lt;scope&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
+	<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#f92672">&lt;/dependencies&gt;</span>
+</code></pre></div><p>Pronto, o lombok está configurado no nosso projeto, abaixo segue as anotações mais utilizadas comumente:</p>
+<p><a href="https://projectlombok.org/features/GetterSetter">@Getter e @Setter</a>: Como o nome sugere, gera os getters e setters de uma classe, pode ser utilizados sozinhos ou juntos, em classes ou em atributos;</p>
+<p><a href="https://projectlombok.org/features/constructor">@NoArgsConstructor e @AllArgsConstructor</a>: Como o nome sugere, gera métodos construtores;</p>
+<p><a href="https://projectlombok.org/features/Builder">@Builder</a>: Implementa o padrão de projetos &ldquo;Builder&rdquo;, basicamente, gera uma classe e um método que torna possível criar uma nova instância da classe anotada. É muito útil na criação de classes imutáveis;</p>
+<p><a href="https://projectlombok.org/features/Data">@Data</a>: Muito parecido com a anotação @Value, no entanto, gera classes mutáveis, bastante útil em classes do tipo DTO;</p>
+<p><a href="https://projectlombok.org/features/Value">@Value</a>: Como descrito acima, gera classes imutáveis e outros métodos comuns no dia a dia (equals, hashCode, toString);</p>
+<p>Existem varias outras funcionalidades do lombok que podem ser encontradas aqui:
+<a href="https://projectlombok.org/features/all">https://projectlombok.org/features/all</a></p>
+<p>Os exemplos utilizados nesse post pode ser encontrados aqui:
+<a href="https://github.com/cezarcruz/codigos-do-site/tree/master/exemplos-lombok">https://github.com/cezarcruz/codigos-do-site/tree/master/exemplos-lombok</a></p>
+<p>Não tenha medo de utilizar o lombok, existem ferramentas capaz de remover o código lombok e gerar as classes como antigamente, mas incluido o lombok no projeto e visto os beneficios, acho dificil voltar.</p>
+<p>Qualquer duvida, deixe uma mensagem no chat abaixo.
+Abraços.</p>
+		</div>
+	</article>
+</main>
+
+
+
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cezarcruz" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="BUSCAR..." value="" name="q" aria-label="BUSCAR...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://cezarcruz.com.br/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Postagens recentes</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/posts/incluindo-map-struct-em-sua-aplicacao-java/">Incluindo MapStruct em sua aplicação Java</a></li>
+			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/posts/incluindo-lombok-na-sua-aplicacao-java/">Incluindo Lombok em sua aplicação Java</a></li>
+			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/configurando-ambiente-java-simples-rapido-no-linux/">Configurando ambiente de desenvolvimento Java rapidamente no Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/certificacao-java-variaveis/">Certificação JAVA (1Z0-808) - Variáveis</a></li>
+			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/certificacao-java-compilacao-e-execucao/">Certificação JAVA (1Z0-808) - Compilação e execução</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categorias</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/1z0-808/">1Z0-808</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/angularjs/">AngularJS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/cakephp/">CakePHP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/csharp/">CSharp</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/css/">CSS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/django/">Django</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/eclipse/">Eclipse</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/fedora/">Fedora</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/java/">Java</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/javascript/">JavaScript</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/jekyll/">Jekyll</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/lamp/">LAMP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/lemp/">LEMP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/linux/">Linux</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/mapstruct/">MapStruct</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/markdown/">Markdown</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/maven/">Maven</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/net/">NET</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/nodejs/">NodeJS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/oracle/">Oracle</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/outros/">Outros</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/php/">PHP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/ruby/">Ruby</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/sailsjs/">SailsJS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/sql/">SQL</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/svn/">SVN</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/1z0-808/" title="1Z0-808">1Z0-808 (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/angularjs/" title="AngularJS">AngularJS (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/cakephp/" title="CakePHP">CakePHP (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/csharp/" title="CSharp">CSharp (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/css/" title="CSS">CSS (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/django/" title="Django">Django (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lemp/" title="LEMP">LEMP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/markdown/" title="Markdown">Markdown (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/maven/" title="Maven">Maven (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/net/" title="NET">NET (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/nodejs/" title="NodeJS">NodeJS (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/oracle/" title="Oracle">Oracle (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/pgp/" title="PGP">PGP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/php/" title="PHP">PHP (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/ruby/" title="Ruby">Ruby (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/sailsjs/" title="SailsJS">SailsJS (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/sql/" title="SQL">SQL (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/svn/" title="SVN">SVN (1)</a>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Blog do Cezar.
+			<span class="footer__copyright-credits">Gerado com <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> com o tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="https://cezarcruz.com.br/js/menu.js"></script>
+</body>
+</html>

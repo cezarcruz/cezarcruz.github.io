@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cakephp on Blog do Cezar</title>
+    <title>CakePHP on Blog do Cezar</title>
     <link>https://cezarcruz.com.br/categories/cakephp/</link>
-    <description>Recent content in Cakephp on Blog do Cezar</description>
+    <description>Recent content in CakePHP on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>pt-br</language>
     <lastBuildDate>Fri, 01 Nov 2013 13:11:15 +0000</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/cakephp/index.xml" rel="self" type="application/rss+xml" />
@@ -20,7 +20,7 @@
       <description>Olás, uma dica rápida pra fazer o CakePHP rodar satisfatoriamente no NGINX.
 Caso queira saber como instalar o cake, é soh clicar aqui. 😉
 Sem mais delongas, basta abrir o arquivo de configuração do NGINX e adicionar as seguintes linhas, depois das configurações padrões para funcionamento com o PHP:
-location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 break; root /usr/share/nginx/html/cake/app/webroot; try_files $uri /$uri/ @cakephp; } location @cakephp { set $q $request_uri; if ($request_uri ~ &#34;</description>
+Lembrando que essa configuração é pra quando estiver usando um subdiretório, no caso, /cake, e os parâmetros fastcgi_param SCRIPT_FILENAME e root devem apontar para o diretório “fisico” do CakePHP.</description>
     </item>
     
     <item>
@@ -39,45 +39,16 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
       
       <guid>https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/</guid>
       <description>&lt;p&gt;Continuando com a segunda parte do tutorial básico usando CakePHP, Windows e Eclipse.&lt;/p&gt;
-
 &lt;p&gt;A primeira parte você encontra &lt;a href=&#34;https://cezarcruz.com.br/2013/06/tutorial-basico-usando-cakephp-windows-eclipse-parte1/&#34;&gt;aqui&lt;/a&gt;, paramos na tela em que é exibido uma mensagem de erro de conexão com o bando de dados no CakePHP, vamos lá.&lt;/p&gt;
-
 &lt;p&gt;Primeiro, precisamos criar uma base de dados, como estamos utilizando o Wamp, é só utilizar o phpMyAdmin, para o tutorial, vamos criar um base de dados chamada &lt;strong&gt;cake.&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Depois de criado o banco de dados, vamos configurar ele no projeto:&lt;/p&gt;
-
 &lt;p&gt;Abra a pasta app-&amp;gt;Config, nessa pasta, encontramos os arquivos relacionados ao configuração do CakePHP, o arquivo que conecta com a base de dados é o database.php.default, o primeiro passo é renomear ele para database.php:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;No Eclipse, o botão F2, é um atalho para renomear arquivos e pastas.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Após renomear o arquivo, vamos configurar a conexão com a base de dados, procure no arquivos por class DATABASE_CONFIG, ela deve esar assim:&lt;/p&gt;
-
-&lt;pre class=&#34;lang:php decode:true&#34;&gt;class DATABASE_CONFIG {
-
-    public $default = array(
-        &#39;datasource&#39; =&amp;gt; &#39;Database/Mysql&#39;,
-        &#39;persistent&#39; =&amp;gt; false,
-        &#39;host&#39; =&amp;gt; &#39;localhost&#39;,
-        &#39;login&#39; =&amp;gt; &#39;user&#39;,
-        &#39;password&#39; =&amp;gt; &#39;password&#39;,
-        &#39;database&#39; =&amp;gt; &#39;database_name&#39;,
-        &#39;prefix&#39; =&amp;gt; &#39;&#39;,
-        //&#39;encoding&#39; =&amp;gt; &#39;utf8&#39;,
-    );
-
-    public $test = array(
-        &#39;datasource&#39; =&amp;gt; &#39;Database/Mysql&#39;,
-        &#39;persistent&#39; =&amp;gt; false,
-        &#39;host&#39; =&amp;gt; &#39;localhost&#39;,
-        &#39;login&#39; =&amp;gt; &#39;user&#39;,
-        &#39;password&#39; =&amp;gt; &#39;password&#39;,
-        &#39;database&#39; =&amp;gt; &#39;test_database_name&#39;,
-        &#39;prefix&#39; =&amp;gt; &#39;&#39;,
-        //&#39;encoding&#39; =&amp;gt; &#39;utf8&#39;,
-    );
-}&lt;/pre&gt;</description>
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;</description>
     </item>
     
     <item>
@@ -86,13 +57,10 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
       <pubDate>Tue, 18 Jun 2013 12:33:16 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-eclipse-parte1/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457626/cake-logo_ns8tdv.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-42&#34; src=&#34;http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457626/cake-logo_ns8tdv.png&#34; alt=&#34;cake-logo&#34; width=&#34;180&#34; height=&#34;180&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
+      <description>&lt;p&gt;&lt;a href=&#34;http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457626/cake-logo_ns8tdv.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Olá, nesse tutorial gostaria de ensinar de uma forma bem básica, como rodar o Framework CakePHP no Windows e escrever algum código usando o Eclipse.&lt;/p&gt;
-
 &lt;p&gt;Bora lá:&lt;/p&gt;
-
-&lt;p&gt;O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos beneficios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada &lt;a href=&#34;http://blog.glaucocustodio.com/2012/07/31/porque-usar-um-framework/&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt; e &lt;a href=&#34;http://pt.wikipedia.org/wiki/MVC&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos beneficios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada &lt;!-- raw HTML omitted --&gt;aqui&lt;!-- raw HTML omitted --&gt; e &lt;!-- raw HTML omitted --&gt;aqui&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>
