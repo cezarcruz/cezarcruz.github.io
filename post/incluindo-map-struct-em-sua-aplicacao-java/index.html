@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,9 +7,9 @@
 	<title>Incluindo MapStruct em sua aplicação Java - Blog do Cezar</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta name="generator" content="Hugo 0.54.0" />
-	
-		
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="https://cezarcruz.com.br/css/style.css">
 	
 	<link rel="shortcut icon" href="https://cezarcruz.com.br/favicon.ico">
@@ -25,24 +25,20 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-		(adsbygoogle = window.adsbygoogle || []).push({
-			google_ad_client: "ca-pub-1691224447355253",
-			enable_page_level_ads: true
-		});
-	</script>
 </head>
 <body class="body">
 	<div class="container container--outer">
 		<header class="header">
-	<div class="container">
-		<div class="logo">
-			<a class="logo__link" href="https://cezarcruz.com.br/" title="Blog do Cezar" rel="home">
-				<div class="logo__title">Blog do Cezar</div>
-				<div class="logo__tagline">um blog sobre programação e outras coisas mais</div>
-			</a>
-		</div>
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="https://cezarcruz.com.br/" title="Blog do Cezar" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Blog do Cezar</div>
+					<div class="logo__tagline">um blog sobre programação</div>
+				</div>
+		</a>
+	</div>
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -50,7 +46,11 @@ if (!doNotTrack) {
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="https://cezarcruz.com.br/sobre/">Sobre</a>
+			<a class="menu__link" href="https://cezarcruz.com.br/sobre/">
+				
+				<span class="menu__text">Sobre</span>
+				
+			</a>
 		</li>
 	</ul>
 </nav>
@@ -64,311 +64,244 @@ if (!doNotTrack) {
 	<article class="post">
 		<header class="post__header">
 			<h1 class="post__title">Incluindo MapStruct em sua aplicação Java</h1>
-			<div class="post__meta meta">
+			<div class="post__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Cezar Cruz</span>
+</div>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-08-11T15:50:36">11 Aug 2019</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="https://cezarcruz.com.br/categories/java" rel="category">Java</a>, <a class="meta__link" href="https://cezarcruz.com.br/categories/mapstruct" rel="category">MapStruct</a></span>
-</div>
-</div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-08-11T15:50:36-03:00">11 Aug 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="https://cezarcruz.com.br/categories/java/" rel="category">Java</a>, <a class="meta__link" href="https://cezarcruz.com.br/categories/mapstruct/" rel="category">MapStruct</a>
+	</span>
+</div></div>
 		</header><div class="content post__content clearfix">
 			<p>Olá, neste post veremos como incluindo o MapStruct em uma aplicação Java.</p>
-
 <p>Qual é o problema?</p>
-
 <p>Nas aplicações atuais estamos acostumados a criar &ldquo;camadas&rdquo;: controllers, services, repositories, DAO, etc. Normalmente, separamos nossa request de dados do que é salvo no banco, com isso temos o famoso DTO e nossas Entidades (JPA). O DTO fica no controller e as entidades são gerenciadas pelo repositório ou DAO, para que isso funcione, temos que converter o DTO antes de salvar no nosso banco de dados, para isso existem algumas formas de fazer, mas todas são massantes.</p>
-
 <p>O que é o MapStruct e como ele pode resolver este problema?</p>
-
 <p>O MapStruct, é suas palavras, é um gerador de código que converte &ldquo;Java Beans&rdquo; baseado em convenção sob configuração.</p>
-
 <p><a href="https://mapstruct.org/">https://mapstruct.org/</a></p>
-
 <p>Dito isso, podemos utilizar o MapStruct para fazer conversões entre um DTO e uma entidade e vice versa, vamos aos passos:</p>
-
 <h2 id="incluir-no-projeto-maven">Incluir no projeto maven</h2>
-
 <p>Deve ser incluído as seguintes linhas no pom.xml</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">   <span style="color:#f92672">&lt;dependency&gt;</span>
+       <span style="color:#f92672">&lt;groupId&gt;</span>org.mapstruct<span style="color:#f92672">&lt;/groupId&gt;</span>
+       <span style="color:#f92672">&lt;artifactId&gt;</span>mapstruct<span style="color:#f92672">&lt;/artifactId&gt;</span>
+       <span style="color:#f92672">&lt;version&gt;</span>1.3.1.Final<span style="color:#f92672">&lt;/version&gt;</span>
+   <span style="color:#f92672">&lt;/dependency&gt;</span>
 
-<pre><code>   &lt;dependency&gt;
-       &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
-       &lt;artifactId&gt;mapstruct&lt;/artifactId&gt;
-       &lt;version&gt;1.3.1.Final&lt;/version&gt;
-   &lt;/dependency&gt;
- 
-   &lt;build&gt;
-       &lt;plugins&gt;
-           &lt;plugin&gt;
-               &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
-               &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
-               &lt;version&gt;3.5.1&lt;/version&gt; &lt;!-- or newer version --&gt;
-               &lt;configuration&gt;
-                   &lt;source&gt;1.8&lt;/source&gt; &lt;!-- depending on your project --&gt;
-                   &lt;target&gt;1.8&lt;/target&gt; &lt;!-- depending on your project --&gt;
-                   &lt;annotationProcessorPaths&gt;
-                       &lt;path&gt;
-                           &lt;groupId&gt;org.mapstruct&lt;/groupId&gt;
-                           &lt;artifactId&gt;mapstruct-processor&lt;/artifactId&gt;
-                           &lt;version&gt;${org.mapstruct.version}&lt;/version&gt;
-                       &lt;/path&gt;
-                       &lt;!-- other annotation processors --&gt;
-                   &lt;/annotationProcessorPaths&gt;
-               &lt;/configuration&gt;
-           &lt;/plugin&gt;
-       &lt;/plugins&gt;
-   &lt;/build&gt;
-</code></pre>
-
-<p>Após esta configuração é possível utilizar normalmente.</p>
-
+   <span style="color:#f92672">&lt;build&gt;</span>
+       <span style="color:#f92672">&lt;plugins&gt;</span>
+           <span style="color:#f92672">&lt;plugin&gt;</span>
+               <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.maven.plugins<span style="color:#f92672">&lt;/groupId&gt;</span>
+               <span style="color:#f92672">&lt;artifactId&gt;</span>maven-compiler-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+               <span style="color:#f92672">&lt;version&gt;</span>3.5.1<span style="color:#f92672">&lt;/version&gt;</span> <span style="color:#75715e">&lt;!-- or newer version --&gt;</span>
+               <span style="color:#f92672">&lt;configuration&gt;</span>
+                   <span style="color:#f92672">&lt;source&gt;</span>1.8<span style="color:#f92672">&lt;/source&gt;</span> <span style="color:#75715e">&lt;!-- depending on your project --&gt;</span>
+                   <span style="color:#f92672">&lt;target&gt;</span>1.8<span style="color:#f92672">&lt;/target&gt;</span> <span style="color:#75715e">&lt;!-- depending on your project --&gt;</span>
+                   <span style="color:#f92672">&lt;annotationProcessorPaths&gt;</span>
+                       <span style="color:#f92672">&lt;path&gt;</span>
+                           <span style="color:#f92672">&lt;groupId&gt;</span>org.mapstruct<span style="color:#f92672">&lt;/groupId&gt;</span>
+                           <span style="color:#f92672">&lt;artifactId&gt;</span>mapstruct-processor<span style="color:#f92672">&lt;/artifactId&gt;</span>
+                           <span style="color:#f92672">&lt;version&gt;</span>${org.mapstruct.version}<span style="color:#f92672">&lt;/version&gt;</span>
+                       <span style="color:#f92672">&lt;/path&gt;</span>
+                       <span style="color:#75715e">&lt;!-- other annotation processors --&gt;</span>
+                   <span style="color:#f92672">&lt;/annotationProcessorPaths&gt;</span>
+               <span style="color:#f92672">&lt;/configuration&gt;</span>
+           <span style="color:#f92672">&lt;/plugin&gt;</span>
+       <span style="color:#f92672">&lt;/plugins&gt;</span>
+   <span style="color:#f92672">&lt;/build&gt;</span>
+</code></pre></div><p>Após esta configuração é possível utilizar normalmente.</p>
 <blockquote>
 <p>O MapStruct gera código através de processamento de anotações, por isso, sempre que houver uma alteração em classes que envolvam o MapStruct (mappers, dto, entidade, etc), deve ser executado um comando de build do maven</p>
 </blockquote>
-
 <h2 id="criando-dtos">Criando DTOs</h2>
-
 <p>Para simplificar o nosso código, não irei exibir os getters e setters.
 Nossa aplicação será composta de 4 POJOs, onde será feita a conversão de um para o outro, veja:</p>
-
 <p>PessoaRequest.java</p>
-
-<pre><code>private String nome;
-private Integer idade;
-private List&lt;EnderecoRequest&gt; enderecos;
-</code></pre>
-
-<p>EnderecoRequest.java</p>
-
-<pre><code>private String rua;
-private Integer numero;
-private String cidade;
-</code></pre>
-
-<p>PessoaResponse.class</p>
-
-<pre><code>private String nome;
-private Integer idade;
-private List&lt;EnderecoResponse&gt; enderecos
-</code></pre>
-
-<p>EnderecoResponse.class</p>
-
-<pre><code>private String logradouro;
-private String numero;
-private String cidade;
-</code></pre>
-
-<p>Repare que as classes de endereço tem propriedades com nomes e tipos diferentes propositalmente.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> String nome<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">private</span> Integer idade<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">private</span> List<span style="color:#f92672">&lt;</span>EnderecoRequest<span style="color:#f92672">&gt;</span> enderecos<span style="color:#f92672">;</span>
+</code></pre></div><p>EnderecoRequest.java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> String rua<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">private</span> Integer numero<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">private</span> String cidade<span style="color:#f92672">;</span>
+</code></pre></div><p>PessoaResponse.class</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> String nome<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">private</span> Integer idade<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">private</span> List<span style="color:#f92672">&lt;</span>EnderecoResponse<span style="color:#f92672">&gt;</span> enderecos
+</code></pre></div><p>EnderecoResponse.class</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> String logradouro<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">private</span> String numero<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">private</span> String cidade<span style="color:#f92672">;</span>
+</code></pre></div><p>Repare que as classes de endereço tem propriedades com nomes e tipos diferentes propositalmente.</p>
 <h2 id="implementar-os-mappers">Implementar os mappers</h2>
-
 <p>Agora que temos nossa aplicação configurada e nossos POJOs, podemos iniciar a implementação.
 Ela pode ser feita de duas formas: Implementando em uma Interface ou uma classe Abstrata.</p>
-
 <blockquote>
 <p>Normalmente devemos utilizar Interfaces e, caso precise de algum método extra, criamos um método &ldquo;default&rdquo;, em casos mais especifitos (injetar um bean do Spring, por exemplo), podemos utilizar classes abstratas.</p>
 </blockquote>
-
 <p>Iremos começar pela classe Endereço:</p>
-
 <p>EnderecoMapper.java</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Mapper</span><span style="color:#f92672">(</span>componentModel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;spring&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">EnderecoMapper</span> <span style="color:#f92672">{</span>
 
-<pre><code>@Mapper(componentModel = &quot;spring&quot;)
-public interface EnderecoMapper {
- 
- @Mapping(target = &quot;logradouro&quot;, source = &quot;rua&quot;)
- EnderecoResponse de(final EnderecoRequest enderecoRequest);
- 
- @InheritInverseConfiguration
- EnderecoRequest de(final EnderecoResponse enderecoResponse);
- 
- List&lt;EnderecoResponse&gt; deRequest(final List&lt;EnderecoRequest&gt; enderecoRequests);
-  List&lt;EnderecoRequest&gt; deResponse(final List&lt;EnderecoResponse&gt; enderecoResponses);
-}
- 
-</code></pre>
+ <span style="color:#a6e22e">@Mapping</span><span style="color:#f92672">(</span>target <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;logradouro&#34;</span><span style="color:#f92672">,</span> source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;rua&#34;</span><span style="color:#f92672">)</span>
+ EnderecoResponse <span style="color:#a6e22e">de</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> EnderecoRequest enderecoRequest<span style="color:#f92672">);</span>
 
-<p>@Mapper é utilizado para dizermos que esta interface é um mapper, a opção &ldquo;componentModel&rdquo; foi utilizada para dizer ao MapStruct que deve ser criar um &ldquo;Bean&rdquo; do spring para que possamos utilizar a Injeção de Dependencia do Spring. A configuração &ldquo;componentModel&rdquo; é opcional</p>
+ <span style="color:#a6e22e">@InheritInverseConfiguration</span>
+ EnderecoRequest <span style="color:#a6e22e">de</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> EnderecoResponse enderecoResponse<span style="color:#f92672">);</span>
 
+ List<span style="color:#f92672">&lt;</span>EnderecoResponse<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">deRequest</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> List<span style="color:#f92672">&lt;</span>EnderecoRequest<span style="color:#f92672">&gt;</span> enderecoRequests<span style="color:#f92672">);</span>
+  List<span style="color:#f92672">&lt;</span>EnderecoRequest<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">deResponse</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> List<span style="color:#f92672">&lt;</span>EnderecoResponse<span style="color:#f92672">&gt;</span> enderecoResponses<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><p>@Mapper é utilizado para dizermos que esta interface é um mapper, a opção &ldquo;componentModel&rdquo; foi utilizada para dizer ao MapStruct que deve ser criar um &ldquo;Bean&rdquo; do spring para que possamos utilizar a Injeção de Dependencia do Spring. A configuração &ldquo;componentModel&rdquo; é opcional</p>
 <p>@Mapping é utilizado para deixar explícito a conversão. Quando o nome das propriedades estão iguais o próprio MapStruct infere, mas quando está diferente, precisa ser especificado a origem e o destino, existem outra possibilidades, mas vamos explorar apenas o básico. Repare que o campo número são de tipos diferentes, o proprio MapStruct consegue fazer as conversões, é bem útil e ainda é possível especificar a conversão manualmente.</p>
-
 <p>@InheritInverseConfiguration faz a configuração inversa da conversão, deve ser utilizado quando existe um mapper com algum tipo de configuração específica.</p>
-
 <p>Os métodos de list sabem utilizar a configuração criada nos métodos anteriores não sendo necessário nenhuma configuração extra.</p>
-
 <p>Veja como fica a classe gerada a partir desta configuração:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> br.com.cezarcruz.mapstruct.controllers.mappers<span style="color:#f92672">;</span>
 
-<pre><code>package br.com.cezarcruz.mapstruct.controllers.mappers;
- 
-import br.com.cezarcruz.mapstruct.controllers.request.EnderecoRequest;
-import br.com.cezarcruz.mapstruct.controllers.response.EnderecoResponse;
-import java.util.ArrayList;
-import java.util.List;
-import javax.annotation.Generated;
-import org.springframework.stereotype.Component;
- 
-@Generated(
-   value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
-   date = &quot;2020-01-11T12:49:13-0200&quot;,
-   comments = &quot;version: 1.3.1.Final, compiler: javac, environment: Java 11.0.4 (AdoptOpenJDK)&quot;
-)
-@Component
-public class EnderecoMapperImpl implements EnderecoMapper {
- 
-   @Override
-   public EnderecoResponse de(EnderecoRequest enderecoRequest) {
-       if ( enderecoRequest == null ) {
-           return null;
-       }
- 
-       EnderecoResponse enderecoResponse = new EnderecoResponse();
- 
-       enderecoResponse.setLogradouro( enderecoRequest.getRua() );
-       if ( enderecoRequest.getNumero() != null ) {
-           enderecoResponse.setNumero( String.valueOf( enderecoRequest.getNumero() ) );
-       }
-       enderecoResponse.setCidade( enderecoRequest.getCidade() );
- 
-       return enderecoResponse;
-   }
- 
-   @Override
-   public EnderecoRequest de(EnderecoResponse enderecoResponse) {
-       if ( enderecoResponse == null ) {
-           return null;
-       }
- 
-       EnderecoRequest enderecoRequest = new EnderecoRequest();
- 
-       enderecoRequest.setRua( enderecoResponse.getLogradouro() );
-       if ( enderecoResponse.getNumero() != null ) {
-           enderecoRequest.setNumero( Integer.parseInt( enderecoResponse.getNumero() ) );
-       }
-       enderecoRequest.setCidade( enderecoResponse.getCidade() );
- 
-       return enderecoRequest;
-   }
- 
-   @Override
-   public List&lt;EnderecoResponse&gt; deRequest(List&lt;EnderecoRequest&gt; enderecoRequests) {
-       if ( enderecoRequests == null ) {
-           return null;
-       }
- 
-       List&lt;EnderecoResponse&gt; list = new ArrayList&lt;EnderecoResponse&gt;( enderecoRequests.size() );
-       for ( EnderecoRequest enderecoRequest : enderecoRequests ) {
-           list.add( de( enderecoRequest ) );
-       }
- 
-       return list;
-   }
- 
-   @Override
-   public List&lt;EnderecoRequest&gt; deResponse(List&lt;EnderecoResponse&gt; enderecoResponses) {
-       if ( enderecoResponses == null ) {
-           return null;
-       }
- 
-       List&lt;EnderecoRequest&gt; list = new ArrayList&lt;EnderecoRequest&gt;( enderecoResponses.size() );
-       for ( EnderecoResponse enderecoResponse : enderecoResponses ) {
-           list.add( de( enderecoResponse ) );
-       }
- 
-       return list;
-   }
-}
- 
-</code></pre>
+<span style="color:#f92672">import</span> br.com.cezarcruz.mapstruct.controllers.request.EnderecoRequest<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> br.com.cezarcruz.mapstruct.controllers.response.EnderecoResponse<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.ArrayList<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javax.annotation.Generated<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.stereotype.Component<span style="color:#f92672">;</span>
 
-<blockquote>
+<span style="color:#a6e22e">@Generated</span><span style="color:#f92672">(</span>
+   value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;org.mapstruct.ap.MappingProcessor&#34;</span><span style="color:#f92672">,</span>
+   date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2020-01-11T12:49:13-0200&#34;</span><span style="color:#f92672">,</span>
+   comments <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;version: 1.3.1.Final, compiler: javac, environment: Java 11.0.4 (AdoptOpenJDK)&#34;</span>
+<span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@Component</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EnderecoMapperImpl</span> <span style="color:#66d9ef">implements</span> EnderecoMapper <span style="color:#f92672">{</span>
+
+   <span style="color:#a6e22e">@Override</span>
+   <span style="color:#66d9ef">public</span> EnderecoResponse <span style="color:#a6e22e">de</span><span style="color:#f92672">(</span>EnderecoRequest enderecoRequest<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> enderecoRequest <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+           <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+       <span style="color:#f92672">}</span>
+
+       EnderecoResponse enderecoResponse <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> EnderecoResponse<span style="color:#f92672">();</span>
+
+       enderecoResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">setLogradouro</span><span style="color:#f92672">(</span> enderecoRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">getRua</span><span style="color:#f92672">()</span> <span style="color:#f92672">);</span>
+       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> enderecoRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">getNumero</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+           enderecoResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">setNumero</span><span style="color:#f92672">(</span> String<span style="color:#f92672">.</span><span style="color:#a6e22e">valueOf</span><span style="color:#f92672">(</span> enderecoRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">getNumero</span><span style="color:#f92672">()</span> <span style="color:#f92672">)</span> <span style="color:#f92672">);</span>
+       <span style="color:#f92672">}</span>
+       enderecoResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">setCidade</span><span style="color:#f92672">(</span> enderecoRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">getCidade</span><span style="color:#f92672">()</span> <span style="color:#f92672">);</span>
+
+       <span style="color:#66d9ef">return</span> enderecoResponse<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#a6e22e">@Override</span>
+   <span style="color:#66d9ef">public</span> EnderecoRequest <span style="color:#a6e22e">de</span><span style="color:#f92672">(</span>EnderecoResponse enderecoResponse<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> enderecoResponse <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+           <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+       <span style="color:#f92672">}</span>
+
+       EnderecoRequest enderecoRequest <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> EnderecoRequest<span style="color:#f92672">();</span>
+
+       enderecoRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">setRua</span><span style="color:#f92672">(</span> enderecoResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">getLogradouro</span><span style="color:#f92672">()</span> <span style="color:#f92672">);</span>
+       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> enderecoResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">getNumero</span><span style="color:#f92672">()</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+           enderecoRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">setNumero</span><span style="color:#f92672">(</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">parseInt</span><span style="color:#f92672">(</span> enderecoResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">getNumero</span><span style="color:#f92672">()</span> <span style="color:#f92672">)</span> <span style="color:#f92672">);</span>
+       <span style="color:#f92672">}</span>
+       enderecoRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">setCidade</span><span style="color:#f92672">(</span> enderecoResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">getCidade</span><span style="color:#f92672">()</span> <span style="color:#f92672">);</span>
+
+       <span style="color:#66d9ef">return</span> enderecoRequest<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#a6e22e">@Override</span>
+   <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>EnderecoResponse<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">deRequest</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>EnderecoRequest<span style="color:#f92672">&gt;</span> enderecoRequests<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> enderecoRequests <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+           <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+       <span style="color:#f92672">}</span>
+
+       List<span style="color:#f92672">&lt;</span>EnderecoResponse<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>EnderecoResponse<span style="color:#f92672">&gt;(</span> enderecoRequests<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">);</span>
+       <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span> EnderecoRequest enderecoRequest <span style="color:#f92672">:</span> enderecoRequests <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+           list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span> de<span style="color:#f92672">(</span> enderecoRequest <span style="color:#f92672">)</span> <span style="color:#f92672">);</span>
+       <span style="color:#f92672">}</span>
+
+       <span style="color:#66d9ef">return</span> list<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+
+   <span style="color:#a6e22e">@Override</span>
+   <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>EnderecoRequest<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">deResponse</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>EnderecoResponse<span style="color:#f92672">&gt;</span> enderecoResponses<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> enderecoResponses <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+           <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+       <span style="color:#f92672">}</span>
+
+       List<span style="color:#f92672">&lt;</span>EnderecoRequest<span style="color:#f92672">&gt;</span> list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>EnderecoRequest<span style="color:#f92672">&gt;(</span> enderecoResponses<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">);</span>
+       <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span> EnderecoResponse enderecoResponse <span style="color:#f92672">:</span> enderecoResponses <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+           list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span> de<span style="color:#f92672">(</span> enderecoResponse <span style="color:#f92672">)</span> <span style="color:#f92672">);</span>
+       <span style="color:#f92672">}</span>
+
+       <span style="color:#66d9ef">return</span> list<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><blockquote>
 <p>Observe que ele sabe lidar com valores nulos e incluiu anotações do  Spring</p>
 </blockquote>
-
 <p>Veja como fica o mapper da classe Pessoa</p>
-
-<pre><code>@Mapper(componentModel = &quot;spring&quot;, uses = {
-   EnderecoMapper.class
-})
-public interface PessoaMapper {
- PessoaResponse de(final PessoaRequest pessoaRequest);
-}
-</code></pre>
-
-<p>@Mapper nessa classe ele foi implementado com um detalhe, o &ldquo;uses&rdquo;, com isso dizemos ao MapStruct que não deve ser implementado um novo conversor para endereço mas utilizar o que mapper pronto.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Mapper</span><span style="color:#f92672">(</span>componentModel <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;spring&#34;</span><span style="color:#f92672">,</span> uses <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+   EnderecoMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span>
+<span style="color:#f92672">})</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">PessoaMapper</span> <span style="color:#f92672">{</span>
+ PessoaResponse <span style="color:#a6e22e">de</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> PessoaRequest pessoaRequest<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>@Mapper nessa classe ele foi implementado com um detalhe, o &ldquo;uses&rdquo;, com isso dizemos ao MapStruct que não deve ser implementado um novo conversor para endereço mas utilizar o que mapper pronto.</p>
 <p>Veja como ficou a classe gerada:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Generated</span><span style="color:#f92672">(</span>
+   value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;org.mapstruct.ap.MappingProcessor&#34;</span><span style="color:#f92672">,</span>
+   date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;2020-01-11T12:49:13-0200&#34;</span><span style="color:#f92672">,</span>
+   comments <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;version: 1.3.1.Final, compiler: javac, environment: Java 11.0.4 (AdoptOpenJDK)&#34;</span>
+<span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@Component</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PessoaMapperImpl</span> <span style="color:#66d9ef">implements</span> PessoaMapper <span style="color:#f92672">{</span>
 
-<pre><code>@Generated(
-   value = &quot;org.mapstruct.ap.MappingProcessor&quot;,
-   date = &quot;2020-01-11T12:49:13-0200&quot;,
-   comments = &quot;version: 1.3.1.Final, compiler: javac, environment: Java 11.0.4 (AdoptOpenJDK)&quot;
-)
-@Component
-public class PessoaMapperImpl implements PessoaMapper {
- 
-   @Autowired
-   private EnderecoMapper enderecoMapper;
- 
-   @Override
-   public PessoaResponse de(PessoaRequest pessoaRequest) {
-       if ( pessoaRequest == null ) {
-           return null;
-       }
- 
-       PessoaResponse pessoaResponse = new PessoaResponse();
- 
-       pessoaResponse.setNome( pessoaRequest.getNome() );
-       pessoaResponse.setIdade( pessoaRequest.getIdade() );
-       pessoaResponse.setEnderecos( enderecoMapper.deRequest( pessoaRequest.getEnderecos() ) );
- 
-       return pessoaResponse;
-   }
-}
- 
-</code></pre>
+   <span style="color:#a6e22e">@Autowired</span>
+   <span style="color:#66d9ef">private</span> EnderecoMapper enderecoMapper<span style="color:#f92672">;</span>
 
-<p>E com nossa conversão pronta basta utilizarmos:</p>
+   <span style="color:#a6e22e">@Override</span>
+   <span style="color:#66d9ef">public</span> PessoaResponse <span style="color:#a6e22e">de</span><span style="color:#f92672">(</span>PessoaRequest pessoaRequest<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+       <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span> pessoaRequest <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+           <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+       <span style="color:#f92672">}</span>
 
-<pre><code>@Service
-public class ConversorService {
- 
- @Autowired
- private PessoaMapper pessoaMapper;
- 
- public PessoaResponse converte(final PessoaRequest pessoaRequest) {
-   return pessoaMapper.de(pessoaRequest);
- }
-}
-</code></pre>
+       PessoaResponse pessoaResponse <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PessoaResponse<span style="color:#f92672">();</span>
 
-<p>Pronto.</p>
+       pessoaResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">setNome</span><span style="color:#f92672">(</span> pessoaRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">getNome</span><span style="color:#f92672">()</span> <span style="color:#f92672">);</span>
+       pessoaResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">setIdade</span><span style="color:#f92672">(</span> pessoaRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">getIdade</span><span style="color:#f92672">()</span> <span style="color:#f92672">);</span>
+       pessoaResponse<span style="color:#f92672">.</span><span style="color:#a6e22e">setEnderecos</span><span style="color:#f92672">(</span> enderecoMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">deRequest</span><span style="color:#f92672">(</span> pessoaRequest<span style="color:#f92672">.</span><span style="color:#a6e22e">getEnderecos</span><span style="color:#f92672">()</span> <span style="color:#f92672">)</span> <span style="color:#f92672">);</span>
 
+       <span style="color:#66d9ef">return</span> pessoaResponse<span style="color:#f92672">;</span>
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><p>E com nossa conversão pronta basta utilizarmos:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Service</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConversorService</span> <span style="color:#f92672">{</span>
+
+ <span style="color:#a6e22e">@Autowired</span>
+ <span style="color:#66d9ef">private</span> PessoaMapper pessoaMapper<span style="color:#f92672">;</span>
+
+ <span style="color:#66d9ef">public</span> PessoaResponse <span style="color:#a6e22e">converte</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> PessoaRequest pessoaRequest<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">return</span> pessoaMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">de</span><span style="color:#f92672">(</span>pessoaRequest<span style="color:#f92672">);</span>
+ <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Pronto.</p>
 <p>É possível incluir mais configurações ou fazer alguma implementação para executar antes ou depois de uma conversão, vemos isso em outros posts.</p>
-
 <p>Enquanto isso veja a documentação:
 <a href="https://mapstruct.org/documentation/stable/reference/html/">https://mapstruct.org/documentation/stable/reference/html/</a></p>
-
 <p>O código completo dete post está em:
 <a href="https://github.com/cezarcruz/codigos-do-site/tree/master/map-struct">https://github.com/cezarcruz/codigos-do-site/tree/master/map-struct</a></p>
-
 <p>Qualquer duvida, comente o post.</p>
-
 <p>Até.</p>
 		</div>
-		
 	</article>
 </main>
 
 
-<nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="https://cezarcruz.com.br/post/incluindo-lombok-na-sua-aplicacao-java/" rel="prev"><span class="post-nav__caption">«&thinsp;Anterior</span><p class="post-nav__post-title">Incluindo Lombok em sua aplicação Java</p></a>
-	</div>
-</nav>
+
 
 <section class="comments">
 	<div id="disqus_thread"></div>
@@ -401,11 +334,11 @@ public class ConversorService {
 			<input class="widget-search__field" type="search" placeholder="BUSCAR..." value="" name="q" aria-label="BUSCAR...">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://cezarcruz.com.br" />
+		<input type="hidden" name="sitesearch" value="https://cezarcruz.com.br/" />
 	</form>
 </div>
 <div class="widget-recent widget">
-	<h4 class="widget__title">Recent Posts</h4>
+	<h4 class="widget__title">Postagens recentes</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/post/incluindo-map-struct-em-sua-aplicacao-java/">Incluindo MapStruct em sua aplicação Java</a></li>
@@ -420,69 +353,127 @@ public class ConversorService {
 	<h4 class="widget__title">Categorias</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/1z0-808">1z0 808</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/angularjs">Angularjs</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/cakephp">Cakephp</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/csharp">Csharp</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/css">Css</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/django">Django</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/eclipse">Eclipse</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/fedora">Fedora</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/git">Git</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem">Hospedagem</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/intellij">Intellij</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/java">Java</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/javascript">Javascript</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/jekyll">Jekyll</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/lamp">Lamp</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/lemp">Lemp</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/linux">Linux</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/mapstruct">Mapstruct</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/markdown">Markdown</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/maven">Maven</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/net">Net</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/nodejs">Nodejs</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/oracle">Oracle</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/outros">Outros</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/php">Php</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/ruby">Ruby</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/sailsjs">Sailsjs</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/sql">Sql</a></li>
-			<li class="widget__item"><a class="widget__link" href="https://cezarcruz.com.br/categories/svn">Svn</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/1z0-808/">1Z0-808</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/angularjs/">AngularJS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/cakephp/">CakePHP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/csharp/">CSharp</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/css/">CSS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/django/">Django</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/eclipse/">Eclipse</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/fedora/">Fedora</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/java/">Java</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/javascript/">JavaScript</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/jekyll/">Jekyll</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/lamp/">LAMP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/lemp/">LEMP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/linux/">Linux</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/mapstruct/">MapStruct</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/markdown/">Markdown</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/maven/">Maven</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/net/">NET</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/nodejs/">NodeJS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/oracle/">Oracle</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/outros/">Outros</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/php/">PHP</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/ruby/">Ruby</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/sailsjs/">SailsJS</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/sql/">SQL</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="https://cezarcruz.com.br/categories/svn/">SVN</a>
+			</li>
 		</ul>
 	</div>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/1z0-808" title="1z0 808">1z0 808 (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/angularjs" title="Angularjs">Angularjs (5)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/cakephp" title="Cakephp">Cakephp (4)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/csharp" title="Csharp">Csharp (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/css" title="Css">Css (4)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/django" title="Django">Django (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse" title="Eclipse">Eclipse (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora" title="Fedora">Fedora (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem" title="Hospedagem">Hospedagem (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij" title="Intellij">Intellij (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java" title="Java">Java (8)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript" title="Javascript">Javascript (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll" title="Jekyll">Jekyll (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp" title="Lamp">Lamp (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lemp" title="Lemp">Lemp (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux" title="Linux">Linux (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/markdown" title="Markdown">Markdown (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/maven" title="Maven">Maven (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/net" title="Net">Net (5)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/nodejs" title="Nodejs">Nodejs (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/oracle" title="Oracle">Oracle (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/pgp" title="Pgp">Pgp (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/php" title="Php">Php (6)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/ruby" title="Ruby">Ruby (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/sailsjs" title="Sailsjs">Sailsjs (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/sql" title="Sql">Sql (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/svn" title="Svn">Svn (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/1z0-808/" title="1Z0-808">1Z0-808 (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/angularjs/" title="AngularJS">AngularJS (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/cakephp/" title="CakePHP">CakePHP (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/csharp/" title="CSharp">CSharp (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/css/" title="CSS">CSS (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/django/" title="Django">Django (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lemp/" title="LEMP">LEMP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/markdown/" title="Markdown">Markdown (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/maven/" title="Maven">Maven (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/net/" title="NET">NET (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/nodejs/" title="NodeJS">NodeJS (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/oracle/" title="Oracle">Oracle (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/pgp/" title="PGP">PGP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/php/" title="PHP">PHP (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/ruby/" title="Ruby">Ruby (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/sailsjs/" title="SailsJS">SailsJS (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/sql/" title="SQL">SQL (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/svn/" title="SVN">SVN (1)</a>
 	</div>
 </div>
 </aside>
@@ -492,10 +483,11 @@ public class ConversorService {
 		
 		<div class="footer__copyright">
 			&copy; 2020 Blog do Cezar.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Gerado com <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> com o tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
 </footer>
 	</div>
-<script async defer src="https://cezarcruz.com.br/js/menu.js"></script></body>
+<script async defer src="https://cezarcruz.com.br/js/menu.js"></script>
+</body>
 </html>
