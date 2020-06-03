@@ -81,19 +81,17 @@ if (!doNotTrack) {
 <p>depois de colocarmos nossos arquivos no devido lugar, devemos fazer o seguinte para que o arquivos sejam anexados a página de forma correta:</p>
 <p>No nosso arquivos de layout padrão, no caso, o app/View/Layouts/default.ctp, dentro da tag <strong><!-- raw HTML omitted --></strong> devemos colocar o seguinte código:</p>
 <p>Para arquivos CSS:</p>
-<!-- raw HTML omitted -->
-<p>Para arquivos javascript</p>
-<!-- raw HTML omitted -->
-<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">echo $this-&gt;Html-&gt;css(array(&#39;estilo&#39;));
+</code></pre></div><p>Para arquivos javascript</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">echo $this-&gt;Html-&gt;script(&#39;javascript&#39;)
+</code></pre></div><blockquote>
 <p> Não é necessário colocar a extensão do arquivo, o CakePHP cuida de tudo 😉</p>
 </blockquote>
 <p>No arquivos final, quando o browser renderizar, o resultado será o seguinte:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p> </p>
-<p>Simples e bem fácil, essa foi uma dica de como colocar Javascript e CSS no seu projeto CakePHP.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/cake/css/estilo.css&#34;</span> /&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/cake/js/javascript.js&#34;</span>&gt;
+</code></pre></div><p>Simples e bem fácil, essa foi uma dica de como colocar Javascript e CSS no seu projeto CakePHP.</p>
 <p>É isso ai, até mais.</p>
-<p> </p>
 		</div>
 		<footer class="post__footer">
 			

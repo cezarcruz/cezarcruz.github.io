@@ -19,7 +19,9 @@
       <guid>https://cezarcruz.com.br/como-salvar-autenticacao-no-repositorio-local-usando-git/</guid>
       <description>Uma dica bem curtinha, porém útil:
 Como configurar o git para não pedir senha ao baixar ou subir dados no repositório remoto, para isto, basta entrar no seu repositório local e digitar o comando abaixo:
+git config credential.helper cache
 Pra salvar apenas por um tempo determinado, utilizar:
+git config credential.helper &#39;cache --timeout=60000&#39;
 =D</description>
     </item>
     

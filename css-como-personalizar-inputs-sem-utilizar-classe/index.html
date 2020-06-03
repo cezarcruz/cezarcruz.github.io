@@ -74,13 +74,14 @@ if (!doNotTrack) {
 		</header><div class="content post__content clearfix">
 			<p>Olás, vindo aqui hoje só pra manter o blog “ativo” heheh, hoje, uma dica bem simples de <strong>css</strong> pra personalizar <!-- raw HTML omitted -->textbox<!-- raw HTML omitted --> (mania de .net) inputs.</p>
 <p>O código é o seguinte:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Com o código <strong>css</strong> acima, não será mais preciso declarar uma classe no e colocar em cada elemento input, lembrando que pode ser utilizado em outros elementos, exemplo:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Parece bobo e preguiçoso, mas se levarmos em conta o quanto da pra economizar de Ctrl + C e Ctrl + V.</p>
-<p>Espero que ajude, até mais.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">input</span><span style="color:#f92672">[</span><span style="color:#f92672">type</span><span style="color:#f92672">=</span><span style="color:#f92672">text</span><span style="color:#f92672">]</span> {
+  <span style="color:#75715e">/* regras de estilo aqui. */</span>
+}
+</code></pre></div><p>Com o código <strong>css</strong> acima, não será mais preciso declarar uma classe no e colocar em cada elemento input, lembrando que pode ser utilizado em outros elementos, exemplo:</p>
+<pre><code>input[type=checkbox] {
+    /* estilo aqui */
+}
+</code></pre><p>Espero que ajude, até mais.</p>
 
 		</div>
 		<footer class="post__footer">

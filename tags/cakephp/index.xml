@@ -20,7 +20,7 @@
       <description>Olás, uma dica rápida pra fazer o CakePHP rodar satisfatoriamente no NGINX.
 Caso queira saber como instalar o cake, é soh clicar aqui. 😉
 Sem mais delongas, basta abrir o arquivo de configuração do NGINX e adicionar as seguintes linhas, depois das configurações padrões para funcionamento com o PHP:
-Lembrando que essa configuração é pra quando estiver usando um subdiretório, no caso, /cake, e os parâmetros fastcgi_param SCRIPT_FILENAME e root devem apontar para o diretório “fisico” do CakePHP.</description>
+location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 break; root /usr/share/nginx/html/cake/app/webroot; try_files $uri /$uri/ @cakephp; } location @cakephp { set $q $request_uri; if ($request_uri ~ &amp;#34;^/cake(.</description>
     </item>
     
     <item>
@@ -47,8 +47,31 @@ Lembrando que essa configuração é pra quando estiver usando um subdiretório,
 &lt;p&gt;No Eclipse, o botão F2, é um atalho para renomear arquivos e pastas.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Após renomear o arquivo, vamos configurar a conexão com a base de dados, procure no arquivos por class DATABASE_CONFIG, ela deve esar assim:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;class DATABASE_CONFIG {
+
+	public $default = array(
+		&amp;#39;datasource&amp;#39; =&amp;gt;; &amp;#39;Database/Mysql&amp;#39;,
+		&amp;#39;persistent&amp;#39; =&amp;gt;; false,
+		&amp;#39;host&amp;#39; =&amp;gt;; &amp;#39;localhost&amp;#39;,
+		&amp;#39;login&amp;#39; =&amp;gt;; &amp;#39;user&amp;#39;,
+		&amp;#39;password&amp;#39; =&amp;gt;; &amp;#39;password&amp;#39;,
+		&amp;#39;database&amp;#39; =&amp;gt;; &amp;#39;database_name&amp;#39;,
+		&amp;#39;prefix&amp;#39; =&amp;gt;; &amp;#39;&amp;#39;,
+		//&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
+	);
+
+	public $test = array(
+		&amp;#39;datasource&amp;#39; =&amp;gt; &amp;#39;Database/Mysql&amp;#39;,
+		&amp;#39;persistent&amp;#39; =&amp;gt; false,
+		&amp;#39;host&amp;#39; =&amp;gt; &amp;#39;localhost&amp;#39;,
+		&amp;#39;login&amp;#39; =&amp;gt; &amp;#39;user&amp;#39;,
+		&amp;#39;password&amp;#39; =&amp;gt; &amp;#39;password&amp;#39;,
+		&amp;#39;database&amp;#39; =&amp;gt; &amp;#39;test_database_name&amp;#39;,
+		&amp;#39;prefix&amp;#39; =&amp;gt; &amp;#39;&amp;#39;,
+		//&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
+	);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>

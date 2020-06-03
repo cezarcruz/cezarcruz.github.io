@@ -149,11 +149,9 @@ Vamos lá, o primeiro passo é ter instalado o JVM no seu sistema, feito isso, n
 		Olás,
 Hoje uma pequena dica de JavaScript / JQuery: Como fazer um “Ajax get” com timer.
 Vamos lá, depois de colocarmos as referencias necessárias para o JQuery, devemos utilizar o seguinte código:
- Explicando:
+&lt;script&gt; $(document).ready(function() { function getData() { $.ajax({ url: &#34;http://localhost/dados.php&#34;, beforeSend: function() {$(&#34;#conteudo&#34;).empty();$(&#34;#conteudo&#34;).append(&#34;Carregando&#34;);} }).done(function(data) { $(&#34;#conteudo&#34;).empty(); $(&#34;#conteudo&#34;).append(data); }); } getData(); setInterval(getData, 50000); }); &lt;/script&gt; Explicando:
 Dentro do $(document).ready(function() colocamos os scripts que irão fazer a mágica.
 Na função getData colocamos a chamada ajax:
-Parametros
- url: caminho do script que irá retornar os dados; beforeSend: ação que deve ser realizada antes de obter o resultado da url solicitada, loading, por exemplo; .
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/utilizando-timer-com-javascript-e-ajax-jquery/">Leia mais…</a>
@@ -178,7 +176,7 @@ Parametros
 Hoje vamos com uma dica simples e usual: Como utilizar o Lightbox, aquele plugin JQuery para imagens/galeria, com o CakePHP.
 Vamos lá, depois de instalado o CakePHP, podemos utilizar esse tutorial (Como usar javascript e css no CakePHP), pra colocarmos os arquivos do Lightbox no local correto, e fazermos a chamada no nosso arquivo de layout.
 A chamada para os arquivos de CSS e Javascript devem ficar assim:
-No código acima podemos ver:
+&lt;?php echo $this-&gt;Html-&gt;css(&#39;lightbox&#39;); ?
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/como-adicionar-o-lightbox-em-um-site-utilizando-cakephp/">Leia mais…</a>
@@ -201,8 +199,8 @@ No código acima podemos ver:
 	<div class="content list__excerpt post__content clearfix">
 		Olás, vindo aqui hoje só pra manter o blog “ativo” heheh, hoje, uma dica bem simples de css pra personalizar textbox(mania de .net) inputs.
 O código é o seguinte:
-Com o código css acima, não será mais preciso declarar uma classe no e colocar em cada elemento input, lembrando que pode ser utilizado em outros elementos, exemplo:
-Parece bobo e preguiçoso, mas se levarmos em conta o quanto da pra economizar de Ctrl + C e Ctrl + V.
+input[type=text] { /* regras de estilo aqui. */ } Com o código css acima, não será mais preciso declarar uma classe no e colocar em cada elemento input, lembrando que pode ser utilizado em outros elementos, exemplo:
+input[type=checkbox] { /* estilo aqui */ } Espero que ajude, até mais.
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/css-como-personalizar-inputs-sem-utilizar-classe/">Leia mais…</a>
@@ -293,7 +291,7 @@ git add . git commit -m &quot;.
 		Olás, uma dica rápida pra fazer o CakePHP rodar satisfatoriamente no NGINX.
 Caso queira saber como instalar o cake, é soh clicar aqui. 😉
 Sem mais delongas, basta abrir o arquivo de configuração do NGINX e adicionar as seguintes linhas, depois das configurações padrões para funcionamento com o PHP:
-Lembrando que essa configuração é pra quando estiver usando um subdiretório, no caso, /cake, e os parâmetros fastcgi_param SCRIPT_FILENAME e root devem apontar para o diretório “fisico” do CakePHP.
+location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 break; root /usr/share/nginx/html/cake/app/webroot; try_files $uri /$uri/ @cakephp; } location @cakephp { set $q $request_uri; if ($request_uri ~ &#34;^/cake(.
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/fazendo-o-cakephp-funcionar-milagrosamente-em-subdiretorio-do-nginx/">Leia mais…</a>

@@ -76,27 +76,47 @@ if (!doNotTrack) {
 <p>Pra quem não sabe, o Angular.JS é um framework javascript MV*(C), feito pelo google para basicamente “deixar seu **html** dinâmico”, ou seja, com algumas tags no seu **HTML** será possível fazer atualização de dados, por exemplo.</p>
 <p>Chega de papo, para mais informações nerds, acesse o <a href="https://angularjs.org/" title="https://angularjs.org/">site do agunlar.</a></p>
 <p>Bom, o primeiro passo é adicionar o <strong>javascript</strong> na nossa página HTML:</p>
-<!-- raw HTML omitted -->
-<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><blockquote>
 <p> Vamos usar o CDN deles, fica a seu critério usar remoto ou local.</p>
 </blockquote>
 <p>Depois de adicionarmos isso no header do nosso <strong>HTML</strong>, o próximo passo é adicionar a tag ng-app no elemento body, ele ficara assim:</p>
-<!-- raw HTML omitted -->
-<p>Feito isso, seu <strong>HTML</strong> deverá estar assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pt-BR&#34;</span> <span style="color:#a6e22e">ng-app</span>&gt;
+</code></pre></div><p>Feito isso, seu <strong>HTML</strong> deverá estar assim:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pt-BR&#34;</span> <span style="color:#a6e22e">ng-app</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Content-Type&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/html; charset=utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;Titulo&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.7/angular.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    1 + 1 = {{ 1 + 1 }}
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><blockquote>
 <p> Adicionei o código 1 + 1 = {{ 1 + 1 }} apenas pra verificar se está ok, caso esteja ok, a saida do seu <strong>HTML</strong> deverá ser 1 + 1 = 2. Simples assim.</p>
 </blockquote>
 <p>Assim, concluímos que tudo que tiver dentro de {{ }} será processado pelo <strong>Angular</strong>. Agora vamos a um exemplo mais legal.</p>
 <p>Troque o conteúdo do seu body pelo código abaixo:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Nele temos o conteúdo do <!-- raw HTML omitted --> sendo atualizado conforme é digitado o no input. O grande segredo está no ng-model e no <!-- raw HTML omitted -->Two-way Data Binding<!-- raw HTML omitted --> do Angular.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">ng-model</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;valor&#34;</span>/&gt;
+&lt;<span style="color:#f92672">p</span>&gt;{{valor}}&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>Nele temos o conteúdo do <!-- raw HTML omitted --> sendo atualizado conforme é digitado o no input. O grande segredo está no ng-model e no <!-- raw HTML omitted -->Two-way Data Binding<!-- raw HTML omitted --> do Angular.</p>
 <p>Por ultimo um exemplo que mostra uma pontinha do potencial do <strong>Angular.JS</strong>, veja só:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Podemos ver as seguintes alterações:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pt-BR&#34;</span> <span style="color:#a6e22e">ng-app</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;meuApp&#34;</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">meuApp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">angular</span>.<span style="color:#a6e22e">module</span>(<span style="color:#e6db74">&#39;meuApp&#39;</span>,[]);
+        <span style="color:#a6e22e">meuApp</span>.<span style="color:#a6e22e">controller</span>(<span style="color:#e6db74">&#39;HomeCtrl&#39;</span>, [<span style="color:#e6db74">&#39;$scope&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">$scope</span>) {
+              <span style="color:#a6e22e">$scope</span>.<span style="color:#a6e22e">valor</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Oi Blog!&#39;</span>;
+        }]);
+&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">ng-controller</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;HomeCtrl&#34;</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">ng-model</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;valor&#34;</span>/&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;{{valor}}&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>Podemos ver as seguintes alterações:</p>
 <ul>
 <li>Alteramos o ng-app no elemento HTML para o valor meuApp;</li>
 <li>Alteramos o JavaScript, nele criamos o “meuApp”, que eh um module do Angular;</li>

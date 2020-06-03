@@ -99,46 +99,108 @@ if (!doNotTrack) {
 <p>No nosso exemplo ficará SiteController, na tela AddController coloque o Controller name SiteController e no Scaffolding options selecione Empty MVC controller, clique em add:<!-- raw HTML omitted --></p>
 <p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457581/tela_add_controller_mrsuxs.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Tela Add Controller<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p>Nossa classe SiteController irá estar assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Note que nossa classe herda da classe Controller (OO aqui =P), e que já é criado automaticamente um método ActionResult chamdo Index que retorna uma View(). Essa classe quer dizer que, quando for feita a requisição http://endereco/Site/ irá retornar a View /Site/Index.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Collections.Generic;
+<span style="color:#66d9ef">using</span> System.Linq;
+<span style="color:#66d9ef">using</span> System.Web;
+<span style="color:#66d9ef">using</span> System.Web.Mvc;
+
+<span style="color:#66d9ef">namespace</span> SiteMVC.Controllers
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SiteController</span> : Controller
+    {
+        <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// GET: /Site/
+</span><span style="color:#75715e"></span>
+        <span style="color:#66d9ef">public</span> ActionResult Index()
+        {
+            <span style="color:#66d9ef">return</span> View();
+        }
+
+    }
+}
+</code></pre></div><p>Note que nossa classe herda da classe Controller (OO aqui =P), e que já é criado automaticamente um método ActionResult chamdo Index que retorna uma View(). Essa classe quer dizer que, quando for feita a requisição http://endereco/Site/ irá retornar a View /Site/Index.</p>
 <p>Agora vamos criar a view /Site/Index, pra fazermos isso, devemos criar uma pasta chamada Site(com S maiúsculo) dentro da pasta Views. Depois de criado a pasta Site vamos criar a View Index, botão direito do mouse em cima da pasta Site, Add -&gt; View. Na tela Add View, colocamos o View name de Index, View engine deixamos Razor mesmo, de resto deixamos como está, clicar em Add.<!-- raw HTML omitted --></p>
 <p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457580/tela_add_view_gusagk.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Tela Add view<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p>Agora foi criado a view Index.cshtml dentro da pasta Site, que ficou assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">@{
+    ViewBag.Title = &#34;Index&#34;;
+}
+
+&lt;<span style="color:#f92672">h2</span>&gt;Index&lt;/<span style="color:#f92672">h2</span>&gt;
+</code></pre></div><blockquote>
 <p> Nota: Sempre que criarmos um ActionResult no controller, devemos criar um arquivo cshtml com o mesmo nome para que possa ser chamado quando for feito a requisição via http.</p>
 </blockquote>
 <p>O arquivos Index.cshtml é um arquivo html (podemos colocar marcação html neles):</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Pra executarmos nosso projeto, precisamos fazer um pequeno ajuste no arquivo <em>RouteConfig.cs:</em></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Essa classe define as rotas do MVC, e o parâmetro defaults é o controller que deve ser chamado quando não é passado nenhum link na url. No nosso caso, usaremos o controller Site, e o action Index, para que a primeira pagina a ser processada será o Index.cshmtl, o resultado está a baixo:<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">@{
+    ViewBag.Title = &#34;Index&#34;;
+}
+<span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;Home&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">h1</span>&gt;Home&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>Pra executarmos nosso projeto, precisamos fazer um pequeno ajuste no arquivo <em>RouteConfig.cs:</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> RegisterRoutes(RouteCollection routes)
+    {
+        routes.IgnoreRoute(<span style="color:#e6db74">&#34;{resource}.axd/{*pathInfo}&#34;</span>);
+
+        routes.MapRoute(
+            name: <span style="color:#e6db74">&#34;Default&#34;</span>,
+            url: <span style="color:#e6db74">&#34;{controller}/{action}/{id}&#34;</span>,
+            defaults: <span style="color:#66d9ef">new</span> { controller = <span style="color:#e6db74">&#34;Site&#34;</span>, action = <span style="color:#e6db74">&#34;Index&#34;</span>, id = UrlParameter.Optional }
+        );
+    }
+</code></pre></div><p>Essa classe define as rotas do MVC, e o parâmetro defaults é o controller que deve ser chamado quando não é passado nenhum link na url. No nosso caso, usaremos o controller Site, e o action Index, para que a primeira pagina a ser processada será o Index.cshmtl, o resultado está a baixo:<!-- raw HTML omitted --></p>
 <p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457578/index_cshtml_t8wqep.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Página index.cshtml<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p>O código html gerado fica assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Repare que o código gerado fica limpo e nada gerado escondido, que é comum quando se trata de webforms.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;Home&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">h1</span>&gt;Home&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>Repare que o código gerado fica limpo e nada gerado escondido, que é comum quando se trata de webforms.</p>
 <p>Pra finalizar, vamos passar dados do controller para a View, pra isso, abrimos o SiteController.cs e editamos o ActionResult Index, inserindo a seguinte linha:</p>
-<!-- raw HTML omitted -->
-<p>Estamos definindo que a variável Titulo receberá a string Olá MVC. Obs: ela deve ser colocada antes do return View().</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">ViewBag.Mensagem = <span style="color:#e6db74">&#34;Olá MVC&#34;</span>;
+</code></pre></div><p>Estamos definindo que a variável Titulo receberá a string Olá MVC. Obs: ela deve ser colocada antes do return View().</p>
 <p>Depois de definido o valor da variável, devemos colocar ela no arquivo Index.cshtml:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">@{
+    ViewBag.Title = &#34;Index&#34;;
+}
+<span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;Home&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">h1</span>&gt;@ViewBag.Mensagem&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><blockquote>
 <p> Pra utilizarmos Csharp no arquivo Index.cshtml devemos sempre começar o código com @ (arroba).</p>
 <p>Sempre que fizer atualização no Controller o no Model é preciso recompilar o projeto, mas quando é feito atualização somente na View, não precisa compilar o projeto novamente.</p>
 </blockquote>
 <p>Executamos novamente o nosso projeto, e teremos o resultado abaixo:<!-- raw HTML omitted --></p>
 <p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457577/index_cshtml_final1_xgty2c.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Index.cshtml com ViewBag<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p>E o código gerado:</p>
-<p> </p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>É isso ai, até mais!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;Home&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">h1</span>&gt;Ol&amp;#225; MVC&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>É isso ai, até mais!</p>
 		</div>
 		<footer class="post__footer">
 			

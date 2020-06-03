@@ -83,40 +83,96 @@ if (!doNotTrack) {
 <li>_Layout.cshtml: dentro da pasta Shared que por sua vez está dentro da pasta View;</li>
 </ul>
 <p>O arquivo _ViewStart.cshtml contem apenas uma referencia para nosso layout, pois ele sera processado antes de chamar a View, podemos incluir lógica nesse arquivo, por exemplo, pra carregar um layout pra mobile quando vier uma requisição de um navegador mobile. O arquivo deve ficar assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>O arquivo _Layout.cshtml é onde iremos colocar nosso Layout padrão.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#960050;background-color:#1e0010">@</span>{
+    Layout <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;~/Views/Shared/_Layout.cshtml&#34;</span><span style="color:#960050;background-color:#1e0010">;</span>
+}
+</code></pre></div><p>O arquivo _Layout.cshtml é onde iremos colocar nosso Layout padrão.</p>
 <p>E não podemos esquecer do diretório onde colocamos as folhas de estilo, basta criar, na raiz do projeto, uma pasta chamada Content, crie também um arquivo chamado Site.css, pode deixar em branco, voltaremos nele mais tarde.</p>
 <p>Pra criamos um layout dinâmico, o primeiro passo é modelar ele estático, depois colocamos as funções dinâmicas. Vamos definir nosso layout utilizando Html:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Está ai a definição do nosso layout (^^), claro que isso é apenas para fins de tutorial, agora que temos nosso layout definido, hora de deixar ele um pouco mais “esperto”:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;Titulo&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        <span style="color:#75715e">&lt;!-- Cabeçalho, menu, --&gt;</span>
+        &lt;<span style="color:#f92672">header</span>&gt;
+        &lt;/<span style="color:#f92672">header</span>&gt;
+        <span style="color:#75715e">&lt;!-- Conteudo vai aqui --&gt;</span>
+
+        <span style="color:#75715e">&lt;!-- Rodapé --&gt;</span>
+        &lt;<span style="color:#f92672">footer</span>&gt;
+            &amp;copy; 2013
+        &lt;/<span style="color:#f92672">footer</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>Está ai a definição do nosso layout (^^), claro que isso é apenas para fins de tutorial, agora que temos nosso layout definido, hora de deixar ele um pouco mais “esperto”:</p>
 <p>No tag head, trocamos os dados por esse:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>A linha 2 é a variavel com o titulo da View que está sendo carregado, o valor dessa variável pode ser definida tanto no controller como na propria View;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#a6e22e">&lt;meta charset=&#34;utf-8&#34; /&gt;</span>
+<span style="color:#a6e22e">&lt;title&gt;</span><span style="color:#960050;background-color:#1e0010">@</span>ViewBag.Title<span style="color:#f92672">&lt;/</span>title<span style="color:#f92672">&gt;</span>
+<span style="color:#a6e22e">&lt;link href=&#34;@Url.Content(&#34;~/Content/Site.css&#34;)&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34; /&gt;</span>
+</code></pre></div><p>A linha 2 é a variavel com o titulo da View que está sendo carregado, o valor dessa variável pode ser definida tanto no controller como na propria View;</p>
 <p>A linha 3 é o link para o css que iremos utilizar aqui.</p>
 <p>Agora definimos nosso rodapé:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Bem simples, o único processamento do servidor será pra exibir o ano corrente.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">footer</span>&gt;
+      &amp;copy; @DateTime.Now.Year
+&lt;/<span style="color:#f92672">footer</span>&gt;
+</code></pre></div><p>Bem simples, o único processamento do servidor será pra exibir o ano corrente.</p>
 <p>E agora o mais importante, onde queremos que nossa View apareça no layout:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Para que o conteúdo das Views apareçam no Layout, devemos colocar @RenderBody(). O @RenderBody() sem duvidas é a parte mais importante do layout, sem ele não teremos dados das Views no nosso layout.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main&#34;</span>&gt;
+     @RenderBody()
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>Para que o conteúdo das Views apareçam no Layout, devemos colocar @RenderBody(). O @RenderBody() sem duvidas é a parte mais importante do layout, sem ele não teremos dados das Views no nosso layout.</p>
 <p>O resultado final do _Layout.cshtml ficou assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>E agora, quando criarmos uma View, ela automaticamente virá com o código do layout. Pra exibirmos o titulo, podemos fazer de duas formas, usando o controller:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Ou podemos colocar na própria View, pra isso colocamos o código na primeira linha do arquivo, ficando assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>O ultimo arquivo a ser renderizado é o [View].cshtml, ou seja, se definirmos o ViewBag.Title na View e no controller, o valor utilizado será o da View. No final, o HTML gerado será o seguinte:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Limpo e bonito.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pt-br&#34;</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;@ViewBag.Title&lt;/<span style="color:#f92672">title</span>&gt;
+        &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;@Url.Content(&#34;</span><span style="color:#960050;background-color:#1e0010">~/</span><span style="color:#a6e22e">Content</span><span style="color:#960050;background-color:#1e0010">/</span><span style="color:#a6e22e">Site</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">css</span><span style="color:#960050;background-color:#1e0010">&#34;)&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> /&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">header</span>&gt;
+        &lt;/<span style="color:#f92672">header</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main&#34;</span>&gt;
+            @RenderBody()
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">footer</span>&gt;
+            &amp;copy; @DateTime.Now.Year
+        &lt;/<span style="color:#f92672">footer</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>E agora, quando criarmos uma View, ela automaticamente virá com o código do layout. Pra exibirmos o titulo, podemos fazer de duas formas, usando o controller:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> ActionResult Index()
+{
+     ViewBag.Title = <span style="color:#e6db74">&#34;Titulo da página&#34;</span>;
+     <span style="color:#66d9ef">return</span> View();
+}
+</code></pre></div><p>Ou podemos colocar na própria View, pra isso colocamos o código na primeira linha do arquivo, ficando assim:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#960050;background-color:#1e0010">@</span>{
+    ViewBag.Title = <span style="color:#e6db74">&#34;Titulo da página&#34;</span>;
+}
+</code></pre></div><p>O ultimo arquivo a ser renderizado é o [View].cshtml, ou seja, se definirmos o ViewBag.Title na View e no controller, o valor utilizado será o da View. No final, o HTML gerado será o seguinte:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pt-br&#34;</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;Titulo da página&lt;/<span style="color:#f92672">title</span>&gt;
+        &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/Content/Site.css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> /&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">header</span>&gt;
+        &lt;/<span style="color:#f92672">header</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;main&#34;</span>&gt;
+
+        &lt;/<span style="color:#f92672">div</span>&gt;
+
+        &lt;<span style="color:#f92672">footer</span>&gt;
+            &amp;copy; 2013
+        &lt;/<span style="color:#f92672">footer</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>Limpo e bonito.</p>
 <p>Existe outras formas de utilizar layout padrão no MVC 4, mas isso é assunto para outro post.</p>
 <p>Até mais!</p>
 		</div>

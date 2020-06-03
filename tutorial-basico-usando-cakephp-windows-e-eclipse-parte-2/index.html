@@ -81,9 +81,31 @@ if (!doNotTrack) {
 <p>No Eclipse, o botão F2, é um atalho para renomear arquivos e pastas.</p>
 </blockquote>
 <p>Após renomear o arquivo, vamos configurar a conexão com a base de dados, procure no arquivos por class DATABASE_CONFIG, ela deve esar assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Devemos alterar apenas o login, password e o database:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class DATABASE_CONFIG {
+
+	public $default = array(
+		&#39;datasource&#39; =&gt;; &#39;Database/Mysql&#39;,
+		&#39;persistent&#39; =&gt;; false,
+		&#39;host&#39; =&gt;; &#39;localhost&#39;,
+		&#39;login&#39; =&gt;; &#39;user&#39;,
+		&#39;password&#39; =&gt;; &#39;password&#39;,
+		&#39;database&#39; =&gt;; &#39;database_name&#39;,
+		&#39;prefix&#39; =&gt;; &#39;&#39;,
+		//&#39;encoding&#39; =&gt; &#39;utf8&#39;,
+	);
+
+	public $test = array(
+		&#39;datasource&#39; =&gt; &#39;Database/Mysql&#39;,
+		&#39;persistent&#39; =&gt; false,
+		&#39;host&#39; =&gt; &#39;localhost&#39;,
+		&#39;login&#39; =&gt; &#39;user&#39;,
+		&#39;password&#39; =&gt; &#39;password&#39;,
+		&#39;database&#39; =&gt; &#39;test_database_name&#39;,
+		&#39;prefix&#39; =&gt; &#39;&#39;,
+		//&#39;encoding&#39; =&gt; &#39;utf8&#39;,
+	);
+}
+</code></pre></div><p>Devemos alterar apenas o login, password e o database:</p>
 <p>‘login’ =&gt; ‘root’, ‘password’ =&gt; ”,</p>
 <p>‘database’ =&gt; ‘cake’</p>
 <p> </p>
@@ -91,9 +113,31 @@ if (!doNotTrack) {
 <p>Lembrando que os dados de conexão pode variar de instalação para instalação, porém, o padrão do Wamp é o que está acima</p>
 </blockquote>
 <p>Por fim, seu código deve ficar assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>E ao acessar a pagina via navegador, deveremos ter o seguinte resultado:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class DATABASE_CONFIG {
+
+	public $default = array(
+		&#39;datasource&#39; =&gt; &#39;Database/Mysql&#39;,
+		&#39;persistent&#39; =&gt; false,
+		&#39;host&#39; =&gt; &#39;localhost&#39;,
+		&#39;login&#39; =&gt; &#39;root&#39;,
+		&#39;password&#39; =&gt; &#39;&#39;,
+		&#39;database&#39; =&gt; &#39;cake&#39;,
+		&#39;prefix&#39; =&gt; &#39;&#39;,
+		//&#39;encoding&#39; =&gt; &#39;utf8&#39;,
+	);
+
+	public $test = array(
+		&#39;datasource&#39; =&gt; &#39;Database/Mysql&#39;,
+		&#39;persistent&#39; =&gt; false,
+		&#39;host&#39; =&gt; &#39;localhost&#39;,
+		&#39;login&#39; =&gt; &#39;user&#39;,
+		&#39;password&#39; =&gt; &#39;password&#39;,
+		&#39;database&#39; =&gt; &#39;test_database_name&#39;,
+		&#39;prefix&#39; =&gt; &#39;&#39;,
+		//&#39;encoding&#39; =&gt; &#39;utf8&#39;,
+	);
+}
+</code></pre></div><p>E ao acessar a pagina via navegador, deveremos ter o seguinte resultado:</p>
 <!-- raw HTML omitted -->
 <p>O Ultimo Warning restante é sugerindo a instalação do DebugKit, no momento não teremos utilidade para ele no nosso tutorial, então fica pra próxima 😉</p>
 <p>Agora, vamos a parte teórica:</p>
@@ -116,9 +160,14 @@ if (!doNotTrack) {
 </blockquote>
 <p>Após criarmos o controller vamos editalo da seguinte forma:</p>
 <p> </p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Aqui uma menção a programação orientada a objetos. =D</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomeController</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">AppController</span>{
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">index</span>(){
+
+	}
+}
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Aqui uma menção a programação orientada a objetos. =D</p>
 <p>Sempre devemos começar nosso controller, declarando class seguido do nome do controller extends AppController</p>
 <blockquote>
 <p>Repare que na pasta Controller temos o arquivo AppController.php, devemos (mas não somos obrigados) estender nossa classe dela pois podemos usar ela para carregar algo padrão para todos os outros controllers, um plugin por exemplo, ou desabilitar o uso da base de dados.</p>
@@ -131,9 +180,8 @@ if (!doNotTrack) {
 </blockquote>
 <p>Esses arquivos de template é que irá ser exibido no navegador, os arquivos .ctp serão tratados como arquivos php, ou seja, você pode colocar HTML, Css, JS ou Php nele.</p>
 <p>Para finalizarmos essa parte do tutorial, faremos o seguinte, coloque o código abaixo no no arquivo index.ctp</p>
-<p> </p>
-<!-- raw HTML omitted -->
-<p>Feito isso acesse o link http://localhost/cake/home, o resultado será o seguinte:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;HelloCake&#34;</span> <span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Feito isso acesse o link http://localhost/cake/home, o resultado será o seguinte:</p>
 <!-- raw HTML omitted -->
 <p>Está ai nossa primeira página utilizando o CakePHP, repare que ela já está estilizada, isso acontece porque não definimos nenhum layout, então ele carrega o layout padrão definido pelo CakePHP, em outro tutorial veremos com isso funciona.</p>
 <p>Até a próxima.</p>

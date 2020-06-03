@@ -75,10 +75,22 @@ if (!doNotTrack) {
 			<p>Olás,</p>
 <p>Hoje uma pequena dica de JavaScript / JQuery: Como fazer um “Ajax get” com timer.</p>
 <p>Vamos lá, depois de colocarmos as referencias necessárias para o JQuery, devemos utilizar o seguinte código:</p>
-<p> </p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Explicando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">ready</span>(<span style="color:#66d9ef">function</span>() {
+    	<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getData</span>() {
+    		<span style="color:#a6e22e">$</span>.<span style="color:#a6e22e">ajax</span>({
+    			<span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://localhost/dados.php&#34;</span>,
+    			<span style="color:#a6e22e">beforeSend</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;#conteudo&#34;</span>).<span style="color:#a6e22e">empty</span>();<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;#conteudo&#34;</span>).<span style="color:#a6e22e">append</span>(<span style="color:#e6db74">&#34;Carregando&#34;</span>);}
+    		}).<span style="color:#a6e22e">done</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>) {
+    			<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;#conteudo&#34;</span>).<span style="color:#a6e22e">empty</span>();
+    			<span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;#conteudo&#34;</span>).<span style="color:#a6e22e">append</span>(<span style="color:#a6e22e">data</span>);
+    		});
+    	}
+    	<span style="color:#a6e22e">getData</span>();
+    	<span style="color:#a6e22e">setInterval</span>(<span style="color:#a6e22e">getData</span>, <span style="color:#ae81ff">50000</span>);
+    });
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>Explicando:</p>
 <p>Dentro do  <strong>$(document).ready(function()</strong> colocamos os scripts que irão fazer a mágica.</p>
 <p>Na função <strong>getData</strong> colocamos a chamada ajax:</p>
 <p>Parametros</p>
@@ -93,7 +105,6 @@ if (!doNotTrack) {
 <li>A função que será executada deve ser chamada sem o “()” (parênteses) no final;</li>
 <li>O segundo parâmetro é o intervalo de tempo e milissegundos;</li>
 </ol>
-<p> </p>
 <p>Bom, é isso, espero que seja útil!! Até mais! =D</p>
 <p>PS: Nesse tutorial utilizamos o JQuery somente pelo fato de abstrair o AJAX, de qualquer forma, ele irá funcionar normalmente se você não utilizar uma lib JavaScript.</p>
 

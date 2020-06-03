@@ -81,8 +81,8 @@ if (!doNotTrack) {
 	<div class="content list__excerpt post__content clearfix">
 		Saindo um pouco do PHP, vamos para a plataforma .NET, nesse tutorial (guia rápido hehhehe), vou ensinar como parar e subir um serviço Windows utilizando CSharp, vamos lá.
 Primeiro, vamos intanciar o ServiceController passando como o parâmetro o nome do serviço que iremos gerenciar
-Aqui como paramos o serviço
-  Primeiro, verificamos se o serviço e está rodando Coso ele esteja, paramos ele usando o metodo Stop.  Para iniciar basta utilizar isso
+using System.ServiceProcess; ServiceController service = new ServiceController(&#34;xxxservico&#34;); Aqui como paramos o serviço
+if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();  Primeiro, verificamos se o serviço e está rodando Coso ele esteja, paramos ele usando o metodo Stop.
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/como-parar-um-servico-windows-utilizando-csharp/">Leia mais…</a>
@@ -112,8 +112,31 @@ Aqui como paramos o serviço
 <p>No Eclipse, o botão F2, é um atalho para renomear arquivos e pastas.</p>
 </blockquote>
 <p>Após renomear o arquivo, vamos configurar a conexão com a base de dados, procure no arquivos por class DATABASE_CONFIG, ela deve esar assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class DATABASE_CONFIG {
+
+	public $default = array(
+		&#39;datasource&#39; =&gt;; &#39;Database/Mysql&#39;,
+		&#39;persistent&#39; =&gt;; false,
+		&#39;host&#39; =&gt;; &#39;localhost&#39;,
+		&#39;login&#39; =&gt;; &#39;user&#39;,
+		&#39;password&#39; =&gt;; &#39;password&#39;,
+		&#39;database&#39; =&gt;; &#39;database_name&#39;,
+		&#39;prefix&#39; =&gt;; &#39;&#39;,
+		//&#39;encoding&#39; =&gt; &#39;utf8&#39;,
+	);
+
+	public $test = array(
+		&#39;datasource&#39; =&gt; &#39;Database/Mysql&#39;,
+		&#39;persistent&#39; =&gt; false,
+		&#39;host&#39; =&gt; &#39;localhost&#39;,
+		&#39;login&#39; =&gt; &#39;user&#39;,
+		&#39;password&#39; =&gt; &#39;password&#39;,
+		&#39;database&#39; =&gt; &#39;test_database_name&#39;,
+		&#39;prefix&#39; =&gt; &#39;&#39;,
+		//&#39;encoding&#39; =&gt; &#39;utf8&#39;,
+	);
+}
+</code></pre></div>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/">Leia mais…</a>

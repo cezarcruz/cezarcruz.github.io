@@ -98,7 +98,7 @@ if (!doNotTrack) {
 <p>Por fim, o parâmetro ‘controller’, que como o nome sugere, injetamos o controller no nosso component, repare que adicionamos os valores ‘as vm’ junto ao controller, é assim que definimos que o ‘this’, do controller, é referenciado na view como ‘vm’, se adicionarmos apenas o nome do controller, o Angular infere que você irá utilizar ‘$ctrl’ na view.</p>
 <p>E por fim, para adicionarmos nosso component na aplicação, podemos fazer igual faríamos normalmente com uma diretiva ‘<!-- raw HTML omitted --><!-- raw HTML omitted -->’ ou adicionar ele como uma uma rota, assim:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">$routeProvider</span>.<span style="color:#a6e22e">when</span>(<span style="color:#e6db74">&#39;/home&#39;</span>, {
-  <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&amp;lt;home-module&amp;gt;&amp;lt;/home-module&amp;gt;&#39;</span>
+  <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;home-module&gt;&lt;/home-module&gt;&#39;</span>
 });
 </code></pre></div><p>E’ isso ai, simples e fácil.</p>
 <p>Espero que ajude, abraços!</p>

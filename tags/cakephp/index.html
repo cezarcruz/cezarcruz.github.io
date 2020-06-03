@@ -83,7 +83,7 @@ if (!doNotTrack) {
 		Olás, uma dica rápida pra fazer o CakePHP rodar satisfatoriamente no NGINX.
 Caso queira saber como instalar o cake, é soh clicar aqui. 😉
 Sem mais delongas, basta abrir o arquivo de configuração do NGINX e adicionar as seguintes linhas, depois das configurações padrões para funcionamento com o PHP:
-Lembrando que essa configuração é pra quando estiver usando um subdiretório, no caso, /cake, e os parâmetros fastcgi_param SCRIPT_FILENAME e root devem apontar para o diretório “fisico” do CakePHP.
+location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 break; root /usr/share/nginx/html/cake/app/webroot; try_files $uri /$uri/ @cakephp; } location @cakephp { set $q $request_uri; if ($request_uri ~ &#34;^/cake(.
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/fazendo-o-cakephp-funcionar-milagrosamente-em-subdiretorio-do-nginx/">Leia mais…</a>
@@ -134,8 +134,31 @@ Lembrando que essa configuração é pra quando estiver usando um subdiretório,
 <p>No Eclipse, o botão F2, é um atalho para renomear arquivos e pastas.</p>
 </blockquote>
 <p>Após renomear o arquivo, vamos configurar a conexão com a base de dados, procure no arquivos por class DATABASE_CONFIG, ela deve esar assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class DATABASE_CONFIG {
+
+	public $default = array(
+		&#39;datasource&#39; =&gt;; &#39;Database/Mysql&#39;,
+		&#39;persistent&#39; =&gt;; false,
+		&#39;host&#39; =&gt;; &#39;localhost&#39;,
+		&#39;login&#39; =&gt;; &#39;user&#39;,
+		&#39;password&#39; =&gt;; &#39;password&#39;,
+		&#39;database&#39; =&gt;; &#39;database_name&#39;,
+		&#39;prefix&#39; =&gt;; &#39;&#39;,
+		//&#39;encoding&#39; =&gt; &#39;utf8&#39;,
+	);
+
+	public $test = array(
+		&#39;datasource&#39; =&gt; &#39;Database/Mysql&#39;,
+		&#39;persistent&#39; =&gt; false,
+		&#39;host&#39; =&gt; &#39;localhost&#39;,
+		&#39;login&#39; =&gt; &#39;user&#39;,
+		&#39;password&#39; =&gt; &#39;password&#39;,
+		&#39;database&#39; =&gt; &#39;test_database_name&#39;,
+		&#39;prefix&#39; =&gt; &#39;&#39;,
+		//&#39;encoding&#39; =&gt; &#39;utf8&#39;,
+	);
+}
+</code></pre></div>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-e-eclipse-parte-2/">Leia mais…</a>

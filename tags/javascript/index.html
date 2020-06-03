@@ -190,11 +190,9 @@ if (!doNotTrack) {
 		Olás,
 Hoje uma pequena dica de JavaScript / JQuery: Como fazer um “Ajax get” com timer.
 Vamos lá, depois de colocarmos as referencias necessárias para o JQuery, devemos utilizar o seguinte código:
- Explicando:
+&lt;script&gt; $(document).ready(function() { function getData() { $.ajax({ url: &#34;http://localhost/dados.php&#34;, beforeSend: function() {$(&#34;#conteudo&#34;).empty();$(&#34;#conteudo&#34;).append(&#34;Carregando&#34;);} }).done(function(data) { $(&#34;#conteudo&#34;).empty(); $(&#34;#conteudo&#34;).append(data); }); } getData(); setInterval(getData, 50000); }); &lt;/script&gt; Explicando:
 Dentro do $(document).ready(function() colocamos os scripts que irão fazer a mágica.
 Na função getData colocamos a chamada ajax:
-Parametros
- url: caminho do script que irá retornar os dados; beforeSend: ação que deve ser realizada antes de obter o resultado da url solicitada, loading, por exemplo; .
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/utilizando-timer-com-javascript-e-ajax-jquery/">Leia mais…</a>
@@ -219,7 +217,7 @@ Parametros
 Hoje vamos com uma dica simples e usual: Como utilizar o Lightbox, aquele plugin JQuery para imagens/galeria, com o CakePHP.
 Vamos lá, depois de instalado o CakePHP, podemos utilizar esse tutorial (Como usar javascript e css no CakePHP), pra colocarmos os arquivos do Lightbox no local correto, e fazermos a chamada no nosso arquivo de layout.
 A chamada para os arquivos de CSS e Javascript devem ficar assim:
-No código acima podemos ver:
+&lt;?php echo $this-&gt;Html-&gt;css(&#39;lightbox&#39;); ?
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/como-adicionar-o-lightbox-em-um-site-utilizando-cakephp/">Leia mais…</a>

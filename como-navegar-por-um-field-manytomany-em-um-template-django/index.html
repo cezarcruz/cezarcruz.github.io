@@ -74,9 +74,12 @@ if (!doNotTrack) {
 		</header><div class="content post__content clearfix">
 			<p>Olás,  hoje mais uma dica curtinha: como navegar por um campo <strong>manytomany</strong> em um template <strong>Django</strong>.</p>
 <p>Basta entendermos que o campo <strong>manytomany</strong> vem como um list, então a navegação fica simples, veja:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Onde <em>list_pedidos_abertos</em> é uma lista de pedidos (pode ser qualquer coisa), e nessa lista de pedidos temos <em>item.servicos</em>, que é uma lista com os serviços associados a esse pedido, então, para implementar um laço, basta utilizar o <em>item.servicos.all</em> e estará na forma que estamos acostumados a fazer.</p>
+<pre><code class="language-jsp" data-lang="jsp">{% for item in list_pedidos_abertos %}
+   {% for serv in item.servicos.all %}
+	   &lt;p&gt;{{ serv.nome }}&lt;/p&gt;
+   {% endfor %}
+{% endfor %}
+</code></pre><p>Onde <em>list_pedidos_abertos</em> é uma lista de pedidos (pode ser qualquer coisa), e nessa lista de pedidos temos <em>item.servicos</em>, que é uma lista com os serviços associados a esse pedido, então, para implementar um laço, basta utilizar o <em>item.servicos.all</em> e estará na forma que estamos acostumados a fazer.</p>
 <p>É isso ai, até!!</p>
 <p>=D</p>
 		</div>

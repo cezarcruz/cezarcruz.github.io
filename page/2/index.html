@@ -255,7 +255,9 @@ bem simples, após a conclusão da instalação, basta reiniciar a maquina e des
 	<div class="content list__excerpt post__content clearfix">
 		Uma dica bem curtinha, porém útil:
 Como configurar o git para não pedir senha ao baixar ou subir dados no repositório remoto, para isto, basta entrar no seu repositório local e digitar o comando abaixo:
+git config credential.helper cache
 Pra salvar apenas por um tempo determinado, utilizar:
+git config credential.helper 'cache --timeout=60000'
 =D
 	</div>
 </article><article class="list__item post">
@@ -277,8 +279,8 @@ Pra salvar apenas por um tempo determinado, utilizar:
 		Olás,
 hoje uma dica rápida pra navegarmos por uma classe java que contenha enums:
 Considerando nosso enum:
-Pra navegamos por ele basta fazer o seguinte:
-Utilizando o método values, obtemos um list do tipo do nosso enum com todos os enum, daí pra frente é só diversão.
+public enum Cidades { CAMPINAS, HORTOLANDIA, SUMARE, VALINHOS } Pra navegamos por ele basta fazer o seguinte:
+for (Cidades c : Cidages.values()) { System.out.println(c.toString()); } Utilizando o método values, obtemos um list do tipo do nosso enum com todos os enum, daí pra frente é só diversão.
 Abraços!
 	</div>
 </article>

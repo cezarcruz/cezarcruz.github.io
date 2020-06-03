@@ -76,9 +76,10 @@ if (!doNotTrack) {
 <p>Hoje vamos com uma dica simples e usual: Como utilizar o Lightbox, <a href="http://lokeshdhakar.com/projects/lightbox2/">aquele plugin JQuery para imagens/galeria</a>, com o CakePHP.</p>
 <p>Vamos lá, depois de instalado o CakePHP, podemos utilizar esse tutorial (<a href="https://cezarcruz.com.br/como-usar-javascript-e-css-no-cakephp/">Como usar javascript e css no CakePHP</a>), pra colocarmos os arquivos do Lightbox no local correto, e fazermos a chamada no nosso arquivo de layout.</p>
 <p>A chamada para os arquivos de CSS e Javascript devem ficar assim:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>No código acima podemos ver:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">echo</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Html</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">css</span>(<span style="color:#e6db74">&#39;lightbox&#39;</span>); <span style="color:#75715e">?&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<span style="color:#75715e">&lt;?php</span> <span style="color:#66d9ef">echo</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">Html</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">script</span>(<span style="color:#e6db74">&#39;lightbox.min&#39;</span>); <span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>No código acima podemos ver:</p>
 <ol>
 <li>A chamada pra exibir o css do Lightbox;</li>
 <li>A chamada pro JQuery 2.1.0 nos servidores do Google =D;</li>
@@ -87,9 +88,12 @@ if (!doNotTrack) {
 <p>Feito isso, já estamos na metade do caminho, o próximo passo, é colocar as imagens que serão exibidas.</p>
 <p>Veja como irá ficar a nossa View que irá exibir as fotos:</p>
 <p> </p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Explicando o código (Acho que vou criar um categoria, “<em>explicando o código</em>” hahahahahah) :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">echo $this-&gt;Html-&gt;link(
+	 $this-&gt;Html-&gt;image($fotos[&#39;Foto&#39;][&#39;caminho&#39;], array(&#39;class&#39; =&gt; &#39;class_img&#39;)),
+	 $fotos[&#39;Foto&#39;][&#39;caminho&#39;],
+	 array(&#39;escapeTitle&#39; =&gt; false, &#39;title&#39; =&gt; $fotos[&#39;Foto&#39;][&#39;alt&#39;], &#39;data-lightbox&#39;=&gt; &#39;roadtrip&#39;, &#39;class&#39; =&gt; &#39;class_url&#39;)
+);
+</code></pre></div><p>Explicando o código (Acho que vou criar um categoria, “<em>explicando o código</em>” hahahahahah) :</p>
 <ol>
 <li>Utilizaremos o método link do Helper Html do CakePhp;</li>
 <li>Dentro do método Html, iremos colocar o método image, também do Helper Html (Aqui podemos utilizar a forma padrão, primeiro com o caminho da imagem, e depois os parâmetros adicionais dentro de um array, como é feito de costume), aqui, sugiro que utilize um thumbnail;</li>

@@ -75,9 +75,22 @@ if (!doNotTrack) {
 			<p>Olás, uma dica rápida pra fazer o CakePHP rodar satisfatoriamente no NGINX.</p>
 <p>Caso queira saber como instalar o cake, é soh <!-- raw HTML omitted -->clicar aqui<!-- raw HTML omitted -->. 😉</p>
 <p>Sem mais delongas, basta abrir o arquivo de configuração do NGINX e adicionar as seguintes linhas, depois das configurações padrões para funcionamento com o PHP:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Lembrando que essa configuração é pra quando estiver usando um subdiretório, no caso, /cake, e os parâmetros  fastcgi_param SCRIPT_FILENAME e root devem apontar para o diretório “fisico” do CakePHP..</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">location /cake {
+        rewrite     ^/cake$ /cake/ permanent;
+        rewrite     ^/cake/(.+)$ /$1 break;
+        root        /usr/share/nginx/html/cake/app/webroot;
+        try_files   $uri /$uri/ @cakephp;
+}
+
+location @cakephp {
+        set $q $request_uri;
+        if ($request_uri ~ &#34;^/cake(.+)$&#34;) {
+                set $q $1;
+        }
+        fastcgi_param SCRIPT_FILENAME       /usr/share/nginx/html/cake/app/webroot/index.php;
+        fastcgi_param QUERY_STRING          url=$q;
+}
+</code></pre></div><p>Lembrando que essa configuração é pra quando estiver usando um subdiretório, no caso, /cake, e os parâmetros  fastcgi_param SCRIPT_FILENAME e root devem apontar para o diretório “fisico” do CakePHP..</p>
 <p>É isso ai, espere que ajude.</p>
 <p>Até mais!</p>
 

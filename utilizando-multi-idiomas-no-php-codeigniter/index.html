@@ -77,31 +77,38 @@ if (!doNotTrack) {
 <p>O primeiro passo é configurar:</p>
 <p>Criamos uma pasta dentro de application/language chamada <strong>portuguese</strong> nessa pasta que iremos colocar nossas strings traduzidas.</p>
 <p>Após criarmos a pasta, devemos alterar o arquivo application/config/config.php, na seguinte linha:</p>
-<!-- raw HTML omitted -->
-<p>para:</p>
-<!-- raw HTML omitted -->
-<p>Essa configuração quer dizer que o idioma padrão vai ser o que tiver dentro da pasta portuguese.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$config[&#39;language&#39;] = &#39;english&#39;;
+</code></pre></div><p>para:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$config[&#39;language&#39;] = &#39;portuguese&#39;;
+</code></pre></div><p>Essa configuração quer dizer que o idioma padrão vai ser o que tiver dentro da pasta portuguese.</p>
 <blockquote>
 <p>Repare que temos duas pastas language, uma dentro de application e outra dentro de system, quando o CI procura pelas strings traduzidas, o primeiro local que ele procurar é em application/language e em seguida system/language, então, o mais sensato é colocarmos nossas strings dentro de application/language.</p>
 </blockquote>
 <p>A nomenclatura padrão dos arquivos de idiomas é <strong>nome_lang.php,</strong> para o nosso exemplo, vamos criar um arquivo chamada app_lang.php dentro da pasta portuguese. O conteúdo do arquivo deverá ficar da seguinte forma:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Agora, para utilizarmos ele é tão simples quanto a sua criação, basta carregar ele com essa “enorme” linha de código:</p>
-<!-- raw HTML omitted -->
-<p>Da forma acima, devemos colocar a chamada em todo lugar que for ter strings traduzidas, então, pra facilitar, vamos usar ele no método construtor do nosso Controller:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+        $lang[<span style="color:#e6db74">&#39;title&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Titulo&#34;</span>;
+	$lang[<span style="color:#e6db74">&#39;first_name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Primeiro nome&#34;</span>;
+	$lang[<span style="color:#e6db74">&#39;last_name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Ultimo nome&#34;</span>;
+	$lang[<span style="color:#e6db74">&#39;date&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;data&#34;</span>;
+
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>Agora, para utilizarmos ele é tão simples quanto a sua criação, basta carregar ele com essa “enorme” linha de código:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$this-&gt;lang-&gt;load(&#34;app&#34;,&#34;portuguese&#34;);
+</code></pre></div><p>Da forma acima, devemos colocar a chamada em todo lugar que for ter strings traduzidas, então, pra facilitar, vamos usar ele no método construtor do nosso Controller:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">public function __construct() {
+        parent::__construct();
+        $this-&gt;lang-&gt;load(&#34;app&#34;,&#34;portuguese&#34;);
+   }
+</code></pre></div><blockquote>
 <p> Repare que utilizamos apenas o nome do arquivo, “app”, o resto o CI que preenche.</p>
 </blockquote>
 <p>Agora que carregamos ele no nosso Controller, vamos utilizar ele:</p>
-<!-- raw HTML omitted -->
-<p>A linha acima assume que o valor de $title será Titulo. É tão simples que parece mentira, mas é isso mesmo, agora só passar o valor pra view e exibir, lindo e traduzido.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$data[&#39;title&#39;] = $this -&gt; lang -&gt; line(&#39;title&#39;);
+</code></pre></div><p>A linha acima assume que o valor de $title será Titulo. É tão simples que parece mentira, mas é isso mesmo, agora só passar o valor pra view e exibir, lindo e traduzido.</p>
 <p>E claro, como a intenção de utilizar o multi idioma é o de que nossa aplicação seja visível em outra língua, pra isso, basta criar uma nova pasta em application/language com o idioma que preferir, criar os mesmos arquivos que estão na pasta portuguese e mandar ver na tradução.</p>
 <p>Só não esqueça de alterar o lang-&gt;load para que ele carregue o novo idioma corretamente:</p>
-<!-- raw HTML omitted -->
-<p><a href="https://github.com/EllisLab/CodeIgniter/">Obtenha o CI aqui</a> e o <a href="http://ellislab.com/codeigniter/user-guide/">pratico manual aqui</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$this-&gt;lang-&gt;load(&#34;app&#34;,&#34;idioma&#34;);
+</code></pre></div><p><a href="https://github.com/EllisLab/CodeIgniter/">Obtenha o CI aqui</a> e o <a href="http://ellislab.com/codeigniter/user-guide/">pratico manual aqui</a>.</p>
 <p>É isso ai, espero que seja útil.</p>
 <p>Até mais, abraços.</p>
 		</div>

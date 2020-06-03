@@ -201,7 +201,9 @@ bem simples, após a conclusão da instalação, basta reiniciar a maquina e des
       <guid>https://cezarcruz.com.br/como-salvar-autenticacao-no-repositorio-local-usando-git/</guid>
       <description>Uma dica bem curtinha, porém útil:
 Como configurar o git para não pedir senha ao baixar ou subir dados no repositório remoto, para isto, basta entrar no seu repositório local e digitar o comando abaixo:
+git config credential.helper cache
 Pra salvar apenas por um tempo determinado, utilizar:
+git config credential.helper &#39;cache --timeout=60000&#39;
 =D</description>
     </item>
     
@@ -214,8 +216,8 @@ Pra salvar apenas por um tempo determinado, utilizar:
       <description>Olás,
 hoje uma dica rápida pra navegarmos por uma classe java que contenha enums:
 Considerando nosso enum:
-Pra navegamos por ele basta fazer o seguinte:
-Utilizando o método values, obtemos um list do tipo do nosso enum com todos os enum, daí pra frente é só diversão.
+public enum Cidades { CAMPINAS, HORTOLANDIA, SUMARE, VALINHOS } Pra navegamos por ele basta fazer o seguinte:
+for (Cidades c : Cidages.values()) { System.out.println(c.toString()); } Utilizando o método values, obtemos um list do tipo do nosso enum com todos os enum, daí pra frente é só diversão.
 Abraços!</description>
     </item>
     
@@ -258,11 +260,9 @@ Vamos lá, o primeiro passo é ter instalado o JVM no seu sistema, feito isso, n
       <description>Olás,
 Hoje uma pequena dica de JavaScript / JQuery: Como fazer um “Ajax get” com timer.
 Vamos lá, depois de colocarmos as referencias necessárias para o JQuery, devemos utilizar o seguinte código:
- Explicando:
+&amp;lt;script&amp;gt; $(document).ready(function() { function getData() { $.ajax({ url: &amp;#34;http://localhost/dados.php&amp;#34;, beforeSend: function() {$(&amp;#34;#conteudo&amp;#34;).empty();$(&amp;#34;#conteudo&amp;#34;).append(&amp;#34;Carregando&amp;#34;);} }).done(function(data) { $(&amp;#34;#conteudo&amp;#34;).empty(); $(&amp;#34;#conteudo&amp;#34;).append(data); }); } getData(); setInterval(getData, 50000); }); &amp;lt;/script&amp;gt; Explicando:
 Dentro do $(document).ready(function() colocamos os scripts que irão fazer a mágica.
-Na função getData colocamos a chamada ajax:
-Parametros
- url: caminho do script que irá retornar os dados; beforeSend: ação que deve ser realizada antes de obter o resultado da url solicitada, loading, por exemplo; .</description>
+Na função getData colocamos a chamada ajax:</description>
     </item>
     
     <item>
@@ -275,7 +275,7 @@ Parametros
 Hoje vamos com uma dica simples e usual: Como utilizar o Lightbox, aquele plugin JQuery para imagens/galeria, com o CakePHP.
 Vamos lá, depois de instalado o CakePHP, podemos utilizar esse tutorial (Como usar javascript e css no CakePHP), pra colocarmos os arquivos do Lightbox no local correto, e fazermos a chamada no nosso arquivo de layout.
 A chamada para os arquivos de CSS e Javascript devem ficar assim:
-No código acima podemos ver:</description>
+&amp;lt;?php echo $this-&amp;gt;Html-&amp;gt;css(&amp;#39;lightbox&amp;#39;); ?</description>
     </item>
     
     <item>
@@ -286,8 +286,8 @@ No código acima podemos ver:</description>
       <guid>https://cezarcruz.com.br/css-como-personalizar-inputs-sem-utilizar-classe/</guid>
       <description>Olás, vindo aqui hoje só pra manter o blog “ativo” heheh, hoje, uma dica bem simples de css pra personalizar textbox(mania de .net) inputs.
 O código é o seguinte:
-Com o código css acima, não será mais preciso declarar uma classe no e colocar em cada elemento input, lembrando que pode ser utilizado em outros elementos, exemplo:
-Parece bobo e preguiçoso, mas se levarmos em conta o quanto da pra economizar de Ctrl + C e Ctrl + V.</description>
+input[type=text] { /* regras de estilo aqui. */ } Com o código css acima, não será mais preciso declarar uma classe no e colocar em cada elemento input, lembrando que pode ser utilizado em outros elementos, exemplo:
+input[type=checkbox] { /* estilo aqui */ } Espero que ajude, até mais.</description>
     </item>
     
     <item>
@@ -330,7 +330,7 @@ git add . git commit -m &amp;quot;.</description>
       <description>Olás, uma dica rápida pra fazer o CakePHP rodar satisfatoriamente no NGINX.
 Caso queira saber como instalar o cake, é soh clicar aqui. 😉
 Sem mais delongas, basta abrir o arquivo de configuração do NGINX e adicionar as seguintes linhas, depois das configurações padrões para funcionamento com o PHP:
-Lembrando que essa configuração é pra quando estiver usando um subdiretório, no caso, /cake, e os parâmetros fastcgi_param SCRIPT_FILENAME e root devem apontar para o diretório “fisico” do CakePHP.</description>
+location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 break; root /usr/share/nginx/html/cake/app/webroot; try_files $uri /$uri/ @cakephp; } location @cakephp { set $q $request_uri; if ($request_uri ~ &amp;#34;^/cake(.</description>
     </item>
     
     <item>
@@ -364,10 +364,10 @@ Lembrando que essa configuração é pra quando estiver usando um subdiretório,
 Temos o seguinte link:
 http://exemplo.com/pag.aspx?rel=valor&amp;amp;lang=br
 Pra pegar o valor utilizando csharp:
-Ou:
-Pra pegar o valor utilizando VB.NET:
-Ou:
-Fácil fácil, até.</description>
+string valor = Request.QueryString[&amp;#34;rel&amp;#34;]; Ou:
+foreach(string params in Request.QueryString) { Response.write(Request.QueryString[params]) } Pra pegar o valor utilizando VB.NET:
+Dim valar As String = Request.QueryString(&amp;#34;rel&amp;#34;) Ou:
+For Each param As String In Request.QueryString() Response.Write(Request.QueryString(param)) Next Fácil fácil, até.</description>
     </item>
     
     <item>
@@ -448,8 +448,8 @@ Pra baixar a versão mais recente, basta entrar no site do projeto: http://found
       <guid>https://cezarcruz.com.br/como-parar-um-servico-windows-utilizando-csharp/</guid>
       <description>Saindo um pouco do PHP, vamos para a plataforma .NET, nesse tutorial (guia rápido hehhehe), vou ensinar como parar e subir um serviço Windows utilizando CSharp, vamos lá.
 Primeiro, vamos intanciar o ServiceController passando como o parâmetro o nome do serviço que iremos gerenciar
-Aqui como paramos o serviço
-  Primeiro, verificamos se o serviço e está rodando Coso ele esteja, paramos ele usando o metodo Stop.  Para iniciar basta utilizar isso</description>
+using System.ServiceProcess; ServiceController service = new ServiceController(&amp;#34;xxxservico&amp;#34;); Aqui como paramos o serviço
+if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();  Primeiro, verificamos se o serviço e está rodando Coso ele esteja, paramos ele usando o metodo Stop.</description>
     </item>
     
     <item>
@@ -467,8 +467,31 @@ Aqui como paramos o serviço
 &lt;p&gt;No Eclipse, o botão F2, é um atalho para renomear arquivos e pastas.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Após renomear o arquivo, vamos configurar a conexão com a base de dados, procure no arquivos por class DATABASE_CONFIG, ela deve esar assim:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;class DATABASE_CONFIG {
+
+	public $default = array(
+		&amp;#39;datasource&amp;#39; =&amp;gt;; &amp;#39;Database/Mysql&amp;#39;,
+		&amp;#39;persistent&amp;#39; =&amp;gt;; false,
+		&amp;#39;host&amp;#39; =&amp;gt;; &amp;#39;localhost&amp;#39;,
+		&amp;#39;login&amp;#39; =&amp;gt;; &amp;#39;user&amp;#39;,
+		&amp;#39;password&amp;#39; =&amp;gt;; &amp;#39;password&amp;#39;,
+		&amp;#39;database&amp;#39; =&amp;gt;; &amp;#39;database_name&amp;#39;,
+		&amp;#39;prefix&amp;#39; =&amp;gt;; &amp;#39;&amp;#39;,
+		//&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
+	);
+
+	public $test = array(
+		&amp;#39;datasource&amp;#39; =&amp;gt; &amp;#39;Database/Mysql&amp;#39;,
+		&amp;#39;persistent&amp;#39; =&amp;gt; false,
+		&amp;#39;host&amp;#39; =&amp;gt; &amp;#39;localhost&amp;#39;,
+		&amp;#39;login&amp;#39; =&amp;gt; &amp;#39;user&amp;#39;,
+		&amp;#39;password&amp;#39; =&amp;gt; &amp;#39;password&amp;#39;,
+		&amp;#39;database&amp;#39; =&amp;gt; &amp;#39;test_database_name&amp;#39;,
+		&amp;#39;prefix&amp;#39; =&amp;gt; &amp;#39;&amp;#39;,
+		//&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
+	);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>

@@ -76,70 +76,119 @@ if (!doNotTrack) {
 <p><strong>Markdown</strong> é uma ferramenta de conversão texto pra HTML para escrever textos para web. <strong>Markdown</strong> permite escrever usando um texto fácil de ler e escrever e depois converte em uma estrutura valida de XHTML (ou HTML). Pra uma definição melhor, veja o <a href="http://daringfireball.net/projects/markdown/">site do projeto</a>.</p>
 <p>Um local onde o <strong>Markdown</strong> é bastante utilizado é nos arquivos .md utilizado no <a href="https://github.com/">Git Hub</a>.</p>
 <p>Mas vamos lá, pra escrevermos texto começamos sempre com o titulo, hehehe. Pra gerarmos  um titulo em <strong>Markdown</strong> é tranquilo, veja:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Colocamos a partir de três símbolos de **= **(igual)  abaixo do texto, e o HTML gerado é:</p>
-<!-- raw HTML omitted -->
-<p>Bem sussa, pra gerar um subtítulo, é tão simples quanto:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Colocamos a partir de três traços abaixo do texto, e o HTML gerado é:</p>
-<!-- raw HTML omitted -->
-<p>Pra escrever títulos, podemos utilizar outras formas também:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>E o resultado é:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Para escrevermos um texto, também é bem simples, o que devemos atentar é que pra começarmos um novo paragrafo, devemos deixar uma linha em branco no texto <strong>Markdown</strong>:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>O HTML gerado segue abaixo:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>No meio do texto, podemos colocar palavras em itálico ou negrito, por exemplo:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Resultado:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Pra adicionarmos uma citação:</p>
-<!-- raw HTML omitted -->
-<p>O HTML gerado é:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Em <strong>Markdown</strong>, sempre que vc começar a linha com &gt; (maior) ele será uma citação e se você continuar em varias linhas seguidas, será apenas uma única citação com e um paragrafo, mas caso você coloque um linha em branco com sinal de &gt; (maior) entre duas linhas com sinal de &gt; (maior)  mas que tenha algum conteúdo, você irá criar um novo paragrafo, porem, está dentro de uma única citação.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">007 - Um novo dia pra morrer
+============================
+</code></pre></div><p>Colocamos a partir de três símbolos de **= **(igual)  abaixo do texto, e o HTML gerado é:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt;007 - Um novo dia pra morrer&lt;/<span style="color:#f92672">h1</span>&gt;;
+</code></pre></div><p>Bem sussa, pra gerar um subtítulo, é tão simples quanto:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">O Daniel Craig é o James Bond mais zica
+---------------------------------------
+</code></pre></div><p>Colocamos a partir de três traços abaixo do texto, e o HTML gerado é:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h2</span>&gt;O Daniel Craig é o James Bond mais zica&lt;/<span style="color:#f92672">h2</span>&gt;
+</code></pre></div><p>Pra escrever títulos, podemos utilizar outras formas também:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">#Titulo 1
+<span style="color:#75715e">##Subtítulo
+</span><span style="color:#75715e">###SubSubtítulo
+</span><span style="color:#75715e"></span>.....
+</code></pre></div><p>E o resultado é:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt;Titulo 1&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">h2</span>&gt;Subtítulo&lt;/<span style="color:#f92672">h2</span>&gt;
+&lt;<span style="color:#f92672">h3</span>&gt;SubSubtítulo&lt;/<span style="color:#f92672">h3</span>&gt;
+</code></pre></div><p>Para escrevermos um texto, também é bem simples, o que devemos atentar é que pra começarmos um novo paragrafo, devemos deixar uma linha em branco no final da linha:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">Curabitur consequat commodo magna. Nulla vel eros nec dui malesuada gravida. Donec pellentesque, quam et varius consectetur, risus orci dapibus ante, quis euismod diam metus sed erat.
+
+Mauris aliquet pretium ante, a rutrum libero facilisis a. Nulla facilisi. Praesent semper ornare felis, non pharetra elit vestibulum pulvinar.
+
+Phasellus quis lacus ultrices, posuere urna eu, pellentesque metus. Donec vulputate velit sit amet augue mattis rutrum. Phasellus ultrices tempor elit vitae vulputate. Praesent quis ullamcorper justo. Cras euismod nisl nibh, eu pulvinar lectus condimentum ut.
+</code></pre></div><p>O HTML gerado segue abaixo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;Curabitur consequat commodo magna. Nulla vel eros nec dui malesuada gravida. Donec pellentesque, quam et varius consectetur, risus orci dapibus ante, quis euismod diam metus sed erat. &lt;/<span style="color:#f92672">p</span>&gt;
+
+&lt;<span style="color:#f92672">p</span>&gt;Mauris aliquet pretium ante, a rutrum libero facilisis a. Nulla facilisi. Praesent semper ornare felis, non pharetra elit vestibulum pulvinar. &lt;/<span style="color:#f92672">p</span>&gt;
+
+&lt;<span style="color:#f92672">p</span>&gt;Phasellus quis lacus ultrices, posuere urna eu, pellentesque metus. Donec vulputate velit sit amet augue mattis rutrum. Phasellus ultrices tempor elit vitae vulputate. Praesent quis ullamcorper justo. Cras euismod nisl nibh, eu pulvinar lectus condimentum ut.&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>No meio do texto, podemos colocar palavras em itálico ou negrito, por exemplo:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">_consequat_
+<span style="font-weight:bold">**consequat**</span>
+</code></pre></div><p>Resultado:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">em</span>&gt;consequat&lt;/<span style="color:#f92672">em</span>&gt;;
+&lt;<span style="color:#f92672">strong</span>&gt;consequat&lt;/<span style="color:#f92672">strong</span>&gt;;
+</code></pre></div><p>Pra adicionarmos uma citação:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md"><span style="color:#66d9ef">&gt; </span><span style="font-style:italic">Ser ou não ser, eis a questão.
+</span></code></pre></div><p>O HTML gerado é:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">blockquote</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;Ser ou não ser, eis a questão&lt;/<span style="color:#f92672">p</span>&gt;;
+&lt;/<span style="color:#f92672">blockquote</span>&gt;
+</code></pre></div><p>Em <strong>Markdown</strong>, sempre que vc começar a linha com &gt; (maior) ele será uma citação e se você continuar em varias linhas seguidas, será apenas uma única citação com e um paragrafo, mas caso você coloque um linha em branco com sinal de &gt; (maior) entre duas linhas com sinal de &gt; (maior)  mas que tenha algum conteúdo, você irá criar um novo paragrafo, porem, está dentro de uma única citação.</p>
 <p>Pra criarmos uma lista não ordenada, temos um segredinho também, temos que pular uma linha depois do ultimo paragrafo, veja:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>O resultado:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Além do * (asterisco), podemos utilizar o sinal de + (soma) ou – (subtração) pra formarmos uma lista.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">Lista de compras
+
+<span style="color:#66d9ef">*</span> alface
+<span style="color:#66d9ef">*</span> tomate
+<span style="color:#66d9ef">*</span> cebola
+<span style="color:#66d9ef">*</span> couve
+</code></pre></div><p>O resultado:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;Lista de compras&lt;/<span style="color:#f92672">p</span>&gt;
+
+&lt;<span style="color:#f92672">ul</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;alface&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;tomate&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;cebola&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;couve&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div><p>Além do * (asterisco), podemos utilizar o sinal de + (soma) ou – (subtração) pra formarmos uma lista.</p>
 <p>Pra termos uma lista ordenada, segue a mesma ideia da lista não ordenada:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>E resultado:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Pra criamos uma lista aninhada, basta uma colocarmos o subitem com um espaço na frente:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>O resultado:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>A ideia é a mesma para a lista ordenada.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">Lista de compras
+
+<span style="color:#66d9ef">1.</span> alface
+<span style="color:#66d9ef">2.</span> tomate
+<span style="color:#66d9ef">3.</span> cebola
+<span style="color:#66d9ef">4.</span> couve&lt;/<span style="color:#f92672">pre</span>&gt;
+</code></pre></div><p>E resultado:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;Lista de compras&lt;/<span style="color:#f92672">p</span>&gt;
+
+&lt;<span style="color:#f92672">ol</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;alface&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;tomate&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;cebola&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;<span style="color:#f92672">li</span>&gt;couve&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ol</span>&gt;
+</code></pre></div><p>Pra criamos uma lista aninhada, basta uma colocarmos o subitem com um espaço na frente:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">Lista de compras
+
+<span style="color:#66d9ef">*</span> alface
+<span style="color:#66d9ef">*</span> tomate
+<span style="color:#66d9ef">*</span> cebola
+<span style="color:#66d9ef">*</span> couve
+</code></pre></div><p>O resultado:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;Lista de compras&lt;/<span style="color:#f92672">p</span>&gt;
+
+&lt;<span style="color:#f92672">ul</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;alface
+        &lt;<span style="color:#f92672">ul</span>&gt;
+            &lt;<span style="color:#f92672">li</span>&gt;tomate&lt;/<span style="color:#f92672">li</span>&gt;
+        &lt;/<span style="color:#f92672">ul</span>&gt;
+    &lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;cebola
+        &lt;<span style="color:#f92672">ul</span>&gt;
+            &lt;<span style="color:#f92672">li</span>&gt;couve&lt;/<span style="color:#f92672">li</span>&gt;
+            &lt;<span style="color:#f92672">li</span>&gt;espinafre&lt;/<span style="color:#f92672">li</span>&gt;
+        &lt;/<span style="color:#f92672">ul</span>&gt;
+    &lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div><p>A ideia é a mesma para a lista ordenada.</p>
 <p>Pra criamos um link com uma página da web:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">Esse o [<span style="color:#f92672">link para o meu blog</span>](<span style="color:#a6e22e">https://cezarcruz.com.br/blog/ &#34;Meu blog&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">Esse é o [<span style="color:#f92672">link para o meu blog</span>](<span style="color:#a6e22e">https://cezarcruz.com.br/ &#34;Meu blog&#34;</span>)
 </code></pre></div><p>O resultado vem logo abaixo:</p>
-<!-- raw HTML omitted -->
-<p>Repare que o que está dentro do colchetes é o que irá virar um link, o endereço vem dentro de parênteses e utilizar o title dentro do parênteses é opcional, caso não queira, basta deixar somente o endereço.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;Esse é o &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cezarcruz.com.br/&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Meu blog&#34;</span>&gt;link para o meu blog&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>Repare que o que está dentro do colchetes é o que irá virar um link, o endereço vem dentro de parênteses e utilizar o title dentro do parênteses é opcional, caso não queira, basta deixar somente o endereço.</p>
 <p>Ainda com links, podemos usar ele de uma forma um pouco mais organizada, utilizando referencias:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>O Resultado segue como de costume:</p>
-<!-- raw HTML omitted -->
-<p>Pra utilizarmos referencias em links, temos que atentar aos fatos:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">O site do [G1][1] é igual ao do [R7][2]
+
+[1]: http://g1.com &#34;Site do G1&#34;
+[2]: http://r7.com &#34;Site do R7&#34;
+</code></pre></div><p>O Resultado segue como de costume:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;O site do &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;g1.com&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Site do G1&#34;</span>&gt;G1&lt;/<span style="color:#f92672">a</span>&gt; é igual ao do &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;r7.com&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Site do R7&#34;</span>&gt;R7&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>Pra utilizarmos referencias em links, temos que atentar aos fatos:</p>
 <ul>
 <li>O que estiver entre os primeiros colchetes é o que irá se tornar “clicável”;</li>
 <li>O segundo colchetes é a referencia, nela, podemos utilizar uma letra ou palavra e elas não são <em>case sensitive</em>;</li>
@@ -147,10 +196,10 @@ if (!doNotTrack) {
 <li>Não esquecer de por <strong>http://</strong>;</li>
 </ul>
 <p>Pra utilizarmos imagens, o código é semelhante ao de links:</p>
-<!-- raw HTML omitted -->
-<p>E o lindo resultado:</p>
-<!-- raw HTML omitted -->
-<p>A diferença básica entre links e imagens é a ! (exclamação) antes do código.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">![<span style="color:#f92672">O alt</span>](<span style="color:#a6e22e">https://www.google.com.br/images/srpr/logo11w.png &#34;Logo do google&#34;</span>)
+</code></pre></div><p>E o lindo resultado:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.google.com.br/images/srpr/logo11w.png&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;O alt&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Logo do google&#34;</span>&gt;
+</code></pre></div><p>A diferença básica entre links e imagens é a ! (exclamação) antes do código.</p>
 <p>Bom por enquanto é isso ai, são bem básicas, mas é o suficiente pra nos prepararmos pros próximos tutoriais de Jekyll.</p>
 <p>Abraços.</p>
 <p>Links úteis</p>

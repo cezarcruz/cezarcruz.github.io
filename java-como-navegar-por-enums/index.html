@@ -75,12 +75,14 @@ if (!doNotTrack) {
 			<p>Olás,</p>
 <p>hoje uma dica rápida pra navegarmos por uma classe java que contenha <strong>enums</strong>:</p>
 <p>Considerando nosso <strong>enum</strong>:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Pra navegamos por ele basta fazer o seguinte:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Utilizando o método <strong>values</strong>, obtemos um list do tipo do nosso <strong>enum</strong> com todos os <strong>enum</strong>, daí pra frente é só diversão.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> Cidades <span style="color:#f92672">{</span>
+    CAMPINAS<span style="color:#f92672">,</span> HORTOLANDIA<span style="color:#f92672">,</span> SUMARE<span style="color:#f92672">,</span> VALINHOS
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Pra navegamos por ele basta fazer o seguinte:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Cidades c <span style="color:#f92672">:</span> Cidages<span style="color:#f92672">.</span><span style="color:#a6e22e">values</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>c<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Utilizando o método <strong>values</strong>, obtemos um list do tipo do nosso <strong>enum</strong> com todos os <strong>enum</strong>, daí pra frente é só diversão.</p>
 <p>Abraços!</p>
 
 		</div>

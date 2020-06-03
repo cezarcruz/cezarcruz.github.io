@@ -76,14 +76,24 @@ if (!doNotTrack) {
 <p>Hoje uma dica rápida sobre oracle: Como utilizar o <strong>Case</strong> em um select no Oracle.</p>
 <p>O <strong>Case</strong>, basicamente é um “if/else”, por exemplo, se um condição for for verdadeira ele faz determinada ação.</p>
 <p>A utilização do Case é bem simples, veja abaixo:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Explicando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+     <span style="color:#66d9ef">CASE</span> nome_coluna
+     <span style="color:#66d9ef">WHEN</span> <span style="color:#e6db74">&#39;valor_ocorrer&#39;</span> <span style="color:#66d9ef">THEN</span> <span style="color:#e6db74">&#39;substitui_por_isso&#39;</span>
+     <span style="color:#66d9ef">ELSE</span> <span style="color:#e6db74">&#39;valor_padrão&#39;</span>
+     <span style="color:#66d9ef">END</span>
+<span style="color:#66d9ef">FROM</span> tabela;
+</code></pre></div><p>Explicando:</p>
 <p><strong>CASE</strong> o nome da coluna WHEN o valor que irá retornar THEN substitui por esse valor ELSE não encontre o valor na cláusula, usa este como default END.</p>
 <p>Também é possível utilizar mais de uma cláusula, bastando apenas acrescentar elas da seguinte forma:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Simples, porem muuuuuuito útil em alguns casos.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+     <span style="color:#66d9ef">CASE</span> nome_coluna
+     <span style="color:#66d9ef">WHEN</span> <span style="color:#e6db74">&#39;valor_ocorrer&#39;</span> <span style="color:#66d9ef">THEN</span> <span style="color:#e6db74">&#39;substitui_por_isso&#39;</span>
+     <span style="color:#66d9ef">WHEN</span> <span style="color:#e6db74">&#39;valor2_ocorrer&#39;</span> <span style="color:#66d9ef">THEN</span> <span style="color:#e6db74">&#39;substitui_por_isso&#39;</span>
+     <span style="color:#66d9ef">WHEN</span> <span style="color:#e6db74">&#39;valor3_ocorrer&#39;</span> <span style="color:#66d9ef">THEN</span> <span style="color:#e6db74">&#39;substitui_por_isso&#39;</span>
+     <span style="color:#66d9ef">ELSE</span> valor_padrão
+     <span style="color:#66d9ef">END</span>
+<span style="color:#66d9ef">FROM</span> tabela;
+</code></pre></div><p>Simples, porem muuuuuuito útil em alguns casos.</p>
 <p>É isso ae, use com moderação, boa sorte e até!!</p>
 		</div>
 		<footer class="post__footer">
