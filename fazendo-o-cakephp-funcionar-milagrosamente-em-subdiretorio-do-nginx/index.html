@@ -14,6 +14,7 @@ Sem mais delongas, basta abrir o arquivo de configuração do NGINX e adicionar 
 location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.&#43;)$ /$1 break; root /usr/share/nginx/html/cake/app/webroot; try_files $uri /$uri/ @cakephp; } location @cakephp { set $q $request_uri; if ($request_uri ~ &#34;^/cake(." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cezarcruz.com.br/fazendo-o-cakephp-funcionar-milagrosamente-em-subdiretorio-do-nginx/" />
+<meta property="og:image" content="https://cezarcruz.com.br/img/header_og.png"/>
 <meta property="article:published_time" content="2013-11-01T13:11:15+00:00" />
 <meta property="article:modified_time" content="2013-11-01T13:11:15+00:00" />
 
