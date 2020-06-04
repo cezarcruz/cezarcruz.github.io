@@ -111,20 +111,20 @@ if (!doNotTrack) {
 
         <span style="color:#75715e">&lt;!-- Rodapé --&gt;</span>
         &lt;<span style="color:#f92672">footer</span>&gt;
-            &amp;copy; 2013
+            © 2013
         &lt;/<span style="color:#f92672">footer</span>&gt;
     &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><p>Está ai a definição do nosso layout (^^), claro que isso é apenas para fins de tutorial, agora que temos nosso layout definido, hora de deixar ele um pouco mais “esperto”:</p>
+</code></pre></div><p>Está ai a definição do nosso layout (^^), claro que isso é apenas para fins de tutorial, agora que temos nosso layout definido, hora de deixar ele um pouco mais &ldquo;esperto&rdquo;:</p>
 <p>No tag head, trocamos os dados por esse:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#a6e22e">&lt;meta charset=&#34;utf-8&#34; /&gt;</span>
 <span style="color:#a6e22e">&lt;title&gt;</span><span style="color:#960050;background-color:#1e0010">@</span>ViewBag.Title<span style="color:#f92672">&lt;/</span>title<span style="color:#f92672">&gt;</span>
 <span style="color:#a6e22e">&lt;link href=&#34;@Url.Content(&#34;~/Content/Site.css&#34;)&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34; /&gt;</span>
-</code></pre></div><p>A linha 2 é a variavel com o titulo da View que está sendo carregado, o valor dessa variável pode ser definida tanto no controller como na propria View;</p>
+</code></pre></div><p>A linha 2 é a variavel com o titulo da View que está sendo carregado, o valor dessa variável pode ser definida tanto no controller como na própria View;</p>
 <p>A linha 3 é o link para o css que iremos utilizar aqui.</p>
 <p>Agora definimos nosso rodapé:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">footer</span>&gt;
-      &amp;copy; @DateTime.Now.Year
+      © @DateTime.Now.Year
 &lt;/<span style="color:#f92672">footer</span>&gt;
 </code></pre></div><p>Bem simples, o único processamento do servidor será pra exibir o ano corrente.</p>
 <p>E agora o mais importante, onde queremos que nossa View apareça no layout:</p>
@@ -147,7 +147,7 @@ if (!doNotTrack) {
             @RenderBody()
         &lt;/<span style="color:#f92672">div</span>&gt;
         &lt;<span style="color:#f92672">footer</span>&gt;
-            &amp;copy; @DateTime.Now.Year
+            © @DateTime.Now.Year
         &lt;/<span style="color:#f92672">footer</span>&gt;
     &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
@@ -177,7 +177,7 @@ if (!doNotTrack) {
         &lt;/<span style="color:#f92672">div</span>&gt;
 
         &lt;<span style="color:#f92672">footer</span>&gt;
-            &amp;copy; 2013
+            © 2013
         &lt;/<span style="color:#f92672">footer</span>&gt;
     &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
@@ -280,9 +280,6 @@ if (!doNotTrack) {
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -354,10 +351,10 @@ if (!doNotTrack) {
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

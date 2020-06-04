@@ -82,7 +82,7 @@ if (!doNotTrack) {
 		</header><div class="content post__content clearfix">
 			<p>Neste post veremos como são criadas e utilizadas as variáveis em uma aplicação Java.</p>
 <p>Uma variável é um nome definido pelo programador ao qual se associa um valor pertencente a um certo tipo de dados e armazenado em um conjunto de posições da memória do computador. Basicamente, toda variável sempre possui um nome, um tipo e um conteúdo.</p>
-<p>O nome de uma variável, em Java, pode ser formado por uma letra, pelos caracteres _ (<em>underscore</em>), ou $ (cifrão). Nomes não podem conter outros símbolos gráficos, operadores ou espaços em branco, podendo ser longos, embora apenas os primeiros 32 caracteres sejam usados para distinguir. Lembrando que Java é <em>Case Sensitive</em>, letras minusculas e maiusculas são consideradas diferentes. Exemplos válidos:</p>
+<p>O nome de uma variável, em Java, pode ser formado por uma letra, pelos caracteres _ (<em>underscore</em>), ou $ (cifrão). Nomes não podem conter outros símbolos gráficos, operadores ou espaços em branco, podendo ser longos, embora apenas os primeiros 32 caracteres sejam usados para distinguir. Lembrando que Java é <em>Case Sensitive</em>, letras minusculas e maiúsculas são consideradas diferentes. Exemplos válidos:</p>
 <ul>
 <li>a</li>
 <li>outro</li>
@@ -101,10 +101,10 @@ if (!doNotTrack) {
 </ul>
 <p>O Java possui um conjunto de palavras que indicam os nomes dos tipos primitivos, as diretivas da linguagem, os especificadores e modificadores e outros elementos pertencentes a sintaxe dessa linguagem. Essas palavras são reservadas e não podem ser utilizadas com outra finalidade:</p>
 <p><em>abstract</em>, <em>assert</em>, <em>boolean</em>, <em>break</em>, <em>byte</em>, <em>case</em>, <em>catch</em>, <em>class</em>, <em>continue</em>, <em>default</em>, <em>do</em>, <em>double</em>, <em>else</em>, <em>enum</em>, <em>extends</em>, <em>false</em>, <em>final</em>, <em>finally</em>, <em>float</em>, <em>for</em>, <em>if</em>, <em>implements</em>, <em>import</em>, <em>instanceof</em>, <em>int</em>, <em>interface</em>, <em>long</em>, <em>native</em>, <em>new</em>, <em>null</em>, <em>package</em>, <em>private</em>, <em>protected</em>, <em>public</em>, <em>return</em>, <em>short</em>, <em>static</em>, <em>strictfp</em>, <em>super</em>, <em>switch</em>, <em>synchronized</em>, <em>this</em>, <em>throw</em>, <em>throws</em>, <em>transient</em>, <em>true</em>, <em>try</em>, <em>void</em>, <em>volatile</em>, <em>while</em></p>
-<p>false e true não são palavras reservadas, mas valores literais do tipo boolean. Do mesmo modo, null é o literal nulo. Além dos citados, existem outras duas que, embora sejam reservadas, nao sao utilizadas pela linguagem: <em>const</em> e <em>goto</em>.</p>
+<p>false e true não são palavras reservadas, mas valores literais do tipo boolean. Do mesmo modo, null é o literal nulo. Além dos citados, existem outras duas que, embora sejam reservadas, não são utilizadas pela linguagem: <em>const</em> e <em>goto</em>.</p>
 <p>Declarar uma variável é associar um tipo, um nome e um valor. Para isso deve ser observada a sintaxe:</p>
 <pre><code>&lt;Tipo&gt; &lt;nome1&gt; [, nome2 [, nome3 [..., nomeN]]];
-</code></pre><p>A especificação de um Tipo e ao menos um nome sao obrigatorios. Pode seguir opcionalmente uma lista de nomes, todos separados por vírgulas. A declaração é terminado por ; (ponto e vírgula). O Tipo pode ser um tipo primitivo, uma classe da API Java ou outra definida pelo programador. Exemplos:</p>
+</code></pre><p>A especificação de um Tipo e ao menos um nome são obrigatórios. Pode seguir opcionalmente uma lista de nomes, todos separados por vírgulas. A declaração é terminado por ; (ponto e vírgula). O Tipo pode ser um tipo primitivo, uma classe da API Java ou outra definida pelo programador. Exemplos:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> i<span style="color:#f92672">;</span>
 <span style="color:#66d9ef">float</span> total<span style="color:#f92672">,</span> preco<span style="color:#f92672">;</span>
 <span style="color:#66d9ef">byte</span> mascara<span style="color:#f92672">;</span>
@@ -148,7 +148,7 @@ Escopo.java:16: error: cannot find symbol
   symbol:   variable j
   location: class Escopo
 1 error
-</code></pre><p>A mensagem indica que na linha 16 do arquivo Escopo.java foi detectado um simbolo desconhecido (variavel j), pois, de fato, naquele escopo, (bloco 1 ou mais externos) não existe essa variável. Para corrigir o erro, a declaração da variável j deve ser movida para o início do bloco onde ocorreu o erro:</p>
+</code></pre><p>A mensagem indica que na linha 16 do arquivo Escopo.java foi detectado um simbolo desconhecido (variável j), pois, de fato, naquele escopo, (bloco 1 ou mais externos) não existe essa variável. Para corrigir o erro, a declaração da variável j deve ser movida para o início do bloco onde ocorreu o erro:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Escopo</span> <span style="color:#f92672">{</span> <span style="color:#75715e">// inicio do bloco0
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String args<span style="color:#f92672">[])</span> <span style="color:#f92672">{</span> <span style="color:#75715e">//inicio do bloco 1
 </span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span> <span style="color:#75715e">// variavel do bloco 1
@@ -272,9 +272,6 @@ Escopo.java:16: error: cannot find symbol
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -346,10 +343,10 @@ Escopo.java:16: error: cannot find symbol
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

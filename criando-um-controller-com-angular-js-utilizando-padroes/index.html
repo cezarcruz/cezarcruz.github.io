@@ -89,16 +89,16 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">angular</span>.<span style="color:#a6e22e">module</span>(<span style="color:#e6db74">&#39;app.seriado&#39;</span>).<span style="color:#a6e22e">controller</span>(<span style="color:#e6db74">&#39;SeriadosCtrl&#39;</span>, <span style="color:#a6e22e">SeriadosCtrl</span>);
 </code></pre></div><p>Na única linha acima, setamos o controller SeriadosCtrl no angular module com a function SeriadosCtrl, o código ficar<!-- raw HTML omitted -->á<!-- raw HTML omitted --> mais completo, com o exemplo abaixo:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">(<span style="color:#66d9ef">function</span>() {
-	<span style="color:#75715e">/**
-</span><span style="color:#75715e">	 * Controller do seriados.
-</span><span style="color:#75715e">	 */</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * Controller do seriados.
+</span><span style="color:#75715e">     */</span>
 <span style="color:#a6e22e">angular</span>.<span style="color:#a6e22e">module</span>(<span style="color:#e6db74">&#39;app.seriado&#39;</span>).<span style="color:#a6e22e">controller</span>(<span style="color:#e6db74">&#39;SeriadosCtrl&#39;</span>, <span style="color:#a6e22e">SeriadosCtrl</span>);
 
-	<span style="color:#a6e22e">SeriadosCtrl</span>.<span style="color:#a6e22e">$inject</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;$location&#39;</span>, <span style="color:#e6db74">&#39;SeriadoService&#39;</span>,<span style="color:#e6db74">&#39;$modal&#39;</span>];
+    <span style="color:#a6e22e">SeriadosCtrl</span>.<span style="color:#a6e22e">$inject</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;$location&#39;</span>, <span style="color:#e6db74">&#39;SeriadoService&#39;</span>,<span style="color:#e6db74">&#39;$modal&#39;</span>];
 
-	<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">SeriadosCtrl</span>(<span style="color:#a6e22e">$location</span>, <span style="color:#a6e22e">SeriadoService</span>, <span style="color:#a6e22e">$modal</span>) {
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">SeriadosCtrl</span>(<span style="color:#a6e22e">$location</span>, <span style="color:#a6e22e">SeriadoService</span>, <span style="color:#a6e22e">$modal</span>) {
 
-	}
+    }
 })();
 </code></pre></div><p>Nas linhas acima temos o complemento da criação de um controller e ainda utilizamos a injeção de dependências no controller, pra isso utilizamos o &lt;function_name&gt;.$inject = &lt;dependências&gt;, lembrando que a ordem das dependências e a assinatura da function (SeriadosCtrl) devem ser as mesmas.</p>
 <p>Não sei dizer quanto a desempenho, mas quanto a legibilidade de código, fica muito melhor utilizando o styleguide.</p>
@@ -203,9 +203,6 @@ if (!doNotTrack) {
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -277,10 +274,10 @@ if (!doNotTrack) {
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

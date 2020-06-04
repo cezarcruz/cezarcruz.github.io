@@ -150,19 +150,19 @@ if (!doNotTrack) {
 
 <span style="color:#f92672">}</span>
 </code></pre></div><p>A anotação <a href="https://projectlombok.org/features/Value">@Value</a> gera vários códigos:
-toString(), equal(), hashCode(), construtor com todos as propriedades, métodos getter. Obs: O @Value gera classes imutáveis, dessa forma não é possivel utilizar os famosos métodos Setters, para criar classes mutáveis, deve ser utilizada a anotação <a href="https://projectlombok.org/features/Data">@Data</a>.</p>
+toString(), equal(), hashCode(), construtor com todos as propriedades, métodos getter. Obs: O @Value gera classes imutáveis, dessa forma não é possível utilizar os famosos métodos Setters, para criar classes mutáveis, deve ser utilizada a anotação <a href="https://projectlombok.org/features/Data">@Data</a>.</p>
 <h2 id="incluindo-no-nosso-projeto">Incluindo no nosso projeto.</h2>
 <p>Como nem tudo são flores, o primeiro passo é incluir o plugin do lombok em nossa IDE, esse passo é importante, pois dessa forma a IDE consegue entender os métodos gerados:</p>
 <p><a href="https://projectlombok.org/setup/eclipse">Eclipse</a></p>
 <p><a href="https://projectlombok.org/setup/intellij">Intellij</a></p>
-<p>O proxímo passo é incluir a dependência no nosso pom.xml:</p>
+<p>O próximo passo é incluir a dependência no nosso pom.xml:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependencies&gt;</span>
-	<span style="color:#f92672">&lt;dependency&gt;</span>
-		<span style="color:#f92672">&lt;groupId&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
-		<span style="color:#f92672">&lt;artifactId&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
-		<span style="color:#f92672">&lt;version&gt;</span>1.18.8<span style="color:#f92672">&lt;/version&gt;</span>
-		<span style="color:#f92672">&lt;scope&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
-	<span style="color:#f92672">&lt;/dependency&gt;</span>
+    <span style="color:#f92672">&lt;dependency&gt;</span>
+        <span style="color:#f92672">&lt;groupId&gt;</span>org.projectlombok<span style="color:#f92672">&lt;/groupId&gt;</span>
+        <span style="color:#f92672">&lt;artifactId&gt;</span>lombok<span style="color:#f92672">&lt;/artifactId&gt;</span>
+        <span style="color:#f92672">&lt;version&gt;</span>1.18.8<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;scope&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
+    <span style="color:#f92672">&lt;/dependency&gt;</span>
 <span style="color:#f92672">&lt;/dependencies&gt;</span>
 </code></pre></div><p>Pronto, o lombok está configurado no nosso projeto, abaixo segue as anotações mais utilizadas comumente:</p>
 <p><a href="https://projectlombok.org/features/GetterSetter">@Getter e @Setter</a>: Como o nome sugere, gera os getters e setters de uma classe, pode ser utilizados sozinhos ou juntos, em classes ou em atributos;</p>
@@ -174,7 +174,7 @@ toString(), equal(), hashCode(), construtor com todos as propriedades, métodos 
 <a href="https://projectlombok.org/features/all">https://projectlombok.org/features/all</a></p>
 <p>Os exemplos utilizados nesse post pode ser encontrados aqui:
 <a href="https://github.com/cezarcruz/codigos-do-site/tree/master/exemplos-lombok">https://github.com/cezarcruz/codigos-do-site/tree/master/exemplos-lombok</a></p>
-<p>Não tenha medo de utilizar o lombok, existem ferramentas capaz de remover o código lombok e gerar as classes como antigamente, mas incluido o lombok no projeto e visto os beneficios, acho dificil voltar.</p>
+<p>Não tenha medo de utilizar o lombok, existem ferramentas capaz de remover o código lombok e gerar as classes como antigamente, mas incluído o lombok no projeto e visto os benefícios, acho dificil voltar.</p>
 <p>Qualquer duvida, deixe uma mensagem no chat abaixo.
 Abraços.</p>
 		</div>
@@ -262,9 +262,6 @@ Abraços.</p>
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -336,10 +333,10 @@ Abraços.</p>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

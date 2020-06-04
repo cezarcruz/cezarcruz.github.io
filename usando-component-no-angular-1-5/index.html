@@ -92,25 +92,25 @@ if (!doNotTrack) {
     <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">valor</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Blog do Cezar&#39;</span>;
   }
 })();
-</code></pre></div><p>Esse é um controller comum, que já estamos acostumados a criar no angular. O único ponto de atenção é quanto ao ‘this’, ao invés de utilizarmos ‘$scope’, podemos adicionar os valores direto no ‘this’, abaixo mostro como ele é carregado no template.</p>
+</code></pre></div><p>Esse é um controller comum, que já estamos acostumados a criar no angular. O único ponto de atenção é quanto ao &ldquo;this&rdquo;, ao invés de utilizarmos &lsquo;$scope&rsquo;;, podemos adicionar os valores direto no &ldquo;this&rdquo;, abaixo mostro como ele é carregado no template.</p>
 <p>Agora que temos um controller, vamos criar um template para mostrar o nosso valor na tela:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{{ <span style="color:#f92672">::</span><span style="color:#a6e22e">vm</span>.<span style="color:#a6e22e">valor</span> }}
-</code></pre></div><p>No nosso arquivo ‘home.html’, usamos a mesmas sintaxe que estamos acostumados, repare que usamos o ‘vm’ antes da variável que declaramos no controller, no código abaixo mostro o motivo ;).</p>
+</code></pre></div><p>No nosso arquivo &lsquo;home.html&rsquo;;, usamos a mesmas sintaxe que estamos acostumados, repare que usamos o &lsquo;vm&rsquo;; antes da variável que declaramos no controller, no código abaixo mostro o motivo ;).</p>
 <p>Depois de criarmos o controller e a view, vamos finalmente criar o nosso component, veja:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">angular</span>.<span style="color:#a6e22e">module</span>(<span style="color:#e6db74">&#39;home-module&#39;</span>).<span style="color:#a6e22e">component</span>(<span style="color:#e6db74">&#39;homeModule&#39;</span>, {
   <span style="color:#a6e22e">templateUrl</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;home.html&#39;</span>,
   <span style="color:#a6e22e">controller</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;HomeController as vm&#39;</span>,
 });
-</code></pre></div><p>Para criarmos o component, basta colocar o ‘.component’ no modulo, como parâmetros, ele recebe o nome e um objeto com as configurações do componente. O nome do componente segue o mesmo padrão das diretivas:</p>
+</code></pre></div><p>Para criarmos o component, basta colocar o &lsquo;.component&rsquo;; no modulo, como parâmetros, ele recebe o nome e um objeto com as configurações do componente. O nome do componente segue o mesmo padrão das diretivas:</p>
 <p>Nome: <strong>homeModule</strong></p>
 <p>Referencia em outras partes da aplicação: <strong>home-module</strong></p>
-<p>O parâmetro ‘templateUrl’ passamos o caminho da view que criamos anteriormente. Podemos também, substituir esse parâmetro por ‘templatle’ e colocar a view diretamente inline, para algo pequeno, me parece muito bom.</p>
-<p>Por fim, o parâmetro ‘controller’, que como o nome sugere, injetamos o controller no nosso component, repare que adicionamos os valores ‘as vm’ junto ao controller, é assim que definimos que o ‘this’, do controller, é referenciado na view como ‘vm’, se adicionarmos apenas o nome do controller, o Angular infere que você irá utilizar ‘$ctrl’ na view.</p>
-<p>E por fim, para adicionarmos nosso component na aplicação, podemos fazer igual faríamos normalmente com uma diretiva ‘<!-- raw HTML omitted --><!-- raw HTML omitted -->’ ou adicionar ele como uma uma rota, assim:</p>
+<p>O parâmetro &lsquo;templateUrl&rsquo;; passamos o caminho da view que criamos anteriormente. Podemos também, substituir esse parâmetro por &lsquo;templatle&rsquo;; e colocar a view diretamente inline, para algo pequeno, me parece muito bom.</p>
+<p>Por fim, o parâmetro &lsquo;controller&rsquo;;, que como o nome sugere, injetamos o controller no nosso component, repare que adicionamos os valores &lsquo;as vm&rsquo;; junto ao controller, é assim que definimos que o &lsquo;this&rsquo;;, do controller, é referenciado na view como &lsquo;vm&rsquo;;, se adicionarmos apenas o nome do controller, o Angular infere que você irá utilizar &lsquo;$ctrl&rsquo;; na view.</p>
+<p>E por fim, para adicionarmos nosso component na aplicação, podemos fazer igual faríamos normalmente com uma diretiva &lsquo;<!-- raw HTML omitted --><!-- raw HTML omitted -->&rsquo;; ou adicionar ele como uma uma rota, assim:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">$routeProvider</span>.<span style="color:#a6e22e">when</span>(<span style="color:#e6db74">&#39;/home&#39;</span>, {
   <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&lt;home-module&gt;&lt;/home-module&gt;&#39;</span>
 });
-</code></pre></div><p>E’ isso ai, simples e fácil.</p>
+</code></pre></div><p>E&rsquo;; isso ai, simples e fácil.</p>
 <p>Espero que ajude, abraços!</p>
 <p><strong>Referencias</strong></p>
 <p><a href="https://toddmotto.com/exploring-the-angular-1-5-component-method/">https://toddmotto.com/exploring-the-angular-1-5-component-method/</a></p>
@@ -122,7 +122,7 @@ if (!doNotTrack) {
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item">
-			<a class="tags__link btn" href="https://cezarcruz.com.br/tags/javascript/" rel="tag">Javascript</a>
+			<a class="tags__link btn" href="https://cezarcruz.com.br/tags/javascrip/" rel="tag">Javascrip</a>
 		</li>
 		<li class="tags__item">
 			<a class="tags__link btn" href="https://cezarcruz.com.br/tags/angularjs/" rel="tag">AngularJS</a>
@@ -214,9 +214,6 @@ if (!doNotTrack) {
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -288,10 +285,10 @@ if (!doNotTrack) {
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

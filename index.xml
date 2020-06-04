@@ -62,7 +62,7 @@
       <pubDate>Sat, 10 Mar 2018 10:05:51 -0300</pubDate>
       
       <guid>https://cezarcruz.com.br/certificacao-java-compilacao-e-execucao/</guid>
-      <description>Olá, neste primeiro post iremos ver como escrever o nosso primeiro programa Java, como executar e como passar “parametros” para ele.
+      <description>Olá, neste primeiro post iremos ver como escrever o nosso primeiro programa Java, como executar e como passar “parâmetros” para ele.
 Com o JDK é necessário usar um console, um prompt de comandos, para efetuar a compilação ou execução de programas Java, além de compilar e executar, são disponibilizadas outras ferramentas no JDK. Nosso foco será apenas nos comando javac e java.
 Para criarmos nosso primeiro programa, será necessário criar um arquivo texto com o nome HelloWorld.</description>
     </item>
@@ -104,7 +104,7 @@ irei começar uma série de posts relacionados a Java. A ideia é escrever sobre
       <description>Olas,
 Para habilitar esta funcionalidade no nautilus do Fedora eh muito simples, basta rodar os comandos abaixo:
 sudo dnf install nautilus-open-terminal
-Apos isto, basta reiniciar o nautilius, e quando clicar com o botão direito do mouse, a opção “Open in terminal” estará disponível:
+Apos isto, basta reiniciar o nautilius, e quando clicar com o botão direito do mouse, a opção &amp;ldquo;Open in terminal&amp;rdquo; estará disponível:
 killall nautilus
 Prontinho! =)</description>
     </item>
@@ -131,7 +131,7 @@ gem install rubygems-update --source &amp;quot;http://rubygems.org&amp;quot; upd
       
       <guid>https://cezarcruz.com.br/como-instalar-drivers-nvidia-no-elementary-os-loki/</guid>
       <description>Olás,
-recentemente foi lançado a nova versão do Elementary OS, uma distribuição que tem como meta ser “Uma alternativa rápida e código aberto ao Windows e macOS”, após a instalação, como sempre, é necessário instalar os drivers da placa de vídeo, uma forma bem simples é executar esse comando:
+recentemente foi lançado a nova versão do Elementary OS, uma distribuição que tem como meta ser &amp;ldquo;Uma alternativa rápida e código aberto ao Windows e macOS&amp;rdquo;, após a instalação, como sempre, é necessário instalar os drivers da placa de vídeo, uma forma bem simples é executar esse comando:
 sudo ubuntu-drivers debug &amp;amp;&amp;amp; sudo ubuntu-drivers autoinstall
 bem simples, após a conclusão da instalação, basta reiniciar a maquina e desfrutar. =)</description>
     </item>
@@ -267,7 +267,7 @@ Vamos lá, o primeiro passo é ter instalado o JVM no seu sistema, feito isso, n
       
       <guid>https://cezarcruz.com.br/utilizando-timer-com-javascript-e-ajax-jquery/</guid>
       <description>Olás,
-Hoje uma pequena dica de JavaScript / JQuery: Como fazer um “Ajax get” com timer.
+Hoje uma pequena dica de JavaScript / JQuery: Como fazer um &amp;ldquo;Ajax get&amp;rdquo; com timer.
 Vamos lá, depois de colocarmos as referencias necessárias para o JQuery, devemos utilizar o seguinte código:
 &amp;lt;script&amp;gt; $(document).ready(function() { function getData() { $.ajax({ url: &amp;#34;http://localhost/dados.php&amp;#34;, beforeSend: function() {$(&amp;#34;#conteudo&amp;#34;).empty();$(&amp;#34;#conteudo&amp;#34;).append(&amp;#34;Carregando&amp;#34;);} }).done(function(data) { $(&amp;#34;#conteudo&amp;#34;).empty(); $(&amp;#34;#conteudo&amp;#34;).append(data); }); } getData(); setInterval(getData, 50000); }); &amp;lt;/script&amp;gt; Explicando:
 Dentro do $(document).ready(function() colocamos os scripts que irão fazer a mágica.
@@ -293,7 +293,7 @@ A chamada para os arquivos de CSS e Javascript devem ficar assim:
       <pubDate>Fri, 28 Mar 2014 19:23:34 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/css-como-personalizar-inputs-sem-utilizar-classe/</guid>
-      <description>Olás, vindo aqui hoje só pra manter o blog “ativo” heheh, hoje, uma dica bem simples de css pra personalizar textbox(mania de .net) inputs.
+      <description>Olás, vindo aqui hoje só pra manter o blog &amp;ldquo;ativo&amp;rdquo; heheh, hoje, uma dica bem simples de css pra personalizar textbox(mania de .net) inputs.
 O código é o seguinte:
 input[type=text] { /* regras de estilo aqui. */ } Com o código css acima, não será mais preciso declarar uma classe no e colocar em cada elemento input, lembrando que pode ser utilizado em outros elementos, exemplo:
 input[type=checkbox] { /* estilo aqui */ } Espero que ajude, até mais.</description>
@@ -327,7 +327,7 @@ git add . git commit -m &amp;quot;.</description>
       <pubDate>Thu, 16 Jan 2014 00:40:15 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;, um software para gerar páginas estáticas usado principalmente pra blogs. Esse tutorial é a primeira parte. O &lt;strong&gt;Jekyll&lt;/strong&gt; é um software gerador de páginas estáticas. Usando arquivos de texto com &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax&#34;&gt;Markdown&lt;/a&gt;, ele cria um site completo, estático, pronto pra ser publicado. A vantagem de gerar um blog, ou um site em html estático, é que não precisamos nos preocupar com muitas camadas de segurança, considerando que eliminamos o interpretador PHP, no caso do WordPress, eliminamos o próprio WordPress, que apesar de ser uma ótima plataforma de blog, pode conter bugs, eliminamos também a necessidade de um servidor de banco de dados (falow MySql 😉 ), e claro,  o desempenho, como só é exibido páginas estáticas, são menos requisições e nada pra processar e pra hospedar apenas páginas estáticas é muito mais barato e até “di grátis” hehehehe.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Jekyll&lt;/strong&gt;, um software para gerar páginas estáticas usado principalmente pra blogs. Esse tutorial é a primeira parte. O &lt;strong&gt;Jekyll&lt;/strong&gt; é um software gerador de páginas estáticas. Usando arquivos de texto com &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax&#34;&gt;Markdown&lt;/a&gt;, ele cria um site completo, estático, pronto pra ser publicado. A vantagem de gerar um blog, ou um site em html estático, é que não precisamos nos preocupar com muitas camadas de segurança, considerando que eliminamos o interpretador PHP, no caso do WordPress, eliminamos o próprio WordPress, que apesar de ser uma ótima plataforma de blog, pode conter bugs, eliminamos também a necessidade de um servidor de banco de dados (falow MySql 😉 ), e claro,  o desempenho, como só é exibido páginas estáticas, são menos requisições e nada pra processar e pra hospedar apenas páginas estáticas é muito mais barato e até &amp;ldquo;di grátis&amp;rdquo; hehehehe.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -396,7 +396,7 @@ For Each param As String In Request.QueryString() Response.Write(Request.QuerySt
       <pubDate>Wed, 14 Aug 2013 14:03:58 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/uikit-uma-outra-alternativa-ao-bootstrap/</guid>
-      <description>Como mostrei nesse post uma alternativa ao bootsrap , nesse post vou “mostrar” (entenda como colocar o link para o site) um outro framework que é uma ótima alternativa ao velho bootsrap.
+      <description>Como mostrei nesse post uma alternativa ao bootsrap , nesse post vou &amp;ldquo;mostrar&amp;rdquo; (entenda como colocar o link para o site) um outro framework que é uma ótima alternativa ao velho bootsrap.
 Como falei no outro post, o Bootstrap não é ruim, mas se dermos uma olhada em alguns sites por ai, será muito fácil nos depararmos com o bootstrap, então, para que nosso site ou sistema não seja mais um igual ao boostrap, o UIkit é uma alternativa a se considerar.</description>
     </item>
     
@@ -456,9 +456,9 @@ Pra baixar a versão mais recente, basta entrar no site do projeto: http://found
       
       <guid>https://cezarcruz.com.br/como-parar-um-servico-windows-utilizando-csharp/</guid>
       <description>Saindo um pouco do PHP, vamos para a plataforma .NET, nesse tutorial (guia rápido hehhehe), vou ensinar como parar e subir um serviço Windows utilizando CSharp, vamos lá.
-Primeiro, vamos intanciar o ServiceController passando como o parâmetro o nome do serviço que iremos gerenciar
+Primeiro, vamos instanciar o ServiceController passando como o parâmetro o nome do serviço que iremos gerenciar
 using System.ServiceProcess; ServiceController service = new ServiceController(&amp;#34;xxxservico&amp;#34;); Aqui como paramos o serviço
-if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();  Primeiro, verificamos se o serviço e está rodando Coso ele esteja, paramos ele usando o metodo Stop.</description>
+if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();  Primeiro, verificamos se o serviço e está rodando Coso ele esteja, paramos ele usando o método Stop.</description>
     </item>
     
     <item>
@@ -478,27 +478,27 @@ if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();  Pri
 &lt;p&gt;Após renomear o arquivo, vamos configurar a conexão com a base de dados, procure no arquivos por class DATABASE_CONFIG, ela deve esar assim:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;class DATABASE_CONFIG {
 
-	public $default = array(
-		&amp;#39;datasource&amp;#39; =&amp;gt;; &amp;#39;Database/Mysql&amp;#39;,
-		&amp;#39;persistent&amp;#39; =&amp;gt;; false,
-		&amp;#39;host&amp;#39; =&amp;gt;; &amp;#39;localhost&amp;#39;,
-		&amp;#39;login&amp;#39; =&amp;gt;; &amp;#39;user&amp;#39;,
-		&amp;#39;password&amp;#39; =&amp;gt;; &amp;#39;password&amp;#39;,
-		&amp;#39;database&amp;#39; =&amp;gt;; &amp;#39;database_name&amp;#39;,
-		&amp;#39;prefix&amp;#39; =&amp;gt;; &amp;#39;&amp;#39;,
-		//&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
-	);
+    public $default = array(
+        &amp;#39;datasource&amp;#39; =&amp;gt;; &amp;#39;Database/Mysql&amp;#39;,
+        &amp;#39;persistent&amp;#39; =&amp;gt;; false,
+        &amp;#39;host&amp;#39; =&amp;gt;; &amp;#39;localhost&amp;#39;,
+        &amp;#39;login&amp;#39; =&amp;gt;; &amp;#39;user&amp;#39;,
+        &amp;#39;password&amp;#39; =&amp;gt;; &amp;#39;password&amp;#39;,
+        &amp;#39;database&amp;#39; =&amp;gt;; &amp;#39;database_name&amp;#39;,
+        &amp;#39;prefix&amp;#39; =&amp;gt;; &amp;#39;&amp;#39;,
+        //&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
+    );
 
-	public $test = array(
-		&amp;#39;datasource&amp;#39; =&amp;gt; &amp;#39;Database/Mysql&amp;#39;,
-		&amp;#39;persistent&amp;#39; =&amp;gt; false,
-		&amp;#39;host&amp;#39; =&amp;gt; &amp;#39;localhost&amp;#39;,
-		&amp;#39;login&amp;#39; =&amp;gt; &amp;#39;user&amp;#39;,
-		&amp;#39;password&amp;#39; =&amp;gt; &amp;#39;password&amp;#39;,
-		&amp;#39;database&amp;#39; =&amp;gt; &amp;#39;test_database_name&amp;#39;,
-		&amp;#39;prefix&amp;#39; =&amp;gt; &amp;#39;&amp;#39;,
-		//&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
-	);
+    public $test = array(
+        &amp;#39;datasource&amp;#39; =&amp;gt; &amp;#39;Database/Mysql&amp;#39;,
+        &amp;#39;persistent&amp;#39; =&amp;gt; false,
+        &amp;#39;host&amp;#39; =&amp;gt; &amp;#39;localhost&amp;#39;,
+        &amp;#39;login&amp;#39; =&amp;gt; &amp;#39;user&amp;#39;,
+        &amp;#39;password&amp;#39; =&amp;gt; &amp;#39;password&amp;#39;,
+        &amp;#39;database&amp;#39; =&amp;gt; &amp;#39;test_database_name&amp;#39;,
+        &amp;#39;prefix&amp;#39; =&amp;gt; &amp;#39;&amp;#39;,
+        //&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
+    );
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
@@ -509,10 +509,10 @@ if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();  Pri
       <pubDate>Tue, 18 Jun 2013 12:33:16 +0000</pubDate>
       
       <guid>https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-eclipse-parte1/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457626/cake-logo_ns8tdv.png&#34;&gt;&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;Olá, nesse tutorial gostaria de ensinar de uma forma bem básica, como rodar o Framework CakePHP no Windows e escrever algum código usando o Eclipse.&lt;/p&gt;
 &lt;p&gt;Bora lá:&lt;/p&gt;
-&lt;p&gt;O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos beneficios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada &lt;!-- raw HTML omitted --&gt;aqui&lt;!-- raw HTML omitted --&gt; e &lt;!-- raw HTML omitted --&gt;aqui&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+&lt;p&gt;O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos benefícios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada &lt;!-- raw HTML omitted --&gt;aqui&lt;!-- raw HTML omitted --&gt; e &lt;!-- raw HTML omitted --&gt;aqui&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -522,10 +522,10 @@ if (service.Status.Equals(ServiceControllerStatus.Running)) service.Stop();  Pri
       
       <guid>https://cezarcruz.com.br/saber-qual-e-o-navegador-usando-php/</guid>
       <description>Dica rápida para descobrir qual navegador está acessando sua aplicação php:
-A variável $navegador guarda a informação de $_SERVER[‘HTTP_USER_AGENT’], que é ecoada na linha abaixo.
+&amp;lt;?php $navegador = $\_SERVER[&amp;#39;HTTP\_USER_AGENT&amp;#39;]; echo $navegador; ?&amp;gt; A variável $navegador guarda a informação de $_SERVER[&amp;lsquo;HTTP_USER_AGENT&amp;rsquo;], que é ecoada na linha abaixo.
 O array $_SERVER[] contem algumas informações uteis, todas descritas aqui: http://php.net/manual/pt_BR/reserved.variables.server.phpAs saídas padrão são:
 Firefox: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0
-Internet Explorer: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.</description>
+Internet Explorer: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .</description>
     </item>
     
     <item>
@@ -548,17 +548,6 @@ Então, seja bem vindo e aproveite a viagem.</description>
       <description>&lt;p&gt;Olás,&lt;/p&gt;
 &lt;p&gt;aqui não é bem um tutorial, está mais para uma dica:&lt;/p&gt;
 &lt;p&gt;Se você quer deixar sua div transparente, você pode utilizar isso, por exemplo, pra deixar a imagem de background visível, deve ser inserido no seu css a seguinte regra:&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hostinger Brasil, hospedagem gratuita</title>
-      <link>https://cezarcruz.com.br/hostinger-brasil-hospedagem-gratuita/</link>
-      <pubDate>Thu, 13 Jun 2013 03:19:23 +0000</pubDate>
-      
-      <guid>https://cezarcruz.com.br/hostinger-brasil-hospedagem-gratuita/</guid>
-      <description>Olá, nesse post vou falar um pouco da Hostinger Brasil, um serviço de hospedagem PHP e MySQL que é gratuito e oferece bons recurso.
-Conheci a Hostinger Brasil por acaso, queria hospedar um site em PHP, mais pra conhecer melhor a linguagem, e me deparei com a Hostinger Brasil.A Hostinger Brasil oferece 3 tipos de planos de hospedagem: Gratuito, Premium e Busines.
-O plano gratuito já resolve muitos problemas de quem está iniciando ou querendo se familiarizar com hospedagem de sites.</description>
     </item>
     
     <item>

@@ -101,13 +101,13 @@ if (!doNotTrack) {
 <li><strong>App_Start</strong>: Nesse diretório devemos ficar atento com o arquivo RouteConfig.cs, que iremos utilizar em seguida;</li>
 <li><strong>Controllers:</strong> Onde fica os controles da nossa aplicação (MVC básico aqui =D);</li>
 <li><strong>Model</strong>: Onde fica os modelos/dados da aplicação (MVC básico aqui também);</li>
-<li><strong>Views</strong>: Onde fica os cshtml, arquivos que serão a “cara” da nossa aplicação;</li>
+<li><strong>Views</strong>: Onde fica os cshtml, arquivos que serão a &ldquo;cara&rdquo; da nossa aplicação;</li>
 <li><strong>Web.config</strong>: Onde normalmente fica as configurações de uma aplicação .NET;</li>
 </ul>
 <p>Com a estrutura criada, vamos escrever códigos. Primeiro, vamos criar um Controller chamado site, isso é bem simples, clicar com o botão direito do mouse na pasta Controllers e em seguida Add -&gt; Controller. Por padrão devemos criar um controle assim:</p>
 <p><strong>[NomeDoController]Controler</strong></p>
-<p>No nosso exemplo ficará SiteController, na tela AddController coloque o Controller name SiteController e no Scaffolding options selecione Empty MVC controller, clique em add:<!-- raw HTML omitted --></p>
-<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457581/tela_add_controller_mrsuxs.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Tela Add Controller<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>No nosso exemplo ficará SiteController, na tela AddController coloque o Controller name SiteController e no Scaffolding options selecione Empty MVC controller, clique em add:</p>
+<p><!-- raw HTML omitted --></p>
 <p>Nossa classe SiteController irá estar assim:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">using</span> System;
 <span style="color:#66d9ef">using</span> System.Collections.Generic;
@@ -130,8 +130,8 @@ if (!doNotTrack) {
     }
 }
 </code></pre></div><p>Note que nossa classe herda da classe Controller (OO aqui =P), e que já é criado automaticamente um método ActionResult chamdo Index que retorna uma View(). Essa classe quer dizer que, quando for feita a requisição http://endereco/Site/ irá retornar a View /Site/Index.</p>
-<p>Agora vamos criar a view /Site/Index, pra fazermos isso, devemos criar uma pasta chamada Site(com S maiúsculo) dentro da pasta Views. Depois de criado a pasta Site vamos criar a View Index, botão direito do mouse em cima da pasta Site, Add -&gt; View. Na tela Add View, colocamos o View name de Index, View engine deixamos Razor mesmo, de resto deixamos como está, clicar em Add.<!-- raw HTML omitted --></p>
-<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457580/tela_add_view_gusagk.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Tela Add view<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>Agora vamos criar a view /Site/Index, pra fazermos isso, devemos criar uma pasta chamada Site(com S maiúsculo) dentro da pasta Views. Depois de criado a pasta Site vamos criar a View Index, botão direito do mouse em cima da pasta Site, Add -&gt; View. Na tela Add View, colocamos o View name de Index, View engine deixamos Razor mesmo, de resto deixamos como está, clicar em Add.</p>
+<p><!-- raw HTML omitted --></p>
 <p>Agora foi criado a view Index.cshtml dentro da pasta Site, que ficou assim:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">@{
     ViewBag.Title = &#34;Index&#34;;
@@ -165,8 +165,8 @@ if (!doNotTrack) {
             defaults: <span style="color:#66d9ef">new</span> { controller = <span style="color:#e6db74">&#34;Site&#34;</span>, action = <span style="color:#e6db74">&#34;Index&#34;</span>, id = UrlParameter.Optional }
         );
     }
-</code></pre></div><p>Essa classe define as rotas do MVC, e o parâmetro defaults é o controller que deve ser chamado quando não é passado nenhum link na url. No nosso caso, usaremos o controller Site, e o action Index, para que a primeira pagina a ser processada será o Index.cshmtl, o resultado está a baixo:<!-- raw HTML omitted --></p>
-<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457578/index_cshtml_t8wqep.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Página index.cshtml<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+</code></pre></div><p>Essa classe define as rotas do MVC, e o parâmetro defaults é o controller que deve ser chamado quando não é passado nenhum link na url. No nosso caso, usaremos o controller Site, e o action Index, para que a primeira pagina a ser processada será o Index.cshmtl, o resultado está a baixo:</p>
+<p><!-- raw HTML omitted --></p>
 <p>O código html gerado fica assim:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -198,8 +198,8 @@ if (!doNotTrack) {
 <p> Pra utilizarmos Csharp no arquivo Index.cshtml devemos sempre começar o código com @ (arroba).</p>
 <p>Sempre que fizer atualização no Controller o no Model é preciso recompilar o projeto, mas quando é feito atualização somente na View, não precisa compilar o projeto novamente.</p>
 </blockquote>
-<p>Executamos novamente o nosso projeto, e teremos o resultado abaixo:<!-- raw HTML omitted --></p>
-<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457577/index_cshtml_final1_xgty2c.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Index.cshtml com ViewBag<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p>Executamos novamente o nosso projeto, e teremos o resultado abaixo:</p>
+<p><!-- raw HTML omitted --></p>
 <p>E o código gerado:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span>&gt;
@@ -207,7 +207,7 @@ if (!doNotTrack) {
         &lt;<span style="color:#f92672">title</span>&gt;Home&lt;/<span style="color:#f92672">title</span>&gt;
     &lt;/<span style="color:#f92672">head</span>&gt;
     &lt;<span style="color:#f92672">body</span>&gt;
-        &lt;<span style="color:#f92672">h1</span>&gt;Ol&amp;#225; MVC&lt;/<span style="color:#f92672">h1</span>&gt;
+        &lt;<span style="color:#f92672">h1</span>&gt;Olá MVC&lt;/<span style="color:#f92672">h1</span>&gt;
     &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div><p>É isso ai, até mais!</p>
@@ -310,9 +310,6 @@ if (!doNotTrack) {
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -384,10 +381,10 @@ if (!doNotTrack) {
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

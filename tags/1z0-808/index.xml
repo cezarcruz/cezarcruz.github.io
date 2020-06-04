@@ -26,7 +26,7 @@
       <pubDate>Sat, 10 Mar 2018 10:05:51 -0300</pubDate>
       
       <guid>https://cezarcruz.com.br/certificacao-java-compilacao-e-execucao/</guid>
-      <description>Olá, neste primeiro post iremos ver como escrever o nosso primeiro programa Java, como executar e como passar “parametros” para ele.
+      <description>Olá, neste primeiro post iremos ver como escrever o nosso primeiro programa Java, como executar e como passar “parâmetros” para ele.
 Com o JDK é necessário usar um console, um prompt de comandos, para efetuar a compilação ou execução de programas Java, além de compilar e executar, são disponibilizadas outras ferramentas no JDK. Nosso foco será apenas nos comando javac e java.
 Para criarmos nosso primeiro programa, será necessário criar um arquivo texto com o nome HelloWorld.</description>
     </item>

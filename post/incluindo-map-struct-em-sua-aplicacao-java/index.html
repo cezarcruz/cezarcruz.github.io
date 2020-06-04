@@ -82,7 +82,7 @@ if (!doNotTrack) {
 		</header><div class="content post__content clearfix">
 			<p>Olá, neste post veremos como incluindo o MapStruct em uma aplicação Java.</p>
 <p>Qual é o problema?</p>
-<p>Nas aplicações atuais estamos acostumados a criar &ldquo;camadas&rdquo;: controllers, services, repositories, DAO, etc. Normalmente, separamos nossa request de dados do que é salvo no banco, com isso temos o famoso DTO e nossas Entidades (JPA). O DTO fica no controller e as entidades são gerenciadas pelo repositório ou DAO, para que isso funcione, temos que converter o DTO antes de salvar no nosso banco de dados, para isso existem algumas formas de fazer, mas todas são massantes.</p>
+<p>Nas aplicações atuais estamos acostumados a criar &ldquo;camadas&rdquo;: <em>controllers, services, repositories, DAO</em>, etc. Normalmente, separamos nossa request de dados do que é salvo no banco, com isso temos o famoso DTO e nossas Entidades (JPA). O DTO fica no controller e as entidades são gerenciadas pelo repositório ou DAO, para que isso funcione, temos que converter o DTO antes de salvar no nosso banco de dados, para isso existem algumas formas de fazer, mas todas são massantes.</p>
 <p>O que é o MapStruct e como ele pode resolver este problema?</p>
 <p>O MapStruct, é suas palavras, é um gerador de código que converte &ldquo;Java Beans&rdquo; baseado em convenção sob configuração.</p>
 <p><a href="https://mapstruct.org/">https://mapstruct.org/</a></p>
@@ -144,7 +144,7 @@ Nossa aplicação será composta de 4 POJOs, onde será feita a conversão de um
 <p>Agora que temos nossa aplicação configurada e nossos POJOs, podemos iniciar a implementação.
 Ela pode ser feita de duas formas: Implementando em uma Interface ou uma classe Abstrata.</p>
 <blockquote>
-<p>Normalmente devemos utilizar Interfaces e, caso precise de algum método extra, criamos um método &ldquo;default&rdquo;, em casos mais especifitos (injetar um bean do Spring, por exemplo), podemos utilizar classes abstratas.</p>
+<p>Normalmente devemos utilizar Interfaces e, caso precise de algum método extra, criamos um método &ldquo;default&rdquo;, em casos mais específicos (injetar um bean do Spring, por exemplo), podemos utilizar classes abstratas.</p>
 </blockquote>
 <p>Iremos começar pela classe Endereço:</p>
 <p>EnderecoMapper.java</p>
@@ -160,9 +160,8 @@ Ela pode ser feita de duas formas: Implementando em uma Interface ou uma classe 
  List<span style="color:#f92672">&lt;</span>EnderecoResponse<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">deRequest</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> List<span style="color:#f92672">&lt;</span>EnderecoRequest<span style="color:#f92672">&gt;</span> enderecoRequests<span style="color:#f92672">);</span>
   List<span style="color:#f92672">&lt;</span>EnderecoRequest<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">deResponse</span><span style="color:#f92672">(</span><span style="color:#66d9ef">final</span> List<span style="color:#f92672">&lt;</span>EnderecoResponse<span style="color:#f92672">&gt;</span> enderecoResponses<span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
-
 </code></pre></div><p><strong>@Mapper</strong> é utilizado para dizermos que esta interface é um mapper, a opção &ldquo;componentModel&rdquo; foi utilizada para dizer ao MapStruct que deve ser criar um &ldquo;Bean&rdquo; do spring para que possamos utilizar a Injeção de Dependencia do Spring. A configuração &ldquo;componentModel&rdquo; é opcional</p>
-<p><strong>@Mapping</strong> é utilizado para deixar explícito a conversão. Quando o nome das propriedades estão iguais o próprio MapStruct infere, mas quando está diferente, precisa ser especificado a origem e o destino, existem outra possibilidades, mas vamos explorar apenas o básico. Repare que o campo número são de tipos diferentes, o proprio MapStruct consegue fazer as conversões, é bem útil e ainda é possível especificar a conversão manualmente.</p>
+<p><strong>@Mapping</strong> é utilizado para deixar explícito a conversão. Quando o nome das propriedades estão iguais o próprio MapStruct infere, mas quando está diferente, precisa ser especificado a origem e o destino, existem outra possibilidades, mas vamos explorar apenas o básico. Repare que o campo número são de tipos diferentes, o próprio MapStruct consegue fazer as conversões, é bem útil e ainda é possível especificar a conversão manualmente.</p>
 <p><strong>@InheritInverseConfiguration</strong> faz a configuração inversa da conversão, deve ser utilizado quando existe um mapper com algum tipo de configuração específica.</p>
 <p>Os métodos de list sabem utilizar a configuração criada nos métodos anteriores não sendo necessário nenhuma configuração extra.</p>
 <p>Veja como fica a classe gerada a partir desta configuração:</p>
@@ -245,7 +244,6 @@ Ela pode ser feita de duas formas: Implementando em uma Interface ou uma classe 
        <span style="color:#66d9ef">return</span> list<span style="color:#f92672">;</span>
    <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-
 </code></pre></div><blockquote>
 <p>Observe que ele sabe lidar com valores nulos e incluiu anotações do  Spring</p>
 </blockquote>
@@ -284,7 +282,6 @@ Ela pode ser feita de duas formas: Implementando em uma Interface ou uma classe 
        <span style="color:#66d9ef">return</span> pessoaResponse<span style="color:#f92672">;</span>
    <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-
 </code></pre></div><p>E com nossa conversão pronta basta utilizarmos:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Service</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConversorService</span> <span style="color:#f92672">{</span>
@@ -389,9 +386,6 @@ Ela pode ser feita de duas formas: Implementando em uma Interface ou uma classe 
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -463,10 +457,10 @@ Ela pode ser feita de duas formas: Implementando em uma Interface ou uma classe 
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

@@ -84,7 +84,7 @@ if (!doNotTrack) {
 <p>Basta entendermos que o campo <strong>manytomany</strong> vem como um list, então a navegação fica simples, veja:</p>
 <pre><code class="language-jsp" data-lang="jsp">{% for item in list_pedidos_abertos %}
    {% for serv in item.servicos.all %}
-	   &lt;p&gt;{{ serv.nome }}&lt;/p&gt;
+       &lt;p&gt;{{ serv.nome }}&lt;/p&gt;
    {% endfor %}
 {% endfor %}
 </code></pre><p>Onde <em>list_pedidos_abertos</em> é uma lista de pedidos (pode ser qualquer coisa), e nessa lista de pedidos temos <em>item.servicos</em>, que é uma lista com os serviços associados a esse pedido, então, para implementar um laço, basta utilizar o <em>item.servicos.all</em> e estará na forma que estamos acostumados a fazer.</p>
@@ -186,9 +186,6 @@ if (!doNotTrack) {
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -260,10 +257,10 @@ if (!doNotTrack) {
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

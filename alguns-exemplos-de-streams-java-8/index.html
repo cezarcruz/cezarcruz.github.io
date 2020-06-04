@@ -102,7 +102,7 @@ stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</s
 </code></pre></div><p>Ou ainda:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
 </code></pre></div><p>Lembre sempre da tipagem da lista e do seu método.</p>
-<p>Outra acao que pode ser feita utilizando a api de Streams e&rsquo; filtrar uma lista utilizando o método <em>filter</em>, veja o exemplo abaixo:</p>
+<p>Outra ação que pode ser feita utilizando a api de Streams e&rsquo; filtrar uma lista utilizando o método <em>filter</em>, veja o exemplo abaixo:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">stringList<span style="color:#f92672">.</span><span style="color:#a6e22e">stream</span><span style="color:#f92672">().</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">((</span>s <span style="color:#f92672">-&gt;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Brasil&#34;</span><span style="color:#f92672">))).</span><span style="color:#a6e22e">forEach</span><span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">::</span>println<span style="color:#f92672">);</span>
 </code></pre></div><p>O input do método <em>filter</em> e&rsquo; o mesmo do <em>forEach</em>: 1 item por vez da lista. No entanto, o método que ele recebe deve retornar um boolean. Basicamente ele itera a lista item por item e executa o método em cada um, sempre que o resultado for true, ele guarda em uma lista temporária, ao final da iteração ele retorna esses itens em uma nova lista (no nosso exemplo, sera impresso todos os itens que forem igual &lsquo;Brasil&rsquo;).
 Repare que o retorno do filter e&rsquo; uma Stream de itens, então, é possível iterar essa lista com um <em>forEach</em>, igual ao primeiro exemplo.</p>
@@ -207,9 +207,6 @@ Repare que o retorno do filter e&rsquo; uma Stream de itens, então, é possíve
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -281,10 +278,10 @@ Repare que o retorno do filter e&rsquo; uma Stream de itens, então, é possíve
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

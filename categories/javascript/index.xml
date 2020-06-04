@@ -65,7 +65,7 @@
       
       <guid>https://cezarcruz.com.br/utilizando-timer-com-javascript-e-ajax-jquery/</guid>
       <description>Olás,
-Hoje uma pequena dica de JavaScript / JQuery: Como fazer um “Ajax get” com timer.
+Hoje uma pequena dica de JavaScript / JQuery: Como fazer um &amp;ldquo;Ajax get&amp;rdquo; com timer.
 Vamos lá, depois de colocarmos as referencias necessárias para o JQuery, devemos utilizar o seguinte código:
 &amp;lt;script&amp;gt; $(document).ready(function() { function getData() { $.ajax({ url: &amp;#34;http://localhost/dados.php&amp;#34;, beforeSend: function() {$(&amp;#34;#conteudo&amp;#34;).empty();$(&amp;#34;#conteudo&amp;#34;).append(&amp;#34;Carregando&amp;#34;);} }).done(function(data) { $(&amp;#34;#conteudo&amp;#34;).empty(); $(&amp;#34;#conteudo&amp;#34;).append(data); }); } getData(); setInterval(getData, 50000); }); &amp;lt;/script&amp;gt; Explicando:
 Dentro do $(document).ready(function() colocamos os scripts que irão fazer a mágica.

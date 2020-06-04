@@ -60,27 +60,27 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
 &lt;p&gt;Após renomear o arquivo, vamos configurar a conexão com a base de dados, procure no arquivos por class DATABASE_CONFIG, ela deve esar assim:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;class DATABASE_CONFIG {
 
-	public $default = array(
-		&amp;#39;datasource&amp;#39; =&amp;gt;; &amp;#39;Database/Mysql&amp;#39;,
-		&amp;#39;persistent&amp;#39; =&amp;gt;; false,
-		&amp;#39;host&amp;#39; =&amp;gt;; &amp;#39;localhost&amp;#39;,
-		&amp;#39;login&amp;#39; =&amp;gt;; &amp;#39;user&amp;#39;,
-		&amp;#39;password&amp;#39; =&amp;gt;; &amp;#39;password&amp;#39;,
-		&amp;#39;database&amp;#39; =&amp;gt;; &amp;#39;database_name&amp;#39;,
-		&amp;#39;prefix&amp;#39; =&amp;gt;; &amp;#39;&amp;#39;,
-		//&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
-	);
+    public $default = array(
+        &amp;#39;datasource&amp;#39; =&amp;gt;; &amp;#39;Database/Mysql&amp;#39;,
+        &amp;#39;persistent&amp;#39; =&amp;gt;; false,
+        &amp;#39;host&amp;#39; =&amp;gt;; &amp;#39;localhost&amp;#39;,
+        &amp;#39;login&amp;#39; =&amp;gt;; &amp;#39;user&amp;#39;,
+        &amp;#39;password&amp;#39; =&amp;gt;; &amp;#39;password&amp;#39;,
+        &amp;#39;database&amp;#39; =&amp;gt;; &amp;#39;database_name&amp;#39;,
+        &amp;#39;prefix&amp;#39; =&amp;gt;; &amp;#39;&amp;#39;,
+        //&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
+    );
 
-	public $test = array(
-		&amp;#39;datasource&amp;#39; =&amp;gt; &amp;#39;Database/Mysql&amp;#39;,
-		&amp;#39;persistent&amp;#39; =&amp;gt; false,
-		&amp;#39;host&amp;#39; =&amp;gt; &amp;#39;localhost&amp;#39;,
-		&amp;#39;login&amp;#39; =&amp;gt; &amp;#39;user&amp;#39;,
-		&amp;#39;password&amp;#39; =&amp;gt; &amp;#39;password&amp;#39;,
-		&amp;#39;database&amp;#39; =&amp;gt; &amp;#39;test_database_name&amp;#39;,
-		&amp;#39;prefix&amp;#39; =&amp;gt; &amp;#39;&amp;#39;,
-		//&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
-	);
+    public $test = array(
+        &amp;#39;datasource&amp;#39; =&amp;gt; &amp;#39;Database/Mysql&amp;#39;,
+        &amp;#39;persistent&amp;#39; =&amp;gt; false,
+        &amp;#39;host&amp;#39; =&amp;gt; &amp;#39;localhost&amp;#39;,
+        &amp;#39;login&amp;#39; =&amp;gt; &amp;#39;user&amp;#39;,
+        &amp;#39;password&amp;#39; =&amp;gt; &amp;#39;password&amp;#39;,
+        &amp;#39;database&amp;#39; =&amp;gt; &amp;#39;test_database_name&amp;#39;,
+        &amp;#39;prefix&amp;#39; =&amp;gt; &amp;#39;&amp;#39;,
+        //&amp;#39;encoding&amp;#39; =&amp;gt; &amp;#39;utf8&amp;#39;,
+    );
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
@@ -92,10 +92,10 @@ location /cake { rewrite ^/cake$ /cake/ permanent; rewrite ^/cake/(.+)$ /$1 brea
       
       <guid>https://cezarcruz.com.br/saber-qual-e-o-navegador-usando-php/</guid>
       <description>Dica rápida para descobrir qual navegador está acessando sua aplicação php:
-A variável $navegador guarda a informação de $_SERVER[‘HTTP_USER_AGENT’], que é ecoada na linha abaixo.
+&amp;lt;?php $navegador = $\_SERVER[&amp;#39;HTTP\_USER_AGENT&amp;#39;]; echo $navegador; ?&amp;gt; A variável $navegador guarda a informação de $_SERVER[&amp;lsquo;HTTP_USER_AGENT&amp;rsquo;], que é ecoada na linha abaixo.
 O array $_SERVER[] contem algumas informações uteis, todas descritas aqui: http://php.net/manual/pt_BR/reserved.variables.server.phpAs saídas padrão são:
 Firefox: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0
-Internet Explorer: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.</description>
+Internet Explorer: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .</description>
     </item>
     
   </channel>

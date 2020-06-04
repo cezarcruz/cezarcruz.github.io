@@ -87,7 +87,7 @@ if (!doNotTrack) {
 <p>File -&gt; New -&gt; Maven Project<!-- raw HTML omitted --></p>
 <p><a href="https://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457566/maven-new-project_chg3gr.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Novo projeto Maven<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p>Nessa tele devemos selecionar a opção <strong>Create a simple project(skip archetype selection),</strong> conforme a figura, em seguida clicar em next.<!-- raw HTML omitted --></p>
-<p><a href="https://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457564/maven-new-project-description_ui33fj.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Novo projeto Maven – Descrição<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<p><a href="https://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457564/maven-new-project-description_ui33fj.png"><!-- raw HTML omitted --></a><!-- raw HTML omitted -->Novo projeto Maven - Descrição<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <p>Nessa tela temos as opções para identificar nosso projeto, devemos preencher as seguintes opções:</p>
 <p>*` (um identificador da empresa/grupo ao qual o projeto pertence. Geralmente o nome do site da empresa/grupo ao contrário) : <strong>br.com.cezarcruz</strong></p>
 <ul>
@@ -117,7 +117,6 @@ if (!doNotTrack) {
 </li>
 <li>pom.xml: pra um projeto <strong>maven</strong>, esse é o arquivo onde ficam todas as configurações pertinente a geração de build, testes, jars de terceiros, etc;</li>
 </ul>
-<p> </p>
 <h2 id="ajustando-configurações">Ajustando configurações</h2>
 <p>Depois que nosso projeto foi criado, precisamos fazer alguns ajustes para que ele rode adequadamente no <strong>Eclipse</strong>. Vamos começar pelo <strong>pom.xml,</strong> a versão gerada pelo Eclipse é a seguinte:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0&#34;</span> <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span> <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
@@ -129,26 +128,26 @@ if (!doNotTrack) {
 <span style="color:#f92672">&lt;/project&gt;</span>
 </code></pre></div><p>Nele devemos adicionar uma configuração para que o <strong>maven/eclipse</strong> saiba qual a versão do <strong>java</strong> ele deve utilizar no projeto:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0&#34;</span> <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
-	<span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
-	<span style="color:#f92672">&lt;modelVersion&gt;</span>4.0.0<span style="color:#f92672">&lt;/modelVersion&gt;</span>
-	<span style="color:#f92672">&lt;groupId&gt;</span>br.com.cezarcruz<span style="color:#f92672">&lt;/groupId&gt;</span>
-	<span style="color:#f92672">&lt;artifactId&gt;</span>website<span style="color:#f92672">&lt;/artifactId&gt;</span>
-	<span style="color:#f92672">&lt;version&gt;</span>0.0.1-SNAPSHOT<span style="color:#f92672">&lt;/version&gt;</span>
-	<span style="color:#f92672">&lt;packaging&gt;</span>war<span style="color:#f92672">&lt;/packaging&gt;</span>
-	<span style="color:#f92672">&lt;build&gt;</span>
-		<span style="color:#f92672">&lt;finalName&gt;</span>website<span style="color:#f92672">&lt;/finalName&gt;</span>
-		<span style="color:#f92672">&lt;plugins&gt;</span>
-			<span style="color:#f92672">&lt;plugin&gt;</span>
-				<span style="color:#f92672">&lt;groupId&gt;</span>org.apache.maven.plugins<span style="color:#f92672">&lt;/groupId&gt;</span>
-				<span style="color:#f92672">&lt;artifactId&gt;</span>maven-compiler-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
-				<span style="color:#f92672">&lt;version&gt;</span>3.1<span style="color:#f92672">&lt;/version&gt;</span>
-				<span style="color:#f92672">&lt;configuration&gt;</span>
-					<span style="color:#f92672">&lt;source&gt;</span>1.8<span style="color:#f92672">&lt;/source&gt;</span>
-					<span style="color:#f92672">&lt;target&gt;</span>1.8<span style="color:#f92672">&lt;/target&gt;</span>
-				<span style="color:#f92672">&lt;/configuration&gt;</span>
-			<span style="color:#f92672">&lt;/plugin&gt;</span>
-		<span style="color:#f92672">&lt;/plugins&gt;</span>
-	<span style="color:#f92672">&lt;/build&gt;</span>
+    <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;modelVersion&gt;</span>4.0.0<span style="color:#f92672">&lt;/modelVersion&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>br.com.cezarcruz<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>website<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>0.0.1-SNAPSHOT<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;packaging&gt;</span>war<span style="color:#f92672">&lt;/packaging&gt;</span>
+    <span style="color:#f92672">&lt;build&gt;</span>
+        <span style="color:#f92672">&lt;finalName&gt;</span>website<span style="color:#f92672">&lt;/finalName&gt;</span>
+        <span style="color:#f92672">&lt;plugins&gt;</span>
+            <span style="color:#f92672">&lt;plugin&gt;</span>
+                <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.maven.plugins<span style="color:#f92672">&lt;/groupId&gt;</span>
+                <span style="color:#f92672">&lt;artifactId&gt;</span>maven-compiler-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+                <span style="color:#f92672">&lt;version&gt;</span>3.1<span style="color:#f92672">&lt;/version&gt;</span>
+                <span style="color:#f92672">&lt;configuration&gt;</span>
+                    <span style="color:#f92672">&lt;source&gt;</span>1.8<span style="color:#f92672">&lt;/source&gt;</span>
+                    <span style="color:#f92672">&lt;target&gt;</span>1.8<span style="color:#f92672">&lt;/target&gt;</span>
+                <span style="color:#f92672">&lt;/configuration&gt;</span>
+            <span style="color:#f92672">&lt;/plugin&gt;</span>
+        <span style="color:#f92672">&lt;/plugins&gt;</span>
+    <span style="color:#f92672">&lt;/build&gt;</span>
 <span style="color:#f92672">&lt;/project&gt;</span>
 </code></pre></div><p>Explicando:</p>
 <p>Dentro do <strong>build</strong>, definimos o <strong>finalName</strong> (o nome final do pacote, ex: website.war), em seguida os <strong>plugins</strong>, aqui destacamos apenas as marcações <strong>source</strong> dentro de <strong>configuration</strong>, é nela que definimos a versão do java utilizado no projeto, nesse caso a versão 1.8.</p>
@@ -166,8 +165,8 @@ if (!doNotTrack) {
 <p>Feito isso, clique em finish, será criando um arquivo xml vazio, apenas com o cabeçalho, devemos apagar e colocar o conteúdo abaixo:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 <span style="color:#f92672">&lt;web-app</span> <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;3.1&#34;</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee&#34;</span>
-	<span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
-	<span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&#34;</span> <span style="color:#f92672">/&gt;</span>
+    <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+    <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&#34;</span> <span style="color:#f92672">/&gt;</span>
 </code></pre></div><blockquote>
 <p>Os arquivos que ficam dentro de WEB-INF não é possível acessar pela rede.</p>
 </blockquote>
@@ -181,7 +180,7 @@ if (!doNotTrack) {
 &lt;<span style="color:#f92672">title</span>&gt;Insert title here&lt;/<span style="color:#f92672">title</span>&gt;
 &lt;/<span style="color:#f92672">head</span>&gt;
 &lt;<span style="color:#f92672">body</span>&gt;
-	&lt;<span style="color:#f92672">h1</span>&gt;Olá mundo&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;<span style="color:#f92672">h1</span>&gt;Olá mundo&lt;/<span style="color:#f92672">h1</span>&gt;
 &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div><p>Feito isso, basta adicionarmos o projeto dentro do <strong>tomcat</strong> e iniciar o mesmo. Após a inicialização do <strong>tomcat</strong>, acesse nossa pagina utilizando o link http://localhost:8080/website/ e nossa linda página será carregada:<!-- raw HTML omitted --></p>
@@ -290,9 +289,6 @@ if (!doNotTrack) {
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -364,10 +360,10 @@ if (!doNotTrack) {
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

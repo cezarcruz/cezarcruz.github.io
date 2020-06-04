@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascrip on Blog do Cezar</title>
+    <link>https://cezarcruz.com.br/tags/javascrip/</link>
+    <description>Recent content in Javascrip on Blog do Cezar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Wed, 22 Jun 2016 01:55:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://cezarcruz.com.br/tags/javascrip/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Utilizando component no Angular 1.5</title>
+      <link>https://cezarcruz.com.br/usando-component-no-angular-1-5/</link>
+      <pubDate>Wed, 22 Jun 2016 01:55:53 +0000</pubDate>
+      
+      <guid>https://cezarcruz.com.br/usando-component-no-angular-1-5/</guid>
+      <description>&lt;p&gt;Olá,&lt;/p&gt;
+&lt;p&gt;Hoje vamos ver uma forma de usar uma nova funcionalidade do Angular 1, o component.&lt;/p&gt;
+&lt;p&gt;O component é um tipo especial de diretiva, que permite criar, de uma forma simplificada, web components e pavimentar o caminho para uma futura migração para o Angular 2. Para mim a principal vantagem é poder criar peças de códigos reaproveitáveis de uma maneira bem mais simples que criar uma diretiva e suas configurações complexas (manipulação de DOM ainda deve ser feito por diretivas).&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

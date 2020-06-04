@@ -8,7 +8,7 @@
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 		<meta property="og:title" content="Como utilizar o Jekyll pra criar um blog com páginas estáticas. Jekyll parte 1" />
-<meta property="og:description" content="Jekyll, um software para gerar páginas estáticas usado principalmente pra blogs. Esse tutorial é a primeira parte. O Jekyll é um software gerador de páginas estáticas. Usando arquivos de texto com Markdown, ele cria um site completo, estático, pronto pra ser publicado. A vantagem de gerar um blog, ou um site em html estático, é que não precisamos nos preocupar com muitas camadas de segurança, considerando que eliminamos o interpretador PHP, no caso do WordPress, eliminamos o próprio WordPress, que apesar de ser uma ótima plataforma de blog, pode conter bugs, eliminamos também a necessidade de um servidor de banco de dados (falow MySql 😉 ), e claro,  o desempenho, como só é exibido páginas estáticas, são menos requisições e nada pra processar e pra hospedar apenas páginas estáticas é muito mais barato e até “di grátis” hehehehe." />
+<meta property="og:description" content="Jekyll, um software para gerar páginas estáticas usado principalmente pra blogs. Esse tutorial é a primeira parte. O Jekyll é um software gerador de páginas estáticas. Usando arquivos de texto com Markdown, ele cria um site completo, estático, pronto pra ser publicado. A vantagem de gerar um blog, ou um site em html estático, é que não precisamos nos preocupar com muitas camadas de segurança, considerando que eliminamos o interpretador PHP, no caso do WordPress, eliminamos o próprio WordPress, que apesar de ser uma ótima plataforma de blog, pode conter bugs, eliminamos também a necessidade de um servidor de banco de dados (falow MySql 😉 ), e claro,  o desempenho, como só é exibido páginas estáticas, são menos requisições e nada pra processar e pra hospedar apenas páginas estáticas é muito mais barato e até &ldquo;di grátis&rdquo; hehehehe." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cezarcruz.com.br/como-utilizar-o-jekyll-pra-criar-um-blog-com-paginas-estaticas-jekyll-parte-1/" />
 <meta property="og:image" content="https://cezarcruz.com.br/img/header_og.png"/>
@@ -80,7 +80,7 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p><strong>Jekyll</strong>, um software para gerar páginas estáticas usado principalmente pra blogs. Esse tutorial é a primeira parte. O <strong>Jekyll</strong> é um software gerador de páginas estáticas. Usando arquivos de texto com <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>, ele cria um site completo, estático, pronto pra ser publicado. A vantagem de gerar um blog, ou um site em html estático, é que não precisamos nos preocupar com muitas camadas de segurança, considerando que eliminamos o interpretador PHP, no caso do WordPress, eliminamos o próprio WordPress, que apesar de ser uma ótima plataforma de blog, pode conter bugs, eliminamos também a necessidade de um servidor de banco de dados (falow MySql 😉 ), e claro,  o desempenho, como só é exibido páginas estáticas, são menos requisições e nada pra processar e pra hospedar apenas páginas estáticas é muito mais barato e até “di grátis” hehehehe.</p>
+			<p><strong>Jekyll</strong>, um software para gerar páginas estáticas usado principalmente pra blogs. Esse tutorial é a primeira parte. O <strong>Jekyll</strong> é um software gerador de páginas estáticas. Usando arquivos de texto com <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>, ele cria um site completo, estático, pronto pra ser publicado. A vantagem de gerar um blog, ou um site em html estático, é que não precisamos nos preocupar com muitas camadas de segurança, considerando que eliminamos o interpretador PHP, no caso do WordPress, eliminamos o próprio WordPress, que apesar de ser uma ótima plataforma de blog, pode conter bugs, eliminamos também a necessidade de um servidor de banco de dados (falow MySql 😉 ), e claro,  o desempenho, como só é exibido páginas estáticas, são menos requisições e nada pra processar e pra hospedar apenas páginas estáticas é muito mais barato e até &ldquo;di grátis&rdquo; hehehehe.</p>
 <blockquote>
 <p>Esse tutorial é baseado no Ubuntu, o Windows não foi muito amigável pra instalar o Jekyll. =/ Deixando bem claro que o WordPress é uma ótima plataforma, supre qualquer necessidades para um blog e até algo mais avançado. O <strong>Jekyll</strong> não é muito simples de se trabalhar, por isso deve ser utilizado, principalmente por desenvolvedores, e nesse caso, é uma ótima oportunidade de aprender novas tecnologias e ir afiando os conhecimentos em otimização não somente de conteúdo como também dos códigos do site.</p>
 </blockquote>
@@ -91,7 +91,7 @@ if (!doNotTrack) {
 </blockquote>
 <p>Isso já é o suficiente pra instalar o Ruby no ubuntu. Pra verificar se instalou certo, mais por desencargo mesmo, basta digitar o comando abaixo:</p>
 <p><code>ruby --version</code></p>
-<p>E o resultado é a versão do Ruby instalado… 😉 Agora que temos o Ruby funcionando, vamos instalar o <strong>Jekyll</strong>, o comando, claro, é bem simples:</p>
+<p>E o resultado é a versão do Ruby instalado&hellip; 😉 Agora que temos o Ruby funcionando, vamos instalar o <strong>Jekyll</strong>, o comando, claro, é bem simples:</p>
 <p><code>gem install jekyll</code></p>
 <blockquote>
 <p> O gem é o comando do Ruby similar ao comando apt-get do Linux, ele serve pra instalar pacotes.</p>
@@ -108,7 +108,9 @@ if (!doNotTrack) {
 </ul>
 <p>Por enquanto esses são os diretórios essenciais para começarmos a conhecer melhor nosso blog. Pra rodarmos ele localmente e ver como ficou, devemos, de dentro da pasta blog, rodar o comando abaixo:</p>
 <p><code>jekyll serve</code></p>
-<p>Ele irá disponibilizar um modo “preview” do blog no endereço http://localhost:4000, assim podemos ver como irá ficar nosso blog com o layout padrão do <strong>jekyll</strong>. Além disso, é claro, ele irá gerar uma build, as páginas html, dentro da pasta _site. O resultado final é a página abaixo: <a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457571/pagina_inicial_utilizando_o_layout_padrao_do_jekyll_kqxcae.png"><!-- raw HTML omitted --></a> Nos próximos tutorias irei explicar como criar um post, personalizar o blog, otimizar o SEO e o que for surgindo. Links úteis:</p>
+<p>Ele irá disponibilizar um modo &ldquo;preview&rdquo; do blog no endereço http://localhost:4000, assim podemos ver como irá ficar nosso blog com o layout padrão do <strong>jekyll</strong>. Além disso, é claro, ele irá gerar uma build, as páginas html, dentro da pasta _site. O resultado final é a página abaixo:</p>
+<p><!-- raw HTML omitted --></p>
+<p>Nos próximos tutorias irei explicar como criar um post, personalizar o blog, otimizar o SEO e o que for surgindo. Links úteis:</p>
 <ul>
 <li><a href="http://jekyllrb.com/">Site oficial do Jekyll</a> (A documentação é bem completa);</li>
 <li><a href="https://www.ruby-lang.org/pt/">Site oficila do Ruby</a>;</li>
@@ -209,9 +211,6 @@ if (!doNotTrack) {
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -283,10 +282,10 @@ if (!doNotTrack) {
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

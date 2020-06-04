@@ -11,7 +11,7 @@
 <meta property="og:description" content="
 Olá, nesse tutorial gostaria de ensinar de uma forma bem básica, como rodar o Framework CakePHP no Windows e escrever algum código usando o Eclipse.
 Bora lá:
-O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos beneficios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada aqui e aqui." />
+O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos benefícios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada aqui e aqui." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cezarcruz.com.br/tutorial-basico-usando-cakephp-windows-eclipse-parte1/" />
 <meta property="og:image" content="https://cezarcruz.com.br/img/header_og.png"/>
@@ -83,40 +83,39 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p><a href="http://res.cloudinary.com/cezarcruz-com-br/image/upload/v1454457626/cake-logo_ns8tdv.png"><!-- raw HTML omitted --></a></p>
+			<p><!-- raw HTML omitted --></p>
 <p>Olá, nesse tutorial gostaria de ensinar de uma forma bem básica, como rodar o Framework CakePHP no Windows e escrever algum código usando o Eclipse.</p>
 <p>Bora lá:</p>
-<p>O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos beneficios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada <!-- raw HTML omitted -->aqui<!-- raw HTML omitted --> e <!-- raw HTML omitted -->aqui<!-- raw HTML omitted -->.</p>
+<p>O CakePHP é um framework PHP(dãããã) que utiliza MVC, poderia perder bastante tempo falando dos benefícios de usar um Framework e MVC, mas essa não é a intenção do post, de qualquer forma, de uma olhada <!-- raw HTML omitted -->aqui<!-- raw HTML omitted --> e <!-- raw HTML omitted -->aqui<!-- raw HTML omitted -->.</p>
 <p>O primeiro passo é ter o servidor de aplicação funcionando e para simplificar muito nossa vida, existe o <!-- raw HTML omitted -->Wamp<!-- raw HTML omitted -->, que já vem com tudo que precisamos para rodar o CakePHP: Apache, PHP e MySQL.</p>
 <p>Depois de instalado o Wamp, que é bem simples, ele irá criar uma pasta em C:wamp, dentro dessa pasta estará a pasta www, que é onde iremos colocar os arquivos que serão acessados pelo navegador. Para verificar se o wamp está funcionando corretamente, basta acessar o link http://localhost, que você irá deparar com a pagina do wamp.</p>
 <!-- raw HTML omitted -->
 <p>O proximo passo é baixar o CakePHP.</p>
 <p>O CakePHP você encontra <!-- raw HTML omitted -->aqui<!-- raw HTML omitted -->, e a documentação você encontra <!-- raw HTML omitted -->aqui.<!-- raw HTML omitted --></p>
-<p>Agora basta baixar o CakePHP e colocar no diretório www do Wamp (C:wampwww), no momento a versão atual é a 2.3.6 e seu diretório do CakePHP irá ficar assim: C:wampwwwcakephp-cakephp-b81c198. (Quando abrirmos o CakePHP no Eclipse, falarei um pouco mais da estrutura de diretórios do framework)</p>
+<p>Agora basta baixar o CakePHP e colocar no diretório www do Wamp (C:wampwww), no momento a versão atual é a 2.3.6 e seu diretório do CakePHP irá ficar assim: C:\wamp\www\cakephp-cakephp-b81c198. (Quando abrirmos o CakePHP no Eclipse, falarei um pouco mais da estrutura de diretórios do framework)</p>
 <p>Agora, altere o nome da pasta cakephp-cakephp-b81c198 para cake, e acesse via http://localhost/cake e a tela abaixo irá aparecer:</p>
 <!-- raw HTML omitted -->
 <p>Se a tela aparece dessa forma, significa que o module rewrite do apache não está habilitado, no wamp é bem simples fazer isso, vá até o ícone do wamp, que está localizado próximo ao relógio do Windows, clique nele e procure por Apache, teremos a seguinte tela:</p>
 <!-- raw HTML omitted -->
-<p> </p>
 <p>Agora, clique em Apache modules e procure por rewrite_module, clique nele e aguarde o wamp reiniciar para que as configurações sejam válidas. (O rewrite_module é utilizado para criar url amigáveis ou personalizadas)</p>
-<p>Agora teremos o CakePHP funcionando “quase” que completamente, nossa tela será a seguinte:</p>
+<p>Agora teremos o CakePHP funcionando &ldquo;quase&rdquo; que completamente, nossa tela será a seguinte:</p>
 <!-- raw HTML omitted -->
 <p>Agora vamos ao o que consideraria a segunda parte do tutorial, importar a estrutura de diretórios para o <a href="http://www.eclipse.org/">Eclipse</a>, uma IDE feita em Java pela IBM, que é muito utilizada para desenvolvimentos em geral (Java, PHP, Html, JS, etc).</p>
 <p>Assumiremos que o Eclipse já esta instalado e configurado para que possamos editar arquivos em PHP. A grande sacada aqui é criarmos um projeto apontando para o diretório do CakePHP, faremos o seguinte:</p>
 <p>Com o Eclipse aberto, clicar em File, New, Php Project:</p>
 <!-- raw HTML omitted -->
 <ol>
-<li>Nesse textbox, coloque o nome do Projeto, para o tutorial sujiro utlizar cake, com letras minusculas 😉</li>
-<li>Aqui você deve selecionar o diretório raiz do cake, no nosso caso, C:wampwwwcake</li>
+<li>Nesse textbox, coloque o nome do Projeto, para o tutorial sugiro utilizar cake, com letras minusculas 😉</li>
+<li>Aqui você deve selecionar o diretório raiz do cake, no nosso caso, C:\wamp\www\cake</li>
 <li>Feito as devidas configurações, clique em Finish.</li>
 </ol>
 <p>E agora teremos nosso projeto criado e pronto para começarmos</p>
 <!-- raw HTML omitted -->
 <p>Nossa primeira alteração será para corrigirmos o erros exibidos na pagina inicial do CakePHP, vamos lá.</p>
 <p>Abrar o arquivos core.php que fica em Cake-&gt;app-&gt;Config, e altere o valor do <strong>Security.salt</strong> e do <strong>Security.cipherSeed:</strong></p>
-<p><code>&lt;br /&gt; Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');</code></p>
-<p>Configure::write(‘Security.cipherSeed’, ‘76859309657453542496749683645’);</p>
-<p>Esses carinhas são utilizados na criptografia do CakePHP e devem ser alterados, para que não utilizem o valor padrão do CakePHP. No Security,salt você pode utilizar qualquer valor que seja número ou letra e no Security.cipherSeed você deve utilizar apenas números. Não esqueça de salvar o arquivos.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">Configure::write(&#39;Security.salt&#39;, &#39;DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi&#39;);
+Configure::write(&#39;Security.cipherSeed&#39;, &#39;76859309657453542496749683645&#39;);
+</code></pre></div><p>Esses carinhas são utilizados na criptografia do CakePHP e devem ser alterados, para que não utilizem o valor padrão do CakePHP. No Security,salt você pode utilizar qualquer valor que seja número ou letra e no Security.cipherSeed você deve utilizar apenas números. Não esqueça de salvar o arquivos.</p>
 <p>Até esse ponto, já corrigimos as duas primeiras mensagens de erros, nosso CakePHP está assim:</p>
 <!-- raw HTML omitted -->
 <p>No próximo post daremos continuidade ao projeto, explicarei como corrigir o erro de banco, explicarei um pouco da estrutura de diretórios do CakePHP e por fim um pouco de código.</p>
@@ -220,9 +219,6 @@ if (!doNotTrack) {
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -294,10 +290,10 @@ if (!doNotTrack) {
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>

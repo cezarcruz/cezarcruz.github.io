@@ -97,12 +97,12 @@ if (!doNotTrack) {
 <p>A nomenclatura padrão dos arquivos de idiomas é <strong>nome_lang.php,</strong> para o nosso exemplo, vamos criar um arquivo chamada app_lang.php dentro da pasta portuguese. O conteúdo do arquivo deverá ficar da seguinte forma:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
         $lang[<span style="color:#e6db74">&#39;title&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Titulo&#34;</span>;
-	$lang[<span style="color:#e6db74">&#39;first_name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Primeiro nome&#34;</span>;
-	$lang[<span style="color:#e6db74">&#39;last_name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Ultimo nome&#34;</span>;
-	$lang[<span style="color:#e6db74">&#39;date&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;data&#34;</span>;
+    $lang[<span style="color:#e6db74">&#39;first_name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Primeiro nome&#34;</span>;
+    $lang[<span style="color:#e6db74">&#39;last_name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Ultimo nome&#34;</span>;
+    $lang[<span style="color:#e6db74">&#39;date&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;data&#34;</span>;
 
 <span style="color:#75715e">?&gt;</span>
-</code></pre></div><p>Agora, para utilizarmos ele é tão simples quanto a sua criação, basta carregar ele com essa “enorme” linha de código:</p>
+</code></pre></div><p>Agora, para utilizarmos ele é tão simples quanto a sua criação, basta carregar ele com essa &ldquo;enorme&rdquo; linha de código:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$this-&gt;lang-&gt;load(&#34;app&#34;,&#34;portuguese&#34;);
 </code></pre></div><p>Da forma acima, devemos colocar a chamada em todo lugar que for ter strings traduzidas, então, pra facilitar, vamos usar ele no método construtor do nosso Controller:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">public function __construct() {
@@ -110,7 +110,7 @@ if (!doNotTrack) {
         $this-&gt;lang-&gt;load(&#34;app&#34;,&#34;portuguese&#34;);
    }
 </code></pre></div><blockquote>
-<p> Repare que utilizamos apenas o nome do arquivo, “app”, o resto o CI que preenche.</p>
+<p> Repare que utilizamos apenas o nome do arquivo, &ldquo;app&rdquo;, o resto o CI que preenche.</p>
 </blockquote>
 <p>Agora que carregamos ele no nosso Controller, vamos utilizar ele:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$data[&#39;title&#39;] = $this -&gt; lang -&gt; line(&#39;title&#39;);
@@ -217,9 +217,6 @@ if (!doNotTrack) {
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/git/">Git</a>
 			</li>
 			<li class="widget__item">
-				<a class="widget__link" href="https://cezarcruz.com.br/categories/hospedagem/">Hospedagem</a>
-			</li>
-			<li class="widget__item">
 				<a class="widget__link" href="https://cezarcruz.com.br/categories/intellij/">Intellij</a>
 			</li>
 			<li class="widget__item">
@@ -291,10 +288,10 @@ if (!doNotTrack) {
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/eclipse/" title="Eclipse">Eclipse (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/fedora/" title="Fedora">Fedora (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/git/" title="Git">Git (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/hospedagem/" title="Hospedagem">Hospedagem (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/intellij/" title="Intellij">Intellij (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/java/" title="Java">Java (7)</a>
-		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascrip/" title="Javascrip">Javascrip (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/javascript/" title="JavaScript">JavaScript (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/jekyll/" title="Jekyll">Jekyll (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/lamp/" title="LAMP">LAMP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="https://cezarcruz.com.br/tags/linux/" title="Linux">Linux (2)</a>
