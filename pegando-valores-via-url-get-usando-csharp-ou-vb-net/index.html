@@ -7,6 +7,20 @@
 	<title>Pegando valores via Url (GET) usando CSharp ou VB.NET - Blog do Cezar</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
+		<meta property="og:title" content="Pegando valores via Url (GET) usando CSharp ou VB.NET" />
+<meta property="og:description" content="Dica rápida pra pegar valores (GET) em urls em ASP .NET:
+Temos o seguinte link:
+http://exemplo.com/pag.aspx?rel=valor&amp;lang=br
+Pra pegar o valor utilizando csharp:
+string valor = Request.QueryString[&#34;rel&#34;]; Ou:
+foreach(string params in Request.QueryString) { Response.write(Request.QueryString[params]) } Pra pegar o valor utilizando VB.NET:
+Dim valar As String = Request.QueryString(&#34;rel&#34;) Ou:
+For Each param As String In Request.QueryString() Response.Write(Request.QueryString(param)) Next Fácil fácil, até." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://cezarcruz.com.br/pegando-valores-via-url-get-usando-csharp-ou-vb-net/" />
+<meta property="article:published_time" content="2013-09-09T18:26:46+00:00" />
+<meta property="article:modified_time" content="2013-09-09T18:26:46+00:00" />
+
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
