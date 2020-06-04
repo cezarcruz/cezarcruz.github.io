@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Junit on Blog do Cezar</title>
+    <link>https://cezarcruz.com.br/categories/junit/</link>
+    <description>Recent content in Junit on Blog do Cezar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Thu, 04 Jun 2020 09:54:36 -0300</lastBuildDate>
+    
+	<atom:link href="https://cezarcruz.com.br/categories/junit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Testes parametrizados com Junit 5</title>
+      <link>https://cezarcruz.com.br/testes-parametrizados-com-junit-5/</link>
+      <pubDate>Thu, 04 Jun 2020 09:54:36 -0300</pubDate>
+      
+      <guid>https://cezarcruz.com.br/testes-parametrizados-com-junit-5/</guid>
+      <description>&lt;p&gt;Com a versão mais recente do Junit ficou muito simples de fazer testes &amp;ldquo;parametrizados&amp;rdquo;, onde, com apenas um método, é possivel fazer testes em vários cenários.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

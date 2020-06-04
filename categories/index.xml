@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Blog do Cezar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 11 Jan 2020 15:50:36 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2020 09:54:36 -0300</lastBuildDate>
     
 	<atom:link href="https://cezarcruz.com.br/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Java</title>
       <link>https://cezarcruz.com.br/categories/java/</link>
-      <pubDate>Sat, 11 Jan 2020 15:50:36 -0300</pubDate>
+      <pubDate>Thu, 04 Jun 2020 09:54:36 -0300</pubDate>
       
       <guid>https://cezarcruz.com.br/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Junit</title>
+      <link>https://cezarcruz.com.br/categories/junit/</link>
+      <pubDate>Thu, 04 Jun 2020 09:54:36 -0300</pubDate>
+      
+      <guid>https://cezarcruz.com.br/categories/junit/</guid>
       <description></description>
     </item>
     
