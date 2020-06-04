@@ -8,7 +8,7 @@
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 		<meta property="og:title" content="Testes parametrizados com Junit 5" />
-<meta property="og:description" content="Com a versão mais recente do Junit ficou muito simples de fazer testes &ldquo;parametrizados&rdquo;, onde, com apenas um método, é possivel fazer testes em vários cenários." />
+<meta property="og:description" content="Com a versão mais recente do Junit ficou muito simples de fazer testes &ldquo;parametrizados&rdquo;, onde, com apenas um método, é possível fazer testes em vários cenários." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cezarcruz.com.br/testes-parametrizados-com-junit-5/" />
 <meta property="og:image" content="https://cezarcruz.com.br/img/header_java_og.png" />
@@ -80,7 +80,7 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header><div class="content post__content clearfix">
-			<p>Com a versão mais recente do Junit ficou muito simples de fazer testes &ldquo;parametrizados&rdquo;, onde, com apenas um método, é possivel fazer testes em vários cenários.</p>
+			<p>Com a versão mais recente do Junit ficou muito simples de fazer testes &ldquo;parametrizados&rdquo;, onde, com apenas um método, é possível fazer testes em vários cenários.</p>
 <p>Neste post vamos ver dois cenários:</p>
 <p><a href="https://junit.org/junit5/docs/current/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/CsvSource.html">@CsvSource</a></p>
 <p><a href="https://junit.org/junit5/docs/current/api/org.junit.jupiter.params/org/junit/jupiter/params/provider/ValueSource.html">@ValueSource</a></p>
@@ -91,7 +91,7 @@ if (!doNotTrack) {
     <span style="color:#f92672">&lt;version&gt;</span>5.6.2<span style="color:#f92672">&lt;/version&gt;</span>
     <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><p>Com a dependência correta, o nosso primeiro teste ja pode ser escrito:</p>
+</code></pre></div><p>Com a dependência correta, o nosso primeiro teste já pode ser escrito:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@ParameterizedTest</span>
   <span style="color:#a6e22e">@CsvSource</span><span style="color:#f92672">({</span>
       <span style="color:#e6db74">&#34;AAA,AAA&#34;</span><span style="color:#f92672">,</span>
@@ -105,15 +105,18 @@ if (!doNotTrack) {
 <li><strong>@CsvSource</strong> recebe um array de valores em formato &ldquo;CSV&rdquo;.</li>
 <li>Repare que nosso teste é anotado com <strong>@ParameterizedTest</strong>.</li>
 <li>O método tem duas entradas que representam os valores separados por &ldquo;,&quot;.</li>
-<li>Também é possivel fazer o teste usando um arquivo &ldquo;.csv&rdquo;
+<li>Também é possível fazer o teste usando um arquivo &ldquo;.csv&rdquo;
 <ul>
-<li>@CsvFileSource(resources = &ldquo;arquivo.csv&rdquo;, numLinesToSkip = 1)</li>
+<li>@CsvFileSource(resources = &ldquo;arquivo.csv&rdquo;, numLinesToSkip = 1)
+<ul>
 <li><strong>resouces</strong>: é o nome do arquivo</li>
-<li><strong>numLinesToSkip</strong>: arquivos csv iniciando com o cabeçalho na primeira linha, se esse for o caso, esse parmetro diz para pulgar a primeira linha, ou o número de linhas passado como valor.</li>
+<li><strong>numLinesToSkip</strong>: arquivos csv iniciando com o cabeçalho na primeira linha, se esse for o caso, esse parâmetro diz para pular a primeira linha, ou o número de linhas passado como valor.</li>
 </ul>
 </li>
 </ul>
-<p>O método é executado 3 vezes, cada uma passando os valores por linhas, e caso tenha algum erro em um dos cenários, o junit mostra qual deles deu erro:</p>
+</li>
+</ul>
+<p>O método é executado 3 vezes, cada uma passando os valores por linhas, e caso tenha algum erro em um dos cenários, o Junit mostra qual deles deu erro:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@ParameterizedTest</span>
 <span style="color:#a6e22e">@CsvSource</span><span style="color:#f92672">({</span>
     <span style="color:#e6db74">&#34;AAA,AAA&#34;</span><span style="color:#f92672">,</span>
