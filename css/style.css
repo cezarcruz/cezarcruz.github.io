@@ -43,7 +43,7 @@ html {
 
 body {
 	margin: 0;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-family: Ubuntu, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	font-size: .875rem;
 	line-height: 1.6;
@@ -864,6 +864,11 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .list__header {
 	margin-bottom: 10px;
 	margin-bottom: .625rem;
+}
+
+.list__title {
+	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 .list__meta {
