@@ -73,7 +73,7 @@ if (!doNotTrack) {
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="https://cezarcruz.com.br/poilitica-de-privacidade/" rel="bookmark">
+			<a href="https://cezarcruz.com.br/politica-de-privacidade/" rel="bookmark">
 			Políticas de Privacidade
 			</a>
 		</h2>
@@ -89,7 +89,7 @@ Solicitamos informações pessoais apenas quando realmente precisamos delas para
 Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado.
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/poilitica-de-privacidade/">Leia mais…</a>
+		<a class="list__footer-readmore btn" href="https://cezarcruz.com.br/politica-de-privacidade/">Leia mais…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
@@ -469,13 +469,44 @@ Prontinho! =)
 	<div class="container footer__container flex">
 		
 <div class="footer__links">
-	<a class="footer__link" href="https://cezarcruz.com.br/poilitica-de-privacidade/">Políticas de Privacidade</a>
+	<a class="footer__link" href="https://cezarcruz.com.br/politica-de-privacidade/">Políticas de Privacidade</a>
 </div>
 		<div class="footer__copyright">
 			&copy; 2020 Blog do Cezar.
 			<span class="footer__copyright-credits">Gerado com <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> com o tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
 		</div>
 	</div>
+	<style>
+
+</style>
+
+<div class="lgpd" id="lgpd" style="display: none;">
+  <div>
+    <p>
+      Ao continuar neste site, você aceita nossa <a href="https://cezarcruz.com.br/politica-de-privacidade/">política de privacidade</a>.
+    </p>
+    <a role="button" class="btn" id="close" onclick="fechaLgpd();">OK</a>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  const obtemLgdpElement = () => document.getElementById('lgpd');
+
+  const showLgpd = () => obtemLgdpElement().style.display = 'block';
+
+  const fechaLgpd = () => {
+    obtemLgdpElement().remove();
+    localStorage.setItem('lgpd', true);
+  }
+
+  window.addEventListener('load', () => {
+    const lgpdAceito = localStorage.getItem('lgpd');
+    if (!lgpdAceito) {
+      showLgpd();
+    }
+  });
+</script>
 </footer>
 	</div>
 <script async defer src="https://cezarcruz.com.br/js/menu.js"></script>
